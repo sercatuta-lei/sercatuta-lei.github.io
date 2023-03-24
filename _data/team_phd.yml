@@ -1,0 +1,52 @@
+#- name:
+#  photo: rock.jpg
+#  status:
+#  number_info:
+#  info1:
+#  info2:
+#  info3:
+#  info4:
+
+- name: <a href="https://www.linkedin.com/in/xiaolei-harry-ren-01a5b8120/">Xiaolei (Harry) Ren</a>
+  photo: Xiaolei.jpg
+  status: PhD Candidate, started Sept 2017
+
+- name: <a href="https://mengfei-ren.github.io">Mengfei (Angela) Ren</a>
+  photo: mengfei.jpg
+  status: PhD ABD (All But Defense), started Sept 2017
+  number_info: 2
+  info1: Focuses on security analysis of IoT wireless protocols. 
+  info2: Focuses on detecting security issues on Zigbee protocol with state-of-art software testing techniques.
+
+- name: <a href="https://www.linkedin.com/in/sunny-shree-a6a465109/">Sunny Shree</a>
+  photo: sunny.jpg
+  status: PhD student, started Sept 2018
+  number_info: 2
+  info1: Focuses on AI-Based Software Engineering
+  info2: Focuses on applying software engineering technique to generate counterfactual explanations for the decision made by the machine learning models.
+
+- name: Qiping Wei
+  photo: qiping.jpg
+  status: PhD student, started Jan 2019
+  number_info: 3
+  info1: B.S. in the School of Computer Science and Technology at the University of Science and Technology in China
+  info2: M.S. of Computer Science from UT Arlington
+  info3: Focuses on symbolic execution on smart contracts. She also has an interest in Human-Computer Interaction (HCI).
+
+- name: <a href="https://www.linkedin.com/in/fadul-sikder-0b5a8a202/">Fadul Sikder</a>
+  photo: fadul.jpg
+  status: PhD student, started Sept 2021
+  number_info: 2
+  info1: B.S. in Statusrmation Technology from Jahagirnagr University
+  info2: His research interests lie in Blockchain, Smart Contracts, Security, and Privacy.
+
+- name: <a href="https://www.linkedin.com/in/krishna-khadka-238b35162/">Krishna Khadka</a>
+  photo: krishna.jpg
+  status: PhD student, started Jan 2022
+  number_info: 1
+  info1: Focuses on testing and debugging machine learning models to improve the model prediction by finding faults in the training data set.
+
+- name: <a href="https://www.linkedin.com/in/arjdahal/">Arjun Dahal</a>
+  photo: arjun.jpeg
+  status: PhD student, started Sept 2022
+  

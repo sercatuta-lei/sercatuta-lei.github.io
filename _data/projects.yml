@@ -1,0 +1,14 @@
+- name: Fuzz Testing of Zigbee Protocol Implementation
+  image: zigbee.png
+  summary: Zigbee protocol is one of global most popular IoT wireless standards used by millinion devices and customers. It has also been deployed in NASA Mars mission as communication radio between flying drone and Perseverance rover. Recently, server vulnerabilities in Zigbee protocol implementations have compromised IoT dvices from different manufactuers. It becomes imperative to perform security testing on Zigbee protocol implementations. Thus, this research project aims to apply existing state-of-art vulnerability detection techniques, such as fuzzing and data flow analysis, to Zigbee protocol implementations.
+  link: https://sercatuta-lei.github.io/projects/zigbee_fuzzing
+
+- name: Security Analysis of Ethereum Smart Contracts
+  image: smart_contracts.jpeg
+  summary: Ethereum blockchain is the decentralized platform for Ether (ETH, cryptocurrency ether) and smart contracts. Ether is second only to Bitcoin in market capitalization. Smart contracts enable Ethereum to remove the need for a third party to handle transactions between peers, which can reduce the time and save money. They are either all or part of the backends of the distributed applications (Dapps). Since smart contracts are mainly involved in financially based transactions, security is a major concern for wide application. The immutable nature makes this concern more serious as they are rather difficult to patch. Therefore, security analysis of smart contracts is critical.
+  link: https://sercatuta-lei.github.io/projects/smart_contracts
+
+- name: How Compiler Optimization Affects Binary Code Differences
+  image: compiler_optimization.png
+  summary: Compiler optimizations often have an impact on the syntactic and semantic representation of binary code. For example, modern compilers apply many intra-procedural optimization techniques, such as loop unrolling, compound conditionals, and basic-block merging, to generate branch-less code to support prefetch instructions. Straight-line code avoids branching misprediction and facilitates pipelined execution, but it also merges several basic blocks into one. The well-known function inlining optimization replaces function call instruction with the actual code of the callee function. The frequently invoked library functions are most likely to be inlined. These compiler optimizations can effectively affect the control flow graph structure by breaking function integrity and merging basic blocks.
+  link: https://blog.uta.edu/xiaoleiren/project-description/

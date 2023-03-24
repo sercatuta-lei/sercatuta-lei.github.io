@@ -1,0 +1,49 @@
+#- name:
+#  photo: rock.jpg
+#  duration:
+#  link:
+
+- name: <a href="https://cjaganmohan.github.io/">Jaganmohan Chandrasekaran</a>
+  photo: Jagan.jpg
+  duration: Graduated in 2021, now Postdoctoral Research Associate at Virginia Tech
+  link: <a href="https://www.linkedin.com/in/cjaganmohan/">LinkedIn</a>
+  
+- name: Huadong (Jack) Feng
+  photo: Huadong_Feng.png
+  duration: Graduated in 2021, now Research Scientist at Facebook
+  link: <a href="https://www.linkedin.com/in/huadong-feng-0abba38b">LinkedIn</a> 
+
+- name: Duan Feng
+  photo: Feng_Duan.jpeg
+  duration: Graduated in 2021
+  link: <a href="https://www.linkedin.com/in/feng-duan-820949a2/">LinkedIn</a> 
+
+- name: Sarker Tanveer Ahmed
+  photo: Sarker_Tanveer_Ahmed.jpeg
+  duration: Graduated in 2017, now Associate Professor at University of Dhaka
+  link: <a href="https://www.linkedin.com/in/sarker-tanveer-ahmed-93a0a072/">LinkedIn</a> 
+
+- name: Jing Xu
+  photo: Jing_Xu.jpeg
+  duration: Graduated in 2016, now Software Engineer at Google
+  link: <a href="https://www.linkedin.com/in/jing-xu-b77bb357/">LinkedIn</a> 
+
+- name: Laleh Ghandehari
+  photo: Laleh_Ghandehari.jpeg
+  duration: Graduated in 2016, now Software Engineer at ZEISS Medical Technology
+  link: <a href="https://www.linkedin.com/in/lalehshghandehari/">LinkedIn</a> 
+
+- name: Mehra Nouroz Borazjany
+  photo: Mehra_Nouroz_Borazjany.jpeg
+  duration: Graduated in 2014, now Associate professor of instruction at The University of Texas at Dallas
+  link: <a href="https://www.linkedin.com/in/mehra-nouroz-borazjany-b6366511/">LinkedIn</a> 
+
+- name: Linbin Yu
+  photo: Linbin_Yu.jpeg
+  duration: Graduated in 2013, now Research Scientist at Facebook
+  link: <a href="https://www.linkedin.com/in/linbinyu/">LinkedIn</a> 
+
+- name: Wenhua Wang
+  photo: bio-photo.jpg
+  duration: Graduated in 2010, now Senior DevOps/Release Engineer at Apple
+  link: <a href="https://www.linkedin.com/in/wenhua-wang-1169741b/">LinkedIn</a> 

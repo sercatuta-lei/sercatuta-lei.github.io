@@ -1,0 +1,69 @@
+#- name:
+#  photo: rock.jpg
+#  duration:
+#  link:
+
+- name: Ankita Patel
+  photo: Ankita.jpg
+  duration: Graduated in 2022, now Application Delivery Lead at Zurich North America
+  link: <a href="https://www.linkedin.com/in/patelankitar/">LinkedIn</a> 
+
+- name: Dengfeng Xia
+  photo: Dengfeng_Xia.jpeg
+  duration: Graduated in 2012, now Sr. SWE Test at Twitter
+  
+- name: Anthony Opara
+  photo: bio-photo.jpg
+  duration: Graduated in 2008, now Senior Solutions Architect at Ericsson
+  link: <a href="https://www.linkedin.com/in/anthony-opara-6681649b/">LinkedIn</a> 
+
+- name: Keerthika Koteeswaran
+  photo: Keerthika_Koteeswaran.jpeg
+  duration: Graduated in 2007, now Senior Data Engineer at Adobe
+  link: <a href="https://www.linkedin.com/in/kkoteeswaran/">LinkedIn</a> 
+
+- name: Arun Ramani 
+  photo: Arun_Ramani.jpeg
+  duration: Graduated in 2007, now Senior Software Development Manager at PayPal
+
+- name: Andres Yanes
+  photo: bio-photo.jpg
+  duration: Graduated in 2007
+
+- name: Kallol Mahata
+  photo: Kallol_Mahata.jpeg
+  duration: Graduated in 2007, now PCIC Co-founder and CEO
+  link: <a href="https://www.linkedin.com/in/kallolmahata/">LinkedIn</a> 
+
+- name: Daxa Patel
+  photo: bio-photo.jpg
+  duration: Graduated in 2006
+
+- name: Chinmay Jayaswal
+  photo: Chinmay_Jayaswal.jpeg
+  duration: Graduated in 2006, now Finance Manager at AT&T
+  link: <a href="https://www.linkedin.com/in/chinmayjayaswal/">LinkedIn</a> 
+
+- name: Vidur Gupta
+  photo: bio-photo.jpg
+  duration: Graduated in 2006, now Engineering Manager at Cisco
+  link: <a href="https://www.linkedin.com/in/vidurg/">LinkedIn</a> 
+
+- name: Monica Hernandez
+  photo: bio-photo.jpg
+  duration: Graduated in 2006, now CEO MAS Global
+  link: <a href="https://www.linkedin.com/in/monicamhernandez/">LinkedIn</a> 
+
+- name: Gaurav Saini
+  photo: Gaurav_Saini.jpeg
+  duration: Graduated in 2005, now Senior Practice Manager, Global and Strategic Accounts at Amazon Web Services (AWS)
+  link: <a href="https://www.linkedin.com/in/g-gauravsaini/">LinkedIn</a> 
+
+- name: Mohammad Shaito
+  photo: Mohammad_Shaito.jpeg
+  duration: Ph.D. Candiate, CSE at UTA
+  link: <a href="https://www.linkedin.com/in/mshaito/">LinkedIn</a> 
+
+- name: Pichate Pluempatanakij
+  photo: bio-photo.jpg
+  duration: Graduated in 2003

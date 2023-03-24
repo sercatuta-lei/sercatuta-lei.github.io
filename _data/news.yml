@@ -1,0 +1,59 @@
+- date: March 1, 2023
+  keyword: New Lab Member!
+  headline: Welcome Arjun Dahal to our lab as a PhD student.
+
+- date: December 20, 2022
+  keyword: New Published Paper!
+  headline: Jack, Xiaolei & Qiping have their paper titled "MagicMirror&#58; Towards High-Coverage Fuzzing of Smart Contracts", being accepted into ICST 2023. ICST is a major conference in Software Testing, and smart contract is an exciting application domain. 
+
+- date: July 11, 2022
+  keyword: New Published Paper!
+  headline: Mengfei has her extension work of the first project being accepted by ACM Journal Digital Threats&#58; Research and Practice, titled "Security Analysis of Zigbee Protocol Implementation".
+
+- date: June 17, 2022
+  keyword: New Published Paper!
+  headline: Sunny and Jagan's paper, titled "DeltaExplainer&#58; A Software Debugging Approach to Generating Counterfactual Explanations", has been accepted to AITest 2022
+
+- date: April 22, 2022
+  keyword: Thesis Defense!
+  headline: Ankita has successfully defended her Master thesis.
+
+- date: November 9, 2021
+  keyword: New NIST Grant!
+  headline: The National Institute Of Standards and Technology (NIST) supports our work on Explaining and Debugging decisions made by machine learning models with a three-year, $385,000 grant. <a href='https://www.uta.edu/news/news-releases/2021/11/09/lei-ai-decisions'>[Read News]</a>
+
+- date: August 18, 2021
+  keyword: Thesis Defense!
+  headline: Jaganmohan Chandrasekaran has successfully defended his Ph.D. dissertation titled "Testing AI-based Software Systems".
+
+- date: May 24, 2021
+  keyword: Congratulation!
+  headline: Xiaolei Ren, Dr. Jiang Ming and Dr. Jeff Lei won the PLDI 2021 Distinguished Paper Award for their paper <a href='https://pldi21.sigplan.org/track/pldi-2021-papers'>Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference&#58; An Empirical Study</a>. PLDI is the flagship conference in the field of programming languages and programming systems research.
+
+- date: May 15, 2021
+  keyword: Thesis Defense!
+  headline: Feng Duan has successfully defended his Ph.D. dissertation.
+
+- date: May 15, 2021
+  keyword: Thesis Defense!
+  headline: Huadong (Jack) Feng has successfully defended his Ph.D. dissertation.
+
+- date: May 6, 2021
+  keyword: New Published Paper!
+  headline: Mengfei has her first paper accepted by WiSec'21. Her paper is titled as <a href='https://dl.acm.org/doi/10.1145/3448300.3468296'>Z-Fuzzer&#58; Device-agnostic Fuzzing of Zigbee Protocol Implementation.</a> 
+
+- date: May 6, 2021
+  keyword: New Published Paper!
+  headline: Xiaolei has his first paper accepted by PLDI'21. His paper is titled as <a href='https://pldi21.sigplan.org/track/pldi-2021-papers'>Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference&#58; An Empirical Study</a>.
+
+- date: May 5, 2021
+  headline: Mengfei has started her summer intership of Vehicle Security Testing at Toyota North America.
+
+- date: May 5, 2021
+  keyword: New Summer Dissertation Fellowship Award!
+  headline: Jagan has received the "Summer 2021 Dissertation Fellowship" award at UTA.
+
+- date: Janurary 27, 2021
+  keyword: New Testing Tool!
+  headline: Congratulation Jack for his excellent work on testing smart contracts. He has just finished an external release of a tool called <a href='https://magic-mirror.gitbook.io/magicmi/'>MagicMirror</a>. NIST will make a public release of the tool.
+

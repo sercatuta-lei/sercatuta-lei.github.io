@@ -1,0 +1,754 @@
+# # Template
+# - title: "Something"
+#   authors: Someone
+#   link:
+#     url: https://doi.org/??
+#     display: Some Journal/Conference Name
+#   highlight: 0
+#   journal: 0
+#   conference: 1
+#   workshop: 0
+#   patent: 0
+#   book: 0
+
+# Workshop/Demo/Poster
+
+- title: "A Combinatorial Approach to Explaining Image Classifiers"
+  authors: Chandrasekaran, Jaganmohan, Yu Lei, Raghu Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/ICSTW52544.2021.00019
+    display: Proceedings of 2021 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '21)
+  # news2: Acceptance Rate 27.2%
+  workshop: 1
+
+- title: "A Combinatorial Approach to Testing Deep Neural Network-based Autonomous Driving Systems"
+  authors: Chandrasekaran, Jaganmohan, Yu Lei, Raghu Kacker, and D. Richard Kuhn
+  link:
+    url: 10.1109/ICSTW52544.2021.00022
+    display: Proceedings of 2021 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '21)
+  # news2: Acceptance Rate 27.2%
+  workshop: 1
+
+- title: "Combinatorial methods for explainable AI"
+  authors: Kuhn, D. Richard, Raghu N. Kacker, Yu Lei, and Dimitris E. Simos
+  link:
+    url: 10.1109/ICSTW50294.2020.00037
+    display: Proceedings of 2021 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '21)
+  # news2: Acceptance Rate 27.2%
+  workshop: 1
+
+- title: "An Approach to T-way Test Sequence Generation with Constraints"
+  authors: Duan, Feng, Yu Lei, Raghu N. Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/ICSTW.2019.00059
+    display: Proceedings of 2019 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '19)
+  workshop: 1
+
+- title: "Using Parameter Mapping to Avoid Forbidden Tuples in a Covering Array"
+  authors: Duan, Feng, Yu Lei, Raghu N. Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/ICSTW.2019.00060
+    display: Proceedings of 2019 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '19)
+  workshop: 1
+
+- title: "Weighted Combinatorial Sequence Testing for the TLS Protocol"
+  authors: Garn, Bernhard, Dimitris E. Simos, Feng Duan, Yu Lei, Josip Bozic, and Franz Wotawa
+  link:
+    url: https://doi.org/10.1109/ICSTW.2019.00031
+    display: Proceedings of 2019 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '19)
+  workshop: 1
+
+- title: "A Model for T-Way Fault Profile Evolution during Testing"
+  authors:  Kuhn, D. Richard, Raghu N. Kacker, and Yu Lei.
+  link:
+    url: https://doi.org/10.1109/ICSTW.2017.35
+    display: Proceedings of 2019 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '17)
+  workshop: 1
+
+- title: "Optimizing IPOG's Vertical Growth with Constraints based on Hypergraph Coloring"
+  authors: Duan, Feng, Yu Lei, Linbin Yu, Raghu N. Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/ICSTW.2017.37
+    display: Proceedings of 2017 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '17)
+  workshop: 1
+
+- title: "Applying Combinatorial Testing to High-speed Railway Track Circuit Receiver"
+  authors: Rao, Chang, Jin Guo, Nan Li, Yu Lei, Yadong Zhang, Yao Li, and Yaxin Cao
+  link:
+    url: https://doi.org/10.1109/ICSTW.2017.39
+    display: Proceedings of 2017 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '17)
+  workshop: 1
+
+- title: "Applying Combinatorial Testing to Data Mining Algorithms"
+  authors: Chandrasekaran, Jaganmohan, Huadong Feng, Yu Lei, D. Richard Kuhn, and Raghu Kacker
+  link:
+    url: https://doi.org/10.1109/ICSTW.2017.46
+    display: Proceedings of the 10th IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '17)
+  workshop: 1
+
+- title: "The Tail at Scale: How to Predict It?"
+  authors:  Nguyen, Minh, Zhongwei Li, Feng Duan, Hao Che, and Hong Jiang
+  link:
+    url: https://www.usenix.org/system/files/conference/hotcloud16/hotcloud16_nguyen.pdf
+    display: Proceedings of the 8th USENIX workshop on Hot Topics in Cloud Computing (HotCloud '16)
+  workshop: 1
+
+- title: "Pseudo-exhaustive Testing of Attribute Based Access Control Rules"
+  authors:  Kuhn, D. Richard, Vincent Hu, David F. Ferraiolo, Raghu N. Kacker, and Yu Lei
+  link:
+    url: https://doi.org/10.1109/ICSTW.2016.35
+    display: Proceedings of the 9th IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '16)
+  workshop: 1
+
+- title: "Towards Agile Testing for Railway Safety-critical Software"
+  authors:  Li, Nan, Jin Guo, Jeff Lei, Yao Li, Chang Rao, and YaXin Cao
+  link:
+    url: https://doi.org/10.1145/2962695.2962713
+    display: Proceedings of the Scientific Workshop Proceedings of XP2016 (XP '16)
+  workshop: 1
+
+- title: "Ben&#58; A Combinatorial Testing-based Fault Localization Tool"
+  authors:  Ghandehari Laleh Sh, Jaganmohan Chandrasekaran, Yu Lei, Raghu Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/ICSTW.2015.7107446
+    display: Proceedings of the 8th IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '15)
+  workshop: 1
+
+- title: "Constraint Handling in Combinatorial Test Generation using Forbidden Tuples"
+  authors:  Yu, Linbin, Feng Duan, Yu Lei, Raghu N. Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/ICSTW.2015.7107441
+    display: Proceedings of the 8th IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '15)
+  workshop: 1
+
+- title: "Improving IPOG's Vertical Growth based on A Graph Coloring Scheme"
+  authors:  Feng Duan, Yu Lei, Linbin Yu, Raghu N. Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/ICSTW.2015.7107444
+    display: Proceedings of the 8th IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '15)
+  workshop: 1
+
+- title: "An Empirical Comparison of Combinatorial and Random Testing"
+  authors:  Ghandehari, Laleh Sh, Jacek Czerwonka, Yu Lei, Soheil Shafiee, Raghu Kacker, and Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/ICSTW.2014.8
+    display: Proceedings of the 7th IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '14)
+  workshop: 1
+
+- title: "Applying Combinatorial Testing to the Siemens Suite"
+  authors:  Ghandehari, Laleh Shikh Gholamhossein, Mehra N. Bourazjany, Yu Lei, Raghu N. Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/ICSTW.2013.47
+    display: Proceedings of the 6th IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '13)
+  workshop: 1
+
+- title: "An Input Space Modeling Methodology for Combinatorial Testing"
+  authors:  Borazjany, Mehra N., Laleh Sh Ghandehari, Yu Lei, Raghu Kacker, and Rick Kuhn
+  link:
+    url: https://doi.org/10.1109/ICSTW.2013.48
+    display: Proceedings of the 6th IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '13)
+  workshop: 1
+
+- title: "Identifying Failure-Inducing Combinations Using Tuple Relationship"
+  authors:  Xintao Niu, Changhai Nie, Yu Lei, and Alvin T.S. Chan
+  link:
+    url: https://doi.org/10.1109/ICSTW.2013.38
+    display: Proceedings of the 6th IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '13)
+  workshop: 1
+
+- title: "Combinatorial Coverage Measurement Concepts and Applications"
+  authors:  Kuhn, D. Richard, Itzel Dominguez Mendoza, Raghu N. Kacker, and Yu Lei
+  link:
+    url: https://doi.org/10.1109/ICSTW.2013.77
+    display: Proceedings of the 6th IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '13)
+  workshop: 1
+
+
+# Conference Paper
+
+- title: "Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference&#58; An Empirical Study"
+  authors: Xiaolei Ren, Michael Ho, Jiang Ming, Yu Lei, Li Li
+  link:
+    url: https://doi.org/10.1145/3453483.3454035
+    display: Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation (PLDI '21)
+  news2: Acceptance Rate 27.2%
+  conference: 1
+
+- title: "Z-Fuzzer&#58; Device-agnostic Fuzzing of Zigbee Protocol Implementation"
+  authors: Mengfei Ren, Xiaolei Ren, Huadong Feng, Jiang Ming, Yu Lei
+  link:
+    url: https://doi.org/10.1145/3448300.3468296
+    display: Proceedings of the 14th ACM Conference on Security and Privacy in Wireless and Mobile Networks (WiSec '21)
+  news2: Acceptance Rate 28.1%
+  conference: 1
+
+- title: "Evaluation of T-Way Testing of DNNs in Autonomous Driving Systems"
+  authors: Chandrasekaran, Jaganmohan, Ankita Ramjibhai Patel, Yu Lei, Raghu Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/AITEST52744.2021.00013
+    display: Proceedings of 2021 IEEE International Conference on Artificial Intelligence Testing (AITest '21)
+  conference: 1
+
+- title: "Effectiveness of Dataset Reduction in Testing Machine Learning Algorithms"
+  authors: Chandrasekaran, Jaganmohan, Huadong Feng, Yu Lei, Raghu Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/AITEST49225.2020.00027
+    display: Proceedings of 2020 IEEE International Conference on Artificial Intelligence Testing (AITest '20)
+  conference: 1
+
+- title: "Combining Model Refinement and Test Generation for Conformance Testing of the IEEE Phd Protocol using Abstract State Machines"
+  authors: Bombarda, Andrea, Silvia Bonfanti, Angelo Gargantini, Marco Radavelli, Feng Duan, and Yu Lei
+  link:
+    url: https://doi.org/10.1007/978-3-030-31280-0_5
+    display: Proceedings of 2019 IFIP International Conference on Testing Software and Systems (ICTSS '19)
+  conference: 1
+
+- title: "IPSO&#58; A Scaling Model for Data-intensive Applications"
+  authors: Li, Zhongwei, Feng Duan, Minh Nguyen, Hao Che, Yu Lei, and Hong Jiang
+  link:
+    url: https://doi.org/10.1109/ICDCS.2019.00032
+    display: Proceedings of 39th IEEE International Conference on Distributed Computing Systems (ICDCS '19)
+  conference: 1
+
+- title: "A Method-level Test Generation Framework for Debugging Big Data Application"
+  authors: Feng, Huadong, Jaganmohan Chandrasekaran, Yu Lei, Raghu Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/BigData.2018.8622248
+    display: Proceedings of 2018 IEEE International Conference on Big Data (Big Data '18)
+  conference: 1
+
+- title: "Testing TLS using Combinatorial Methods and Execution Framework"
+  authors: Simos, Dimitris E., Josip Bozic, Feng Duan, Bernhard Garn, Kristoffer Kleine, Yu Lei, and Franz Wotawa
+  link:
+    url: https://doi.org/10.1007/978-3-319-67549-7_10
+    display: Proceedings of 2017 IFIP International Conference on Testing Software and Systems (ICTSS '17)
+  conference: 1
+
+- title: "MirrorDroid&#58; A Framework to Detect Sensitive Information Leakage in Android by Duplicate Program Execution"
+  authors: Rumee, Sarker T. Ahmed, Donggang Liu, and Yu Lei
+  link:
+    url: https://doi.org/10.1109/CISS.2017.7926086
+    display: Proceedings of the 51st Annual Conference on Information Sciences and Systems (CISS '17)
+  conference: 1
+
+- title: "Using Delta Debugging to Minimize Stress Tests for Concurrent Data Structures"
+  authors: Xu, Jing, Yu Lei, and Richard Carver
+  link:
+    url: https://doi.org/10.1109/ICST.2017.11
+    display: Proceedings of 2017 IEEE International Conference on Software Testing, Verification and Validation (ICST '17)
+  conference: 1
+
+- title: "Applying Combinatorial Test Data Generation to Big Data Applications"
+  authors: Li Nan, Yu Lei, Haider Riaz Khan, Jingshu Liu, and Yun Guo.
+  link:
+    url: https://doi.org/10.1145/2970276.2970325
+    display: Proceedings of the 31st IEEE/ACM International Conference on Automated Software Engineering (ASE '17)
+  conference: 1
+
+- title: "A Combinatorial Approach to Analyzing Cross-Site Scripting (XSS) Vulnerabilities in Web Application Security Testing"
+  authors: Simos, Dimitris E., Kristoffer Kleine, Laleh Shikh Gholamhossein Ghandehari, Bernhard Garn, and Yu Lei
+  link:
+    url: https://doi.org/10.1007/978-3-319-47443-4_5
+    display: Proceedings of 2016 IFIP International Conference on Testing Software and Systems (ICTSS '16)
+  conference: 1
+
+- title: "An Object-Oriented Analysis and Design Environment"
+  authors: Simos, Dimitris E., Kristoffer Kleine, Laleh Shikh Gholamhossein Ghandehari, Bernhard Garn, and Yu Lei
+  link:
+    url: https://doi.org/10.1007/978-3-319-47443-4_5
+    display: Proceedings of 2016 IFIP International Conference on Testing Software and Systems (ICTSS '16)
+  conference: 1
+
+- title: "A Combinatorial Approach to Analyzing Cross-Site Scripting (XSS) Vulnerabilities in Web Application Security Testing"
+  authors: David Kung and Yu Lei
+  link:
+    url: https://doi.org/10.1109/CSEET.2016.20
+    display: Proceedings of the 29th IEEE International Conference on Software Engineering Education and Training (CSEET '16)
+  conference: 1
+
+- title: "Evaluating the Effectiveness of BEN in Locating Different Types of Software Fault"
+  authors: Raghu N. Kacker, David R. Kuhn, Jagan Chandrasekaran, and Yu Lei
+  link:
+    url: https://doi.org/10.1109/ICSTW.2016.44
+    display: Proceedings of 2016 IEEE International Conference on Software Testing, Verification and Validation (ICST '16)
+  conference: 1
+
+- title: "Estimating t-Way Fault Profile Evolution During Testing"
+  authors: Kuhn, D. Richard, Raghu N. Kacker, and Yu Lei
+  link:
+    url: https://doi.org/10.1109/COMPSAC.2016.110
+    display: Proceedings of the 40th IEEE Annual Computer Software and Applications Conference (COMPSAC '16)
+  conference: 1
+
+- title: "A Lightweight, Static Approach to Detecting Unbounded Thread-Instantiation Loops"
+  authors: Jing Xu, Yu Lei, Richard Carver and David Kung
+  link:
+    url: https://doi.org/10.1109/ICST.2015.7102579
+    display: Proceedings of the 8th IEEE International Conference on Software Testing, Verification and Validation (ICST '15)
+  conference: 1
+
+- title: "Effective and Scalable Uncertainty Evaluation for Large-Scale Complex System Applications"
+  authors: Xie Junfei, Yan Wan, Yi Zhou, Kevin Mills, James J. Filliben, and Yu Lei
+  link:
+    url: https://doi.org/10.1109/WSC.2014.7019936
+    display: Proceedings of the 2014 IEEE Winter Simulation Conference
+  conference: 1
+
+- title: "An Improved Image File Storage Method using Data Deduplication"
+  authors: Zhou Lei, Zhaoxin Li, Yu Lei, Yanling Bi, Luokai Hu, and Wenfeng Shen
+  link:
+    url: https://doi.org/10.1109/TrustCom.2014.82
+    display: Proceedings of the 13th IEEE International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom '14)
+  conference: 1
+
+- title: "Combinatorial Test Generation for Software Product Lines using Minimum Invalid Tuples"
+  authors: Linbin Yu, Feng Duan, Yu Lei, Raghu N. Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/HASE.2014.18
+    display: Proceedings of the 15th IEEE Symposium on High-Assurance Systems Engineering (HASE '14)
+  conference: 1
+
+- title: "Fault Localization based on Failure-inducing Combinations"
+  authors: Ghandehari, Laleh Sh, Yu Lei, David Kung, Raghu Kacker, and Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/ISSRE.2013.6698916
+    display: Proceedings of the 24th IEEE International Symposium on Software Reliability Engineering (ISSRE '13)
+  conference: 1
+
+- title: "A Dynamic Approach to Isolating Erroneous Event Patterns in Concurrent Program Execution"
+  authors: Xu Jing, Yu Lei, Richard Carver, and David Kung
+  link:
+    url: https://doi.org/10.1007/978-3-642-39955-8_9
+    display: Proceedings of 2013 International Conference on Multicore Software Engineering, Performance, and Tools (MUSEPAT '13)
+  conference: 1
+
+- title: "A Modular Approach to Model-based Testing of Concurrent Programs"
+  authors: Richard Carver, and Yu Lei
+  link:
+    url: https://doi.org/10.1007/978-3-642-39955-8_8
+    display: Proceedings of 2013 International Conference on Multicore Software Engineering, Performance, and Tools (MUSEPAT '13)
+  conference: 1
+
+- title: "Social Trust Prediction using Rank-K Matrix Recovery"
+  authors: Jin Huang, Feiping Nie, Heng Huang, Yu Lei, and Chris Ding
+  link:
+    url: https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=dd75717d33dda619a394240dfe41e5becb4f79c3
+    display: Proceedings of the 24th IEEE International Symposium on Software Reliability Engineering (ISSRE '13)
+  conference: 1
+
+- title: "A General Conformance Testing Framework for IEEE 11073 PHD's Communication Model"
+  authors: Yu, Linbin, Yu Lei, Raghu N. Kacker, D. Richard Kuhn, Ram D. Sriram, and Kevin Brady
+  link:
+    url: https://doi.org/10.1109/ISSRE.2013.6698916
+    display: Proceedings of the 23rd International Joint Conference on Artificial Intelligence
+  conference: 1
+
+- title: "An Efficient Algorithm for Constraint Handling in Combinatorial Test Generation"
+  authors: Yu, Linbin, Yu Lei, Mehra Nourozborazjany, Raghu N. Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/ICST.2013.35
+    display: Proceedings of the 6th IEEE International Conference on Software Testing, Verification and Validation (ICST '13)
+  conference: 1
+
+- title: "Acts&#58; A Combinatorial Test Generation Tool"
+  authors: Yu, Linbin, Yu Lei, Raghu N. Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/ICST.2013.52
+    display: Proceedings of the 6th IEEE International Conference on Software Testing, Verification and Validation (ICST '13)
+  conference: 1
+
+- title: "A Multi-objective Scheduling Strategy based on MOGA in Cloud Computing Environment"
+  authors: Lei, Zhou, Jinfeng Xiang, Zhebo Zhou, Feng Duan, and Yu Lei
+  link:
+    url: https://doi.org/10.1109/CCIS.2012.6664433
+    display: Proceedings of the 2nd IEEE International Conference on Cloud Computing and Intelligence Systems (CCIS '12)
+  conference: 1
+
+- title: "Improved Delta Debugging based on Combinatorial Testing"
+  authors: Li, Jie, Changhai Nie, and Yu Lei
+  link:
+    url: https://doi.org/10.1109/QSIC.2012.28
+    display: Proceedings of the 12th International Conference on Quality Software (QSIC '12)
+  conference: 1
+
+- title: "Efficient ALgorithms for T-Way Test Sequence Generation"
+  authors: Yu, Linbin, Yu Lei, Raghu N. Kacker, D. Richard Kuhn, and James Lawrence
+  link:
+    url: https://doi.org/10.1109/ICECCS20050.2012.6299217
+    display: Proceedings of the 17th International Conference on Enigneering of Complex Computer Systems (ICECCS '12)
+  conference: 1
+
+- title: "Identifying Failure-inducing Combinations in a Combinatorial Test Set"
+  authors: Ghandehari, Laleh Shikh Gholamhossein, Yu Lei, Tao Xie, Richard Kuhn, and Raghu Kacker
+  link:
+    url: https://doi.org/10.1109/ICST.2012.117
+    display: Proceedings of the 5th International Conference on Software Testing, Verification and Validation (ICST '12)
+  conference: 1
+
+- title: "Isolating Failure-Inducing Combinations in Combinatorial Testing Using Test Augmentation and Classification"
+  authors: Kiran Shakya, Tao Xie, Nuo Li, Yu Lei, Raghu Kacker, and Richard Kuhn
+  link:
+    url: https://doi.org/10.1109/ICST.2012.149
+    display: Proceedings of the 5th International Conference on Software Testing, Verification and Validation (ICST '12)
+  conference: 1
+
+- title: "A Combinatorial Approach to Detecting Buffer Overflow Vulnerabilities"
+  authors:  Wang, Wenhua, Yu Lei, Donggang Liu, David Kung, Christoph Csallner, Dazhi Zhang, Raghu Kacker, and Rick Kuhn
+  link:
+    url: https://doi.org/10.1109/DSN.2011.5958225
+    display: Proceedings of the 41st IEEE/IFIP International Conference on Dependable Systems & Networks (DSN '11)
+  conference: 1
+
+- title: "A Stateful Approach to Testing Monitors in Multithreaded Programs"
+  authors:  Carver, Richard H., and Jeff Lei
+  link:
+    url: https://doi.org/10.1109/HASE.2010.14
+    display: Proceedings of the 12th IEEE International Conference on High Assurance Systems Engineering (HASE '10)
+  conference: 1
+
+- title: "DCMTs: Supporting Dynamically Created Migratory Threads"
+  authors:  Yueting Zhu, Wu Zhang, Hai Jiang, Yu Lei and Junjie Peng
+  link:
+    url: https://doi.org/10.1109/CSE.2010.63
+    display: Proceedings of the 13th IEEE International Conference on Computational Science and Engineering (CSE '10)
+  conference: 1
+
+- title: "Random vs. Combinatorial Methods for Discrete Event Simulation of a Grid Computer Network"
+  authors:  Richard Kuhn, Raghu Kacker and Yu Lei
+  link:
+    url: https://ntrs.nasa.gov/citations/20100012880
+    display: Selected Papers Presented at MODSIM World 2009 Conference and Expo
+  conference: 1
+
+- title: "Testing C Programs for Vulnerability Using Trace-Based Symbolic Execution and Satisfiability Analysis"
+  authors:  Zhang, Dazhi, Donggang Liu, Wenhua Wang, Jeff Lei, David Kung, and Christoph Csallner
+  link:
+    url: https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=0238f59e1fa2b03e3fa57acdec339f38db17cb71
+    display: Proceedings of the 40th IEEE/IFIP International Conference on Dependable Systems & Networks (DSN '10)
+  conference: 1
+
+- title: "A Combinatorial Approach to Building Navigation Graphs for Dynamic Web Applications"
+  authors:  Wang, Wenhua, Yu Lei, Sreedevi Sampath, Raghu Kacker, Rick Kuhn, and James Lawrence
+  link:
+    url: https://doi.org/10.1109/ICSM.2009.5306321
+    display: Proceedings of the 2009 IEEE International Conference on Software Maintenance (ICSM '09)
+  conference: 1
+
+- title: "An Interaction-based Test Sequence Generation Approach for Testing Web Applications"
+  authors:  Wang, Wenhua, Sreedevi Sampath, Yu Lei, and Raghu Kacker
+  link:
+    url: https://doi.org/10.1109/HASE.2008.53
+    display: Proceedings of the 11th IEEE International Conference on High Assurance Systems Engineering (HASE '08)
+  conference: 1
+
+- title: "Towards And Evaluation Framework for Assistive Environments"
+  authors:  Metsis, Vangelis, Zhengyi Le, Yu Lei, and Fillia Makedon
+  link:
+    url: https://doi.org/10.1145/1389586.1389601
+    display: Proceedings of the 1st ACM International Conference on Pervasive Technologies Related to Assistive Environments (PETRA '08)
+  conference: 1
+
+- title: "IPOG: A General Strategy for T-Way Software Testing"
+  authors:  Lei, Yu, Raghu Kacker, D. Richard Kuhn, Vadim Okun, and James Lawrence
+  link:
+    url: https://doi.org/10.1109/ECBS.2007.47
+    display: Proceedings of the 14th Annual IEEE International Conference and Workshops on the Engineering of Computer-based Systems (ECBS '07)
+  conference: 1
+
+- title: "A State Exploration-based Approach to Testing Java Monitors"
+  authors:  Lei, Yu, Richard Carver, David Kung, Vidur Gupta, and Monica Hernandez
+  link:
+    url: https://doi.org/10.1109/ISSRE.2006.9
+    display: Proceedings of the 17th IEEE International Symposium on Software Reliability Engineering (ISSRE '06)
+  conference: 1
+
+- title: "A New Algorithm for Reachability Testing of Concurrent Programs"
+  authors:  Lei, Yu, and Richard Carver
+  link:
+    url: https://doi.org/10.1109/ISSRE.2005.5
+    display: Proceedings of the 16th IEEE International Symposium on Software Reliability Engineering (ISSRE '05)
+  conference: 1
+
+- title: "An Approach to Unfolding Asynchronous Communication Protocols"
+  authors:  Lei, Yu, and S. Purushothaman Iyer
+  link:
+    url: https://doi.org/10.1007/11526841_23
+    display: Proceedings of the 2005 International Symposium on Formal Methods (FM '05)
+  conference: 1
+
+- title: "A Blocking-based Approach to Protocol Validation"
+  authors:  Lei, Yu, David Kung, and Qizhi Ye
+  link:
+    url: https://doi.org/10.1109/COMPSAC.2005.15
+    display: Proceedings of the 29th Annual International Computer Software and Applications Conference (COMPSAC'05)
+  conference: 1
+
+- title: "A Novel Framework for Non-deterministic Testing of Message-passing Programs"
+  authors:  Lei, Yu, and Eric Wong
+  link:
+    url: https://doi.org/10.1109/HASE.2005.2
+    display: Proceedings of the 9th IEEE International Symposium on High-Assurance Systems Engineering (HASE'05)
+  conference: 1
+
+- title: "Effective Generation of Test Sequences for Structural Testing of Concurrent Programs"
+  authors:  Wong, W. Eric, Yu Lei, and Xiao Ma
+  link:
+    url: https://doi.org/10.1109/ICECCS.2005.37
+    display: Proceedings of the 10th IEEE international conference on engineering of complex computer systems (ICECCS'05)
+  conference: 1
+
+- title: "An Evaluation of E-Business Metamodels"
+  authors:  Lei, Yu, and Munindar P. Singh
+  link:
+    url: 
+    display: SEKE 2005
+  conference: 1
+
+- title: "A General Model for Reachability Testing of Concurrent Programs"
+  authors:  Carver, Richard H., and Yu Lei
+  link:
+    url: https://doi.org/10.1007/978-3-540-30482-1_14
+    display: Proceedings of the 2004 International Conference on Formal Engineering Methods (FM'04)
+  conference: 1
+
+- title: "Reachability Testing of Semaphore-based Programs"
+  authors:  Lei, Yu, and Richard Carver
+  link:
+    url: https://doi.org/10.1109/CMPSAC.2004.1342849
+    display: Proceedings of the 28th Annual International Computer Software and Applications Conference (CMPSAC '04)
+  conference: 1
+
+- title: "Efficient Reachability Testing of Asynchronous Message-passing Programs"
+  authors:  Lei, Yu, and Kuo-Chung Tai
+  link:
+    url: https://doi.org/10.1109/ICECCS.2002.1181496
+    display: Proceedings of the 8th IEEE International Conference on Engineering of Complex Computer Systems (ICECCS '02)
+  conference: 1
+
+
+# Journal
+- title: "Security Analysis of Zigbee Protocol Implementation via Device-agnostic Fuzzing"
+  authors: Mengfei Ren, Xiaolei Ren, Huadong Feng, Jiang Ming, Yu Lei
+  link:
+    url: https://doi.org/10.1145/3551894
+    display: ACM Digital Threats&#58; Research and Practice (DTRAP '22)
+  journal: 1
+
+- title: "Measurement of the Adequacy of A Test Suite with Respect to the Modeled Test Space"
+  authors: R. Kacker, D. R. Kuhn, Y. Lei and D. Simos
+  link:
+    url: https://www.researchgate.net/profile/D-Kuhn/publication/354154375_Measurement_of_the_adequacy_of_a_test_suite_with_respect_to_the_modeled_test_space/links/61fab0d34393577abe087ca5/Measurement-of-the-adequacy-of-a-test-suite-with-respect-to-the-modeled-test-space.pdf
+    display: IEEE Software (2021)
+  journal: 1
+
+- title: "A Theory of Pending Schemas in Combinatorial Testing"
+  authors: X. Niu, H. Wu, N. Changhai, Y. Lei and X. Wang
+  link:
+    url: https://doi.org/10.1109/TSE.2021.3113920
+    display: IEEE Transactions on Software Engineering (TSE '21)
+  journal: 1
+
+- title: "Combinatorial Test Generation for Multiple Input Models with Shared Parameters"
+  authors: C. Rao, N. Li, Y. Lei, J. Guo, Y. Zhang, R. N. Kacker, D. R. Kuhn
+  link:
+    url: https://doi.org/10.1109/TSE.2021.3065950
+    display: IEEE Transactions on Software Engineering (TSE '21)
+  journal: 1
+
+- title: "Factorials Experiments, Covering Arrays, and Combinatorial Testing"
+  authors: Kacker, R.N., Kuhn, D.R., Lei, Y
+  link:
+    url: https://doi.org/10.1007/s11786-021-00502-7
+    display: Mathematics in Computer Science volume 15 (2021)
+  journal: 1
+
+- title: "Input Space Coverage Matters"
+  authors: R. Kuhn, R. Kacker, Y. Lei, D. Simos
+  link:
+    url: https://doi.org/10.1109/MC.2019.2951980
+    display: Computer 53.1 (2020)&#58 37-44. (2020)
+  journal: 1
+
+- title: "Testing TLS using Planning-based Combinatorial Methods and Execution Framework"
+  authors: Simos, Dimitris E., Josip Bozic, Bernhard Garn, Manuel Leithner, Feng Duan, Kristoffer Kleine, Yu Lei, and Franz Wotawa
+  link:
+    url: https://doi.org/10.1007/s11219-018-9412-z
+    display: Software Quality Journal 27 (2019)&#58 703-729 (2019)
+  journal: 1
+
+- title: "M-PCM-OFFD: An Effective Output Statistics Estimation Method for Systems of High Dimensional Uncertainties Subject to Low-Order Parameter Interactions, Mathematics and Computers in Simulation"
+  authors: J. Xie, Y. Wan, K. Mills, J. J. Filliben, Y. Lei, Z. Lin
+  link:
+    url: https://doi.org/10.1016/j.matcom.2018.10.010
+    display: Mathematics and Computers in Simulation Volume 159 (2019)
+  journal: 1
+
+- title: "A Combinatorial Testing-based Approach to Fault Localization"
+  authors: Ghandehari, Laleh Sh, Yu Lei, Raghu Kacker, Richard Kuhn, Tao Xie, and David Kung
+  link:
+    url: https://doi.org/10.1109/TSE.2018.2865935
+    display: IEEE Transactions on Software Engineering (TSE '18)
+  journal: 1
+
+- title: "Identifying Failure-causing Schemas in the Presence of Multiple Faults"
+  authors: Niu, Xintao, Changhai Nie, Jeff Y. Lei, Hareton Leung, and Xiaoyin Wang
+  link:
+    url: https://doi.org/10.1109/TSE.2018.2844259
+    display: IEEE Transactions on Software Engineering (TSE '18)
+  journal: 1
+
+- title: "An Interleaving Approach to Combinatorial Testing and Failure-inducing Interaction Identification"
+  authors: Niu, Xintao, Changhai Nie, Hareton Leung, Yu Lei, Xiaoyin Wang, Jiaxi Xu, and Yan Wang
+  link:
+    url: https://doi.org/10.1109/TSE.2018.2865772
+    display: IEEE Transactions on Software Engineering (TSE '18)
+  journal: 1
+
+- title: "Using Combinatorial Testing to Build Navigation Graphs for Dynamic Web Applications"
+  authors: Wang, Wenhua, Sreedevi Sampath, Yu Lei, Raghu Kacker, Richard Kuhn, and James Lawrence
+  link:
+    url: https://doi.org/10.1002/stvr.1599
+    display: Software Testing, Verification and Reliability 26.4 (2016)&#58 318-346
+  journal: 1
+
+- title: "Measuring and Specifying Combinatorial Coverage of Test Input Configurations"
+  authors: Kuhn, D. Richard, Raghu N. Kacker, and Yu Lei
+  link:
+    url: https://doi.org/10.1007/s11334-015-0266-2
+    display: Innovations in Systems and Software Engineering 12, 249-261 (2016)
+  journal: 1
+
+- title: "Combinatorial Coverage as An Aspect of Test Quality"
+  authors: Kuhn, D. Richard, Raghu N. Kacker, and Yu Lei
+  link:
+    url: https://www.researchgate.net/profile/D-Kuhn/publication/283126064_Combinatorial_coverage_as_an_aspect_of_test_quality/links/5654689508aeafc2aabbcbe9/Combinatorial-coverage-as-an-aspect-of-test-quality.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail
+    display: CrossTalk 28.2 (2015)&#58 19-23
+  journal: 1
+
+- title: "Scalable and Efficient Workload Hotspot Detection in Virtualized Environment"
+  authors: Lei, Zhou, Bolin Hu, Jianhua Guo, Luokai Hu, Wenfeng Shen, and Yu Lei
+  link:
+    url: https://doi.org/10.1007/s10586-014-0383-y
+    display: Cluster Computing 17, 1253-1264 (2014)
+  journal: 1
+
+- title: "A Distributed Framework for Demand-driven Software Vulnerability Detection"
+  authors: Zhang, Dazhi, Donggang Liu, Christoph Csallner, David Kung, and Yu Lei
+  link:
+    url: https://doi.org/10.1016/j.jss.2013.08.033
+    display: Journal of Systems and Software Volume 87, 60-73 (2014)
+  journal: 1
+
+- title: "Social Trust Prediction using Heterogeneous Networks"
+  authors: Huang, Jin, Feiping Nie, Heng Huang, Yi-Cheng Tu, and Yu Lei
+  link:
+    url: https://doi.org/10.1145/2541268.2541270
+    display: ACM Transactions on Knowledge Discovery from Data, Volume 7, Issue 4, Artical No,17 (2014)
+  journal: 1
+
+- title: "Combinatorial Testing for Software: An Adaptation of Design of Experiments"
+  authors: Kacker, Raghu N., D. Richard Kuhn, Yu Lei, and James F. Lawrence
+  link:
+    url: https://doi.org/10.1016/j.measurement.2013.02.021
+    display: Measurement, Volume 46, Issue 9 3745-3752 (2013)
+  journal: 1
+
+- title: "SimFuzz: Test Case Similarity Directed Deep Fuzzing"
+  authors: Zhang, Dazhi, Donggang Liu, Yu Lei, David Kung, Christoph Csallner, Nathaniel Nystrom, and Wenhua Wang
+  link:
+    url: https://doi.org/10.1016/j.jss.2011.07.028
+    display: Journal of Systems and Software, Volume 85, Issue 1 102-111 (2012)
+  journal: 1
+
+- title: "A Survey of Binary Covering Arrays"
+  authors: Lawrence, Jim, Raghu N. Kacker, Yu Lei, D. Richard Kuhn, and Michael Forbes
+  link:
+    url: https://doi.org/10.37236/571
+    display: The Electronic Journal of COmbinatorics, Volume 18, Issue 1 (2011)
+  journal: 1
+
+- title: "Distributed Reachability Testing of Concurrent Programs"
+  authors: Carver, Richard H., and Yu Lei
+  link:
+    url: https://doi.org/10.1002/cpe.1573
+    display: Concurrency and Computation&#58 Practice and Experience (2010)
+  journal: 1
+
+- title: "A Class Library for Implementing, Testing, and Debugging Concurrent Programs"
+  authors: Carver, Richard H., and Yu Lei
+  link:
+    url: https://doi.org/10.1007/s10009-009-0102-9
+    display: International Journal on Software Tools for Technology Transfer 12, 69-88 (2010)
+  journal: 1
+
+- title: "Combinatorial Software Testing"
+  authors: Kuhn, Rick, Raghu Kacker, Yu Lei, and Justin Hunter
+  link:
+    url: https://doi.org/10.1109/MC.2009.253
+    display: Journal of Computer, Volume 42, Issue 8 (MC '09)
+  journal: 1
+
+- title: "Refining the In-parameter-order Strategy for Constructing Covering Arrays"
+  authors: Forbes, Michael, Jim Lawrence, Yu Lei, Raghu N. Kacker, and D. Richard Kuhn
+  link:
+    url: https://doi.org/10.6028%2Fjres.113.022
+    display: Journal of Research of the National Institute of Standards and Technology (2008)
+  journal: 1
+
+- title: "Reachability Graph-based Test Sequence Generation fro Concurrent Programs"
+  authors: Wong, W. Eric, and Yu Lei
+  link:
+    url: https://doi.org/10.1142/S0218194008003878
+    display: International Journal of Software Engineering and Knowledge Engineering, Volume 18, No. 06, 803-822 (2008)
+  journal: 1
+
+- title: "IPOG/IPOG-D: Efficient Test Generation for Multi-way Combinatorial Testing"
+  authors: Lei, Yu, Raghu Kacker, D. Richard Kuhn, Vadim Okun, and James Lawrence
+  link:
+    url: https://doi.org/10.1002/stvr.381
+    display: Journal of Software&#58 Testing, Verification and Reliability, Volume 18, Issue 3, 125-148 (2008)
+  journal: 1
+
+- title: "Automated Combinatorial Test Methods: Beyond Pairwise Testing"
+  authors: Kuhn, D. Richard, Raghu Kacker, and Yu Lei
+  link:
+    url: https://tsapps.nist.gov/publication/get_pdf.cfm?pub_id=152162
+    display: Crosstalk, Journal of Defense Software Engineering (2008)
+  journal: 1
+
+- title: "Practical Combinatorial Testing: Beyond Pairwise"
+  authors: Kuhn, Rick, Yu Lei, and Raghu Kacker
+  link:
+    url: https://doi.org/10.1109/MITP.2008.54
+    display: Journal of IT Professional, Volume 10, Issue 3, 19-23 (2008)
+  journal: 1
+
+- title: "A Combinatorial Testing Strategy for Concurrent Programs"
+  authors: Lei, Yu, Richard H. Carver, Raghu Kacker, and David Kung
+  link:
+    url: https://doi.org/10.1002/stvr.369
+    display: Journal of Software&#58 Testing, Verification and Reliability, Volume 17, Issue 4, 207-225 (2007)
+  journal: 1
+
+- title: "Reachability Testing of Concurrent Programs"
+  authors: Lei, Yu, and Richard H. Carver
+  link:
+    url: https://doi.org/10.1109/TSE.2006.56
+    display: IEEE Transactions on Software Engineering (TSE '06)
+  journal: 1
+
+- title: "A Blocking-based Approach to Protocol Validation"
+  authors: Ye, Qizhi, Yu Lei, and David Kung
+  link:
+    url: https://doi.org/10.1093/comjnl/bxl017
+    display: The Computer Journal, Volume 49, Issue 5, 541-553 (2006)
+  journal: 1
+
+
+# Book Chapter
+- title: "2 Effective Uncertainty Evaluation in Large-Scale Systems"
+  authors: Xie Junfei, Yan Wan, Yi Zhou, Kevin Mills, James J. Filliben, and Yu Lei
+  link:
+    url: https://scholar.google.com/scholar?q=Effective+Uncertainty+Evaluation+in+Large-Scale+Systems&hl=en&as_sdt=0&as_vis=1&oi=scholart
+    display: Principles of Cyber-Physical Systems&#58; An Interdisciplinary Approach
+  book: 1

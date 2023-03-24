@@ -1,0 +1,17 @@
+#- name:
+#  photo: rock.jpg
+#  status:
+#  number_info:
+#  info1:
+#  info2:
+#  info3:
+#  info4:
+
+
+- name: Ruben Martinez
+  photo: bio-photo.jpg
+  status: Master student
+  number_info: 1
+  info1: Focuses on Big Data and Software Engineering
+
+
