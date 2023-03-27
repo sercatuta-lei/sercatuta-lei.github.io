@@ -8,17 +8,17 @@ permalink: /projects/zigbee_fuzzing/
 
 # Fuzz Testing of Zigbee Protocol Implementation #
 
-** Lead by Mengfei Ren **
+**Lead by Mengfei Ren**
 
 ## Description ##
 
-<figure class="fourth">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/projpic/mengfei/zigbee_detail.png" style="width: 100%; margin: 10px">
-</figure>
+![]({{ site.url }}{{ site.baseurl }}/images/projpic/mengfei/zigbee_detail.png){: style="width: 100%; float: center; margin: 10px"}
 
 In recent years, we have witnessed the increasing of IoT devices deployed in various areas, e.g., home automation, healthcare, industry and smart vehicle. Zigbee is one of global most popular IoT wireless standards used by million devices and customers. Particularly, Zigbee is now on Mars as well! In March 2021, it was used in NASA Mars mission as the communication radio between flying drone and Perseverance rover.
 
-![]({{ site.url }}{{ site.baseurl }}/images/projpic/zigbee.png){: style="width: 300px; float: left; margin: 0px 10px"} **Why we need Zigbee?** Zigbee is designed as low-power, low-cost, and low-speed, for the communication between resource-constraint embedded devices. However, when both simplicity and low cost are goals, security often suffers since productivity has high priority and security service may have limited resources. Recently, server vulnerabilities in Zigbee protocol implementations have compromised IoT dvices from different manufactuers. It becomes imperative to perform security testing on Zigbee protocol implementations. <b>This research project amis to apply state-of-art software testing techniques, such as fuzzing and data flow analysis, for detecting security vulnerability in Zigbee protocol implementations.</b>
+![]({{ site.url }}{{ site.baseurl }}/images/projpic/zigbee.png){: style="width: 300px; float: left; margin: 0px 10px"} **Why we need Zigbee?** Though WiFi and Bluetooth have been worked very well for many years, they are not ideal communication solutions for resource-constraint IoT devices. Suppose we have many small sensors deployed in a remote area to monitor equipments' status. Of course, we don't want to frequently replace their batteries. Thus, their daily communication should not spend too much power and resource. However, WiFi is complicated and its transceivers are usually expensive. Bluetooth devices also use too much power and too complex.
+
+Therefore, Zigbee is designed as a low-power, low-cost, and low-speed wireless protocol, for the communication between resource-constraint embedded devices. However, when both simplicity and low cost are goals, security often suffers since productivity has high priority and security service may have limited resources. Recently, server vulnerabilities in Zigbee protocol implementations have compromised IoT dvices from different manufactuers. It becomes imperative to perform security testing on Zigbee protocol implementations. <b>This research project amis to apply state-of-art software testing techniques, such as fuzzing and data flow analysis, for detecting security vulnerability in Zigbee protocol implementations.</b>
 
 
 ## Publications ##
@@ -31,7 +31,7 @@ In recent years, we have witnessed the increasing of IoT devices deployed in var
   <li><a href="https://dl.acm.org/doi/10.1145/3448300.3468296" target="_blank">Z-Fuzzer: Device-agnostic Fuzzing of Zigbee Protocol Implementation</a>
   <br>by <b>Mengfei Ren</b>, Xiaolei Ren, Huadong Feng, Jiang Ming, Yu Lei 
   <br>In <i>Proceedings of the 14th ACM Conference on Security and Privacy in Wireless and Mobile Networks</i>. Abu Dhabi, UAE, 2021
-  <br><span style="color: green;"> <b>ACM Badges: 
+  <br><span style="color: green;"> <b>ACM Artifact Evaluation Badges: 
     <img style="width:40px;margin:1px 2px 1px 5px;" title="Artifacts Evaluated & Functional" src="{{ site.url }}{{ site.baseurl }}/images/projpic/mengfei/artifacts_evaluated_functional_dl.jpg" alt="Functional">Functional 
     <img style="width:40px;margin:1px 2px 1px 5px;" title="Artifacts Available" src="{{ site.url }}{{ site.baseurl }}/images/projpic/mengfei/artifacts_available_dl.jpg" alt="Available">Available 
     <img style="width:40px;margin:1px 2px 1px 5px;" title="Artifacts Reproduced" src="{{ site.url }}{{ site.baseurl }}/images/projpic/mengfei/results_reproduced_dl.jpg" alt="Reproduced">Reproduced
@@ -44,7 +44,7 @@ In recent years, we have witnessed the increasing of IoT devices deployed in var
   </li>
 
   <li>Intelligent Mutation Strategy of Zigbee Protocol Fuzzing via Constraint-Field Dependency Inference
-  <br>by <b>Mengfei Ren</b>, Haotian ZHang, Xiaolei Ren, Jiang Ming, Yu Lei 
+  <br>by <b>Mengfei Ren</b>, Haotian ZHang, Xiaolei Ren, Jiang Ming, Yu Lei (under review)
   </li>
 </ul>
 
