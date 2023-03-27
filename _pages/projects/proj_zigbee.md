@@ -10,28 +10,45 @@ permalink: /projects/zigbee_fuzzing/
 
 ** Lead by Mengfei Ren **
 
-<!-- **(NSF Award IIS-2014475)** -->
-
 ## Description ##
 
-<!-- In the United States, poor diet contributes to more than half of premature deaths related to cardiovascular and metabolic disease, including type 2 diabetes (T2D). At present, the number of adults developing T2D continues to rise, with over 30 million Americans living with T2D. Another 80 million are currently at-risk of progressing from pre-diabetes to T2D. Improving food choices remains a cornerstone of modern diabetes care and can decrease the risk of progression to T2D. However, at present, achieving timely and appropriate lifestyle change in adults with or at-risk of T2D is challenging. Conventional methods to record meal choice and track nutritional composition can be inaccurate (e.g., estimating protein content of a meal) and burdensome (i.e., individuals must manually enter information into a food diary). Interestingly, the blood glucose profile after a meal depends not only on the carbohydrate content but also on the amount of fat, protein, and fiber; as an example, adding fat and protein to carbohydrates generally leads to smaller increases and slower decreases in achieved glucose levels, lowering risk. This suggests that the shape of the glucose response to a meal may have the potential to indicate meal content. A unique opportunity to exploit this information is to use a continuous glucose monitor (CGM). A CGM is a small sensor that attaches to the skin and measures glucose continuously every 5-15 minutes, making it possible to automatically record the glucose responses to meals. To this aim, the investigators will conduct ambulatory studies in which people (healthy, with T2D, or at-risk of T2D) will consume a variety of conventional meals in free-living conditions while wearing a CGM and a smartwatch to assess physical activity. With data from these devices, the investigators will develop machine-learning algorithms that can predict the content of a meal. This project would be helpful to clinicians to provide new information to support positive behavior change to reduce the risk of or progression from pre-diabetes to T2D, and would make it easier for patients to passively and accurately track nutritional components of their diet, potentially leading to healthier diets and improved health.
-
 <figure class="fourth">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/projpic/imm.png" style="width: 70%; float: center; margin: 10px">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/projpic/mengfei/zigbee_detail.png" style="width: 70%; float: center; margin: 10px">
 </figure>
-![]({{ site.url }}{{ site.baseurl }}/images/projpic/imm.png){: style="width: 50%"} -->
+
+In recent years, we have witnessed the increasing of IoT devices deployed in various areas, e.g., home automation, healthcare, industry and smart vehicle. Zigbee is one of global most popular IoT wireless standards used by million devices and customers. Particularly, Zigbee is now on Mars as well! In March 2021, it was used in NASA Mars mission as the communication radio between flying drone and Perseverance rover.
+
+![]({{ site.url }}{{ site.baseurl }}/images/projpic/zigbee.png){: style="width: 250px; float: left; margin: 0px 10px"} Why we need Zigbee? Zigbee is designed as low-power, low-cost, and low-speed, for the communication between resource-constraint embedded devices. However, when both simplicity and low cost are goals, security often suffers since productivity has high priority and security service may have limited resources. Recently, server vulnerabilities in Zigbee protocol implementations have compromised IoT dvices from different manufactuers. <b>It becomes imperative to perform security testing on Zigbee protocol implementations.</b>
+
+This research project amis to apply state-of-art software testing techniques, such as fuzzing and data flow analysis, for detecting security vulnerability in Zigbee protocol implementations.
 
 
 ## Publications ##
-<!-- using Chicago reference style from google scholar -->
-<!-- Paromitaa, Projna, Theodora Chaspari, Seyedhooman Sajjadia, Anurag Dasa, Bobak J. Mortazavia, and Ricardo Gutierrez-Osunaa. "Personalized Meal Classification Using Continuous Glucose Monitors." (2021). [Link to paper](http://ceur-ws.org/Vol-2903/IUI21WS-HEALTHI-10.pdf)
+<ul>
+  <li><a href="https://dl.acm.org/doi/abs/10.1145/3551894" target="_blank">Security Analysis of Zigbee Protocol Implementation via Device-agnostic Fuzzing</a>
+  <br>by <b>Mengfei Ren</b>, Xiaolei Ren, Huadong Feng, Jiang Ming, Yu Lei 
+  <br><i><a href="https://dl.acm.org/journal/dtrap/cfp" target="_blank">ACM Digital Threats: Research and Practice (DTRAP)</a></i>
+  </li>
 
-Das, Anurag, Seyedhooman Sajjadi, Bobak Mortazavi, Theodora Chaspari, Projna Paromita, Laura Ruebush, Nicolaas Deutz, and Ricardo Gutierrez-Osuna. "A Sparse Coding Approach to Automatic Diet Monitoring with Continuous Glucose Monitors." In ICASSP 2021-2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 2900-2904. IEEE, 2021. [Link to paper](https://ieeexplore.ieee.org/abstract/document/9414452)
+  <li><a href="https://dl.acm.org/doi/10.1145/3448300.3468296" target="_blank">Z-Fuzzer: Device-agnostic Fuzzing of Zigbee Protocol Implementation</a>
+  <br>by <b>Mengfei Ren</b>, Xiaolei Ren, Huadong Feng, Jiang Ming, Yu Lei 
+  <br>In <i>Proceedings of the 14th ACM Conference on Security and Privacy in Wireless and Mobile Networks</i>. Abu Dhabi, UAE, 2021
+  <br><span style="color: green;"><i class="fa-solid fa-star fa-sm"></i> <b>ACM Badges: 
+    <img class="badge" title="Artifacts Evaluated & Functional" src="artifacts_evaluated_functional_dl.jpg" alt="Functional">Functional 
+    <img class="badge"  title="Artifacts Available" src="artifacts_available_dl.jpg" alt="Available">Available 
+    <img class="badge"  title="Artifacts Reproduced" src="results_reproduced_dl.jpg" alt="Reproduced">Reproduced
+  </b></span>
+  <br><span style="color: indianred;"><i class="fa-solid fa-bug fa-sm"></i> <b>Zero-day Vulnerabilities Detected:</b>
+  <br>
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27890" target="_blank">CVE-2020-27890</a>, 
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27891" target="_blank">CVE-2020-27891</a>, 
+  <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27892" target="_blank">CVE-2020-27892</a>
+  </span>
+  </li>
 
-Sajjadi, Seyedhooman, Anurag Das, Ricardo Gutierrez-Osuna, Theodora Chaspari, Projna Paromita, Laura E. Ruebush, Nicolaas E. Deutz, and Bobak J. Mortazavi. "Towards The Development of Subject-Independent Inverse Metabolic Models." In ICASSP 2021-2021 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), pp. 3970-3974. IEEE, 2021. [Link to paper](https://ieeexplore.ieee.org/abstract/document/9413829)
-
-<figure class="fourth">
-  <img src="{{ site.url }}{{ site.baseurl }}/images/logopic/Logo_NSF.png" style="width: 150px">
-</figure> -->
+  <li>Intelligent Mutation Strategy of Zigbee Protocol Fuzzing <br>via Constraint-Field Dependency Inference
+  <br>by <b>Mengfei Ren</b>, Haotian ZHang, Xiaolei Ren, Jiang Ming, Yu Lei 
+  </li>
+</ul>
 
 **[Back to Project Page]({{ site.url }}{{ site.baseurl }}/projects/)**
