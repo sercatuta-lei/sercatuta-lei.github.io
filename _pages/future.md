@@ -26,29 +26,30 @@ If you are interested in working with us as a PhD student, please send me an [em
 ### Master Students at UT Arlington
 If you are a Master student at UT Arlington looking for a Master thesis project, contact me per email or stop by my office.
 
+<br />
+
 ## Other References
 
 ### General Information for Perspective Students
-- [Software Engineering: A Personal Reflection](https://ylei.utasites.cloud/static/PDFs//se.reflections.pdf)
-- [Future of Software Engineering Research](https://ylei.utasites.cloud/static/PDFs//FOSER-December-2011.pdf)
+- [Software Engineering: A Personal Reflection]({{ site.base }}/{{ site.url }}/downloads/se.reflections.pdf)
+- [Future of Software Engineering Research]({{ site.base }}/{{ site.url }}/downloads/FOSER-December-2011.pdf)
 - [Ten Reasons to be a Research Software Engineer](https://www.software.ac.uk/blog/2013-08-23-ten-reasons-be-research-software-engineer)
-- [How to Make PhD in Software Engineering](https://ylei.utasites.cloud/static/PDFs//HowToMakePhD.pdf)
-- [What Makes Good Research in Software Engineering?](https://ylei.utasites.cloud/static/PDFs//shaw-fin-etaps.pdf)
-- [Writing Good Software Engineering Research Papers](https://ylei.utasites.cloud/static/PDFs//shaw-icse03.pdf)
-- [Research in Software Engineering: an Analysis of the Literature](https://ylei.utasites.cloud/static/PDFs//ResearchInSE.pdf)
-- [Semester Kick-off Meeting Powerpoints](https://ylei.utasites.cloud/static/PDFs//lab.kickoff.spring17.pdf)
+- [How to Make PhD in Software Engineering]({{ site.base }}/{{ site.url }}/downloads/HowToMakePhD.pdf)
+- [What Makes Good Research in Software Engineering?]({{ site.base }}/{{ site.url }}/downloads/shaw-fin-etaps.pdf)
+- [Writing Good Software Engineering Research Papers]({{ site.base }}/{{ site.url }}/downloads/shaw-icse03.pdf)
+- [Research in Software Engineering: an Analysis of the Literature]({{ site.base }}/{{ site.url }}/downloads/ResearchInSE.pdf)
+- [Semester Kick-off Meeting Powerpoints]({{ site.base }}/{{ site.url }}/downloads/lab.kickoff.spring17.pdf)
 
 ### Technical Paper Writing
-- [Writing Systems and Networking Articles](https://ylei.utasites.cloud/static/PDFs//Writing-Systems-and-Networking-Articles.pdf)
+- [Writing Systems and Networking Articles]({{ site.base }}/{{ site.url }}/downloads/Writing-Systems-and-Networking-Articles.pdf)
 - [Writing a Technical Paper](https://homes.cs.washington.edu/~mernst/advice/write-technical-paper.html)
-- [Helpful Hints for Technical Paper Writing](https://ylei.utasites.cloud/static/PDFs//paper-writing.pdf)
-- [A Guide for Writing a Technical Research Paper](https://ylei.utasites.cloud/static/PDFs//TechPaperHowTo.pdf)
-- [Hints on Writing Technical Papers and Making Presentations](https://ylei.utasites.cloud/static/PDFs//HintsOnWritingTechnicalPapers.pdf)
-- [How to Write a Technical Paper: Structure and Style of the Epitome of your Research](https://ylei.utasites.cloud/static/PDFs//how-to-write-a-technical-research-paper.pdf)
-- [Writing Research Papers](https://ylei.utasites.cloud/static/PDFs//writing-technical-papers.pdf)
-- [Some Hints to Improve Writing of Technical Papers](https://ylei.utasites.cloud/static/PDFs//writing-hints.pdf)
+- [Helpful Hints for Technical Paper Writing]({{ site.base }}/{{ site.url }}/downloads/paper-writing.pdf)
+- [A Guide for Writing a Technical Research Paper]({{ site.base }}/{{ site.url }}/downloads/TechPaperHowTo.pdf)
+- [Hints on Writing Technical Papers and Making Presentations]({{ site.base }}/{{ site.url }}/downloads/HintsOnWritingTechnicalPapers.pdf)
+- [How to Write a Technical Paper: Structure and Style of the Epitome of your Research]({{ site.base }}/{{ site.url }}/downloads/how-to-write-a-technical-research-paper.pdf)
+- [Writing Research Papers]({{ site.base }}/{{ site.url }}/downloads/writing-technical-papers.pdf)
+- [Some Hints to Improve Writing of Technical Papers]({{ site.base }}/{{ site.url }}/downloads/writing-hints.pdf)
 
 ### Helpful Links
-- [Design: The Key to Writing (and Advising) a One-Draft Ph.D Dissertation](http://www-users.cs.umn.edu/~carlis/one-draft.pdf)
-- [A Talk on Talking](http://www-users.cs.umn.edu/~carlis/talk-on-talking.pdf)
+... coming soon
 
