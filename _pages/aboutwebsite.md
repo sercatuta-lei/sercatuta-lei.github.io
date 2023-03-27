@@ -41,12 +41,12 @@ For the **news items**, just keep adding them in `_data/news.yml` following the 
 
 For **publications**, just keep adding them in `_data/publist.yml` following the provided template. Update the value to `1` based on the publication type so it will be shown under the proper section.
 
-For **projects**, just keep adding their summary in `_data/projects.yml` following the template. It would be better you provide an image to introduce each research project as well. If you want to include another page to present more details, put your link in `link` field.
+For **projects**, just keep adding their summary in `_data/projects.yml` following the template. It would be better you provide an image to introduce each research project as well. Place your image under `images/projpic` folder. If you want to include another page to present more details, put your link in `link` field.
 - If the link is an external link, just set the value;
 - If you want to create an internal link, here are the steps:
-	- Create a new file under `_pages/projects` folder and name it as `[your_project_name].md`.
- 	- Add your own description and layout.
- 	- For `link` field, put {{ site.url }}{{ site.baseurl }}/`[your_project_name]` as the value.
+  - Create a new file under `_pages/projects` folder and name it as `[your_project_name].md`.
+  - Add your own description and layout. If you have pictures included in the page, create a new folder under `projpic` folder to save them.
+  - For `link` field in `projects.yml`, put {{ site.url }}{{ site.baseurl }}/`[your_project_name]` as the value.
 
 For information for **future students**, just directly modify `_pages/future.md`. Some useful files are saved in `downloads` folder.
 
