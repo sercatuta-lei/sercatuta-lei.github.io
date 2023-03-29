@@ -37,12 +37,12 @@ For **team members' information**, you can update the following files with provi
 - `alumni_bsc.yml`: Alumni Bachelor students. (Currently we don't have)
 - `alumni_visitors.yml`: Previous visiting scholars.
 
-For the **news items**, just keep adding them in `_data/news.yml` following the provided template. The first 3 will be shown in `Home` page. To modify the number of news shown in Home page, modify `news.html` under folder `_includes`.
+For the **news items**, just keep adding them in `_data/news.yml` following the provided template. The first 5 will be shown in `Home` page. To modify the number of news shown in Home page, modify `news.html` under folder `_includes`.
 
 For **publications**, just keep adding them in `_data/publist.yml` following the provided template. Update the value to `1` based on the publication type so it will be shown under the proper section.
 
-For **projects**, just keep adding their summary in `_data/projects.yml` following the template. It would be better you provide an image to introduce each research project as well. Place your image under `images/projpic` folder. If you want to include another page to present more details, put your link in `link` field.
-- If the link is an external link, just set the value;
+For **projects**, just keep adding their summary in `_data/projects.yml` following the provided template. It would be better that you provide an image to introduce each research project as well. Place your image under `images/projpic` folder. If you want to include another page to present more details, put your link in `link` field.
+- If the link is an external link, just set the original value.
 - If you want to create an internal link, here are the steps:
   - Create a new file under `_pages/projects` folder and name it as `[your_project_name].md`.
   - Add your own description and layout. If you have pictures included in the page, create a new folder under `projpic` folder to save them.
