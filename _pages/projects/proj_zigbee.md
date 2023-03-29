@@ -27,7 +27,7 @@ In recent years, we have witnessed the increasing of IoT devices deployed in var
 <ul>
   <li><a href="https://dl.acm.org/doi/abs/10.1145/3551894" target="_blank">Security Analysis of Zigbee Protocol Implementation via Device-agnostic Fuzzing</a>
   <br>by <b>Mengfei Ren</b>, Xiaolei Ren, Huadong Feng, Jiang Ming, Yu Lei 
-  <br><i>ACM Digital Threats: Research and PracticeVolume 4Issue 1Article No.: 9pp 1–24</a></i>
+  <br><i>ACM Digital Threats: Research and PracticeVolume 4Issue 1Article No.: 9pp 1–24</i>
   </li>
 
   <li><a href="https://dl.acm.org/doi/10.1145/3448300.3468296" target="_blank">Z-Fuzzer: Device-agnostic Fuzzing of Zigbee Protocol Implementation</a>
