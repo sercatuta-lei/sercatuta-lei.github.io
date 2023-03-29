@@ -27,11 +27,11 @@
 
 - name: Qiping Wei
   photo: qiping.jpg
-  status: PhD student, started Jan 2019
+  status: PhD student, started Jan 2020
   number_info: 3
   info1: B.S. in the School of Computer Science and Technology at the University of Science and Technology in China
   info2: M.S. of Computer Science from UT Arlington
-  info3: Focuses on symbolic execution on smart contracts. She also has an interest in Human-Computer Interaction (HCI).
+  info3: Focuses on symbolic execution of Ethereum smart contracts.
 
 - name: <a href="https://www.linkedin.com/in/fadul-sikder-0b5a8a202/">Fadul Sikder</a>
   photo: fadul.jpg
