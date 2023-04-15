@@ -25,9 +25,14 @@ In recent years, we have witnessed the increasing of IoT devices deployed in var
 
 ## Publications ##
 <ul>
+ <li>Intelligent Zigbee Protocol Fuzzing via Constraint-Field Dependency Inference
+  <br>by <b>Mengfei Ren</b>, Haotian ZHang, Xiaolei Ren, Jiang Ming, Yu Lei
+  <br>In <i>Proceedings of the 2023 European Symposium of Research in Computer Security (ESORICS '23).</i> Hague, Netherland. <i>(Just accpeted)</i>
+  </li>
+ 
   <li><a href="https://dl.acm.org/doi/abs/10.1145/3551894" target="_blank">Security Analysis of Zigbee Protocol Implementation via Device-agnostic Fuzzing</a>
   <br>by <b>Mengfei Ren</b>, Xiaolei Ren, Huadong Feng, Jiang Ming, Yu Lei 
-  <br><i>ACM Digital Threats: Research and PracticeVolume 4Issue 1Article No.: 9pp 1–24</i>
+  <br><i>ACM Digital Threats: Research and Practice, Volume 4, Issue 1, Article No.: 9pp 1–24.</i>
   </li>
 
   <li><a href="https://dl.acm.org/doi/10.1145/3448300.3468296" target="_blank">Z-Fuzzer: Device-agnostic Fuzzing of Zigbee Protocol Implementation</a>
@@ -43,10 +48,6 @@ In recent years, we have witnessed the increasing of IoT devices deployed in var
   <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27891" target="_blank">CVE-2020-27891</a>, 
   <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-27892" target="_blank">CVE-2020-27892</a>
   </span>
-  </li>
-
-  <li>Intelligent Mutation Strategy of Zigbee Protocol Fuzzing via Constraint-Field Dependency Inference
-  <br>by <b>Mengfei Ren</b>, Haotian ZHang, Xiaolei Ren, Jiang Ming, Yu Lei (under review)
   </li>
 </ul>
 
