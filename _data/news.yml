@@ -1,6 +1,15 @@
+- date: August 25, 2023
+  keyword: New Lab Member!
+  headline: Welcome Pujan Budhathoki to our lab as a Ph.D. student.
+
+- date: July 31, 2023
+  keyword: New Published Paper!
+  headline: Qiping, Fadule & Jack have their paper titled "SmartExecutor&#58; Coverage-Driven Symbolic Execution Guided by a Function Dependency Graph", being accepted by [BRAINS 2023](https://brains.dnac.org/). 
+
+
 - date: March 1, 2023
   keyword: New Lab Member!
-  headline: Welcome Arjun Dahal to our lab as a PhD student.
+  headline: Welcome Arjun Dahal to our lab as a Ph.D. student.
 
 - date: December 20, 2022
   keyword: New Published Paper!
@@ -16,7 +25,7 @@
 
 - date: April 22, 2022
   keyword: Thesis Defense!
-  headline: Ankita has successfully defended her Master thesis.
+  headline: Ankita has successfully defended her Master's thesis.
 
 - date: November 9, 2021
   keyword: New NIST Grant!
@@ -28,7 +37,7 @@
 
 - date: May 24, 2021
   keyword: Congratulation!
-  headline: Xiaolei Ren, Dr. Jiang Ming and Dr. Jeff Lei won the PLDI 2021 Distinguished Paper Award for their paper <a href='https://pldi21.sigplan.org/track/pldi-2021-papers'>Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference&#58; An Empirical Study</a>. PLDI is the flagship conference in the field of programming languages and programming systems research.
+  headline: Xiaolei Ren, Dr. Jiang Ming, and Dr. Jeff Lei won the PLDI 2021 Distinguished Paper Award for their paper <a href='https://pldi21.sigplan.org/track/pldi-2021-papers'>Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference&#58; An Empirical Study</a>. PLDI is the flagship conference in the field of programming languages and programming systems research.
 
 - date: May 15, 2021
   keyword: Thesis Defense!
@@ -47,13 +56,13 @@
   headline: Xiaolei has his first paper accepted by PLDI'21. His paper is titled as <a href='https://pldi21.sigplan.org/track/pldi-2021-papers'>Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference&#58; An Empirical Study</a>.
 
 - date: May 5, 2021
-  headline: Mengfei has started her summer intership of Vehicle Security Testing at Toyota North America.
+  headline: Mengfei has started her summer internship in Vehicle Security Testing at Toyota North America.
 
 - date: May 5, 2021
   keyword: New Summer Dissertation Fellowship Award!
   headline: Jagan has received the "Summer 2021 Dissertation Fellowship" award at UTA.
 
-- date: Janurary 27, 2021
+- date: January 27, 2021
   keyword: New Testing Tool!
-  headline: Congratulation Jack for his excellent work on testing smart contracts. He has just finished an external release of a tool called <a href='https://magic-mirror.gitbook.io/magicmi/'>MagicMirror</a>. NIST will make a public release of the tool.
+  headline: Congratulations Jack for his excellent work on testing smart contracts. He has just finished an external release of a tool called <a href='https://magic-mirror.gitbook.io/magicmi/'>MagicMirror</a>. NIST will make a public release of the tool.
 
