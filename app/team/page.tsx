@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 // Director data
 const director = {
-  name: "Dr. Yu (Jeff) Lei&apos;s",
+  name: "Dr. Yu (Jeff) Lei",
   photo: "DrLei.jpg",
   info: "Professor, Computer Science and Engineering",
   education: [
