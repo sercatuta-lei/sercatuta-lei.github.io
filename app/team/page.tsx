@@ -195,10 +195,7 @@ const formerVisitingScholars = [
   }
 ];
 
-// Utility function to render HTML content safely
-const renderHtml = (html: string) => {
-  return <span dangerouslySetInnerHTML={{ __html: html }} />;
-};
+// Removed unused renderHtml function
 
 export default function TeamPage() {
   return (

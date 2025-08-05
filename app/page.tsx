@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+// Removed unused imports
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";

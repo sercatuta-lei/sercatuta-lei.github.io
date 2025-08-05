@@ -1,10 +1,8 @@
 "use client";
 import { useState, useMemo } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { publications, Publication } from "./data";
+import { publications } from "./data";
 
 const years = [...new Set(publications.map(pub => pub.year))].sort((a, b) => b - a);
 const types = ["all", "conference", "journal", "workshop", "book"];

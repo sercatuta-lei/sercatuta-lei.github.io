@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+// Removed unused Badge import
 import { Button } from "@/components/ui/button";
-import { projects, Project } from "./data";
+import { projects } from "./data";
 
 export default function ProjectsPage() {
   const [expandedProjects, setExpandedProjects] = useState<Set<string>>(new Set());

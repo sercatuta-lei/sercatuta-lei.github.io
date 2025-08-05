@@ -24,7 +24,7 @@ export default function ScrollingBanner() {
           💡 Explore our projects in smart contracts and IoT security
         </span>
         <span className="text-white font-bold text-sm uppercase tracking-wider">
-          🎓 Future opportunities for PhD and Master's students
+          🎓 Future opportunities for PhD and Master&apos;s students
         </span>
         <span className="text-white font-bold text-sm uppercase tracking-wider">
           🔗 Connect with us for research collaborations
@@ -52,7 +52,7 @@ export default function ScrollingBanner() {
           💡 Explore our projects in smart contracts and IoT security
         </span>
         <span className="text-white font-bold text-sm uppercase tracking-wider">
-          🎓 Future opportunities for PhD and Master's students
+          🎓 Future opportunities for PhD and Master&apos;s students
         </span>
         <span className="text-white font-bold text-sm uppercase tracking-wider">
           🔗 Connect with us for research collaborations
