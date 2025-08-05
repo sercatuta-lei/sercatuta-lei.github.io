@@ -165,7 +165,7 @@ export default function RootLayout({
                 </div>
                 {/* Copyright */}
                 <div className="text-center text-sm text-slate-600 dark:text-white/80">
-                  Jeff Lei Lab © {new Date().getFullYear()} &nbsp;
+                  Jeff Lei Lab © {new Date().getFullYear()} &amp;nbsp;
                   <a href="#" className="underline hover:text-slate-800 dark:hover:text-white transition-colors">Manage Cookies</a>
                 </div>
                 {/* Language selector */}

@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 // Director data
 const director = {
-  name: "Dr. Yu (Jeff) Lei's",
+  name: "Dr. Yu (Jeff) Lei&apos;s",
   photo: "DrLei.jpg",
   info: "Professor, Computer Science and Engineering",
   education: [
@@ -97,7 +97,7 @@ const alumniPhDStudents = [
   }
 ];
 
-// Alumni Master's Students
+  // Alumni Master&apos;s Students
 const alumniMastersStudents = [
   {
     name: "Ankita Patel",
@@ -325,14 +325,14 @@ export default function TeamPage() {
         </div>
       </motion.div>
 
-      {/* Alumni Master's Students */}
+              {/* Alumni Master&apos;s Students */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
         className="mb-16"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-8">Alumni Master's Students</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-8">Alumni Master&apos;s Students</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {alumniMastersStudents.map((student, index) => (
             <motion.div

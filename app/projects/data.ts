@@ -22,7 +22,7 @@ export const projects: Project[] = [
   {
     id: "fairness-testing",
     name: "Fairness Testing of Black Box Machine Learning Models",
-    summary: "Decision-making by ML systems can exhibit biases, resulting in unfair outcomes for different individuals. This work presents a novel method based on t-way testing in a VAE's latent space to systematically explore the search space. By decoding these latent-space samples, our approach generates highly natural instances that find the fairness violations in a black box setting.",
+    summary: "Decision-making by ML systems can exhibit biases, resulting in unfair outcomes for different individuals. This work presents a novel method based on t-way testing in a VAE&apos;s latent space to systematically explore the search space. By decoding these latent-space samples, our approach generates highly natural instances that find the fairness violations in a black box setting.",
     image: "testing_in_ml.png",
     link: "https://ajdahal.github.io/portfolio/fairness_testing.html",
     status: "ongoing",

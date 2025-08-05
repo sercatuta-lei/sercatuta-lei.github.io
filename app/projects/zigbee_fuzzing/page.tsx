@@ -109,7 +109,7 @@ export default function ZigbeeFuzzingPage() {
                   Mengfei Ren, Haotian Zhang, Xiaolei Ren, Jiang Ming, Yu Lei
                 </p>
                 <p className="text-slate-600 dark:text-gray-300 text-sm mb-2">
-                  Proceedings of the 2023 European Symposium of Research in Computer Security (ESORICS '23)
+                  Proceedings of the 2023 European Symposium of Research in Computer Security (ESORICS &apos;23)
                 </p>
                 <Badge className="bg-green-500 text-white text-xs">Just Accepted</Badge>
               </div>
@@ -143,7 +143,7 @@ export default function ZigbeeFuzzingPage() {
                   Mengfei Ren, Xiaolei Ren, Huadong Feng, Jiang Ming, Yu Lei
                 </p>
                 <p className="text-slate-600 dark:text-gray-300 text-sm mb-2">
-                  Proceedings of the 14th ACM Conference on Security and Privacy in Wireless and Mobile Networks (WiSec '21)
+                  Proceedings of the 14th ACM Conference on Security and Privacy in Wireless and Mobile Networks (WiSec &apos;21)
                 </p>
                 <div className="mt-2">
                   <h5 className="text-red-500 dark:text-red-400 font-medium text-sm mb-2">Zero-day Vulnerabilities Detected:</h5>

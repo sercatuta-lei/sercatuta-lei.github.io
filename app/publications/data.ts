@@ -60,7 +60,7 @@ export const publications: Publication[] = [
     id: 1,
     title: "Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference: An Empirical Study",
     authors: "Xiaolei Ren, Michael Ho, Jiang Ming, Yu Lei, Li Li",
-    venue: "Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation (PLDI '21)",
+    venue: "Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation (PLDI &apos;21)",
     url: "https://doi.org/10.1145/3453483.3454035",
     year: 2021,
     type: "conference",
@@ -70,7 +70,7 @@ export const publications: Publication[] = [
     id: 2,
     title: "Z-Fuzzer: Device-agnostic Fuzzing of Zigbee Protocol Implementation",
     authors: "Mengfei Ren, Xiaolei Ren, Huadong Feng, Jiang Ming, Yu Lei",
-    venue: "Proceedings of the 14th ACM Conference on Security and Privacy in Wireless and Mobile Networks (WiSec '21)",
+    venue: "Proceedings of the 14th ACM Conference on Security and Privacy in Wireless and Mobile Networks (WiSec &apos;21)",
     url: "https://doi.org/10.1145/3448300.3468296",
     year: 2021,
     type: "conference",
@@ -80,7 +80,7 @@ export const publications: Publication[] = [
     id: 3,
     title: "Evaluation of T-Way Testing of DNNs in Autonomous Driving Systems",
     authors: "Chandrasekaran, Jaganmohan, Ankita Ramjibhai Patel, Yu Lei, Raghu Kacker, and D. Richard Kuhn",
-    venue: "Proceedings of 2021 IEEE International Conference on Artificial Intelligence Testing (AITest '21)",
+    venue: "Proceedings of 2021 IEEE International Conference on Artificial Intelligence Testing (AITest &apos;21)",
     url: "https://doi.org/10.1109/AITEST52744.2021.00013",
     year: 2021,
     type: "conference"
@@ -89,7 +89,7 @@ export const publications: Publication[] = [
     id: 4,
     title: "Effectiveness of Dataset Reduction in Testing Machine Learning Algorithms",
     authors: "Chandrasekaran, Jaganmohan, Huadong Feng, Yu Lei, Raghu Kacker, and D. Richard Kuhn",
-    venue: "Proceedings of 2020 IEEE International Conference on Artificial Intelligence Testing (AITest '20)",
+    venue: "Proceedings of 2020 IEEE International Conference on Artificial Intelligence Testing (AITest &apos;20)",
     url: "https://doi.org/10.1109/AITEST49225.2020.00027",
     year: 2020,
     type: "conference"
@@ -127,7 +127,7 @@ export const publications: Publication[] = [
     id: 16,
     title: "Security Analysis of Zigbee Protocol Implementation via Device-agnostic Fuzzing",
     authors: "Mengfei Ren, Xiaolei Ren, Huadong Feng, Jiang Ming, Yu Lei",
-    venue: "ACM Digital Threats: Research and Practice (DTRAP '22)",
+    venue: "ACM Digital Threats: Research and Practice (DTRAP &apos;22)",
     url: "https://doi.org/10.1145/3551894",
     year: 2022,
     type: "journal"
@@ -136,7 +136,7 @@ export const publications: Publication[] = [
     id: 17,
     title: "A Theory of Pending Schemas in Combinatorial Testing",
     authors: "X. Niu, H. Wu, N. Changhai, Y. Lei and X. Wang",
-    venue: "IEEE Transactions on Software Engineering (TSE '21)",
+    venue: "IEEE Transactions on Software Engineering (TSE &apos;21)",
     url: "https://doi.org/10.1109/TSE.2021.3113920",
     year: 2021,
     type: "journal"
@@ -145,7 +145,7 @@ export const publications: Publication[] = [
     id: 18,
     title: "Combinatorial Test Generation for Multiple Input Models with Shared Parameters",
     authors: "C. Rao, N. Li, Y. Lei, J. Guo, Y. Zhang, R. N. Kacker, D. R. Kuhn",
-    venue: "IEEE Transactions on Software Engineering (TSE '21)",
+    venue: "IEEE Transactions on Software Engineering (TSE &apos;21)",
     url: "https://doi.org/10.1109/TSE.2021.3065950",
     year: 2021,
     type: "journal"
@@ -183,7 +183,7 @@ export const publications: Publication[] = [
     id: 47,
     title: "A Combinatorial Approach to Explaining Image Classifiers",
     authors: "Chandrasekaran, Jaganmohan, Yu Lei, Raghu Kacker, and D. Richard Kuhn",
-    venue: "Proceedings of 2021 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '21)",
+    venue: "Proceedings of 2021 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW &apos;21)",
     url: "https://doi.org/10.1109/ICSTW52544.2021.00019",
     year: 2021,
     type: "workshop"
@@ -192,7 +192,7 @@ export const publications: Publication[] = [
     id: 48,
     title: "A Combinatorial Approach to Testing Deep Neural Network-based Autonomous Driving Systems",
     authors: "Chandrasekaran, Jaganmohan, Yu Lei, Raghu Kacker, and D. Richard Kuhn",
-    venue: "Proceedings of 2021 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '21)",
+    venue: "Proceedings of 2021 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW &apos;21)",
     url: "https://doi.org/10.1109/ICSTW52544.2021.00022",
     year: 2021,
     type: "workshop"
@@ -201,7 +201,7 @@ export const publications: Publication[] = [
     id: 49,
     title: "Combinatorial methods for explainable AI",
     authors: "Kuhn, D. Richard, Raghu N. Kacker, Yu Lei, and Dimitris E. Simos",
-    venue: "Proceedings of 2021 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW '21)",
+    venue: "Proceedings of 2021 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW &apos;21)",
     url: "https://doi.org/10.1109/ICSTW50294.2020.00037",
     year: 2021,
     type: "workshop"

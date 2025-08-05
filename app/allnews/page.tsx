@@ -12,7 +12,7 @@ const news = [
   {
     date: "July 31, 2023",
     keyword: "New Published Paper!",
-    headline: "Qiping, Fadule & Jack have their paper titled \"SmartExecutor: Coverage-Driven Symbolic Execution Guided by a Function Dependency Graph\", being accepted by BRAINS 2023.",
+    headline: "Qiping, Fadule & Jack have their paper titled &quot;SmartExecutor: Coverage-Driven Symbolic Execution Guided by a Function Dependency Graph&quot;, being accepted by BRAINS 2023.",
   },
   {
     date: "March 1, 2023",
@@ -22,22 +22,22 @@ const news = [
   {
     date: "December 20, 2022",
     keyword: "New Published Paper!",
-    headline: "Jack, Xiaolei & Qiping have their paper titled \"MagicMirror: Towards High-Coverage Fuzzing of Smart Contracts\", being accepted into ICST 2023. ICST is a major conference in Software Testing, and smart contract is an exciting application domain.",
+    headline: "Jack, Xiaolei & Qiping have their paper titled &quot;MagicMirror: Towards High-Coverage Fuzzing of Smart Contracts&quot;, being accepted into ICST 2023. ICST is a major conference in Software Testing, and smart contract is an exciting application domain.",
   },
   {
     date: "July 11, 2022",
     keyword: "New Published Paper!",
-    headline: "Mengfei has her extension work of the first project being accepted by ACM Journal Digital Threats: Research and Practice, titled \"Security Analysis of Zigbee Protocol Implementation\".",
+    headline: "Mengfei has her extension work of the first project being accepted by ACM Journal Digital Threats: Research and Practice, titled &quot;Security Analysis of Zigbee Protocol Implementation&quot;.",
   },
   {
     date: "June 17, 2022",
     keyword: "New Published Paper!",
-    headline: "Sunny and Jagan's paper, titled \"DeltaExplainer: A Software Debugging Approach to Generating Counterfactual Explanations\", has been accepted to AITest 2022",
+    headline: "Sunny and Jagan&apos;s paper, titled &quot;DeltaExplainer: A Software Debugging Approach to Generating Counterfactual Explanations&quot;, has been accepted to AITest 2022",
   },
   {
     date: "April 22, 2022",
     keyword: "Thesis Defense!",
-    headline: "Ankita has successfully defended her Master's thesis.",
+    headline: "Ankita has successfully defended her Master&apos;s thesis.",
   },
   {
     date: "November 9, 2021",
@@ -47,7 +47,7 @@ const news = [
   {
     date: "August 18, 2021",
     keyword: "Thesis Defense!",
-    headline: "Jaganmohan Chandrasekaran has successfully defended his Ph.D. dissertation titled \"Testing AI-based Software Systems\".",
+    headline: "Jaganmohan Chandrasekaran has successfully defended his Ph.D. dissertation titled &quot;Testing AI-based Software Systems&quot;.",
   },
   {
     date: "May 24, 2021",
@@ -77,7 +77,7 @@ const news = [
   {
     date: "May 5, 2021",
     keyword: "New Summer Dissertation Fellowship Award!",
-    headline: "Jagan has received the \"Summer 2021 Dissertation Fellowship\" award at UTA.",
+    headline: "Jagan has received the &quot;Summer 2021 Dissertation Fellowship&quot; award at UTA.",
   },
   {
     date: "January 27, 2021",

@@ -14,7 +14,7 @@ const news = [
   {
     date: "July 31, 2023",
     keyword: "New Published Paper!",
-    headline: "Qiping, Fadule & Jack have their paper titled \"SmartExecutor: Coverage-Driven Symbolic Execution Guided by a Function Dependency Graph\", being accepted by BRAINS 2023.",
+    headline: "Qiping, Fadule & Jack have their paper titled &quot;SmartExecutor: Coverage-Driven Symbolic Execution Guided by a Function Dependency Graph&quot;, being accepted by BRAINS 2023.",
   },
   {
     date: "March 1, 2023",
@@ -24,7 +24,7 @@ const news = [
   {
     date: "December 20, 2022",
     keyword: "New Published Paper!",
-    headline: "Jack, Xiaolei & Qiping have their paper titled \"MagicMirror: Towards High-Coverage Fuzzing of Smart Contracts\", being accepted into ICST 2023.",
+    headline: "Jack, Xiaolei & Qiping have their paper titled &quot;MagicMirror: Towards High-Coverage Fuzzing of Smart Contracts&quot;, being accepted into ICST 2023.",
   },
   {
     date: "July 11, 2022",
@@ -102,7 +102,7 @@ export default function Home() {
             <p className="text-lg text-slate-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Our research group conducts cutting-edge research in software engineering, 
               focusing on software design, specification, analysis, verification, and testing. 
-              We're part of the Software Engineering Research Center (SERC) at UTA.
+              We&apos;re part of the Software Engineering Research Center (SERC) at UTA.
             </p>
           </motion.div>
 
