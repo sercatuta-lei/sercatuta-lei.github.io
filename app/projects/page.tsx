@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-// Removed unused Badge import
 import { Button } from "@/components/ui/button";
 import { projects } from "./data";
 

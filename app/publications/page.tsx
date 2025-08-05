@@ -1,11 +1,11 @@
 "use client";
 import { useState, useMemo } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { publications } from "./data";
 
 const years = [...new Set(publications.map(pub => pub.year))].sort((a, b) => b - a);
-const types = ["all", "conference", "journal", "workshop", "book"];
 
 export default function PublicationsPage() {
   const [selectedYear, setSelectedYear] = useState<number | null>(null);
