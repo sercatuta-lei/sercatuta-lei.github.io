@@ -22,8 +22,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Jeff Lei's Lab - Software Engineering Research Group",
-    template: "%s | Jeff Lei's Lab"
+    default: "Jeff Lei&apos;s Lab - Software Engineering Research Group",
+    template: "%s | Jeff Lei&apos;s Lab"
   },
   description: "The Software Engineering Research Group supervised by Dr. Jeff Lei at the University of Texas at Arlington. Conducting cutting-edge research in software design, specification, analysis, verification, and testing.",
   keywords: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     "machine learning"
   ],
   authors: [{ name: "Jeff Lei" }],
-  creator: "Jeff Lei's Lab",
+  creator: "Jeff Lei&apos;s Lab",
   publisher: "University of Texas at Arlington",
   formatDetection: {
     email: false,
@@ -112,21 +112,21 @@ export const metadata: Metadata = {
   other: {
     'msapplication-TileColor': '#000000',
     'theme-color': '#000000',
-    'DC.title': 'Jeff Lei\'s Lab - Software Engineering Research Group',
+    'DC.title': 'Jeff Lei&apos;s Lab - Software Engineering Research Group',
     'DC.creator': 'Jeff Lei',
     'DC.subject': 'Software Engineering, Research, Computer Science',
     'DC.description': 'Software Engineering Research Group at UTA',
     'DC.publisher': 'University of Texas at Arlington',
-    'DC.contributor': 'Jeff Lei\'s Lab Team',
+    'DC.contributor': 'Jeff Lei&apos;s Lab Team',
     'DC.date': '2024',
     'DC.type': 'Text',
     'DC.format': 'text/html',
     'DC.identifier': 'https://sercatuta-lei.github.io',
     'DC.language': 'en',
     'DC.coverage': 'Software Engineering Research',
-    'DC.rights': 'Copyright Jeff Lei\'s Lab',
+    'DC.rights': 'Copyright Jeff Lei&apos;s Lab',
     'citation_author': 'Jeff Lei',
-    'citation_title': 'Jeff Lei\'s Lab - Software Engineering Research Group',
+    'citation_title': 'Jeff Lei&apos;s Lab - Software Engineering Research Group',
     'citation_publication_date': '2024',
     'citation_journal_title': 'Software Engineering Research',
     'citation_publisher': 'University of Texas at Arlington',

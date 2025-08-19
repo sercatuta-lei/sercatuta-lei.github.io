@@ -2,7 +2,7 @@ export default function StructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "ResearchOrganization",
-    "name": "Jeff Lei's Lab",
+    "name": "Jeff Lei&apos;s Lab",
     "description": "Software Engineering Research Group at the University of Texas at Arlington",
     "url": "https://sercatuta-lei.github.io",
     "logo": "https://sercatuta-lei.github.io/images/logo1.png",
