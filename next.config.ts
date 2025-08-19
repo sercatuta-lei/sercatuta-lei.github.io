@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-<<<<<<< HEAD
   // Performance optimizations
   images: {
     // Enable image optimization
@@ -78,9 +77,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-=======
-  /* config options here */
->>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
 };
 
 export default nextConfig;
