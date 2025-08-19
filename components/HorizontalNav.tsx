@@ -33,7 +33,11 @@ export default function HorizontalNav() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
+<<<<<<< HEAD
             <span className="text-xl font-bold text-gray-900 dark:text-white">Jeff Lei&apos;s Lab</span>
+=======
+            <span className="text-xl font-bold text-gray-900 dark:text-white">Jeff Lei Lab</span>
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
           </motion.div>
 
           {/* Desktop Navigation */}

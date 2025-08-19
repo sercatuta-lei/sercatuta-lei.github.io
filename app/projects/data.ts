@@ -38,6 +38,7 @@ export const projects: Project[] = [
     lead: "Sunny Shree"
   },
   {
+<<<<<<< HEAD
     id: "privacy-attacks-explanations",
     name: "Privacy Attacks Leveraging Model Explanations",
     summary: "Machine learning systems are inherently vulnerable to privacy attacks, which can extract various aspects of the model, including its training data, model parameters, and sensitive attributes related to the training data. Moreover, model explanations can inadvertently disclose additional information that further aids such attacks. The goal is to assess the extent to which we can recover information from the model by leveraging this additional information.",
@@ -45,6 +46,15 @@ export const projects: Project[] = [
     status: "ongoing",
     category: "ai-ml",
     lead: "Pujan Budhathoki"
+=======
+    id: "privacy-testing",
+    name: "Privacy Testing in Machine Learning based systems",
+    summary: "Machine Learning systems are inherently vulnerable to Privacy attacks. These attacks can steal different parts of the ML model including training data, model parameters and sensitive attributes regarding the training data. The goal is to test and detect whether a model is sufficiently guarded against these kinds of attacks.",
+    link: "https://nine-monday-454.notion.site/Privacy-Testing-in-Machine-Learning-143bbf0f6a98805ab4f0c7e2bbf86ec2",
+    status: "ongoing",
+    category: "ai-ml",
+    lead: "Krishna Khadka"
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
   },
   {
     id: "smart-contracts",
@@ -65,5 +75,18 @@ export const projects: Project[] = [
     status: "ongoing",
     category: "iot",
     lead: "Mengfei Ren"
+<<<<<<< HEAD
+=======
+  },
+  {
+    id: "compiler-optimization",
+    name: "How Compiler Optimization Affects Binary Code Differences",
+    summary: "Compiler optimizations often have an impact on the syntactic and semantic representation of binary code. For example, modern compilers apply many intra-procedural optimization techniques, such as loop unrolling, compound conditionals, and basic-block merging, to generate branch-less code to support prefetch instructions. Straight-line code avoids branching misprediction and facilitates pipelined execution, but it also merges several basic blocks into one. The well-known function inlining optimization replaces function call instruction with the actual code of the callee function. The frequently invoked library functions are most likely to be inlined. These compiler optimizations can effectively affect the control flow graph structure by breaking function integrity and merging basic blocks.",
+    image: "compiler_optimization.png",
+    link: "https://blog.uta.edu/xiaoleiren/project-description/",
+    status: "completed",
+    category: "testing",
+    lead: "Xiaolei Ren"
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
   }
 ]; 

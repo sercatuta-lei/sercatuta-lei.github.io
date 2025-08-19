@@ -9,6 +9,7 @@ export interface Publication {
   acceptanceRate?: string;
 }
 
+<<<<<<< HEAD
 // Lazy load publications data to improve initial page load
 const publicationsData: Publication[] = [
   // Conference Papers (2020 onwards, sorted by year descending)
@@ -50,12 +51,20 @@ const publicationsData: Publication[] = [
     type: "conference"
   },
   // 2024 Papers
+=======
+export const publications: Publication[] = [
+  // Conference Papers (2020 onwards, sorted by year descending)
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
   {
     id: 11,
     title: "A Combinatorial Approach to Hyperparameter Optimization",
     authors: "Khadka, Krishna; Chandrasekaran, Jaganmohan; Lei, Yu; Kacker, Raghu N; Kuhn, D Richard",
     venue: "Proceedings of the IEEE/ACM 3rd International Conference on AI Engineering – Software Engineering for AI (CAIN 2024)",
+<<<<<<< HEAD
     url: "https://dl.acm.org/doi/abs/10.1145/3644815.3644941",
+=======
+    url: "https://doi.org/10.1145/3656902.3656920",
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
     year: 2024,
     type: "conference"
   },
@@ -64,16 +73,26 @@ const publicationsData: Publication[] = [
     title: "Assessing the Degree of Feature Interactions That Determine a Model Prediction",
     authors: "Khadka, Krishna; Shree, Sunny; Lei, Yu; Kacker, Raghu N; Kuhn, D Richard",
     venue: "Proceedings of the 2024 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW 2024)",
+<<<<<<< HEAD
     url: "https://ieeexplore.ieee.org/abstract/document/10675910",
+=======
+    url: "",
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
     year: 2024,
     type: "conference"
   },
   {
     id: 13,
     title: "Constructing Surrogate Models in Machine Learning Using Combinatorial Testing and Active Learning",
+<<<<<<< HEAD
     authors: "Sunny Shree, Krishna Khadka, Yu Lei, Raghu N Kacker, D Richard Kuhn",
     venue: "Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering (ASE 2024), Pages 1645-1654",
     url: "https://dl.acm.org/doi/abs/10.1145/3691620.3695532",
+=======
+    authors: "S.Shree, K. Khadka, Y. Lei, R. N. Kacker, and D. R. Kuhn",
+    venue: "ASE 2024",
+    url: "",
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
     year: 2024,
     type: "conference"
   },
@@ -82,7 +101,11 @@ const publicationsData: Publication[] = [
     title: "Proxima: A Proxy Model-Based Approach to Influence Analysis",
     authors: "S.Shree, Y. Lei, R. N. Kacker, and D. R. Kuhn",
     venue: "AITest 2024",
+<<<<<<< HEAD
     url: "https://ieeexplore.ieee.org/abstract/document/10685198",
+=======
+    url: "",
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
     year: 2024,
     type: "conference"
   },
@@ -91,11 +114,16 @@ const publicationsData: Publication[] = [
     title: "Algorithmic Optimizations for Deriving Minimal Forbidden Tuples",
     authors: "M.Wagner, I. Hiess, L. Kampel, D. E. Simos, and Y. Lei",
     venue: "ICSTW 2024",
+<<<<<<< HEAD
     url: "https://ieeexplore.ieee.org/abstract/document/10675974",
+=======
+    url: "",
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
     year: 2024,
     type: "conference"
   },
   {
+<<<<<<< HEAD
     id: 52,
     title: "SmartExecutor: Coverage-Driven Symbolic Execution Guided by a Function Dependency Graph",
     authors: "Qiping Wei, Fadul Sikder, Huadong Feng, Yu Lei",
@@ -150,11 +178,17 @@ const publicationsData: Publication[] = [
     type: "book"
   },
   {
+=======
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
     id: 1,
     title: "Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference: An Empirical Study",
     authors: "Xiaolei Ren, Michael Ho, Jiang Ming, Yu Lei, Li Li",
     venue: "Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation (PLDI &apos;21)",
+<<<<<<< HEAD
     url: "https://dl.acm.org/doi/abs/10.1145/3453483.3454035",
+=======
+    url: "https://doi.org/10.1145/3453483.3454035",
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
     year: 2021,
     type: "conference",
     acceptanceRate: "27.2%"
@@ -174,7 +208,11 @@ const publicationsData: Publication[] = [
     title: "Evaluation of T-Way Testing of DNNs in Autonomous Driving Systems",
     authors: "Chandrasekaran, Jaganmohan, Ankita Ramjibhai Patel, Yu Lei, Raghu Kacker, and D. Richard Kuhn",
     venue: "Proceedings of 2021 IEEE International Conference on Artificial Intelligence Testing (AITest &apos;21)",
+<<<<<<< HEAD
     url: "https://ieeexplore.ieee.org/abstract/document/9564319",
+=======
+    url: "https://doi.org/10.1109/AITEST52744.2021.00013",
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
     year: 2021,
     type: "conference"
   },
@@ -189,6 +227,7 @@ const publicationsData: Publication[] = [
   },
 
   // Journal Papers (2020 onwards, sorted by year descending)
+<<<<<<< HEAD
   // 2025 Journal Papers
   {
     id: 57,
@@ -219,11 +258,36 @@ const publicationsData: Publication[] = [
   },
   // 2024 Journal Papers
   {
+=======
+  {
+    id: 44,
+    title: "Fairness Testing of Machine Learning Models using Combinatorial Testing in Latent Space",
+    authors: "Arjun Dahal, Sunny Shree, Yu Lei, Raghu N. Kacker, D. Richard Kuhn",
+    venue: "IEEE Transactions on Software Engineering (TSE)",
+    url: "",
+    year: 2024,
+    type: "journal"
+  },
+  {
+    id: 45,
+    title: "SmartExecutor: Coverage-Driven Symbolic Execution Guided via State Prioritization and Function Selection",
+    authors: "Qiping Wei, Fadul Sikder, Huadong Feng, Yu Lei, Raghu Kacker, Richard Kuhn",
+    venue: "ACM Transactions on Software Engineering and Methodology (TOSEM)",
+    url: "",
+    year: 2024,
+    type: "journal"
+  },
+  {
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
     id: 46,
     title: "Ensuring Reliability Through Combinatorial Coverage Measures",
     authors: "Raunak, M. S., D. R. Kuhn, R. N. Kacker, and Y. Lei",
     venue: "IEEE Reliability (2024)",
+<<<<<<< HEAD
     url: "https://ieeexplore.ieee.org/abstract/document/10530482",
+=======
+    url: "",
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
     year: 2024,
     type: "journal"
   },
@@ -232,7 +296,11 @@ const publicationsData: Publication[] = [
     title: "Security Analysis of Zigbee Protocol Implementation via Device-agnostic Fuzzing",
     authors: "Mengfei Ren, Xiaolei Ren, Huadong Feng, Jiang Ming, Yu Lei",
     venue: "ACM Digital Threats: Research and Practice (DTRAP &apos;22)",
+<<<<<<< HEAD
     url: "https://dl.acm.org/doi/full/10.1145/3551894",
+=======
+    url: "https://doi.org/10.1145/3551894",
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
     year: 2022,
     type: "journal"
   },
@@ -241,7 +309,11 @@ const publicationsData: Publication[] = [
     title: "A Theory of Pending Schemas in Combinatorial Testing",
     authors: "X. Niu, H. Wu, N. Changhai, Y. Lei and X. Wang",
     venue: "IEEE Transactions on Software Engineering (TSE &apos;21)",
+<<<<<<< HEAD
     url: "https://ieeexplore.ieee.org/abstract/document/9543605",
+=======
+    url: "https://doi.org/10.1109/TSE.2021.3113920",
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
     year: 2021,
     type: "journal"
   },
@@ -259,6 +331,7 @@ const publicationsData: Publication[] = [
     title: "Factorials Experiments, Covering Arrays, and Combinatorial Testing",
     authors: "Kacker, R.N., Kuhn, D.R., Lei, Y",
     venue: "Mathematics in Computer Science volume 15 (2021)",
+<<<<<<< HEAD
     url: "https://link.springer.com/article/10.1007/s11786-021-00502-7",
     year: 2021,
     type: "journal"
@@ -287,6 +360,9 @@ const publicationsData: Publication[] = [
     authors: "Raghu N Kacker, D Richard Kuhn, Yu Lei, Dimitris E Simos",
     venue: "IEEE Software, Volume 39, Issue 5, Pages 62-67",
     url: "https://ieeexplore.ieee.org/abstract/document/9523533",
+=======
+    url: "https://doi.org/10.1007/s11786-021-00502-7",
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
     year: 2021,
     type: "journal"
   },
@@ -306,7 +382,11 @@ const publicationsData: Publication[] = [
     title: "Synthetic Data Generation Using Combinatorial Testing and Variational Autoencoder",
     authors: "Khadka, Krishna; Chandrasekaran, Jaganmohan; Lei, Yu; Kacker, Raghu N; Kuhn, D Richard",
     venue: "Proceedings of the 2023 IEEE International Conference on Software Testing, Verification and Validation Workshops (ICSTW 2023)",
+<<<<<<< HEAD
     url: "https://ieeexplore.ieee.org/abstract/document/10132195/",
+=======
+    url: "https://doi.org/10.1109/ICSTW58424.2023.00052",
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
     year: 2023,
     type: "workshop"
   },
@@ -348,6 +428,7 @@ const publicationsData: Publication[] = [
     year: 2020,
     type: "book"
   }
+<<<<<<< HEAD
 ];
 
 // Export function to get publications (enables code splitting)
@@ -355,3 +436,6 @@ export const getPublications = (): Publication[] => publicationsData;
 
 // Export for backward compatibility
 export const publications = publicationsData;
+=======
+]; 
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143

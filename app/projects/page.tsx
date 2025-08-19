@@ -66,6 +66,7 @@ export default function ProjectsPage() {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-2 leading-tight">
+<<<<<<< HEAD
                         {project.link ? (
                           <a 
                             href={project.link} 
@@ -78,6 +79,9 @@ export default function ProjectsPage() {
                         ) : (
                           project.name
                         )}
+=======
+                        {project.name}
+>>>>>>> a63b755777e2f1d41c50db7713d1c6a61fdfb143
                       </h3>
                     </div>
                   </div>
