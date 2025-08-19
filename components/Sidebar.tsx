@@ -10,7 +10,7 @@ export default function Sidebar() {
           <circle cx="30" cy="20" r="20" fill="#fff" fillOpacity="0.1" />
           <text x="50%" y="55%" textAnchor="middle" fill="#fff" fontSize="18" fontWeight="bold" dy=".3em">UTA</text>
         </svg>
-        <span className="mt-3 text-lg font-bold tracking-tight text-white text-center">Jeff Lei's Lab</span>
+        <span className="mt-3 text-lg font-bold tracking-tight text-white text-center">Jeff Lei&apos;s Lab</span>
       </div>
       <nav className="flex flex-col gap-2">
         <SidebarLink href="/">Home</SidebarLink>

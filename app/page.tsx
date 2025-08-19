@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useMemo, useCallback } from "react";
+import { useMemo } from "react";
 
 // Move news data to a separate constant for better memory management
 const newsData = [
@@ -65,27 +65,6 @@ const newsData = [
 ];
 
 // Animation variants - moved outside component to prevent recreation
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
-};
-
-const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
-
-const cardHover = {
-  whileHover: { 
-    y: -5, 
-    scale: 1.02,
-    transition: { duration: 0.2 }
-  }
-};
 
 export default function Home() {
   // Memoize news data to prevent unnecessary re-renders
@@ -145,7 +124,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Lei's Research Group, CSE@UTA
+              Lei&apos;s Research Group, CSE@UTA
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

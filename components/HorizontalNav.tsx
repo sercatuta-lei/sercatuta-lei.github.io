@@ -33,7 +33,7 @@ export default function HorizontalNav() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="text-xl font-bold text-gray-900 dark:text-white">Jeff Lei's Lab</span>
+            <span className="text-xl font-bold text-gray-900 dark:text-white">Jeff Lei&apos;s Lab</span>
           </motion.div>
 
           {/* Desktop Navigation */}

@@ -23,7 +23,7 @@ export default function PublicationsPage() {
       const typeMatch = selectedType === "all" || pub.type === selectedType;
       return yearMatch && typeMatch;
     });
-  }, [selectedYear, selectedType]);
+  }, [publications, selectedYear, selectedType]);
 
   const getTypeColor = (type: string) => {
     switch (type) {
