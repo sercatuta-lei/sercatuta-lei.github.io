@@ -3,63 +3,52 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { useMemo } from "react";
 
-// Move news data to a separate constant for better memory management
+
+// News data
 const newsData = [
   {
     date: "2025",
-    keyword: "Graduation!",
-    headline: "Graduation of Qiping",
+    headline: "Qiping has successfully defended her Ph.D. dissertation titled 'Enhancing Symbolic Execution for Solidity Smart Contracts'.",
   },
   {
     date: "2025",
-    keyword: "New Lab Member!",
     headline: "Welcome Sampada to our lab as Volunteer Research Assistant.",
   },
   {
     date: "2024",
-    keyword: "Graduation!",
-    headline: "Graduation of Sunny",
+    headline: "Sunny has successfully defended his Ph.D. dissertation titled 'Leveraging Software Testing Techniques to Explain, Analyze, and Debug Machine Learning Models'.",
   },
   {
     date: "2024",
-    keyword: "New Lab Member!",
     headline: "Welcome Samreen to our lab as an M.S. Thesis student.",
   },
   {
     date: "January 2024",
-    keyword: "New Lab Member!",
     headline: "Welcome Shovon Niverd to our lab as a Ph.D. student.",
   },
   {
     date: "January 2024",
-    keyword: "New Lab Member!",
     headline: "Welcome Saif Uddin Mahmud to our lab as a Ph.D. student.",
   },
   {
     date: "August 25, 2023",
-    keyword: "New Lab Member!",
     headline: "Welcome Pujan Budhathoki to our lab as a Ph.D. student.",
   },
   {
     date: "July 31, 2023",
-    keyword: "New Published Paper!",
-    headline: "Qiping, Fadule & Jack have their paper titled &quot;SmartExecutor: Coverage-Driven Symbolic Execution Guided by a Function Dependency Graph&quot;, being accepted by BRAINS 2023.",
+    headline: "Qiping, Fadule & Jack have their paper titled \"SmartExecutor: Coverage-Driven Symbolic Execution Guided by a Function Dependency Graph\", being accepted by BRAINS 2023.",
   },
   {
     date: "March 1, 2023",
-    keyword: "New Lab Member!",
     headline: "Welcome Arjun Dahal to our lab as a Ph.D. student.",
   },
   {
     date: "December 20, 2022",
-    keyword: "New Published Paper!",
-    headline: "Jack, Xiaolei & Qiping have their paper titled &quot;MagicMirror: Towards High-Coverage Fuzzing of Smart Contracts&quot;, being accepted into ICST 2023.",
+    headline: "Jack, Xiaolei & Qiping have their paper titled \"MagicMirror: Towards High-Coverage Fuzzing of Smart Contracts\", being accepted into ICST 2023.",
   },
   {
     date: "July 11, 2022",
-    keyword: "New Published Paper!",
     headline: "Mengfei has her extension work of the first project being accepted by ACM Journal Digital Threats: Research and Practice.",
   },
 ];
@@ -67,36 +56,29 @@ const newsData = [
 // Animation variants - moved outside component to prevent recreation
 
 export default function Home() {
-  // Memoize news data to prevent unnecessary re-renders
-  const news = useMemo(() => newsData, []);
-  
-  // Memoize research data to prevent unnecessary re-renders
-  const research = useMemo(() => [
+  // Research areas
+  const research = [
     {
       title: "AI/ML Interpretability",
-      description: "Making AI and machine learning models more transparent and explainable",
-      icon: "🔍",
-      color: "from-purple-500 to-pink-500"
+      description: "Making AI and machine learning models more transparent and explainable"
     },
     {
-      title: "AI/ML Security",
-      description: "Security analysis and protection of artificial intelligence systems",
-      icon: "🛡️",
-      color: "from-green-500 to-emerald-500"
+      title: "AI/ML Security and Privacy",
+      description: "Security analysis and protection of artificial intelligence systems"
+    },
+    {
+      title: "Testing and Debugging ML Models",
+      description: "Developing techniques to test, debug, and ensure reliability of machine learning models"
     },
     {
       title: "Blockchain and IoT Security",
-      description: "Security analysis of blockchain systems and Internet of Things protocols",
-      icon: "🔗",
-      color: "from-orange-500 to-red-500"
+      description: "Security analysis of blockchain systems and Internet of Things protocols"
     },
     {
       title: "Software Testing",
-      description: "Developing advanced techniques for automated software testing and verification",
-      icon: "🧪",
-      color: "from-blue-500 to-cyan-500"
+      description: "Developing advanced techniques for automated software testing and verification"
     }
-  ], []);
+  ];
 
   return (
     <div className="min-h-screen">
@@ -151,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-slate-50/50 dark:bg-gray-950 relative overflow-hidden">
+      <section className="py-16 bg-slate-50/50 dark:bg-gray-950 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-indigo-50/30 dark:from-blue-900/10 dark:via-purple-900/10 dark:to-indigo-900/10"></div>
         <div className="relative max-w-6xl mx-auto px-4">
           <motion.div
@@ -159,14 +141,12 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-slate-800 dark:text-white mb-8">
-              Introduction to Our Group
-            </h2>
+
             <div className="max-w-4xl mx-auto">
               <motion.p 
-                className="text-xl text-slate-700 dark:text-gray-200 leading-relaxed mb-12"
+                className="text-xl text-slate-700 dark:text-gray-200 leading-relaxed mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -180,18 +160,41 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="text-left max-w-3xl mx-auto"
+                className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
               >
-                <ul className="space-y-4 text-lg text-slate-600 dark:text-gray-300 leading-relaxed">
-                  <li className="flex items-start">
-                    <span className="text-blue-500 mr-3 mt-1">•</span>
-                    <span><strong>AI for SE</strong>, where we leverage AI techniques to improve the analysis, testing, and debugging of software systems</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-purple-500 mr-3 mt-1">•</span>
-                    <span><strong>SE for AI</strong>, where we apply SE methods to ensure the trustworthiness of AI models and software.</span>
-                  </li>
-                </ul>
+                <motion.div
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.3 }}
+                  className="group"
+                >
+                  <Card className="h-full bg-white/80 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm">
+                    <CardContent className="p-8 text-center">
+                      <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-6">
+                        AI for Software Engineering
+                      </h3>
+                      <p className="text-lg text-slate-600 dark:text-gray-300 leading-relaxed">
+                        We leverage AI techniques to improve the analysis, testing, and debugging of software systems
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+                
+                <motion.div
+                  whileHover={{ y: -5 }}
+                  transition={{ duration: 0.3 }}
+                  className="group"
+                >
+                  <Card className="h-full bg-white/80 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm">
+                    <CardContent className="p-8 text-center">
+                      <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-6">
+                        Software Engineering for AI
+                      </h3>
+                      <p className="text-lg text-slate-600 dark:text-gray-300 leading-relaxed">
+                        We apply SE methods to ensure the trustworthiness of AI models and software
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               </motion.div>
             </div>
           </motion.div>
@@ -199,21 +202,19 @@ export default function Home() {
       </section>
 
       {/* Research Areas Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
             <h2 className="text-4xl font-bold text-slate-800 dark:text-white mb-4">
               Research Areas
             </h2>
-            <p className="text-xl text-slate-600 dark:text-gray-300 max-w-2xl mx-auto">
-              We focus on cutting-edge research in software engineering and related fields
-            </p>
+
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -229,9 +230,6 @@ export default function Home() {
               >
                 <Card className="h-full bg-white/80 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:border-blue-300 dark:group-hover:border-blue-600 backdrop-blur-sm">
                   <CardContent className="p-8">
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${area.color} flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      {area.icon}
-                    </div>
                     <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-3">
                       {area.title}
                     </h3>
@@ -246,71 +244,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-slate-50/50 dark:bg-gray-950">
-        <div className="max-w-6xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-slate-800 dark:text-white mb-4">
-              Research Impact
-            </h2>
-            <p className="text-xl text-slate-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Our research contributions and achievements
-            </p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { number: "50+", label: "Published Papers", icon: "📄" },
-              { number: "20+", label: "PhD Graduates", icon: "🎓" },
-              { number: "15+", label: "Active Projects", icon: "🔬" }
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="text-4xl mb-4">{stat.icon}</div>
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-lg text-gray-600 dark:text-gray-300">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* News Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-16 bg-white dark:bg-gray-900">
         <div className="max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-12"
           >
             <h2 className="text-4xl font-bold text-slate-800 dark:text-white mb-4">
               Latest News
             </h2>
-            <p className="text-xl text-slate-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Stay updated with our latest research achievements and lab activities
-            </p>
+
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {news.slice(0, 6).map((item, idx) => (
+            {newsData.slice(0, 6).map((item, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
@@ -326,7 +279,6 @@ export default function Home() {
                       {item.date}
                     </p>
                     <p className="text-slate-800 dark:text-white text-sm leading-relaxed">
-                      <span className="font-semibold text-slate-800 dark:text-white">{item.keyword}</span>{" "}
                       {item.headline}
                     </p>
                   </CardContent>

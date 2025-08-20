@@ -14,49 +14,49 @@ const director = {
 // Current Members
 const currentMembers = [
   {
-    name: "Fadul Sikder",
+    name: "Mr. Fadul Sikder",
     photo: "fadul.jpg",
     info: "Ph.D. Student",
     link: "https://www.linkedin.com/in/fadul-sikder-0b5a8a202/"
   },
   {
-    name: "Krishna Khadka",
+    name: "Mr. Krishna Khadka",
     photo: "krishna.jpeg",
     info: "Ph.D. Student",
     link: "https://www.linkedin.com/in/krishna-khadka-238b35162/"
   },
   {
-    name: "Arjun Dahal",
+    name: "Mr. Arjun Dahal",
     photo: "arjun.jpeg",
     info: "Ph.D. Student",
     link: "https://www.linkedin.com/in/arjdahal/"
   },
   {
-    name: "Pujan Budhathoki",
+    name: "Mr. Pujan Budhathoki",
     photo: "pujan.png",
     info: "Ph.D. Student",
     link: "https://www.linkedin.com/in/pujan-budhathoki-54a957144/"
   },
   {
-    name: "Saif Uddin Mahmud",
+    name: "Mr. Saif Uddin Mahmud",
     photo: "saif-pic.jpg",
     info: "Ph.D. Student",
     link: "https://www.linkedin.com/in/saif--mahmud/"
   },
   {
-    name: "Shovon Niverd",
+    name: "Mr. Shovon Niverd",
     photo: "shovon_pereira.jpg",
     info: "Ph.D. Student",
     link: "https://www.linkedin.com/in/shovon-niverd-pereira/"
   },
   {
-    name: "Samreen",
+    name: "Ms. Samreen",
     photo: "samreen.jpeg",
     info: "M.S. Thesis Student",
     link: "https://www.linkedin.com/in/samerr98"
   },
   {
-    name: "Sampada",
+    name: "Ms. Sampada",
     photo: "Sampada.jpg",
     info: "Volunteer Research Assistant",
     link: "https://www.linkedin.com/in/sampadapavate/"
@@ -66,155 +66,155 @@ const currentMembers = [
 // Alumni
 const alumni = [
   {
-    name: "Qiping Wei",
+    name: "Dr. Qiping Wei",
     photo: "qiping.jpg",
-    info: "Graduated in 2025",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/qiping-wei-5202a914b/"
   },
   {
-    name: "Sunny Shree",
+    name: "Dr. Sunny Shree",
     photo: "sunny.jpg",
-    info: "Graduated in 2024"
+    info: "Ph.D. Graduate"
   },
   {
-    name: "Mengfei (Angela) Ren",
+    name: "Dr. Mengfei (Angela) Ren",
     photo: "mengfei.jpg",
-    info: "Graduated in 2023",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/angelarenmf/"
   },
   {
-    name: "Xiaolei (Harry) Ren",
+    name: "Dr. Xiaolei (Harry) Ren",
     photo: "Xiaolei.jpg",
-    info: "Graduated in 2023"
+    info: "Ph.D. Graduate"
   },
   {
-    name: "Ruben Martinez",
+    name: "Mr. Ruben Martinez",
     photo: "bio-photo.jpg",
-    info: "Graduated in 2023"
+    info: "M.S. Graduate"
   },
   {
-    name: "Ankita Patel",
+    name: "Dr. Ankita Patel",
     photo: "Ankita.jpg",
-    info: "Graduated in 2022",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/patelankitar/"
   },
   {
-    name: "Duan Feng",
+    name: "Dr. Duan Feng",
     photo: "Feng_Duan.jpeg",
-    info: "Graduated in 2021"
+    info: "Ph.D. Graduate"
   },
   {
-    name: "Huadong (Jack) Feng",
+    name: "Dr. Huadong (Jack) Feng",
     photo: "Huadong_Feng.png",
-    info: "Graduated in 2021"
+    info: "Ph.D. Graduate"
   },
   {
-    name: "Jaganmohan Chandrasekaran",
+    name: "Dr. Jaganmohan Chandrasekaran",
     photo: "Jagan.jpg",
-    info: "Graduated in 2021",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/cjaganmohan/"
   },
   {
-    name: "Sarker Tanveer Ahmed",
+    name: "Dr. Sarker Tanveer Ahmed",
     photo: "Sarker_Tanveer_Ahmed.jpeg",
-    info: "Graduated in 2017",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/sarker-tanveer-ahmed-93a0a072/"
   },
   {
-    name: "Laleh Ghandehari",
+    name: "Dr. Laleh Ghandehari",
     photo: "Laleh_Ghandehari.jpeg",
-    info: "Graduated in 2016",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/lalehshghandehari/"
   },
   {
-    name: "Jing Xu",
+    name: "Dr. Jing Xu",
     photo: "Jing_Xu.jpeg",
-    info: "Graduated in 2016",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/jing-xu-b77bb357/"
   },
   {
-    name: "Mehra Nouroz Borazjany",
+    name: "Dr. Mehra Nouroz Borazjany",
     photo: "Mehra_Nouroz_Borazjany.jpeg",
-    info: "Graduated in 2014"
+    info: "Ph.D. Graduate"
   },
   {
-    name: "Linbin Yu",
+    name: "Dr. Linbin Yu",
     photo: "Linbin_Yu.jpeg",
-    info: "Graduated in 2013",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/linbinyu/"
   },
   {
-    name: "Dengfeng Xia",
+    name: "Dr. Dengfeng Xia",
     photo: "Dengfeng_Xia.jpeg",
-    info: "Graduated in 2012"
+    info: "Ph.D. Graduate"
   },
   {
-    name: "Wenhua Wang",
+    name: "Dr. Wenhua Wang",
     photo: "bio-photo.jpg",
-    info: "Graduated in 2010",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/wenhua-wang-1169741b/"
   },
   {
-    name: "Anthony Opara",
+    name: "Dr. Anthony Opara",
     photo: "bio-photo.jpg",
-    info: "Graduated in 2008",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/anthony-opara-6681649b/"
   },
   {
-    name: "Keerthika Koteeswaran",
+    name: "Dr. Keerthika Koteeswaran",
     photo: "Keerthika_Koteeswaran.jpeg",
-    info: "Graduated in 2007",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/kkoteeswaran/"
   },
   {
-    name: "Arun Ramani",
+    name: "Dr. Arun Ramani",
     photo: "Arun_Ramani.jpeg",
-    info: "Graduated in 2007"
+    info: "Ph.D. Graduate"
   },
   {
-    name: "Andres Yanes",
+    name: "Mr. Andres Yanes",
     photo: "bio-photo.jpg",
-    info: "Graduated in 2007"
+    info: "M.S. Graduate"
   },
   {
-    name: "Kallol Mahata",
+    name: "Dr. Kallol Mahata",
     photo: "Kallol_Mahata.jpeg",
-    info: "Graduated in 2007",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/kallolmahata/"
   },
   {
-    name: "Daxa Patel",
+    name: "Ms. Daxa Patel",
     photo: "bio-photo.jpg",
-    info: "Graduated in 2006"
+    info: "M.S. Graduate"
   },
   {
-    name: "Chinmay Jayaswal",
+    name: "Dr. Chinmay Jayaswal",
     photo: "Chinmay_Jayaswal.jpeg",
-    info: "Graduated in 2006",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/chinmayjayaswal/"
   },
   {
-    name: "Vidur Gupta",
+    name: "Dr. Vidur Gupta",
     photo: "bio-photo.jpg",
-    info: "Graduated in 2006",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/vidurg/"
   },
   {
-    name: "Monica Hernandez",
+    name: "Ms. Monica Hernandez",
     photo: "bio-photo.jpg",
-    info: "Graduated in 2006",
+    info: "M.S. Graduate",
     link: "https://www.linkedin.com/in/monicamhernandez/"
   },
   {
-    name: "Gaurav Saini",
+    name: "Dr. Gaurav Saini",
     photo: "Gaurav_Saini.jpeg",
-    info: "Graduated in 2005",
+    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/g-gauravsaini/"
   },
   {
-    name: "Pichate Pluempatanakij",
+    name: "Dr. Pichate Pluempatanakij",
     photo: "bio-photo.jpg",
-    info: "Graduated in 2003"
+    info: "Ph.D. Graduate"
   }
 ];
 
@@ -241,15 +241,15 @@ export default function TeamPage() {
                 loading="eager"
               />
               <div>
-                <a
-                  href={director.profileUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-2xl font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors underline decoration-2 underline-offset-4 block mb-2"
-                >
-                  {director.name}
-                </a>
-                <p className="text-slate-600 dark:text-gray-300 text-lg">{director.info}</p>
+                                 <a
+                   href="https://ranger.uta.edu/~ylei/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="text-2xl font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors underline decoration-2 underline-offset-4 block mb-2"
+                 >
+                   {director.name}
+                 </a>
+                                 <p className="text-slate-600 dark:text-gray-300 text-lg">{director.info}</p>
               </div>
             </div>
           </CardContent>

@@ -33,9 +33,7 @@ export default function ProjectsPage() {
         className="text-center mb-12"
       >
         <h1 className="text-4xl font-bold mb-4 text-slate-800 dark:text-white">Research Projects</h1>
-        <p className="text-lg text-slate-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Discover our ongoing and completed research projects across various domains including AI/ML, Security, IoT, Blockchain, and Software Testing.
-        </p>
+
       </motion.div>
 
       {/* Projects Grid */}

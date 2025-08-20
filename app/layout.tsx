@@ -155,6 +155,46 @@ export default function RootLayout({
               {children}
             </main>
 
+                         {/* Footer */}
+             <footer className="bg-slate-900 dark:bg-gray-950 border-t border-slate-800 dark:border-gray-800">
+                               <div className="max-w-3xl mx-auto py-6 px-4">
+                  <div className="grid grid-cols-1 gap-4">
+                    
+                    {/* Lab Information */}
+                    <div className="space-y-3">
+                      <div className="flex">
+                        <span className="text-blue-400 font-medium w-28 flex-shrink-0">Office Room:</span>
+                        <span className="text-slate-300">Engineering Research Building (ERB), Room 531</span>
+                      </div>
+                      <div className="flex">
+                        <span className="text-blue-400 font-medium w-28 flex-shrink-0">Post Address:</span>
+                        <div className="text-slate-300 space-y-0.5">
+                          <div>Department of Computer Science and Engineering</div>
+                          <div>The University of Texas at Arlington</div>
+                          <div>Box 19015</div>
+                          <div>Arlington, Texas 76019-0015</div>
+                        </div>
+                      </div>
+                      <div className="flex">
+                        <span className="text-blue-400 font-medium w-28 flex-shrink-0">Email:</span>
+                        <span className="text-slate-300">
+                          <a href="mailto:ylei@cse.uta.edu" className="text-blue-400 hover:text-blue-300 transition-colors">
+                            ylei@cse.uta.edu
+                          </a>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom Bar */}
+                  <div className="border-t border-slate-800 dark:border-gray-800 mt-4 pt-4 text-center">
+                    <p className="text-slate-400 text-sm">
+                      © 2025 Jeff Lei Research Lab. All rights reserved.
+                    </p>
+                  </div>
+                </div>
+            </footer>
+
           </div>
         </ThemeProvider>
       </body>
