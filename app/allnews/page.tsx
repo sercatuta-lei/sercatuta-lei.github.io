@@ -6,7 +6,7 @@ import Link from "next/link";
 const news = [
   {
     date: "2025",
-    headline: "Qiping has successfully defended her Ph.D. dissertation titled 'Enhancing Symbolic Execution for Solidity Smart Contracts'.",
+    headline: "Congratulations to Qiping who has successfully defended her Ph.D. dissertation titled 'Enhancing Symbolic Execution for Solidity Smart Contracts'.",
   },
   {
     date: "2025",
@@ -14,7 +14,7 @@ const news = [
   },
   {
     date: "2024",
-    headline: "Sunny has successfully defended his Ph.D. dissertation titled 'Leveraging Software Testing Techniques to Explain, Analyze, and Debug Machine Learning Models'.",
+    headline: "Congratulations to Sunny who has successfully defended his Ph.D. dissertation titled 'Leveraging Software Testing Techniques to Explain, Analyze, and Debug Machine Learning Models'.",
   },
   {
     date: "2024",
@@ -34,7 +34,7 @@ const news = [
   },
   {
     date: "July 31, 2023",
-    headline: "Qiping, Fadule & Jack have their paper titled \"SmartExecutor: Coverage-Driven Symbolic Execution Guided by a Function Dependency Graph\", being accepted by BRAINS 2023.",
+    headline: "Congratulations to Qiping, Fadule & Jack who have their paper titled \"SmartExecutor: Coverage-Driven Symbolic Execution Guided by a Function Dependency Graph\", being accepted by BRAINS 2023.",
   },
   {
     date: "March 1, 2023",
@@ -42,11 +42,11 @@ const news = [
   },
   {
     date: "December 20, 2022",
-    headline: "Jack, Xiaolei & Qiping have their paper titled \"MagicMirror: Towards High-Coverage Fuzzing of Smart Contracts\", being accepted into ICST 2023. ICST is a major conference in Software Testing, and smart contract is an exciting application domain.",
+    headline: "Congratulations to Jack, Xiaolei & Qiping who have their paper titled \"MagicMirror: Towards High-Coverage Fuzzing of Smart Contracts\", being accepted into ICST 2023. ICST is a major conference in Software Testing, and smart contract is an exciting application domain.",
   },
   {
     date: "July 11, 2022",
-    headline: "Mengfei has her extension work of the first project being accepted by ACM Journal Digital Threats: Research and Practice, titled \"Security Analysis of Zigbee Protocol Implementation\".",
+    headline: "Congratulations to Mengfei who has her extension work of the first project being accepted by ACM Journal Digital Threats: Research and Practice, titled \"Security Analysis of Zigbee Protocol Implementation\".",
   },
   {
     date: "June 17, 2022",
@@ -62,31 +62,31 @@ const news = [
   },
   {
     date: "August 18, 2021",
-    headline: "Jaganmohan Chandrasekaran has successfully defended his Ph.D. dissertation titled \"Testing AI-based Software Systems\".",
+    headline: "Congratulations to Jaganmohan Chandrasekaran who has successfully defended his Ph.D. dissertation titled \"Testing AI-based Software Systems\".",
   },
   {
     date: "May 24, 2021",
-    headline: "Xiaolei Ren, Dr. Jiang Ming, and Dr. Jeff Lei won the PLDI 2021 Distinguished Paper Award for their paper Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference: An Empirical Study. PLDI is the flagship conference in the field of programming languages and programming systems research.",
+    headline: "Congratulations to Xiaolei Ren, Dr. Jiang Ming, and Dr. Jeff Lei who won the PLDI 2021 Distinguished Paper Award for their paper Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference: An Empirical Study. PLDI is the flagship conference in the field of programming languages and programming systems research.",
   },
   {
     date: "May 15, 2021",
-    headline: "Feng Duan has successfully defended his Ph.D. dissertation.",
+    headline: "Congratulations to Feng Duan who has successfully defended his Ph.D. dissertation.",
   },
   {
     date: "May 15, 2021",
-    headline: "Huadong (Jack) Feng has successfully defended his Ph.D. dissertation.",
+    headline: "Congratulations to Huadong (Jack) Feng who has successfully defended his Ph.D. dissertation.",
   },
   {
     date: "May 6, 2021",
-    headline: "Mengfei has her first paper accepted by WiSec'21. Her paper is titled as Z-Fuzzer: Device-agnostic Fuzzing of Zigbee Protocol Implementation.",
+    headline: "Congratulations to Mengfei who has her first paper accepted by WiSec'21. Her paper is titled as Z-Fuzzer: Device-agnostic Fuzzing of Zigbee Protocol Implementation.",
   },
   {
     date: "May 6, 2021",
-    headline: "Xiaolei has his first paper accepted by PLDI'21. His paper is titled as Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference: An Empirical Study.",
+    headline: "Congratulations to Xiaolei who has his first paper accepted by PLDI'21. His paper is titled as Unleashing the Hidden Power of Compiler Optimization on Binary Code Difference: An Empirical Study.",
   },
   {
     date: "May 5, 2021",
-    headline: "Jagan has received the \"Summer 2021 Dissertation Fellowship\" award at UTA.",
+    headline: "Congratulations to Jagan who has received the \"Summer 2021 Dissertation Fellowship\" award at UTA.",
   },
   {
     date: "January 27, 2021",

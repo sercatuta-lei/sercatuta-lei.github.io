@@ -9,7 +9,7 @@ import Link from "next/link";
 const newsData = [
   {
     date: "2025",
-    headline: "Qiping has successfully defended her Ph.D. dissertation titled 'Enhancing Symbolic Execution for Solidity Smart Contracts'.",
+    headline: "Congratulations to Qiping who has successfully defended her Ph.D. dissertation titled 'Enhancing Symbolic Execution for Solidity Smart Contracts'.",
   },
   {
     date: "2025",
@@ -17,7 +17,7 @@ const newsData = [
   },
   {
     date: "2024",
-    headline: "Sunny has successfully defended his Ph.D. dissertation titled 'Leveraging Software Testing Techniques to Explain, Analyze, and Debug Machine Learning Models'.",
+    headline: "Congratulations to Sunny who has successfully defended his Ph.D. dissertation titled 'Leveraging Software Testing Techniques to Explain, Analyze, and Debug Machine Learning Models'.",
   },
   {
     date: "2024",
@@ -37,7 +37,7 @@ const newsData = [
   },
   {
     date: "July 31, 2023",
-    headline: "Qiping, Fadule & Jack have their paper titled \"SmartExecutor: Coverage-Driven Symbolic Execution Guided by a Function Dependency Graph\", being accepted by BRAINS 2023.",
+    headline: "Congratulations to Qiping, Fadule & Jack who have their paper titled \"SmartExecutor: Coverage-Driven Symbolic Execution Guided by a Function Dependency Graph\", being accepted by BRAINS 2023.",
   },
   {
     date: "March 1, 2023",
@@ -45,11 +45,11 @@ const newsData = [
   },
   {
     date: "December 20, 2022",
-    headline: "Jack, Xiaolei & Qiping have their paper titled \"MagicMirror: Towards High-Coverage Fuzzing of Smart Contracts\", being accepted into ICST 2023.",
+    headline: "Congratulations to Jack, Xiaolei & Qiping who have their paper titled \"MagicMirror: Towards High-Coverage Fuzzing of Smart Contracts\", being accepted into ICST 2023.",
   },
   {
     date: "July 11, 2022",
-    headline: "Mengfei has her extension work of the first project being accepted by ACM Journal Digital Threats: Research and Practice.",
+    headline: "Congratulations to Mengfei who has her extension work of the first project being accepted by ACM Journal Digital Threats: Research and Practice.",
   },
 ];
 
