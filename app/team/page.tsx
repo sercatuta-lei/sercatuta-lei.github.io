@@ -68,153 +68,126 @@ const alumni = [
   {
     name: "Dr. Qiping Wei",
     photo: "qiping.jpg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/qiping-wei-5202a914b/"
   },
   {
     name: "Dr. Sunny Shree",
-    photo: "sunny.jpg",
-    info: "Ph.D. Graduate"
+    photo: "sunny.jpg"
   },
   {
     name: "Dr. Mengfei (Angela) Ren",
     photo: "mengfei.jpg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/angelarenmf/"
   },
   {
     name: "Dr. Xiaolei (Harry) Ren",
-    photo: "Xiaolei.jpg",
-    info: "Ph.D. Graduate"
+    photo: "Xiaolei.jpg"
   },
   {
     name: "Mr. Ruben Martinez",
-    photo: "bio-photo.jpg",
-    info: "M.S. Graduate"
+    photo: "bio-photo.jpg"
   },
   {
     name: "Dr. Ankita Patel",
     photo: "Ankita.jpg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/patelankitar/"
   },
   {
     name: "Dr. Duan Feng",
-    photo: "Feng_Duan.jpeg",
-    info: "Ph.D. Graduate"
+    photo: "Feng_Duan.jpeg"
   },
   {
-    name: "Dr. Huadong (Jack) Feng",
-    photo: "Huadong_Feng.png",
-    info: "Ph.D. Graduate"
+    name: "Dr. Huadong (Jack) Ren",
+    photo: "Huadong_Feng.png"
   },
   {
     name: "Dr. Jaganmohan Chandrasekaran",
     photo: "Jagan.jpg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/cjaganmohan/"
   },
   {
     name: "Dr. Sarker Tanveer Ahmed",
     photo: "Sarker_Tanveer_Ahmed.jpeg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/sarker-tanveer-ahmed-93a0a072/"
   },
   {
     name: "Dr. Laleh Ghandehari",
     photo: "Laleh_Ghandehari.jpeg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/lalehshghandehari/"
   },
   {
     name: "Dr. Jing Xu",
     photo: "Jing_Xu.jpeg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/jing-xu-b77bb357/"
   },
   {
     name: "Dr. Mehra Nouroz Borazjany",
-    photo: "Mehra_Nouroz_Borazjany.jpeg",
-    info: "Ph.D. Graduate"
+    photo: "Mehra_Nouroz_Borazjany.jpeg"
   },
   {
     name: "Dr. Linbin Yu",
     photo: "Linbin_Yu.jpeg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/linbinyu/"
   },
   {
     name: "Dr. Dengfeng Xia",
-    photo: "Dengfeng_Xia.jpeg",
-    info: "Ph.D. Graduate"
+    photo: "Dengfeng_Xia.jpeg"
   },
   {
     name: "Dr. Wenhua Wang",
     photo: "bio-photo.jpg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/wenhua-wang-1169741b/"
   },
   {
     name: "Dr. Anthony Opara",
     photo: "bio-photo.jpg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/anthony-opara-6681649b/"
   },
   {
     name: "Dr. Keerthika Koteeswaran",
     photo: "Keerthika_Koteeswaran.jpeg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/kkoteeswaran/"
   },
   {
     name: "Dr. Arun Ramani",
-    photo: "Arun_Ramani.jpeg",
-    info: "Ph.D. Graduate"
+    photo: "Arun_Ramani.jpeg"
   },
   {
     name: "Mr. Andres Yanes",
-    photo: "bio-photo.jpg",
-    info: "M.S. Graduate"
+    photo: "bio-photo.jpg"
   },
   {
     name: "Dr. Kallol Mahata",
     photo: "Kallol_Mahata.jpeg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/kallolmahata/"
   },
   {
     name: "Ms. Daxa Patel",
-    photo: "bio-photo.jpg",
-    info: "M.S. Graduate"
+    photo: "bio-photo.jpg"
   },
   {
     name: "Dr. Chinmay Jayaswal",
     photo: "Chinmay_Jayaswal.jpeg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/chinmayjayaswal/"
   },
   {
     name: "Dr. Vidur Gupta",
     photo: "bio-photo.jpg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/vidurg/"
   },
   {
     name: "Ms. Monica Hernandez",
     photo: "bio-photo.jpg",
-    info: "M.S. Graduate",
     link: "https://www.linkedin.com/in/monicamhernandez/"
   },
   {
     name: "Dr. Gaurav Saini",
     photo: "Gaurav_Saini.jpeg",
-    info: "Ph.D. Graduate",
     link: "https://www.linkedin.com/in/g-gauravsaini/"
   },
   {
     name: "Dr. Pichate Pluempatanakij",
-    photo: "bio-photo.jpg",
-    info: "Ph.D. Graduate"
+    photo: "bio-photo.jpg"
   }
 ];
 
@@ -359,7 +332,7 @@ export default function TeamPage() {
                     ) : (
                       <h3 className="text-base font-semibold text-slate-800 dark:text-white mb-2">{person.name}</h3>
                     )}
-                    <p className="text-slate-600 dark:text-gray-300 text-xs leading-relaxed mb-2">{person.info}</p>
+
                   </div>
                 </CardContent>
               </Card>
