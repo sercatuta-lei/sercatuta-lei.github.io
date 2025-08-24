@@ -8,7 +8,7 @@ import Link from "next/link";
 // News data
 const newsData = [
   {
-    date: "2025",
+    date: "July 14, 2025",
     headline: "Congratulations to Qiping who has successfully defended her Ph.D. dissertation titled 'Enhancing Symbolic Execution for Solidity Smart Contracts'.",
   },
   {
@@ -16,7 +16,7 @@ const newsData = [
     headline: "Welcome Sampada to our lab as Volunteer Research Assistant.",
   },
   {
-    date: "2024",
+    date: "November 18, 2024",
     headline: "Congratulations to Sunny who has successfully defended his Ph.D. dissertation titled 'Leveraging Software Testing Techniques to Explain, Analyze, and Debug Machine Learning Models'.",
   },
   {
