@@ -40,15 +40,7 @@ const publicationsData: Publication[] = [
     year: 2025,
     type: "conference"
   },
-  {
-    id: 59,
-    title: "ABLE: Using Adversarial Pairs to Construct Local Models for Explaining Model Predictions",
-    authors: "Yu Lei, Raghu Kacker, David Kuhn",
-    venue: "2025",
-    url: "",
-    year: 2025,
-    type: "conference"
-  },
+
 
   // 2024 Papers
   {
