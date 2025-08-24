@@ -164,7 +164,7 @@ export default function RootLayout({
                     <div className="space-y-3">
                       <div className="flex">
                         <span className="text-blue-400 font-medium w-28 flex-shrink-0">Office Room:</span>
-                        <span className="text-slate-300">Engineering Research Building (ERB), Room 531</span>
+                        <span className="text-slate-300">Engineering Research Building (ERB), Room 513</span>
                       </div>
                       <div className="flex">
                         <span className="text-blue-400 font-medium w-28 flex-shrink-0">Post Address:</span>
@@ -175,21 +175,14 @@ export default function RootLayout({
                           <div>Arlington, Texas 76019-0015</div>
                         </div>
                       </div>
-                      <div className="flex">
-                        <span className="text-blue-400 font-medium w-28 flex-shrink-0">Email:</span>
-                        <span className="text-slate-300">
-                          <a href="mailto:ylei@cse.uta.edu" className="text-blue-400 hover:text-blue-300 transition-colors">
-                            ylei@cse.uta.edu
-                          </a>
-                        </span>
-                      </div>
+
                     </div>
                   </div>
 
                   {/* Bottom Bar */}
                   <div className="border-t border-slate-800 dark:border-gray-800 mt-4 pt-4 text-center">
                     <p className="text-slate-400 text-sm">
-                      © 2025 Jeff Lei Research Lab. All rights reserved.
+                      © 2025 Jeff Lei&apos;s Research Lab. All rights reserved.
                     </p>
                   </div>
                 </div>
