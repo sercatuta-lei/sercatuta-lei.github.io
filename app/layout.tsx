@@ -22,8 +22,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Jeff Lei&apos;s Lab - Software Engineering Research Group",
-    template: "%s | Jeff Lei&apos;s Lab"
+    default: "Jeff Lei's Lab - Software Engineering Research Group",
+    template: "%s | Jeff Lei's Lab"
   },
   description: "The Software Engineering Research Group supervised by Dr. Jeff Lei at the University of Texas at Arlington. Conducting cutting-edge research in software design, specification, analysis, verification, and testing.",
   keywords: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     "machine learning"
   ],
   authors: [{ name: "Jeff Lei" }],
-  creator: "Jeff Lei&apos;s Lab",
+  creator: "Jeff Lei's Lab",
   publisher: "University of Texas at Arlington",
   formatDetection: {
     email: false,
