@@ -205,7 +205,7 @@ export default function TeamPage() {
           <CardContent className="p-8">
             <div className="flex flex-col items-center text-center gap-6">
               <img
-                src={`/images/teampic/${director.photo}`}
+                src={`./images/teampic/${director.photo}`}
                 alt="Dr. Yu (Jeff) Lei photo"
                 width={200}
                 height={200}
@@ -254,7 +254,7 @@ export default function TeamPage() {
                   <div className="text-center">
                     {member.photo ? (
                       <img
-                        src={`/images/teampic/${member.photo}`}
+                        src={`./images/teampic/${member.photo}`}
                         alt={`${member.name} photo`}
                         width={120}
                         height={120}
@@ -306,7 +306,7 @@ export default function TeamPage() {
                 <CardContent className="p-6">
                   <div className="text-center">
                     <img
-                      src={`/images/teampic/${person.photo}`}
+                      src={`./images/teampic/${person.photo}`}
                       alt={`${person.name} photo`}
                       width={100}
                       height={100}
