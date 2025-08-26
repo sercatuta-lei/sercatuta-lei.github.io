@@ -3,13 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Performance optimizations
   images: {
-    // Enable image optimization
-    formats: ['image/webp', 'image/avif'],
-    // Add domains if loading external images
-    domains: [],
-    // Optimize image sizes
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    // Disable image optimization for static export
+    unoptimized: true,
   },
   
   // Experimental features for better performance
@@ -27,9 +22,10 @@ const nextConfig: NextConfig = {
   // Enable compression
   compress: true,
 
-  // Enable static optimization (uncomment if you want static export)
-  // output: 'export', // Remove this if you need server-side features
+  // Enable static optimization for GitHub Pages
+  output: 'export',
   trailingSlash: true,
+  assetPrefix: '/jeff-lei-lab-website-main',
   
   // Webpack optimizations
   webpack: (config, { dev, isServer }) => {

@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+// Removed Next.js Image import for static export compatibility
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -204,14 +204,12 @@ export default function TeamPage() {
         <Card className="bg-gradient-to-br from-slate-50 to-blue-50/50 dark:from-gray-900 dark:to-gray-950 border border-slate-200/60 dark:border-gray-800 shadow-lg rounded-2xl max-w-md">
           <CardContent className="p-8">
             <div className="flex flex-col items-center text-center gap-6">
-              <Image
+              <img
                 src={`/images/teampic/${director.photo}`}
                 alt="Dr. Yu (Jeff) Lei photo"
                 width={200}
                 height={200}
                 className="rounded-xl object-cover w-48 h-48 shadow-md"
-                priority={true}
-                loading="eager"
               />
               <div>
                                  <a
@@ -255,15 +253,12 @@ export default function TeamPage() {
                 <CardContent className="p-6">
                   <div className="text-center">
                     {member.photo ? (
-                      <Image
+                      <img
                         src={`/images/teampic/${member.photo}`}
                         alt={`${member.name} photo`}
                         width={120}
                         height={120}
                         className="rounded-full object-cover w-24 h-24 mx-auto mb-4 shadow-md"
-                        loading="lazy"
-                        placeholder="blur"
-                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+Rw="
                       />
                     ) : (
                       <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center shadow-md">
@@ -310,15 +305,12 @@ export default function TeamPage() {
               <Card className="bg-white/80 dark:bg-gray-800 border border-slate-200/60 dark:border-gray-700 shadow-lg hover:shadow-xl rounded-2xl hover:bg-white dark:hover:bg-gray-700 transition-all duration-300 backdrop-blur-sm">
                 <CardContent className="p-6">
                   <div className="text-center">
-                    <Image
+                    <img
                       src={`/images/teampic/${person.photo}`}
                       alt={`${person.name} photo`}
                       width={100}
                       height={100}
                       className="rounded-full object-cover w-20 h-20 mx-auto mb-3 shadow-md"
-                      loading="lazy"
-                      placeholder="blur"
-                      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R+Rw="
                     />
                     {person.link ? (
                       <a
