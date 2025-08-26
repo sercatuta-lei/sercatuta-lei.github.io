@@ -25,7 +25,7 @@ const nextConfig: NextConfig = {
   // Enable static optimization for GitHub Pages
   output: 'export',
   trailingSlash: true,
-  assetPrefix: '/jeff-lei-lab-website-main',
+  assetPrefix: '/lei-lab-sercatuta',
   
   // Webpack optimizations
   webpack: (config, { dev, isServer }) => {
