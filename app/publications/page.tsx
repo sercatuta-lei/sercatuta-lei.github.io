@@ -6,8 +6,11 @@ import { motion } from "framer-motion";
 import { getPublications } from "./data";
 
 export default function PublicationsPage() {
-  // Get publications data
-  const publications = useMemo(() => getPublications(), []);
+  // Get publications data and sort by year (most recent first)
+  const publications = useMemo(() => {
+    const pubs = getPublications();
+    return pubs.sort((a, b) => b.year - a.year); // Sort by year descending
+  }, []);
   
   // Memoize years calculation to prevent recalculation on every render
   const years = useMemo(() => 
@@ -34,7 +37,7 @@ export default function PublicationsPage() {
       >
         <h1 className="text-4xl font-bold text-slate-800 dark:text-white mb-4">Publications</h1>
         <p className="text-slate-600 dark:text-gray-300 text-lg">
-          For a full list of publications, visit our{" "}
+          Our research publications displayed chronologically (most recent first). For a complete list, visit our{" "}
           <a 
             href="https://scholar.google.com/citations?hl=en&user=UEHiYcoAAAAJ" 
             className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline transition-colors"
