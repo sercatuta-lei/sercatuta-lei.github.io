@@ -14,49 +14,49 @@ const director = {
 // Current Members
 const currentMembers = [
   {
-    name: "Mr. Fadul Sikder",
+    name: "Fadul Sikder",
     photo: "fadul.jpg",
     info: "Ph.D. Student",
     link: "https://www.linkedin.com/in/fadul-sikder-0b5a8a202/"
   },
   {
-    name: "Mr. Krishna Khadka",
+    name: "Krishna Khadka",
     photo: "krishna.jpeg",
     info: "Ph.D. Student",
     link: "https://www.linkedin.com/in/krishna-khadka-238b35162/"
   },
   {
-    name: "Mr. Arjun Dahal",
+    name: "Arjun Dahal",
     photo: "arjun.jpeg",
     info: "Ph.D. Student",
     link: "https://www.linkedin.com/in/arjdahal/"
   },
   {
-    name: "Mr. Pujan Budhathoki",
+    name: "Pujan Budhathoki",
     photo: "pujan.png",
     info: "Ph.D. Student",
     link: "https://www.linkedin.com/in/pujan-budhathoki-54a957144/"
   },
   {
-    name: "Mr. Saif Uddin Mahmud",
+    name: "Saif Uddin Mahmud",
     photo: "saif-pic.jpg",
     info: "Ph.D. Student",
     link: "https://www.linkedin.com/in/saif--mahmud/"
   },
   {
-    name: "Mr. Shovon Niverd",
+    name: "Shovon Niverd",
     photo: "shovon_pereira.jpg",
     info: "Ph.D. Student",
     link: "https://www.linkedin.com/in/shovon-niverd-pereira/"
   },
   {
-    name: "Ms. Samreen",
+    name: "Samreen",
     photo: "samreen.jpeg",
     info: "M.S. Thesis Student",
     link: "https://www.linkedin.com/in/samerr98"
   },
   {
-    name: "Ms. Sampada",
+    name: "Sampada",
     photo: "Sampada.jpg",
     info: "Volunteer Research Assistant",
     link: "https://www.linkedin.com/in/sampadapavate/"
