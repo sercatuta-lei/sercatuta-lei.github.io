@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://sercatuta-lei.github.io/lei-lab-sercatuta'),
+  metadataBase: new URL('https://sercatuta-lei.github.io'),
   alternates: {
     canonical: '/',
   },
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://sercatuta-lei.github.io/lei-lab-sercatuta',
+    url: 'https://sercatuta-lei.github.io',
     title: 'Jeff Lei Lab - Software Engineering Research Group',
     description: 'The Software Engineering Research Group supervised by Dr. Jeff Lei at the University of Texas at Arlington.',
     siteName: 'Jeff Lei Lab',
@@ -121,7 +121,7 @@ export const metadata: Metadata = {
     'DC.date': '2024',
     'DC.type': 'Text',
     'DC.format': 'text/html',
-    'DC.identifier': 'https://sercatuta-lei.github.io/lei-lab-sercatuta',
+    'DC.identifier': 'https://sercatuta-lei.github.io',
     'DC.language': 'en',
     'DC.coverage': 'Software Engineering Research',
     'DC.rights': 'Copyright Jeff Lei&apos;s Lab',

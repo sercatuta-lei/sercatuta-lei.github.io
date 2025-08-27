@@ -25,7 +25,6 @@ const nextConfig: NextConfig = {
   // Enable static optimization for GitHub Pages
   output: 'export',
   trailingSlash: true,
-  basePath: '/lei-lab-sercatuta',
   
   // Webpack optimizations
   webpack: (config, { dev, isServer }) => {
