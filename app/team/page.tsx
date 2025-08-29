@@ -66,127 +66,127 @@ const currentMembers = [
 // Alumni
 const alumni = [
   {
-    name: "Dr. Qiping Wei",
+    name: "Qiping Wei",
     photo: "qiping.jpg",
     link: "https://www.linkedin.com/in/qiping-wei-5202a914b/"
   },
   {
-    name: "Dr. Sunny Shree",
+    name: "Sunny Shree",
     photo: "sunny.jpg"
   },
   {
-    name: "Dr. Mengfei (Angela) Ren",
+    name: "Mengfei (Angela) Ren",
     photo: "mengfei.jpg",
     link: "https://www.linkedin.com/in/angelarenmf/"
   },
   {
-    name: "Dr. Xiaolei (Harry) Ren",
+    name: "Xiaolei (Harry) Ren",
     photo: "Xiaolei.jpg"
   },
   {
-    name: "Mr. Ruben Martinez",
+    name: "Ruben Martinez",
     photo: "bio-photo.jpg"
   },
   {
-    name: "Dr. Ankita Patel",
+    name: "Ankita Patel",
     photo: "Ankita.jpg",
     link: "https://www.linkedin.com/in/patelankitar/"
   },
   {
-    name: "Dr. Duan Feng",
+    name: "Duan Feng",
     photo: "Feng_Duan.jpeg"
   },
   {
-    name: "Dr. Huadong (Jack) Ren",
+    name: "Huadong (Jack) Ren",
     photo: "Huadong_Feng.png"
   },
   {
-    name: "Dr. Jaganmohan Chandrasekaran",
+    name: "Jaganmohan Chandrasekaran",
     photo: "Jagan.jpg",
     link: "https://www.linkedin.com/in/cjaganmohan/"
   },
   {
-    name: "Dr. Sarker Tanveer Ahmed",
+    name: "Sarker Tanveer Ahmed",
     photo: "Sarker_Tanveer_Ahmed.jpeg",
     link: "https://www.linkedin.com/in/sarker-tanveer-ahmed-93a0a072/"
   },
   {
-    name: "Dr. Laleh Ghandehari",
+    name: "Laleh Ghandehari",
     photo: "Laleh_Ghandehari.jpeg",
     link: "https://www.linkedin.com/in/lalehshghandehari/"
   },
   {
-    name: "Dr. Jing Xu",
+    name: "Jing Xu",
     photo: "Jing_Xu.jpeg",
     link: "https://www.linkedin.com/in/jing-xu-b77bb357/"
   },
   {
-    name: "Dr. Mehra Nouroz Borazjany",
+    name: "Mehra Nouroz Borazjany",
     photo: "Mehra_Nouroz_Borazjany.jpeg"
   },
   {
-    name: "Dr. Linbin Yu",
+    name: "Linbin Yu",
     photo: "Linbin_Yu.jpeg",
     link: "https://www.linkedin.com/in/linbinyu/"
   },
   {
-    name: "Dr. Dengfeng Xia",
+    name: "Dengfeng Xia",
     photo: "Dengfeng_Xia.jpeg"
   },
   {
-    name: "Dr. Wenhua Wang",
+    name: "Wenhua Wang",
     photo: "bio-photo.jpg",
     link: "https://www.linkedin.com/in/wenhua-wang-1169741b/"
   },
   {
-    name: "Dr. Anthony Opara",
+    name: "Anthony Opara",
     photo: "bio-photo.jpg",
     link: "https://www.linkedin.com/in/anthony-opara-6681649b/"
   },
   {
-    name: "Dr. Keerthika Koteeswaran",
+    name: "Keerthika Koteeswaran",
     photo: "Keerthika_Koteeswaran.jpeg",
     link: "https://www.linkedin.com/in/kkoteeswaran/"
   },
   {
-    name: "Dr. Arun Ramani",
+    name: "Arun Ramani",
     photo: "Arun_Ramani.jpeg"
   },
   {
-    name: "Mr. Andres Yanes",
+    name: "Andres Yanes",
     photo: "bio-photo.jpg"
   },
   {
-    name: "Dr. Kallol Mahata",
+    name: "Kallol Mahata",
     photo: "Kallol_Mahata.jpeg",
     link: "https://www.linkedin.com/in/kallolmahata/"
   },
   {
-    name: "Ms. Daxa Patel",
+    name: "Daxa Patel",
     photo: "bio-photo.jpg"
   },
   {
-    name: "Dr. Chinmay Jayaswal",
+    name: "Chinmay Jayaswal",
     photo: "Chinmay_Jayaswal.jpeg",
     link: "https://www.linkedin.com/in/chinmayjayaswal/"
   },
   {
-    name: "Dr. Vidur Gupta",
+    name: "Vidur Gupta",
     photo: "bio-photo.jpg",
     link: "https://www.linkedin.com/in/vidurg/"
   },
   {
-    name: "Ms. Monica Hernandez",
+    name: "Monica Hernandez",
     photo: "bio-photo.jpg",
     link: "https://www.linkedin.com/in/monicamhernandez/"
   },
   {
-    name: "Dr. Gaurav Saini",
+    name: "Gaurav Saini",
     photo: "Gaurav_Saini.jpeg",
     link: "https://www.linkedin.com/in/g-gauravsaini/"
   },
   {
-    name: "Dr. Pichate Pluempatanakij",
+    name: "Pichate Pluempatanakij",
     photo: "bio-photo.jpg"
   }
 ];
