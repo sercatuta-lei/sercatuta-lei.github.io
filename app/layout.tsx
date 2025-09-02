@@ -22,10 +22,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Jeff Lei's Lab - Software Engineering Research Group",
+    default: "Jeff Lei's Lab - AI and Software Engineering Research Group",
     template: "%s | Jeff Lei's Lab"
   },
-  description: "The Software Engineering Research Group supervised by Dr. Jeff Lei at the University of Texas at Arlington. Conducting cutting-edge research in software design, specification, analysis, verification, and testing.",
+  description: "The AI and Software Engineering Research Group supervised by Dr. Jeff Lei at the University of Texas at Arlington. Conducting cutting-edge research in software design, specification, analysis, verification, and testing.",
   keywords: [
     "software engineering",
     "research",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://sercatuta-lei.github.io',
-    title: 'Jeff Lei\'s Lab - Software Engineering Research Group',
+    title: 'Jeff Lei\'s Lab - AI and Software Engineering Research Group',
     description: 'The Software Engineering Research Group supervised by Dr. Jeff Lei at the University of Texas at Arlington.',
     siteName: 'Jeff Lei\'s Lab',
     images: [
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jeff Lei\'s Lab - Software Engineering Research Group',
+    title: 'Jeff Lei\'s Lab - AI and Software Engineering Research Group',
     description: 'The Software Engineering Research Group supervised by Dr. Jeff Lei at the University of Texas at Arlington.',
     images: ['/images/logo1.png'],
   },

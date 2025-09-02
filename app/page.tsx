@@ -100,20 +100,13 @@ export default function Home() {
             >
               Engineering Trustworthy AI and Software Systems
             </motion.h1>
-            <motion.p 
-              className="text-xl md:text-2xl text-slate-600 dark:text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              Lei&apos;s Research Group, CSE@UTA
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
+
+                          <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center mb-6"
+              >
               <Button 
                 asChild
                 className="px-8 py-4 text-lg bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
@@ -152,7 +145,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                Our research focuses on developing <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">trustworthy software systems</span>. We are particularly interested in the intersection of Artificial Intelligence (AI) and Software Engineering (SE).
+                Our research focuses on developing <span className="font-semibold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">trustworthy AI and software systems</span>. We are particularly interested in the intersection of Artificial Intelligence (AI) and Software Engineering (SE).
               </motion.p>
               
               <motion.div
