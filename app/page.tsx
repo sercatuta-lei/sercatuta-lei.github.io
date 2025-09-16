@@ -85,7 +85,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 dark:from-gray-900 dark:via-black dark:to-gray-900">
         <div className="absolute inset-0 bg-grid-pattern opacity-10 dark:opacity-5"></div>
-        <div className="relative max-w-7xl mx-auto px-4 py-20 lg:py-32">
+        <div className="relative max-w-7xl mx-auto px-4 py-20 lg:py-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -121,12 +121,13 @@ export default function Home() {
                 <Link href="/publications">View Research</Link>
               </Button>
             </motion.div>
+
           </motion.div>
         </div>
       </section>
 
       {/* About Section */}
-      <section className="py-16 bg-slate-50/50 dark:bg-gray-950 relative overflow-hidden">
+      <section className="py-8 bg-slate-50/50 dark:bg-gray-950 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-purple-50/20 to-indigo-50/30 dark:from-blue-900/10 dark:via-purple-900/10 dark:to-indigo-900/10"></div>
         <div className="relative max-w-6xl mx-auto px-4">
           <motion.div
@@ -134,7 +135,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-12"
+            className="text-center mb-6"
           >
 
             <div className="max-w-4xl mx-auto">
@@ -155,39 +156,39 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"
               >
-                <motion.div
-                  whileHover={{ y: -5 }}
-                  transition={{ duration: 0.3 }}
-                  className="group"
-                >
-                  <Card className="h-full bg-white/80 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm">
-                    <CardContent className="p-8 text-center">
-                      <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-6">
-                        AI for Software Engineering
-                      </h3>
-                      <p className="text-lg text-slate-600 dark:text-gray-300 leading-relaxed">
-                        We leverage AI techniques to improve the analysis, testing, and debugging of software systems
-                      </p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-                
-                <motion.div
-                  whileHover={{ y: -5 }}
-                  transition={{ duration: 0.3 }}
-                  className="group"
-                >
-                  <Card className="h-full bg-white/80 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm">
-                    <CardContent className="p-8 text-center">
-                      <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-6">
-                        Software Engineering for AI
-                      </h3>
-                      <p className="text-lg text-slate-600 dark:text-gray-300 leading-relaxed">
-                        We apply SE methods to ensure the trustworthiness of AI models and software
-                      </p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
+              <motion.div
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+                className="group"
+              >
+                <Card className="h-full bg-white/80 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm">
+                  <CardContent className="p-8 text-center">
+                    <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-6">
+                      AI for Software Engineering
+                    </h3>
+                    <p className="text-lg text-slate-600 dark:text-gray-300 leading-relaxed">
+                      We leverage AI techniques to improve the analysis, testing, and debugging of software systems
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+              
+              <motion.div
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+                className="group"
+              >
+                <Card className="h-full bg-white/80 dark:bg-gray-800 border border-slate-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-sm">
+                  <CardContent className="p-8 text-center">
+                    <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-6">
+                      Software Engineering for AI
+                    </h3>
+                    <p className="text-lg text-slate-600 dark:text-gray-300 leading-relaxed">
+                      We apply SE methods to ensure the trustworthiness of AI models and software
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
               </motion.div>
             </div>
           </motion.div>
