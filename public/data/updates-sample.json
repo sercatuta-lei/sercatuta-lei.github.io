@@ -1,0 +1,78 @@
+{
+  "students": [
+    {
+      "slackId": "U078U88QTN3",
+      "name": "Arjun Dahal",
+      "slug": "arjun-dahal",
+      "photo": "arjun.jpeg",
+      "updates": [
+        {
+          "date": "2024-11-01",
+          "content": "**Arjun:**\n\nHello everyone,\n\n**Milestone:** Complete the baseline approach for Fairness Testing\n\n**Action items completed:**\n- Implemented Conditional VAE for data generation\n- Fixed issues with KL divergence\n- Obtained metrics for Reconstruction Loss vs Number of Embedding Dimension\n\n**Next steps:**\n- Complete the implementation of Conditional VAE\n- Review all the Fairness definitions\n\n**Replies:**\n\n**Dr. Lei:**\nSounds good. Keep up with the good work.\n\n---",
+          "placeholder": false
+        },
+        {
+          "date": "2024-10-25",
+          "content": "**Arjun:**\n\nHi Group,\n\n**Milestone:** Baseline for Fairness Testing | Nov 12\n\nI am working on making changes on the existing library of VAE to incorporate the combinatorial sampling in its latent space.\n\nI will briefly discuss the findings this Friday.",
+          "placeholder": false
+        }
+      ]
+    },
+    {
+      "slackId": "U079VPWQM8X",
+      "name": "Saif Uddin Mahmud",
+      "slug": "saif-uddin-mahmud",
+      "photo": "saif-pic.jpg",
+      "updates": [
+        {
+          "date": "2024-11-01",
+          "content": "**Saif:**\n\nHello group,\n\n**Milestone:** Complete Literature Survey - Dec 5\n\nAction items:\n- Last week, I have summarized three papers for the literature survey:\n  - Python code smell detection using machine learning\n  - An Empirical Study of Code Smells in Transformer-based Code Generation Techniques\n  - Voting Heterogeneous Ensemble for Code Smell Detection\n\n**I will present my current findings to the group on the following Friday (11/8).**\n\n**Replies:**\n\n**Dr. Lei:**\nIf I remember correctly, I suggested you make a schedule towards the paper submission. Can you share the schedule?\n\n---\n\n**Saif:**\nThank you Dr. Lei. I will prepare the schedule and share it by Wednesday.\n\n---",
+          "placeholder": false
+        }
+      ]
+    },
+    {
+      "slackId": "U079MEWK5TK",
+      "name": "Fadul Sikder",
+      "slug": "fadul-sikder",
+      "photo": "fadul.jpg",
+      "updates": [
+        {
+          "date": "2024-11-01",
+          "content": "**Fadul:**\n\nHi everyone,\n\nThis week I have been working on:\n- Finalizing the dataset for smart contract vulnerability detection\n- Running experiments with different LLM models\n- Preparing presentation for the research group meeting\n\n**Next week:**\n- Continue with model fine-tuning\n- Start writing the methodology section\n\nLooking forward to discussing this in Friday's meeting.",
+          "placeholder": false
+        }
+      ]
+    },
+    {
+      "slackId": "U079MEEBRAM",
+      "name": "Krishna Khadka",
+      "slug": "krishna-khadka",
+      "photo": "krishna.jpeg",
+      "updates": []
+    },
+    {
+      "slackId": "U0798MEJQRH",
+      "name": "Pujan Budhathoki",
+      "slug": "pujan-budhathoki",
+      "photo": "pujan.png",
+      "updates": []
+    },
+    {
+      "slackId": "U079265G0ES",
+      "name": "Qiping Wei",
+      "slug": "qiping-wei",
+      "photo": "qiping.jpg",
+      "updates": []
+    },
+    {
+      "slackId": "U08F6QCJ4JJ",
+      "name": "Shovon Niverd",
+      "slug": "shovon-niverd",
+      "photo": "shovon_pereira.jpg",
+      "updates": []
+    }
+  ],
+  "last_updated": "2024-11-04T03:30:00.000Z"
+}
+

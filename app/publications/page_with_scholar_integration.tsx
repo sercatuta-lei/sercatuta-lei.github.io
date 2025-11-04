@@ -268,7 +268,7 @@ export default function PublicationsPage() {
                       </div>
                       <div className="flex flex-col items-end gap-2 ml-6">
                         <span className="text-slate-500 dark:text-gray-400 text-sm font-medium">{pub.year}</span>
-                        {pub.citations !== undefined && (
+                        {'citations' in pub && pub.citations !== undefined && (
                           <span className="text-slate-500 dark:text-gray-400 text-sm">
                             {pub.citations} citations
                           </span>

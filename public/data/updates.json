@@ -1,0 +1,116 @@
+{
+  "students": [
+    {
+      "slackId": "U078U88QTN3",
+      "name": "Arjun Dahal",
+      "slug": "arjun-dahal",
+      "photo": "arjun.jpeg",
+      "updates": [
+        {
+          "date": "2025-10-28",
+          "content": "**Arjun Dahal:**\n\nHello Everyone,\n\nMilestone: propose a revised end-to-end approach for efficient search for discriminatory pairs in latent space ( Oct 31 )\n\nAction Items Completed:\nUsing Bayesian Optimization in the process.\nExplored different sections of our steps to see if they can be improved.\n\nResults/Findings:\nGaussian Process Regressor with UCB acquisition function can be a starting point for the search.\nBayesian Optimization works best with a continuous latent space. This is particularly important in our case, since other discriminatory instances might make a cluster around the existing discriminatory instance (representative). I have been looking into the feasibility of using Wasserstein autoencoders for our case. There seems to be tradeoff of proximity of counterfactuals when we use this autoencoder for searching the discriminatory latents.\n\nIssues:\nI do not have any issues at the moment.\nI will discuss more on my channel regarding the potential issues and solutions in my channel in coming days.\n\n**Replies:**\n\n**Dr. Lei:**\nBayesian optimization is typically used when the actual target is very expensive to evaluate. Also, it requires a prior, which is difficult to justify for fairness testing.\nI suggest you put a target date (perhaps at most one or two weeks), and if you don't have a breakthrough by that time, move on to other research problems.\n\n---",
+          "placeholder": false
+        },
+        {
+          "date": "2024-11-01",
+          "content": "**Arjun:**\n\nHello everyone,\n\n**Milestone:** Complete the baseline approach for Fairness Testing\n\n**Action items completed:**\n- Implemented Conditional VAE for data generation\n- Fixed issues with KL divergence\n- Obtained metrics for Reconstruction Loss vs Number of Embedding Dimension\n\n**Next steps:**\n- Complete the implementation of Conditional VAE\n- Review all the Fairness definitions\n\n**Replies:**\n\n**Dr. Lei:**\nSounds good. Keep up with the good work.\n\n---",
+          "placeholder": false
+        },
+        {
+          "date": "2024-10-25",
+          "content": "**Arjun:**\n\nHi Group,\n\n**Milestone:** Baseline for Fairness Testing | Nov 12\n\nI am working on making changes on the existing library of VAE to incorporate the combinatorial sampling in its latent space.\n\nI will briefly discuss the findings this Friday.",
+          "placeholder": false
+        }
+      ]
+    },
+    {
+      "slackId": "U079VPWQM8X",
+      "name": "Saif Uddin Mahmud",
+      "slug": "saif-uddin-mahmud",
+      "photo": "saif-pic.jpg",
+      "updates": [
+        {
+          "date": "2025-10-30",
+          "content": "**Saif Uddin Mahmud:**\n\nHi group,\n\n**Milestone 1: Complete the analysis from all the models (both proprietary and free) Nov 14**\n**Milestone 2: Complete the project Nov 30**\n\n**Action Items:**\nI have completed 3rd round of code generation using the three free models. the dataset now contain in total 7.5K generated code (~850 instruction, 3 model, 3 passes) using OpenRouter. I am analysing the false positive rates and the variance of the error distribution by comparing the results from Clang-tidy and Cppcheck.\n\n**Next Actions:**\n\n\n- Compare with any of the frontier models (need to estimate the cost first) --  I am planning to use gpt5-mini by this weekend and haiku 3.5 by next week\n- Find ways to analyze performance on certain types of tests i.e test cases for Functional Requirements, Non Functional Requirements\n\n\nResults: I am still working on the false positive rates. yet to find a meaningful result Issues\n\nIssues: No new issues at this moment.",
+          "placeholder": false
+        },
+        {
+          "date": "2024-11-01",
+          "content": "**Saif:**\n\nHello group,\n\n**Milestone:** Complete Literature Survey - Dec 5\n\nAction items:\n- Last week, I have summarized three papers for the literature survey:\n  - Python code smell detection using machine learning\n  - An Empirical Study of Code Smells in Transformer-based Code Generation Techniques\n  - Voting Heterogeneous Ensemble for Code Smell Detection\n\n**I will present my current findings to the group on the following Friday (11/8).**\n\n**Replies:**\n\n**Dr. Lei:**\nIf I remember correctly, I suggested you make a schedule towards the paper submission. Can you share the schedule?\n\n---\n\n**Saif:**\nThank you Dr. Lei. I will prepare the schedule and share it by Wednesday.\n\n---",
+          "placeholder": false
+        }
+      ]
+    },
+    {
+      "slackId": "U079MEWK5TK",
+      "name": "Fadul Sikder",
+      "slug": "fadul-sikder",
+      "photo": "fadul.jpg",
+      "updates": [
+        {
+          "date": "2025-10-30",
+          "content": "**Fadul Sikder:**\n\nProgress\n\n\n- Adapted the new LLM-synthetic dataset to our pipeline and modified the final stage to run on the whole program (instead of a test harness).\n- Completed implementation changes and debugging to obtain an initial result set; began correctness analysis (ongoing).\n- Generated test cases for 100 synthetic programs produced by an LLM.\n- - I also been working on to a draft paper. I would send the paper draft to the group before today’s meeting in next couple of hours.\n\nResults\n\n\n- 16/100 vulnerabilities were triggered by the generated test cases.\n- 8/16 were buffer overflows; the remainder included stack overflow and double free.\n\nVerification Caveats\n\n\n- The synthetic dataset provides only yes/no vulnerability indicators—no CWE labels.\n- For verification, I implemented checks for double free, use-after-free, stack overflow, and buffer overflow.\n- Practically, I verify triggers by observing memory-corruption symptoms or signals at compile time with \"Memory-Safe Compilation\" or during execution with AddressSanitizer (ASan) enabled. However, without CWE labels, confirming the remaining 84/100 is challenging—there may be silent data corruption, undefined behavior, or true segmentation faults deeper in program state.\n\nMain Issue\n\n\n- Verification methodology: Without CWE-level labels, it’s unclear whether a non-crashing input truly fails to trigger the intended vulnerability or is targeting a different class. How to write a verifier in terms of whats is going wrong.",
+          "placeholder": false
+        },
+        {
+          "date": "2024-11-01",
+          "content": "**Fadul:**\n\nHi everyone,\n\nThis week I have been working on:\n- Finalizing the dataset for smart contract vulnerability detection\n- Running experiments with different LLM models\n- Preparing presentation for the research group meeting\n\n**Next week:**\n- Continue with model fine-tuning\n- Start writing the methodology section\n\nLooking forward to discussing this in Friday's meeting.",
+          "placeholder": false
+        }
+      ]
+    },
+    {
+      "slackId": "U079MEEBRAM",
+      "name": "Krishna Khadka",
+      "slug": "krishna-khadka",
+      "photo": "krishna.jpeg",
+      "updates": [
+        {
+          "date": "2025-10-28",
+          "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\nMilestone:\n\n\n1. CNN paper resubmission — Nov 13\n2. ABLE Global Surrogate Model\n3. Proposal\n\nAction Items:\n\n\n1. I completed the implementation of delta debugging on vision transformer models. I was able to get heat maps as explanation\n2. Some more items to include for validation:\n\n\n1. Smaller decision preserving sets results in better interpretability. Evaluate through a theoretical or a human evaluation for verification.\n2. Conduct an ablation study to verify that OFAT works best for linear heads while Delta Debugging is more effective for non-linear heads, by applying cross-validation between the two.\n\nResults/Finding:\n\n\n1. The results look interesting. The minimal feature patches identified are often **scattered and sparse**, suggesting room for structural refinement.\n2. Identified ViT-ReciproCAM (2024) as a relevant recent approach addressing sparse patch explanations and I plan to integrate similar logic to improve patch coherence.\n\nIssues:\n\n\n1. I'm revisiting the code and fix the sparsity issue.\n\n\nI will be unable to attend the meeting today from 12:30-2 pm as I’ll be conducting a midterm 2 exam for my TA class .\n\n**Replies:**\n\n**Krishna Khadka:**\nAn example of heatmap generation in a ViT architecture using DD-CAM.\n\n---\n\n**Krishna Khadka:**\nThis is similar to outputs from Relevance in the following picture, which ViTReciproCAM has tried to resolve.\n\n---",
+          "placeholder": false
+        }
+      ]
+    },
+    {
+      "slackId": "U0798MEJQRH",
+      "name": "Pujan Budhathoki",
+      "slug": "pujan-budhathoki",
+      "photo": "pujan.png",
+      "updates": [
+        {
+          "date": "2025-10-28",
+          "content": "**Pujan Budhathoki:**\n\nHello everyone,\n**Milestone: Get Experimental Results on discussed experiments**\n**Action Items Completed:**\n\n\n1. I ran several experiments this week to observe what we discussed\n\n\n**Findings: (More Detailed results given in my Slack Channel)**\n\n\n1. On closer inspection, I found that when the training loss on each of the outlier points are the lowest it can be (9.999778782803785e-13) (Training prediction confidence is 100%), Outlier points and generalized points behave the same way under perturbations. But when training loss of the outlier points is higher than this (in the range of e-10 to e-7)(Training prediction confidence of 99.99999%) , Outlier points behave in the way we theorized under perturbations.  I am investigating more on this.\n\n**Issues/Questions:**\n\n\n1. I have no issues this week. I am investigating more on why I’m getting the results I’m getting.",
+          "placeholder": false
+        }
+      ]
+    },
+    {
+      "slackId": "U079265G0ES",
+      "name": "Qiping Wei",
+      "slug": "qiping-wei",
+      "photo": "qiping.jpg",
+      "updates": [
+        {
+          "date": "2025-11-03",
+          "content": "No update was provided for the week ending 2025-11-03.",
+          "placeholder": true
+        }
+      ]
+    },
+    {
+      "slackId": "U08F6QCJ4JJ",
+      "name": "Shovon Niverd",
+      "slug": "shovon-niverd",
+      "photo": "shovon_pereira.jpg",
+      "updates": [
+        {
+          "date": "2025-10-28",
+          "content": "**Shovon Niverd:**\n\n**Milestones:**\n\n\n1. Propose an approach for the new project related to interaction diversity(Oct 31).\n\n**Action Items:**\n\n\n1. Exploring literature related to feature interactions.\n2. Define how interaction diversity can be measured.\n3. Create a summary of how interaction diversity can be used to create a surrogate model.\n\n**Results/Findings:**\n\n\n1. A possible approach to a surrogate model with interaction diversity.\n\n\n1. Interaction diversity can be defined as a measure of *how many* feature pairs interact in a model.\n2. As a first step, we can consider having a black-box model with probability access only.\n3. Create a synthetic dataset using the t-way combinatorial approach. It will be a small dataset to start with\n4. As the trained black-box model has learned all the important interactions of the original dataset, it can give an indication of which feature interactions are actually important. Basically, we need to find out how many features or feature pairs interact with each other to enhance the model's performance. I haven't been able to bank on a particular method, which should be used to calculate this diversity.\n5. After the initial interaction measure is done, only those features or feature pairs that with enough importance will put through another t-way iteration to get more samples, thus iteratively creating a dataset for the surrogate model.\n6. Training the surrogate model with that dataset to get high fidelity.\n\n\n1. The following papers had interesting insights:\n\n\n1. [https://www.mdpi.com/2076-3417/9/23/5191](https://www.mdpi.com/2076-3417/9/23/5191)\n2. [https://ieeexplore.ieee.org/abstract/document/10675910](https://ieeexplore.ieee.org/abstract/document/10675910)\n\n**Issues**\n\n\n1. Need to decide what metric to use for the interaction diversity measure.\n2. Unsure of whether to use a GAN/similar generative model for synthetic data, or simply use a t-way test to generate a dataset. If GAN is used, how the interaction diversity will be represented as a feedback/loss is another challenge.\n\n**Replies:**\n\n**Dr. Lei:**\nThis is not really the direction I suggested. Try to think about this as a machine learning problem. Read the paper that uses class diversity, and see how they develop the approach. you just need to replace that with interaction diversity, and then ask what issues you need to address.\n\n---",
+          "placeholder": false
+        }
+      ]
+    }
+  ],
+  "last_updated": "2025-11-03T22:51:59.462017"
+}

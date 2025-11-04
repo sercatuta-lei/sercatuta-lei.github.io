@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+// Disable this API route for static export
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 // Interface for Google Scholar publication data
 interface ScholarPublication {
   title: string;

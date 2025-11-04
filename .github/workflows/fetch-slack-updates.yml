@@ -1,0 +1,71 @@
+name: Fetch Slack Weekly Updates
+
+on:
+  schedule:
+    # Run every Wednesday at 11 PM UTC (5 PM CT)
+    - cron: '0 23 * * 3'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  fetch-updates:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install slack_sdk pyyaml python-dotenv
+      
+      - name: Fetch Slack updates
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+        run: |
+          python scripts/fetch_slack_updates.py
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "changes=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add public/data/updates.json
+          git add public/data/last-sync.json
+          git commit -m "🤖 Update weekly updates from Slack [$(date +'%Y-%m-%d')]"
+          git push
+      
+      - name: Create summary
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          echo "✅ Successfully updated weekly progress from Slack!" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📅 Timestamp: $(date)" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 View updates: https://sercatuta-lei.github.io/updates/" >> $GITHUB_STEP_SUMMARY
+      
+      - name: No changes summary
+        if: steps.check_changes.outputs.changes == 'false'
+        run: |
+          echo "ℹ️ No new updates found" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "📅 Timestamp: $(date)" >> $GITHUB_STEP_SUMMARY
+
