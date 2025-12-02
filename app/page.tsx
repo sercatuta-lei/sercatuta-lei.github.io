@@ -8,6 +8,10 @@ import Link from "next/link";
 // News data
 const newsData = [
   {
+  date: "2025",
+  headline: "Congratulations to Krishna for his paper titled 'ABLE: Using Adversarial Pairs to Construct Local Models for Explaining Model Predictions', which has been accepted by KDD 2026!",
+  },
+  {
     date: "July 14, 2025",
     headline: "Congratulations to Qiping who has successfully defended her Ph.D. dissertation titled 'Enhancing Symbolic Execution for Solidity Smart Contracts'.",
   },
