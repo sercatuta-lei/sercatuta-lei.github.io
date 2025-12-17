@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2025-12-11",
+          "content": "**Arjun Dahal:**\n\nHello Everyone\n\nMilestone: Baseline on Fairness diagnosis and Repair, TabChange KDD submission\n\nAction Items:\n\n\n1.  I have been reading the paper in more depth for whitebox fairness testing that focuses on fault localization and repair.\n2. I am setting up the experiment record the activations in the second last layer of the neural network for different genders. \n\nOnce I have that, I will look into whether they are separable ( linearly or non-linearly ). MMD loss would be used to match these two distributions for Male and Female, along with the classification loss at the last layer. The network would be retrained, and the changes in fairness and accuracy would be measured.\n\nResult/Findings:\nI do not have notable findings. I am working on this experiment to get started and will improve on it. I will get the results for this setup by tomorrow afternoon.\n\nIssues/Questions:\nThe second last layer has all the necessary information from the network. The neurons are responsible for prediction as well as for biases. The literature progresses from identifying bias layers ( and bias neurons within this layer ) to finding bias neurons scattered throughout the layer. Only focusing on this layer might result in a higher drop in accuracy.",
+          "placeholder": false
+        },
+        {
           "date": "2025-12-05",
           "content": "**Arjun Dahal:**\n\nHello Everyone\n\nMilestone: Baseline on Fairness diagnosis and Repair (Dec 11), TabChange KDD submission\nAction Items:\n\n\n1. Prepared the action plan based on reviews of FSE, had feedback from the Stanford Paper reviewer, made changes to the action plan accordingly\n2. Carried out the literature review for the whitebox fairness testing that focuses on fault localization and repair \n\n\nI have initial draft of both of these documents, and I am improving upon it.\n\nResult/Findings:\nI do not have notable findings.\n\nIssues/Questions:\nI have no issues at the moment.\n\nI will present a new idea session for a paper that has whitebox access and works on fault localization and repair.\n\n**Replies:**\n\n**Dr. Lei:**\nCan you share the feedback from the Stanford Paper reviewer?\n\n---\n\n**Arjun Dahal:**\nSure Professor.\n\n---",
           "placeholder": false
@@ -35,6 +40,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2025-12-11",
+          "content": "**Saif Uddin Mahmud:**\n\nHello group,\n\nMilestone: need to discuss\n\nAction Items\nI set up the full activation-capture pipeline using GPT-2 within TransformerLens to prepare for internal behavior analysis across secure vs. general prompts.\nThe secure and general prompt structure is now working end-to-end, and I validated the activation logging across all layers and tokens.\nI also drafted a  written version of the experimental design document.\nDataset integration is planned next, once the pipeline stabilizes, I will transition from sample prompts to the custom C-code dataset.\nResults\nThe activation-difference and attention-difference extraction pipeline is now functioning correctly on prototype prompts.\nNo model-level findings yet, but the infrastructure for analysis is now stable and ready for scaling.\nIssues\nTransformerLens required several adjustments for handling variable sequence lengths during autoregressive decoding, but these issues are now resolved.\nStill testing on GPT-2 until the full environment for Qwen2.5 / Llama-70B / Gemma-27B is configured, as these models require significant compute and loading considerations.\nDataset integration is pending—current experiments use placeholder prompts until model loading and compute availability are finalized.",
+          "placeholder": false
+        },
+        {
           "date": "2025-11-20",
           "content": "**Saif Uddin Mahmud:**\n\nHi group,\n\n**Milestones**\n\n\n- **Milestone 1:** Complete analysis from all models — Nov 14 (I will be able to share the results on Monday – Nov 24)\n- **Milestone 2:** Complete full project — Nov 30\n\n**Action Items**\n\n\n- Record changes in LLM behavior *original* vs the *secure* prompt and track how these propagate through different model components\n\n\n- generated a small subset with secure prompt. Model internal analysis yet to start.\n\n\n- Demo at least one probing tool to guide the next discussion.\n\n\n- I explored LIT and LLM Probe. I am yet to fully understand how they are actually working\n\n\n- Check if there is any existing work on analyzing the internal behavior of LLMs for secure code generation\n\n\n- Shared and discussed one highly relevant paper that focuses on code correctness\n\n\n- Explore probing techniques across neuron, layer, and model levels to identify suitable methods for our vulnerability-focused analysis -- In progress\n- Check whether these methods reveal differences in internal metrics (e.g., activation patterns, specialization scores) - Yet to start\n- Discuss and decide the appropriate abstraction level for probing (neurons, circuits, layers, or full-model behavior) – yet to start\n\n\n**Results**\n\n\n- No report-able result for this week. all work is in progress.\n\n**Issues**\n\n\n- our first issue is to identify suitable probing tool that aligns with our study. At this stage, I am looking for tools that come out of the box so that we can directly plug-and-play for our study.\n- We do not have sufficient data to train a probing classifier. After discussing with Fadul, we agreed that a good starting point would b the 30 vulnerable samples generated from general prompt and 30 samples from secure prompt. In any case, we first start with plug-and-play options.",
           "placeholder": false
@@ -57,6 +67,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2025-12-17",
+          "content": "No update was provided for the week ending 2025-12-17.",
+          "placeholder": true
+        },
         {
           "date": "2025-12-05",
           "content": "**Fadul Sikder:**\n\nLet me start one.\n\n**Replies:**\n\n**Pujan Budhathoki:**\nyeah, please add me as well.\n\n---",
@@ -81,6 +96,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2025-12-11",
+          "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. ABLE Global Surrogate Model\n\nAction Items:\n\n\n1. I have been doing literature review on the feasibility of ABLE global approach. There are existing work that construct global interpretable models from local interpretable model like LIME. I’m currently exploring in more depth — the technical challenges that are there to construct global model from local model, limitation of existing work, and specific risk pertaining to extending ABLE as a global approach.\n2.  Worked together with Shovon to better understanding his project and draft the approach section. I’m also reverifying and running the code.\n\nResults/Finding:\n\n\n1. The literature review shows existing work in constructing global methods from local methods. \n\nIssues:\n\n\n1. I don’t have outstanding issues at the moment.",
+          "placeholder": false
+        },
+        {
           "date": "2025-12-05",
           "content": "**Krishna Khadka:**\n\nCan you add me @Fadul Sikder",
           "placeholder": false
@@ -98,6 +118,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2025-12-11",
+          "content": "**Pujan Budhathoki:**\n\n**Hello everyone,**\n**Milestone: Present on the Approach addressing the comments**\n**This week I was fully busy in grading work and finalizing the students’ grades so I couldn’t get anything else done. Now that my TA work has ended, I will fully focus on research.**\n**Action Items for next week:**\n\n\n1. Go deep into the approach and see how we can make a paper out of it\n\n**Results/Findings:**\n\n\n1. I do not have any notable findings this week\n\n**Issues: **\n\n\n1. I do not have any issues or questions this week",
+          "placeholder": false
+        },
         {
           "date": "2025-12-05",
           "content": "**Pujan Budhathoki:**\n\n**Hello everyone,**\n**Milestone: Present on the Approach addressing the comments**\n**Last week I was out of town for Thanksgiving through the weekends. This week, I spent my time in my TA work(Giving tutoring sessions to students and helping them with their project and Grading) so I couldn’t commit time to research this week.**\n**Action Items:**\n\n\n1. I have been carrying out minor literature reviews and experiments\n\n**Results/Findings:**\n\n\n1. I do not have any notable findings this week\n\n**Issues:**\n\n\n1. I do not have any issues or questions this week\n\n**Replies:**\n\n**Dr. Lei:**\nI am seriously concerned about your research progress. You keep pushing your milestones, which is unacceptable.\n\n---\n\n**Pujan Budhathoki:**\nI understand Dr. Lei. My research progress has been unacceptable these past few weeks. I should have put in more effort to push the project further. I apologize for this. I also should’ve better balanced my research and my TA work and made better use of my time. I have no excuses for this. I make the commitment that as soon as I finish my TA grading work, I will fully push my project providing timely updates and much higher performance than before.\n\n---",
@@ -117,6 +142,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2025-12-17",
+          "content": "No update was provided for the week ending 2025-12-17.",
+          "placeholder": true
+        },
+        {
           "date": "2025-12-10",
           "content": "No update was provided for the week ending 2025-12-10.",
           "placeholder": true
@@ -135,6 +165,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2025-12-11",
+          "content": "**Shovon Niverd:**\n\n**Milestones:**\n\n\n1. Submit to IJCAI, January 19th, 2026\n\n**Action Items:**\n\n\n1. Study effect on bin variances due to losses introduced in bin learner.\n2. Study amount of samples per bin.\n3. Finalize the final approach.\n4. Prepare for further experiments.\n5. Also which previous works are comparable to our concept, this needs to be decided too.|\n6. Need to work on integrating categorical features in the architecture\n\n**Results/Findings:**\n\n\n1. So far proportion of samples in each bin almost evens out towards the end, this indicates the implemented diversity loss works.\n2. Intra-bin variance goes down, actually towards the middle it goes up and then comes down towards the end; but inter-bin does not really show significant change.\n3. More results are shared in my channel\n\nIssues/Question:\n\n\n1. Few features shows sign of collapse, they have all features inside one bin, every time it's the same three features.\n2. I am also working on integrating categorical features.",
+          "placeholder": false
+        },
+        {
           "date": "2025-12-05",
           "content": "**Shovon Niverd:**\n\nwhich meeting are we joining?",
           "placeholder": false
@@ -147,5 +182,5 @@
       ]
     }
   ],
-  "last_updated": "2025-12-10T23:23:00.888384"
+  "last_updated": "2025-12-17T23:25:10.883819"
 }
