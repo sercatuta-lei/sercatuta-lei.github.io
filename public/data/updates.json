@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2025-12-24",
+          "content": "No update was provided for the week ending 2025-12-24.",
+          "placeholder": true
+        },
+        {
           "date": "2025-12-11",
           "content": "**Arjun Dahal:**\n\nHello Everyone\n\nMilestone: Baseline on Fairness diagnosis and Repair, TabChange KDD submission\n\nAction Items:\n\n\n1.  I have been reading the paper in more depth for whitebox fairness testing that focuses on fault localization and repair.\n2. I am setting up the experiment record the activations in the second last layer of the neural network for different genders. \n\nOnce I have that, I will look into whether they are separable ( linearly or non-linearly ). MMD loss would be used to match these two distributions for Male and Female, along with the classification loss at the last layer. The network would be retrained, and the changes in fairness and accuracy would be measured.\n\nResult/Findings:\nI do not have notable findings. I am working on this experiment to get started and will improve on it. I will get the results for this setup by tomorrow afternoon.\n\nIssues/Questions:\nThe second last layer has all the necessary information from the network. The neurons are responsible for prediction as well as for biases. The literature progresses from identifying bias layers ( and bias neurons within this layer ) to finding bias neurons scattered throughout the layer. Only focusing on this layer might result in a higher drop in accuracy.",
           "placeholder": false
@@ -40,6 +45,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2025-12-24",
+          "content": "No update was provided for the week ending 2025-12-24.",
+          "placeholder": true
+        },
+        {
           "date": "2025-12-11",
           "content": "**Saif Uddin Mahmud:**\n\nHello group,\n\nMilestone: need to discuss\n\nAction Items\nI set up the full activation-capture pipeline using GPT-2 within TransformerLens to prepare for internal behavior analysis across secure vs. general prompts.\nThe secure and general prompt structure is now working end-to-end, and I validated the activation logging across all layers and tokens.\nI also drafted a  written version of the experimental design document.\nDataset integration is planned next, once the pipeline stabilizes, I will transition from sample prompts to the custom C-code dataset.\nResults\nThe activation-difference and attention-difference extraction pipeline is now functioning correctly on prototype prompts.\nNo model-level findings yet, but the infrastructure for analysis is now stable and ready for scaling.\nIssues\nTransformerLens required several adjustments for handling variable sequence lengths during autoregressive decoding, but these issues are now resolved.\nStill testing on GPT-2 until the full environment for Qwen2.5 / Llama-70B / Gemma-27B is configured, as these models require significant compute and loading considerations.\nDataset integration is pending—current experiments use placeholder prompts until model loading and compute availability are finalized.",
           "placeholder": false
@@ -67,6 +77,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2025-12-24",
+          "content": "No update was provided for the week ending 2025-12-24.",
+          "placeholder": true
+        },
         {
           "date": "2025-12-17",
           "content": "No update was provided for the week ending 2025-12-17.",
@@ -96,6 +111,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2025-12-24",
+          "content": "No update was provided for the week ending 2025-12-24.",
+          "placeholder": true
+        },
+        {
           "date": "2025-12-11",
           "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. ABLE Global Surrogate Model\n\nAction Items:\n\n\n1. I have been doing literature review on the feasibility of ABLE global approach. There are existing work that construct global interpretable models from local interpretable model like LIME. I’m currently exploring in more depth — the technical challenges that are there to construct global model from local model, limitation of existing work, and specific risk pertaining to extending ABLE as a global approach.\n2.  Worked together with Shovon to better understanding his project and draft the approach section. I’m also reverifying and running the code.\n\nResults/Finding:\n\n\n1. The literature review shows existing work in constructing global methods from local methods. \n\nIssues:\n\n\n1. I don’t have outstanding issues at the moment.",
           "placeholder": false
@@ -118,6 +138,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2025-12-24",
+          "content": "No update was provided for the week ending 2025-12-24.",
+          "placeholder": true
+        },
         {
           "date": "2025-12-11",
           "content": "**Pujan Budhathoki:**\n\n**Hello everyone,**\n**Milestone: Present on the Approach addressing the comments**\n**This week I was fully busy in grading work and finalizing the students’ grades so I couldn’t get anything else done. Now that my TA work has ended, I will fully focus on research.**\n**Action Items for next week:**\n\n\n1. Go deep into the approach and see how we can make a paper out of it\n\n**Results/Findings:**\n\n\n1. I do not have any notable findings this week\n\n**Issues: **\n\n\n1. I do not have any issues or questions this week",
@@ -142,6 +167,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2025-12-24",
+          "content": "No update was provided for the week ending 2025-12-24.",
+          "placeholder": true
+        },
+        {
           "date": "2025-12-17",
           "content": "No update was provided for the week ending 2025-12-17.",
           "placeholder": true
@@ -165,6 +195,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2025-12-24",
+          "content": "No update was provided for the week ending 2025-12-24.",
+          "placeholder": true
+        },
+        {
           "date": "2025-12-11",
           "content": "**Shovon Niverd:**\n\n**Milestones:**\n\n\n1. Submit to IJCAI, January 19th, 2026\n\n**Action Items:**\n\n\n1. Study effect on bin variances due to losses introduced in bin learner.\n2. Study amount of samples per bin.\n3. Finalize the final approach.\n4. Prepare for further experiments.\n5. Also which previous works are comparable to our concept, this needs to be decided too.|\n6. Need to work on integrating categorical features in the architecture\n\n**Results/Findings:**\n\n\n1. So far proportion of samples in each bin almost evens out towards the end, this indicates the implemented diversity loss works.\n2. Intra-bin variance goes down, actually towards the middle it goes up and then comes down towards the end; but inter-bin does not really show significant change.\n3. More results are shared in my channel\n\nIssues/Question:\n\n\n1. Few features shows sign of collapse, they have all features inside one bin, every time it's the same three features.\n2. I am also working on integrating categorical features.",
           "placeholder": false
@@ -182,5 +217,5 @@
       ]
     }
   ],
-  "last_updated": "2025-12-17T23:25:10.883819"
+  "last_updated": "2025-12-24T23:24:39.058828"
 }
