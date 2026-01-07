@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const news = [
   {
-  date: "Januvary 2026",
+  date: "January 2026",
   headline:"Congratulations to Krishna for his paper titled 'A Combinatorial Approach to Synthetic Data Generation for Machine Learning' that has been published in Springer Nature Computer Science.",
   },
   {
