@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-01-07",
+          "content": "No update was provided for the week ending 2026-01-07.",
+          "placeholder": true
+        },
+        {
           "date": "2025-12-31",
           "content": "No update was provided for the week ending 2025-12-31.",
           "placeholder": true
@@ -50,6 +55,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2026-01-07",
+          "content": "No update was provided for the week ending 2026-01-07.",
+          "placeholder": true
+        },
+        {
           "date": "2025-12-31",
           "content": "No update was provided for the week ending 2025-12-31.",
           "placeholder": true
@@ -87,6 +97,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2026-01-07",
+          "content": "No update was provided for the week ending 2026-01-07.",
+          "placeholder": true
+        },
         {
           "date": "2025-12-31",
           "content": "No update was provided for the week ending 2025-12-31.",
@@ -126,6 +141,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-01-07",
+          "content": "No update was provided for the week ending 2026-01-07.",
+          "placeholder": true
+        },
+        {
           "date": "2025-12-31",
           "content": "No update was provided for the week ending 2025-12-31.",
           "placeholder": true
@@ -158,6 +178,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-01-07",
+          "content": "No update was provided for the week ending 2026-01-07.",
+          "placeholder": true
+        },
         {
           "date": "2025-12-31",
           "content": "No update was provided for the week ending 2025-12-31.",
@@ -192,6 +217,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-01-07",
+          "content": "No update was provided for the week ending 2026-01-07.",
+          "placeholder": true
+        },
+        {
           "date": "2025-12-31",
           "content": "No update was provided for the week ending 2025-12-31.",
           "placeholder": true
@@ -225,6 +255,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-01-07",
+          "content": "No update was provided for the week ending 2026-01-07.",
+          "placeholder": true
+        },
+        {
           "date": "2025-12-31",
           "content": "No update was provided for the week ending 2025-12-31.",
           "placeholder": true
@@ -252,5 +287,5 @@
       ]
     }
   ],
-  "last_updated": "2025-12-31T23:24:56.281158"
+  "last_updated": "2026-01-07T23:26:32.536282"
 }
