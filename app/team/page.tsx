@@ -5,10 +5,11 @@ import { Card, CardContent } from "@/components/ui/card";
 
 // Director data
 const director = {
-  name: "Jeff Lei, PhD, IEEE Fellow",
+  name: "Jeff Lei",
   photo: "DrLei.jpg",
+  info: "PhD, IEEE Fellow",
   info: "Professor of Computer Science",
-  profileUrl: "https://www.uta.edu/academics/faculty/profile?user=ylei"
+  profileUrl: "https://sercatuta-lei.github.io/team/"
 };
 
 // Current Members
