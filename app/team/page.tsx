@@ -5,9 +5,9 @@ import { Card, CardContent } from "@/components/ui/card";
 
 // Director data
 const director = {
-  name: "Dr. Yu (Jeff) Lei",
+  name: "Jeff Lei, PhD, IEEE Fellow",
   photo: "DrLei.jpg",
-  info: "Professor of Department of Computer Science & Engineering",
+  info: "Professor of Computer Science",
   profileUrl: "https://www.uta.edu/academics/faculty/profile?user=ylei"
 };
 
