@@ -9,7 +9,7 @@ const director = {
   photo: "DrLei.jpg",
   title: "PhD, IEEE Fellow",
   info: "Professor of Computer Science",
-  profileUrl: "https://sercatuta-lei.github.io/team/"
+  link: "https://sercatuta-lei.github.io/team/"
 };
 
 // Current Members
@@ -214,13 +214,14 @@ export default function TeamPage() {
               />
               <div>
                                  <a
-                   href="https://ranger.uta.edu/~ylei/"
+                   href="https://sercatuta-lei.github.io/team/"
                    target="_blank"
                    rel="noopener noreferrer"
                    className="text-2xl font-bold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors underline decoration-2 underline-offset-4 block mb-2"
                  >
                    {director.name}
                  </a>
+                                 <p className="text-sm font-medium text-slate-500 dark:text-gray-400 mb-1">{director.title}</p>
                                  <p className="text-slate-600 dark:text-gray-300 text-lg">{director.info}</p>
               </div>
             </div>
