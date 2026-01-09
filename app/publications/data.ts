@@ -187,6 +187,15 @@ const publicationsData: Publication[] = [
   // Journal Papers (2020 onwards, sorted by year descending)
   // 2025 Journal Papers
   {
+    id: 68,
+    title: "A Combinatorial Approach to Synthetic Data Generation for Machine Learning",
+    authors: "Krishna Khadka, Jaganmohan Chandrasekaran, Yu Lei, Raghu N Kacker, D Richard Kuhn",
+    venue: "Springer Nature Computer Science",
+    url: "https://link.springer.com/content/pdf/10.1007/s42979-025-04540-x.pdf",
+    year: 2025,
+    type: "journal"
+  },
+  {
     id: 57,
     title: "Revisiting Optimization-Resilience Claims in Binary Diffing Tools: Insights from LLVM Peephole Optimization Analysis",
     authors: "Xiaolei Ren, Mengfei Ren, Yu Lei, Jiang Ming",

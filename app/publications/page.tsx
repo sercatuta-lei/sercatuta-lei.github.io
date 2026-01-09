@@ -6,10 +6,15 @@ import { motion } from "framer-motion";
 import { getPublications } from "./data";
 
 export default function PublicationsPage() {
-  // Get publications data and sort by year (most recent first)
+  // Get publications data and sort by year (most recent first), then by ID descending
   const publications = useMemo(() => {
     const pubs = getPublications();
-    return pubs.sort((a, b) => b.year - a.year); // Sort by year descending
+    return pubs.sort((a, b) => {
+      if (b.year !== a.year) {
+        return b.year - a.year; // Sort by year descending
+      }
+      return b.id - a.id; // If same year, sort by ID descending (newer IDs first)
+    });
   }, []);
   
   // Memoize years calculation to prevent recalculation on every render

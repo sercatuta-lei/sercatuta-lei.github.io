@@ -195,15 +195,16 @@ const alumni = [
 export default function TeamPage() {
   return (
     <div className="max-w-6xl mx-auto py-12 px-4">
-      {/* Director */}
+      {/* Faculty */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="mb-16 flex justify-start"
+        className="mb-16"
       >
-        
-        <Card className="bg-gradient-to-br from-slate-50 to-blue-50/50 dark:from-gray-900 dark:to-gray-950 border border-slate-200/60 dark:border-gray-800 shadow-lg rounded-2xl max-w-md">
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-8">Faculty</h2>
+        <div className="flex justify-start">
+          <Card className="bg-gradient-to-br from-slate-50 to-blue-50/50 dark:from-gray-900 dark:to-gray-950 border border-slate-200/60 dark:border-gray-800 shadow-lg rounded-2xl max-w-md">
           <CardContent className="p-8">
             <div className="flex flex-col items-center text-center gap-6">
               <img
@@ -228,6 +229,7 @@ export default function TeamPage() {
             </div>
           </CardContent>
         </Card>
+        </div>
       </motion.div>
 
       {/* Current Members */}

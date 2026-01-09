@@ -141,6 +141,14 @@ export default function PublicationsContent() {
             return typeOrder.map(type => {
               const publications = groupedPublications[type];
               if (!publications || publications.length === 0) return null;
+              
+              // Sort publications within each type by year (descending), then by ID (descending)
+              const sortedPublications = [...publications].sort((a, b) => {
+                if (b.year !== a.year) {
+                  return b.year - a.year;
+                }
+                return b.id - a.id;
+              });
 
               return (
                 <div key={type} className="space-y-6">
@@ -152,7 +160,7 @@ export default function PublicationsContent() {
                   </div>
                   
                   <div className="space-y-6">
-                    {publications.map((pub, index) => (
+                    {sortedPublications.map((pub, index) => (
                       <motion.div
                         key={pub.id}
                         initial={{ opacity: 0, x: -50, scale: 0.95 }}
