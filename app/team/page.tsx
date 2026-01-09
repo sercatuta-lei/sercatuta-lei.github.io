@@ -202,6 +202,7 @@ export default function TeamPage() {
         transition={{ duration: 0.6 }}
         className="mb-16 flex justify-start"
       >
+        <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-8">Faculty</h2>
         <Card className="bg-gradient-to-br from-slate-50 to-blue-50/50 dark:from-gray-900 dark:to-gray-950 border border-slate-200/60 dark:border-gray-800 shadow-lg rounded-2xl max-w-md">
           <CardContent className="p-8">
             <div className="flex flex-col items-center text-center gap-6">
