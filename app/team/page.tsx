@@ -204,7 +204,7 @@ export default function TeamPage() {
       >
         <Card className="bg-gradient-to-br from-slate-50 to-blue-50/50 dark:from-gray-900 dark:to-gray-950 border border-slate-200/60 dark:border-gray-800 shadow-lg rounded-2xl max-w-md">
           <CardContent className="p-8">
-            <div className="flex flex-col items-start text-left gap-6">
+            <div className="flex flex-col items-centre text-centre gap-6">
               <img
                 src={`/images/teampic/${director.photo}`}
                 alt="Dr. Yu (Jeff) Lei photo"
