@@ -229,6 +229,7 @@ export default function TeamPage() {
             </div>
           </CardContent>
         </Card>
+       </div> 
       </motion.div>
 
       {/* Current Members */}
