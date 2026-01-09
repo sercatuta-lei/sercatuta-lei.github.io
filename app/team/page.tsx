@@ -202,8 +202,7 @@ export default function TeamPage() {
         transition={{ duration: 0.6 }}
         className="mb-16 flex justify-start"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white mb-8">Faculty</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
         <Card className="bg-gradient-to-br from-slate-50 to-blue-50/50 dark:from-gray-900 dark:to-gray-950 border border-slate-200/60 dark:border-gray-800 shadow-lg rounded-2xl max-w-md">
           <CardContent className="p-8">
             <div className="flex flex-col items-center text-center gap-6">
@@ -229,7 +228,6 @@ export default function TeamPage() {
             </div>
           </CardContent>
         </Card>
-       </div> 
       </motion.div>
 
       {/* Current Members */}
