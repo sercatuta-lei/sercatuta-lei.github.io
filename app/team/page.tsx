@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const director = {
   name: "Jeff Lei",
   photo: "DrLei.jpg",
-  info: "PhD, IEEE Fellow",
+  title: "PhD, IEEE Fellow",
   info: "Professor of Computer Science",
   profileUrl: "https://sercatuta-lei.github.io/team/"
 };
