@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-01-08",
+          "content": "**Arjun Dahal:**\n\nHello Everyone\n\nMilestone: Fairness diagnosis and Repair project, TabChange submission ( Jan 22, Internal Deadline )\n\nAction Items:\n\n\n1. I had been working on removing the sensitive information from the NN to improve the fairness. Now, I am pivoting towards not using the information during prediction. I am conducting a literature review on this. \n2. I am working towards getting results for the baselines of TabChange.\n\n\nResult/Findings:\nI do not have any new notable findings; the findings have already been shared in Slack. I will update my research channel once I have more updates.\n\nIssues/Questions:\nI have no issues at the moment.",
+          "placeholder": false
+        },
+        {
           "date": "2026-01-07",
           "content": "No update was provided for the week ending 2026-01-07.",
           "placeholder": true
@@ -55,6 +60,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2026-01-14",
+          "content": "No update was provided for the week ending 2026-01-14.",
+          "placeholder": true
+        },
+        {
           "date": "2026-01-07",
           "content": "No update was provided for the week ending 2026-01-07.",
           "placeholder": true
@@ -97,6 +107,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2026-01-14",
+          "content": "No update was provided for the week ending 2026-01-14.",
+          "placeholder": true
+        },
         {
           "date": "2026-01-07",
           "content": "No update was provided for the week ending 2026-01-07.",
@@ -141,6 +156,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-01-14",
+          "content": "No update was provided for the week ending 2026-01-14.",
+          "placeholder": true
+        },
+        {
           "date": "2026-01-07",
           "content": "No update was provided for the week ending 2026-01-07.",
           "placeholder": true
@@ -178,6 +198,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-01-08",
+          "content": "**Pujan Budhathoki:**\n\nHello everyone,\n**Milestone: Present on the Approach addressing the comments**\n**I have been very ill and bedridden for the past few days, I will post a proper status update after I get better, on my slack channel. **\n**Action Items:**\n\n\n1. Over the break, I have been very thoroughly going through numerous literature surrounding Memorization and Memorization detection in machine learning:\n\n\n1. Baldock, Robert, Hartmut Maennel, and Behnam Neyshabur. \"Deep learning through the lens of example difficulty.\" Advances in Neural Information Processing Systems 34 (2021): 10876-10889.\n2. Chatterjee, Satrajit. \"Learning and memorization.\" International conference on machine learning. PMLR, 2018.\n3. Somvanshi, Shriyank, et al. \"A survey on deep tabular learning.\" arXiv preprint arXiv:2410.12034 (2024).\n4. Wei, Jiaheng, et al. \"Memorization in deep learning: A survey.\" ACM Computing Surveys 58.4 (2025): 1-35.\n5. Stephenson, Cory, et al. \"On the geometry of generalization and memorization in deep neural networks.\" arXiv preprint arXiv:2105.14602 (2021).\n6. Arpit, Devansh, et al. \"A closer look at memorization in deep networks.\" International conference on machine learning. PMLR, 2017.\n\n\n1. I have also been carrying out numerous experiments to try and standardize the differences between memorized and non-memorized points in terms of:\n\n\n1. How much change we can bring in prediction confidence of memorized vs generalized points under small perturbations\n2. How many features do we need to modify to bring a big change in confidence prediction of memorized vs generalized points \n\n**Results/Findings:**\n\n\n1. I do not have any notable findings at this point\n\n**Issues: **\n\n\n1. I do not have any issues or questions at this point",
+          "placeholder": false
+        },
         {
           "date": "2026-01-07",
           "content": "No update was provided for the week ending 2026-01-07.",
@@ -217,6 +242,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-01-14",
+          "content": "No update was provided for the week ending 2026-01-14.",
+          "placeholder": true
+        },
+        {
           "date": "2026-01-07",
           "content": "No update was provided for the week ending 2026-01-07.",
           "placeholder": true
@@ -255,6 +285,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-01-14",
+          "content": "No update was provided for the week ending 2026-01-14.",
+          "placeholder": true
+        },
+        {
           "date": "2026-01-07",
           "content": "No update was provided for the week ending 2026-01-07.",
           "placeholder": true
@@ -287,5 +322,5 @@
       ]
     }
   ],
-  "last_updated": "2026-01-07T23:26:32.536282"
+  "last_updated": "2026-01-14T23:22:43.224770"
 }
