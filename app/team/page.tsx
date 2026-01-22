@@ -18,31 +18,31 @@ const currentMembers = [
     name: "Fadul Sikder",
     photo: "fadul.jpg",
     info: "Ph.D. Student",
-    link: "https://www.linkedin.com/in/fadul-sikder-0b5a8a202/"
+    link: "https://fadulsikderuta.github.io/"
   },
   {
     name: "Krishna Khadka",
     photo: "krishna.jpeg",
     info: "Ph.D. Student",
-    link: "https://www.linkedin.com/in/krishna-khadka-238b35162/"
+    link: "https://krishnakhadka200416.github.io/portfolio/"
   },
   {
     name: "Arjun Dahal",
     photo: "arjun.jpeg",
     info: "Ph.D. Student",
-    link: "https://www.linkedin.com/in/arjdahal/"
+    link: "https://ajdahal.github.io/"
   },
   {
     name: "Pujan Budhathoki",
     photo: "pujan.png",
     info: "Ph.D. Student",
-    link: "https://www.linkedin.com/in/pujan-budhathoki-54a957144/"
+    link: "https://pujanbudhathoki.github.io/"
   },
   {
     name: "Saif Uddin Mahmud",
     photo: "saif-pic.jpg",
     info: "Ph.D. Student",
-    link: "https://www.linkedin.com/in/saif--mahmud/"
+    link: "https://saif0524.github.io/"
   },
   {
     name: "Shovon Niverd",
@@ -60,7 +60,7 @@ const currentMembers = [
     name: "Sampada",
     photo: "Sampada.jpg",
     info: "Volunteer Research Assistant",
-    link: "https://www.linkedin.com/in/sampadapavate/"
+    link: "https://sampadapavate.com/"
   }
 ];
 
