@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-01-22",
+          "content": "**Arjun Dahal:**\n\nHi,\n\nMilestone: TabChange submission ( Jan 22, Internal Deadline ), Fairness diagnosis and Repair project\n\nAction Items:\n\n\n1. I have finalized a couple of baselines. \n2. I am working on adapting the baselines for our use case.\n\n\nResult/Findings:\nI do not have any new notable findings.\n\nIssues/Questions:\nThe adaptation of baselines to find counterfactuals in attributes isn't straightforward. I am currently fixing the issues related to the adaptation one by one.\n\nI am a little under the weather this week.",
+          "placeholder": false
+        },
+        {
           "date": "2026-01-15",
           "content": "**Arjun Dahal:**\n\nHello Everyone\n\nMilestone: TabChange submission ( Jan 22, Internal Deadline ), Fairness diagnosis and Repair project\n\nAction Items:\n\n\n1. I am working towards getting results for the baselines of TabChange. I was working on adapting a couple of baselines this past week. \n2.  I am conducting a literature review on not using sensitive information during prediction in the bias removal project.\n\n\nResult/Findings:\nI do not have any new notable findings; the findings have already been shared in Slack. I will update my research channel once I have more updates.\n\nIssues/Questions:\nI have no issues at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\nHave a to-do list with target dates on what needs to be done and by when for you to make the submission. Then work on each item, and finish it off, with discipline and commitment.\n\n---",
           "placeholder": false
@@ -65,6 +70,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2026-01-27",
+          "content": "**Saif Uddin Mahmud:**\n\nWeekly update\nHello everyone,\n\nMilestone: ICSME 2026 -- Internal deadline needs adjustment with new leads guidance\n\nAction Items:\n\n\n- Shared a written report with the project lead summarizing prior work and rationale.\n- Implemented an initial teacher-forcing setup at the attention level to support more controlled comparisons.\n\nResult:\n\n\n- no experimental results to report yet.\n\nQuestion/Issue:\n\n\n- Awaiting feedback and next assigned tasks.",
+          "placeholder": false
+        },
+        {
           "date": "2026-01-20",
           "content": "**Saif Uddin Mahmud:**\n\nHello,\n\nWeekly update - 1/20/2026\n\n**Milestone: **ICSME 26 | Internal Deadline Feb 16\n\n**Action Items:**\nI spent time reviewing relevant background work on attention head interpretability (Vig 2019; Elhelo & Geva 2025; Nam et al. 2025), mainly to understand how similar work handles controlled comparisons and analysis methodology. In parallel, I started drafting the background/related work section while experiments are running.\n\n**Results:**\nThe background review helped clarify how important strict experimental control is for making any claims about attention behavior, which aligns well with the feedback I received. There is no concrete model-level findings yet.\n\n**Issues:**\nMain constraint right now is still compute and model availability for larger models, so progress on large-scale experiments may be a bit staggered. Using this time to solidify the methodology and writing instead.",
           "placeholder": false
@@ -117,6 +127,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2026-01-28",
+          "content": "No update was provided for the week ending 2026-01-28.",
+          "placeholder": true
+        },
         {
           "date": "2026-01-20",
           "content": "**Fadul Sikder:**\n\nWeekly Research Update \nProgress\n This week, I focused primarily on writing and refining the research experiments, with the main objective of improving the evaluation results compared to the current baseline. \n-One key change I am making is to use ESBMC (a bounded model checker) to re-evaluate the third stage of the experimental pipeline, instead of relying solely on symbolic execution. \n-I also continued updating parts of the paper, though progress has been slower than expected. \n-My current target is to complete a full version by Sunday and share it with the group before the Thursday submission deadline. \n\nIssues / Observations\n After revisiting the literature and conducting manual analyses to better understand what signals GNN explanations provide for path generation, I identified several key issues \n1. Limitations of Existing GNN-Based Vulnerability Models \n\n\n- Prior works such as Devign and its successors (e.g., DeepWukong, ReVeal, FUNDED) focus on function-level vulnerability prediction. \n- These models operate on function-level code property graphs(subset like ast, cfg, pdg, combination of some), largely because such graphs are easier to construct with Joerns. \n- They do not handle whole-program analysis, where multiple functions interact. After extensive literature search I am confident that with c/c++ programs their are no GNN based works that do vulnerability predictions on whole program all existion work does it on vulnerable function level. \n\n2. Graph Construction for Whole Programs \n\n\n- For whole-program analysis, a call graph is required to represent connections between functions. \n- In my current dataset, using Devign’s original graph construction approach requires introducing call edges between functions. \n- This raises an important question: Can we still claim this as a Devign-based approach if we modify the graph construction to support multi-function programs \n\n3 . Disconnected Graph Issue in Devign \n\n\n- Upon deeper inspection of the Devign implementation, I realized that although graphs are constructed using their code, the resulting structure consists of multiple disconnected subgraphs, one per function. \n- These subgraphs are not connected to each other, which likely introduces limitations for explanation-guided path exploration. \n- To address this, I am currently modifying the Devign graph construction to connect functions via call edges and retraining a new GNN tailored to this setting. \n\n4. Noise Introduced by Line-Level Abstraction \n\n\n- Another limitation arises when aggregating explanation scores to the line level. \n- This abstraction step may introduce significant noise, potentially obscuring the signal we expect explanations to provide. \n- I am preparing additional concrete examples to demonstrate how this noise affects path generation and will present them in today’s meeting. \n\nNext Steps \n\n\n- Finalize the modified Devign-style graph construction and retrain the GNN. \n- Re-run experiments using ESBMC for third-stage evaluation. \n- Complete and circulate a full draft of the paper by Sunday.",
@@ -171,6 +186,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-01-22",
+          "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. Proposal\n\nAction Items:\n\n\n1. Last week, I was working on Shovon's IJCAI submission, specifically with experiments and paper writing. \n2. I'm exploring three possible directions for my proposal:\n\n\n1. Explanation of Recommender systems.\n2. Explanation of Vision Language Models.\n3. Expansion of ABLE as global surrogate model.\n\n     Currently, I 'm doing literature review and specifically looking for problems to solve in the domain. I will share my findings in few days in my slack channel on which direction look more promising.\nResults:\n\n\n1. No results yet.\n\nIssues:\n\n\n1. No issues as of now.\n\n**Replies:**\n\n**Dr. Lei:**\nGood job on making the submission. As you do the literature, for each direction, try to be specific about the problem from the user perspective, the challenges from the technical perspective, the key insights to address each challenge, and what are the research gaps. These questions will help you decide which direction to go deep.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-01-15",
           "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. IJCAI Submission jan 19\n\nAction Items:\n\n\n1. Over the break we discussed on how to improve the approach in terms of training stability and remove the cyclic dependency.\n2. Designed experimental section. Researched on existing baselines and implement them.\n3. Working on paper writing and improving.\n\nResults/Finding:\n\n\n1. The experimental results show that our approach results in better agreement compared to 5 baseline.\n\nIssues:\n\n\n1. No big issues.\n\n**Replies:**\n\n**Dr. Lei:**\nGreat to hear about the results, and glad to see some real collaboration between you and Shovon.\nAlso, now it is time for you to start thinking/discussion about the next project.\n\n---\n\n**Krishna Khadka:**\nsure Dr. Lei. Thank you\n\n---",
           "placeholder": false
@@ -218,6 +238,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-01-27",
+          "content": "**Pujan Budhathoki:**\n\nStatus Update:\n**Milestone: Submit the Literature report(as discussed) on the Mechanistic Analysis of LLMs for Secure Code generation: 27th January **\n\n**Action Items: **\n\n\n1. Firstly, I have been going through literature/articles/tutorials to gain a deeper understanding of the concepts required to fully understand the problem. (i.e. Attention Mechanism, Mechanistic Interpretability, Sparse Autoencoder, etc) \n2. Secondly, I have been going through literature relevant to our problem. I have attached the literature review report I have so far,I will add more updates to it as I go through different literature and more in-depth literature reviews. \n3. I have been working with Saif, and as an action item, I have asked him to create a summarized report on the progress he made on the project so far and the reasoning behind the decisions. \n\n\n**Results/Findings: **\n\n\n1. I have summarized the findings in the report.\n\n\n**Questions/Issues:**\n\n\n1. I have no questions or issues at this time.",
+          "placeholder": false
+        },
         {
           "date": "2026-01-15",
           "content": "**Pujan Budhathoki:**\n\nHello everyone,\n**Milestone: Present on the Approach addressing the comments: 22nd January**\n**I was ill for most of the time last week so it wasn’t a very productive week for me**\n\n**Furthermore, as the new semester begins, I commit that I will post my progress status updates on my slack channel every two days (or everyday, whichever you think will be better) **\n**Action Items:**\n\n\n1. I have been going over the literature very carefully thinking of how I can position my paper. I have some very rough ideas, I will scrutinize them and see which ones work the best. \n\n**Results/Findings:**\n\n\n1. I do not have any notable findings at this point\n\n**Issues: **\n\n\n1. I do not have any issues or questions at this point\n\n**Replies:**\n\n**Dr. Lei:**\nGlad to see your commitment. Status updates for every two days is fine. I also encourage you to be critical at what you read and what you do, and ask questions, which is what research is about.\n\n---",
@@ -267,6 +292,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-01-28",
+          "content": "No update was provided for the week ending 2026-01-28.",
+          "placeholder": true
+        },
+        {
           "date": "2026-01-21",
           "content": "No update was provided for the week ending 2026-01-21.",
           "placeholder": true
@@ -315,6 +345,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-01-22",
+          "content": "**Shovon Niverd:**\n\nMilestone:\n  IJCAI Submission completed January 19\n Work on potential improvements on the last paper\n Work towards a new project simultaneously \nAction Items:\n Work on multi class datasets with TabKD\n While working on last project, we encountered some new areas of distillation; I will try to explore them and share.\nResults/Finding:\nNo findings yet as I have not worked after the submission, hopefully I will have something next week \nIssues:\nNone\n\n**Replies:**\n\n**Dr. Lei:**\nGood job on making the submission. As you are thinking about the next project, do not just put the paper aside yet. You need to identify things that you were not confident about but did not have time to address them before the deadline.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-01-15",
           "content": "**Shovon Niverd:**\n\n**Milestone**:\n IJCAI Submission January 19\n**Action Items**:\n Over the break we discussed on how to improve the approach in terms of training stability and remove the cyclic dependency.\n Completed experiments, which shows better results compared to 5 other baselines.\nThe first draft of the paper is ready, only the conclusion needs to be written\nOver the next few days we will improve the quality of writing, verifying the sections, and if possible add more experiments \nResults/Finding:\nThe current result shows our approach is better than 5 other baselines.\nIssues:\nNo big issues.\n\n**Replies:**\n\n**Dr. Lei:**\nSounds good. Just a reminder, a solid paper is not only about the results, but also about the rationale behind the approach, in terms of the design decisions you make and why you make them. This is something you will need to focus on the paper writing.\n\n---\n\n**Shovon Niverd:**\nThank you Dr Lei, we will focus on properly narrating our rationale behind each design decision in the next couple of days.\n\n---",
           "placeholder": false
@@ -357,5 +392,5 @@
       ]
     }
   ],
-  "last_updated": "2026-01-21T23:31:17.456790"
+  "last_updated": "2026-01-28T23:31:42.148497"
 }
