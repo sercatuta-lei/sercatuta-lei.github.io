@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-01-29",
+          "content": "**Arjun Dahal:**\n\nHi,\n\nMilestone: TabChange submission ( Feb 3, Internal Deadline, Updated )\n\nAction Items:\n\n\n1. I worked on adapting the baseline ( Diffusion Model ) for our case. The adaptation is nearly done. I will share the results by the end of the day.\n2. The rest of the action items for the paper has been identified, I will be working on them one by one and update the slack in case of discussion.\n\n\nResult/Findings:\nI do not have any new notable findings.\n\nIssues/Questions:\nNo issues at the moment.",
+          "placeholder": false
+        },
+        {
           "date": "2026-01-22",
           "content": "**Arjun Dahal:**\n\nHi,\n\nMilestone: TabChange submission ( Jan 22, Internal Deadline ), Fairness diagnosis and Repair project\n\nAction Items:\n\n\n1. I have finalized a couple of baselines. \n2. I am working on adapting the baselines for our use case.\n\n\nResult/Findings:\nI do not have any new notable findings.\n\nIssues/Questions:\nThe adaptation of baselines to find counterfactuals in attributes isn't straightforward. I am currently fixing the issues related to the adaptation one by one.\n\nI am a little under the weather this week.",
           "placeholder": false
@@ -70,6 +75,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2026-02-03",
+          "content": "**Saif Uddin Mahmud:**\n\n**Weekly Status Update****\n**\nMilestone:\nNeeds adjustment under revised project leadership\n\nAction Items:\n\n\n- Reviewed the ICSE paper as the baseline reference for the project’s current framing.\n\n\n\n\n- Familiarized myself with shared mechanistic interpretability resources for background context.\n\n\n\n\n- Shared a small number of background papers with the project lead for reference.\n\n\nResult / Findings:\n\n\n- No concrete results at this stage.\n\n\nQuestions / Issues:\n\n\n- Confirmation on scope and near-term priorities.",
+          "placeholder": false
+        },
+        {
           "date": "2026-01-27",
           "content": "**Saif Uddin Mahmud:**\n\nWeekly update\nHello everyone,\n\nMilestone: ICSME 2026 -- Internal deadline needs adjustment with new leads guidance\n\nAction Items:\n\n\n- Shared a written report with the project lead summarizing prior work and rationale.\n- Implemented an initial teacher-forcing setup at the attention level to support more controlled comparisons.\n\nResult:\n\n\n- no experimental results to report yet.\n\nQuestion/Issue:\n\n\n- Awaiting feedback and next assigned tasks.",
           "placeholder": false
@@ -127,6 +137,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2026-02-04",
+          "content": "No update was provided for the week ending 2026-02-04.",
+          "placeholder": true
+        },
         {
           "date": "2026-01-28",
           "content": "No update was provided for the week ending 2026-01-28.",
@@ -186,6 +201,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-01-29",
+          "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. Identify Next Research Direction\n\nAction Items:\n\n\n1. I worked on drafting and revising the rebuttal for CVPR submission. \n2. Last week, I was reading some materials on Mechanistic Interpretability:\n\n\n1. Mostly understanding what mechanistic interpretability is, Sparse Autoencoders, Sparse Dictionary Library.\n2. Open Problems in mechanistic interpretability: [2501.16496](https://arxiv.org/pdf/2501.16496) \n\n\n1. I plan to fix a research direction by next week (Feb 05)\n\nResults:\n\n\n1. No results yet.\n\nIssues:\n\n\n1. No issues as of now.\n\n**Replies:**\n\n**Dr. Lei:**\nGood job on the rebuttal. One possible direction is to consider what can be done after explanations? Can they be used to test/debug/improve models?\n\n---\n\n**Krishna Khadka:**\nI am doing a literature review on this topic. It seems like an exciting direction to pursue.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-01-22",
           "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. Proposal\n\nAction Items:\n\n\n1. Last week, I was working on Shovon's IJCAI submission, specifically with experiments and paper writing. \n2. I'm exploring three possible directions for my proposal:\n\n\n1. Explanation of Recommender systems.\n2. Explanation of Vision Language Models.\n3. Expansion of ABLE as global surrogate model.\n\n     Currently, I 'm doing literature review and specifically looking for problems to solve in the domain. I will share my findings in few days in my slack channel on which direction look more promising.\nResults:\n\n\n1. No results yet.\n\nIssues:\n\n\n1. No issues as of now.\n\n**Replies:**\n\n**Dr. Lei:**\nGood job on making the submission. As you do the literature, for each direction, try to be specific about the problem from the user perspective, the challenges from the technical perspective, the key insights to address each challenge, and what are the research gaps. These questions will help you decide which direction to go deep.\n\n---",
           "placeholder": false
@@ -238,6 +258,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-02-03",
+          "content": "**Pujan Budhathoki:**\n\nHello everyone,\n**Milestone: Present Baseline Approach: 10th Feb**\n\n**Action Items:**\n\n\n1. I have been carrying out literature reviews on all the different Mechanistic Interpretability techniques that could be used for our approach. This includes Probing, Causal Analysis, Logit lens, newer variants of Sparse Auto Encoders.\n2. I have also been analyzing the weaknesses of the paper that I presented last week to see if we can develop a more systematic approach.\n3. I have been collecting all the papers/resources relevant to the topic. I will share my project page including these resources by the end of the day today. \n4. Last week overall, Saif and I were involved in searching all related papers and carrying out literature reviews. \n\n\n**Result/Findings:**\n\n\n1. I have some findings and ideas that I would like to share in the meeting today.\n\n\n**Question/Issues:**\n\n\n1. One concern that I had. Nowadays, the landscape has shifted so almost all of the models that are used for coding are reasoning models. Should we take this fact into consideration while developing our approach(Develop our approach around reasoning models) instead of treating this as an afterthought?",
+          "placeholder": false
+        },
         {
           "date": "2026-01-27",
           "content": "**Pujan Budhathoki:**\n\nStatus Update:\n**Milestone: Submit the Literature report(as discussed) on the Mechanistic Analysis of LLMs for Secure Code generation: 27th January **\n\n**Action Items: **\n\n\n1. Firstly, I have been going through literature/articles/tutorials to gain a deeper understanding of the concepts required to fully understand the problem. (i.e. Attention Mechanism, Mechanistic Interpretability, Sparse Autoencoder, etc) \n2. Secondly, I have been going through literature relevant to our problem. I have attached the literature review report I have so far,I will add more updates to it as I go through different literature and more in-depth literature reviews. \n3. I have been working with Saif, and as an action item, I have asked him to create a summarized report on the progress he made on the project so far and the reasoning behind the decisions. \n\n\n**Results/Findings: **\n\n\n1. I have summarized the findings in the report.\n\n\n**Questions/Issues:**\n\n\n1. I have no questions or issues at this time.",
@@ -292,6 +317,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-02-04",
+          "content": "No update was provided for the week ending 2026-02-04.",
+          "placeholder": true
+        },
+        {
           "date": "2026-01-28",
           "content": "No update was provided for the week ending 2026-01-28.",
           "placeholder": true
@@ -345,6 +375,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-01-29",
+          "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Looking for a new idea to work on the new project,\n2. Work on the previous paper to polish some of the details.\n\n**Action Items:**\n\n\n1. During the last submission's(TabKD) literature review, we found some interesting work about data distillation, rather than model distillation\n2. Read a few existing literature to understand the current state of the field. Find out if we have a scope of work in this area.\n3. Add multi-class experiments for the TabKD paper.\n4. Measure the query efficiency of TabKD through fixed query budgets; these two can be valuable addition.\n\n**Results/Findings:**\n\n\n1. There are good amount of work for image data distillation, and tabular data distillation is emerging now too. I will have more findings as I progress study.\n\n**Issues:**\nNone at the moment.",
+          "placeholder": false
+        },
+        {
           "date": "2026-01-22",
           "content": "**Shovon Niverd:**\n\nMilestone:\n  IJCAI Submission completed January 19\n Work on potential improvements on the last paper\n Work towards a new project simultaneously \nAction Items:\n Work on multi class datasets with TabKD\n While working on last project, we encountered some new areas of distillation; I will try to explore them and share.\nResults/Finding:\nNo findings yet as I have not worked after the submission, hopefully I will have something next week \nIssues:\nNone\n\n**Replies:**\n\n**Dr. Lei:**\nGood job on making the submission. As you are thinking about the next project, do not just put the paper aside yet. You need to identify things that you were not confident about but did not have time to address them before the deadline.\n\n---",
           "placeholder": false
@@ -392,5 +427,5 @@
       ]
     }
   ],
-  "last_updated": "2026-01-28T23:31:42.148497"
+  "last_updated": "2026-02-04T23:33:54.296943"
 }
