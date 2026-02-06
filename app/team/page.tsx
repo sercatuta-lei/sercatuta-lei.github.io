@@ -61,7 +61,7 @@ const currentMembers = [
     photo: "Sampada.jpg",
     info: "Volunteer Research Assistant",
     link: "https://sampadapavate.com/"
-  }
+  },
   {
     name: "Mekdelawit Gebrewold",
     photo: "Mekdelawit.jpg",
