@@ -62,6 +62,12 @@ const currentMembers = [
     info: "Volunteer Research Assistant",
     link: "https://sampadapavate.com/"
   }
+  {
+    name: "Mekdelawit Gebrewold",
+    photo: "Mekdelawit.jpg",
+    info: "Undergraduate Research Assistant",
+    link: "https://www.linkedin.com/in/mekdelawit-gebrewold"
+  }
 ];
 
 // Alumni
