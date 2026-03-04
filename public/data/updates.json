@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-02-26",
+          "content": "**Arjun Dahal:**\n\nHi,\n\nMilestone:\nWork on fixing bias in NN - get initial validation on the current idea  ( Mar 5 )\n\nAction Items:\n\n\n1. The experiments are completed regarding the tabular data changes. \n2. Most of the literature focuses on VAE/AE networks where the latent space representation is changed to remove certain concepts or isolate certain representations (such as gender information from the rest of the information).\n\n\nResult/Findings:\nThere would be some information in the latent space; all the information about the correlated attributes cannot be entirely removed from the latent space, even when an adversary is used. These correlated attributes make more changes when converted back to the input space, resulting in a higher distance ( thus, lower VCR ) compared to even the CVAE ( which learns from the distribution ).\nI will be discussing new papers that focus on separating sensitive and non-sensitive information in the latent space today.\n\nIssues/Questions:\nI do not have issues at the moment.",
+          "placeholder": false
+        },
+        {
           "date": "2026-02-19",
           "content": "**Arjun Dahal:**\n\nHi,\n\nMilestone:\n1. Work on an additional experiment to better understand and solve the issue of tabular data changes (Feb 19)\n2. Work on fixing bias in NN - get initial validation on the current idea - discussed last in my research channel if it works or not (Feb 19)\n\nAction Items:\n\n\n1. I have set up experiments for (1), and they have been running for a while. \n2. Most of the literature focuses on VAE/AE networks where the latent space representation is changed to remove certain concepts or isolate certain representations (such as gender information from the rest of the information). I have yet to find anything in NN where this is done. \n\n\nResult/Findings:\nI have been working on the experiments by simulating datasets with different attribute strengths between them.\nI will be sharing the results on my channel for the experiments.\n\nIssues/Questions:\nI do not have issues at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\nare you making your milestones?\n\n---\n\n**Arjun Dahal:**\nThank you, Dr. Lei, for your concern. I will be updating the status in my channel to be better on track.\n\n---",
           "placeholder": false
@@ -90,6 +95,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2026-03-03",
+          "content": "**Saif Uddin Mahmud:**\n\nHello everyone,\n\nMilestone: ICSME submission — abstract (submitted), full paper due Mar 6.\n\nProgress:\n\n\n- Incorporating feedback from the draft, with a tighter “verification adequacy” positioning.\n- Refining the introduction and contributions to clearly frame the benchmark as enabling infrastructure rather than a standalone dataset paper.\n- Adding brief dataset characterization (e.g., LOC and problem-tag breakdown) to better describe the analyzed programs.\n\n\nResults: no new results\n\nQuestions/Issues:\n\nTo address recent feedback on coherence and to help meet the 10-page limit, I am restructuring the narrative to focus more clearly on verification adequacy. I would appreciate your thoughts on whether this unified framing connects the components effectively:\n\n\t•\tResearch Gap: Current evaluations of AI-generated C++ rely mainly on single-tier static analysis, leaving runtime and edge-case violations underexplored.\n\n\t•\tVerification Approach: A multi-tier (static, dynamic, formal) framework used to reveal blind spots in single-tier evaluation.\n\n\t•\tBenchmark as Infrastructure: VULBENCH-CPP is positioned as enabling infrastructure rather than the primary contribution.\n\n\t•\tEmpirical finding: The AI-vs-human and correctness-vs-security results provide evidence that single-tier verification can be misleading (e.g., static parity vs. 3.6× runtime gap).",
+          "placeholder": false
+        },
+        {
           "date": "2026-02-24",
           "content": "**Saif Uddin Mahmud:**\n\nHello everyone,\n\n**Milestone:** ICSME submission — abstract due Feb 27, full paper due Mar 6.\n\n**Progress This Week**\n\nReshaped the paper for a methodology focus, emphasizing verification adequacy and cross-tier agreement rather than vulnerability characterization.\nExpanded and tightened the abstract and introduction to better articulate the problem, its importance, limitations of prior work, and our key insight.\nStrengthened related work with additional AI code security user studies and foundational citations for bounded model checking and sanitizers.\n\n\n- Added an appendix covering CWE profiles, MITRE Top-25 prevalence, clang-tidy breakdown, and static cross-tool agreement.\n- Running a supplementary ESBMC configuration (higher unwind + overflow checks) to validate robustness of the cross-tool findings; results will be included in the replication package before full submission.\n\n\n**Key Findings**\n\n\n- Cross-tool agreement between dynamic and formal tiers remains very low.\n- Each verification tier detects substantial exclusive violations.\n- AI-generated C++ triggers significantly more runtime violations than human-written code\n\n\n**Update on feedback received on Friday **\nI am incorporating the feedback received on the earlier version into the revised ICSME draft and will send the updated draft by tomorrow (2/25) morning.",
           "placeholder": false
@@ -167,6 +177,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2026-03-03",
+          "content": "**Fadul Sikder:**\n\nWeekly Research Update\n\nProgress\n\n1. Stage 1 (RQ1) Experiments and Fine-Tuning\n\nThis week, I focused on experiments for the first research question (RQ1).\n\n\n- I tested six models under two configurations:\n\nConfiguration A: adding a dedicated classification head for binary classification\nConfiguration B: supervised fine-tuning\n\n\n- Supervised fine-tuning introduced several practical caveats. I will discuss these caveats and the decisions I’m making in today’s meeting.\n- By Thursday, I expect to complete the full set of RQ1 experiments and report Accuracy, Precision, Recall, and F1 for both configurations.\n\n\n2. Paper Writing for arXiv Submission\n\n\n- I worked on writing and adding related-work discussion for the XPath paper.\n- I plan to share an updated version with the group by tomorrow evening.\n- If I receive feedback by the weekend, my target is to revise based on that feedback and then submit/post the paper by next Tuesday.\n- In parallel, I’m also looking into how to obtain sponsorship for the arXiv submission.\n\n\n3. Early Scope Exploration for the Next Project \n\n\n- I started a preliminary literature review for the next project and plan to present a candidate direction during Thursday’s new-idea discussion.\n- Topics I’m reviewing include code circuits, replacement models/transcoders, and Shapley-style explanation for LLMs.\n- So far, I’ve read around 4–5 papers, and my immediate goal is to aim and decide one direction. \n\n\nIssues / Notes\n\nNo major blockers right now, but supervised fine-tuning has some practical caveats that affect how results should be interpreted. I will summarize these in today’s meeting.",
+          "placeholder": false
+        },
         {
           "date": "2026-02-24",
           "content": "**Fadul Sikder:**\n\nWeekly Research Update\n\nProgress\n\n\n\n- Worked on the experiments for the PROMISE 2025 extension.\n- Fine-tuned Qwen 2.5/3 models (1.5B, 3B, 7B, 14B) on a 1,000-program sample for binary vulnerability detection. The main purpose was to estimate how long the planned experiments will take.\n\n\nModel Selection\n\n\n\n- Conducted an extensive survey of available LLMs to finalize model families for the extension experiments.\n- Shortlisted the following model families: Qwen, Gemma, Mistral (2nd generation), and Llama 3 (3rd generation).\n- I will share the specific model names in the write-up.\n\n\nKey Decisions \n\n\n\n- Excluded MoE-based models for two reasons:\n\n\n1. layer-wise LoRA comparisons are not directly      compatible with dense models, and\n2. there is no straightforward tooling support for LoRA fine-tuning on MoE models.\n\n\n\n- Considering 1–2 larger models in the 32B–64B range, but training them will require model parallelism. I have been exploring tooling options and TACC resources to support this.\n\n\n\nPaper / Experiment Design\n\n\n\n- Continuing drafting the experiment design write-up and extension scope document, with the goal of finishing them before today’s meeting.\n\n\n\nNotes\n\n\n- I learned this week that the Feb 28 deadline for the journal extension has been moved to March 31, which gives me more time to complete the experiments properly.\n\n\n\n\n- On a personal note, my mother has been visiting me since January, and she left this Sunday (my brother came on Friday to take her with him). I wasn’t expecting it and felt quite sad after she left, which also slowed my pace a bit this week.",
@@ -246,6 +261,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-02-26",
+          "content": "**Krishna Khadka:**\n\n**Milestone:**\n\n\n1. Reposition DD-CAM for ECCV and address CVPR reviewer concerns (March 5)\n\n\n**Action Items:**\n\n\n1. Added non-CAM baselines like RISE, Integrated Gradients, SHAP, LIME requested by reviewers into both comparison and localization pipelines in addition, I have also added the Fong et al (extremal perturbation) in the comparison.\n2. Performing evaluation under the same metric suite. The experiments are currently running. I plan to have all experiments completed by tomorrow.\n3. I also started reframing/rewriting the paper. \n\n\nResults:\n\n\n1. The experiments are in progress. \n\n\nIssues: None at the moment.",
+          "placeholder": false
+        },
+        {
           "date": "2026-02-19",
           "content": "**Krishna Khadka:**\n\nMilestone:\nRefine research direction and formalize debugging framework (Feb 19)\nAction Items:\n\n\n1. Implemented the full Explanation-Guided Diffusion Augmentation (EGDA) pipeline on the Waterbirds benchmark: ERM training, GradCAM-based difference saliency maps on mispredictions, Stable Diffusion inpainting to generate counterfactual images, and corrective fine-tuning.\n2. Ran ablation studies comparing saliency-guided masking against random masking and baseline methods (ERM, JTT). \n3. Refined the theoretical framing of the difference map from \"isolating spurious features\" to a margin-based interpretation: the difference map approximates the gradient of the logit margin (y_wrong - y_true), highlighting regions that push the model toward the wrong class relative to the true class.\n\nResults:\nMethod                                      Overall Acc              Worst-Group Acc\nERM baseline                                   87.97%                      72.59%\nRandom mask + inpainting             93.99%                      76.64%\nJTT                                                    92.41%                      80.37%\nEGDA (Ours)                                    94.87%                       82.87%\nSaliency-guided augmentation outperforms random masking by 6.2pp on worst-group accuracy, confirming that the difference map targets meaningful regions.\nIssues:\nResults are from a single database, need to expand the experimentation scope after more discussions.",
           "placeholder": false
@@ -318,6 +338,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-03-03",
+          "content": "**Pujan Budhathoki:**\n\nLast week I was a bit busy with my TA work so I couldn’t commit as much time to research as I wanted to.\n**Milestone: **\n\n\n1. Complete Action Items from last meeting: Go through the approach in more detail, thinking about what made me choose the approach, what are its advantages over the SAE approach? What are going to be the technical challenges of the approach I’m proposing? Also, think about what are the fundamental differences between the domain of the paper and the security domain?(With concrete examples) **March 3**\n2. Carry out the discussed experiment to isolate the results using teacher forcing\n\n**Action Items:**\n\n\n1. I have been carrying out literature reviews with the goal of answering above questions:\n2. Geiger, Atticus, et al. \"Finding alignments between interpretable causal variables and distributed neural representations.\" Causal Learning and Reasoning. PMLR, 2024.\n3. Sun, Jiuding, et al. \"HyperDAS: Towards automating mechanistic interpretability with hypernetworks.\" arXiv preprint arXiv:2503.10894 (2025).\n4. Wu, Zhengxuan, et al. \"Interpretability at scale: Identifying causal mechanisms in alpaca.\" Advances in neural information processing systems 36 (2023): 78205-78226.\n\n**Findings:**\n\n\n1. I will present on the answers I came up with for the above questions in today’s meeting\n\n**Questions/Issues:**\n\n\n1. I don’t have any issues at this point.",
+          "placeholder": false
+        },
         {
           "date": "2026-02-24",
           "content": "**Pujan Budhathoki:**\n\n**Milestone: **\n\n\n1. **Reproduce the experimental results of the secure code generation paper**\n2. **Carry out the discussed experiment to isolate the results using teacher forcing**\n\n\n**Action Items: **\n\n\n1. I have been carrying out literature reviews on Causal Abstraction and Automated Circuit Discovery. Under Causal Abstraction, I have found a technique that might be very relevant to our approach called DAS(Distributed Alignment Search). I will talk more about this(and its improved variants) in today’s presentation:\n\n\n1. Geiger, Atticus, et al. \"Finding alignments between interpretable causal variables and distributed neural representations.\" *Causal Learning and Reasoning*. PMLR, 2024.\n2. Sun, Jiuding, et al. \"HyperDAS: Towards automating mechanistic interpretability with hypernetworks.\" *arXiv preprint arXiv:2503.10894* (2025).\n\n\n1. Regarding the Secure code generation paper’s code that I was trying to implement, after a very thorough look at their code, I realized something that I wasn’t aware of before and what the authors weren’t very clear about before. The code they sent me seems to be an earlier version of their implementation before their rebuttal. And, it seems there were some major changes after the rebuttal which isn’t reflected in that code. I have asked them to provide the updated version(if possible) of the code and am waiting for their reply.\n\n\n**Results/Findings:**\n\n\n1. I will talk about the DAS based approaches in the meeting today. \n\n\n**Question/Issues:**\n\n\n1. I don’t have any issues at this point.",
@@ -392,6 +417,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-03-04",
+          "content": "No update was provided for the week ending 2026-03-04.",
+          "placeholder": true
+        },
+        {
           "date": "2026-02-25",
           "content": "No update was provided for the week ending 2026-02-25.",
           "placeholder": true
@@ -465,6 +495,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-02-26",
+          "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Explore literature regarding MoE and distillation.(mainly find out avenues how MoE can be helpful towards distillation and look for existing work).[March 3]\n\n**Action Items:**\n\n\n1. It is important to understand the mechanism and structure of MoE. I have been reading about different ways they can be implemented. I will share details about it.\n2. In the context of distillation, how MoE can be implemented, I will provide an initial idea about it, it will be refined over time.\n\n**Results/Findings:**\n\n\n1. I am currently reading a survey paper showing different architectures of MoE, in terms of gating function, expert architectures, and data type. Once a get the big picture, I will share my findings.\n\n**Issues:**\nNone at the moment.",
+          "placeholder": false
+        },
+        {
           "date": "2026-02-19",
           "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Identify the next research direction, especially towards model debugging through distillation(March 1).\n2. Address issues of the last submission(February 23)\n\n**Action Items:**\n\n\n1. I have been reading some papers regarding model debugging techniques. My latest finding was that distillation could be used to distill failure modes to a smaller model.\n2. A possible direction could be using distillation to localize the fault patterns more efficiently. For tabular data, a smaller decision tree may be used to transfer failure information and use that info to create more synthetic data to be fed to the teacher model. More information is shared on my channel.\n3. Right now, I am exploring whether the idea is novel and what our core contribution to it could be. \n4. I am also working towards the query budget issue of our previous work.\n5. Previously, we discussed that a fixed number of bins or a learned number of bins is good for our KD paper; I plan to explore that idea too.\n\n**Results/Findings:**\n\n\n1. Distillation can be used to distill failure modes, which is an interesting path for research. I plan to come up with at least three concrete ideas, as discussed in my channel.\n\n**Issues:**\nNone at the moment.",
           "placeholder": false
@@ -532,5 +567,5 @@
       ]
     }
   ],
-  "last_updated": "2026-02-25T23:34:32.081746"
+  "last_updated": "2026-03-04T23:35:38.782549"
 }
