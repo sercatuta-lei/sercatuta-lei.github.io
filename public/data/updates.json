@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-03-05",
+          "content": "**Arjun Dahal:**\n\nHi,\n\nMilestone:\nImplement the current idea for bias mitigation in NN\n\nAction Items:\n\n\n1. I trained a pre-trained NN on two loss functions. The two loss functions are classification loss and loss to reduce information ( HSIC between the output and the gender) between the output and the gender. \n\n\nResult/Findings:\nThe results showed that the accuracy improved upon retraining, and the metrics like AOD and EOD decreased, but the decrease wasn't as much as expected. The decrease in these parameters for RUNNER ( another method approaching the problem ) is almost 4X our results. I am looking into how we can improve the results.  I will be sharing more results in the Slack channel as the experiments progress.\n\nIssues/Questions:\nI do not have issues at the moment.\n\nI would also like to request to leave the meeting early at 1:45 due to TA duties.\n\n**Replies:**\n\n**Dr. Lei:**\nA milestone without a target date is not meaningful.\nAlso, you need to clearly write down the main idea and the major steps of your approach and the why part behind your approach.\n\n---\n\n**Arjun Dahal:**\nThank you, Dr. Lei. I am adding a date to the milestone.\nI will share the main approach in my research channel.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-02-26",
           "content": "**Arjun Dahal:**\n\nHi,\n\nMilestone:\nWork on fixing bias in NN - get initial validation on the current idea  ( Mar 5 )\n\nAction Items:\n\n\n1. The experiments are completed regarding the tabular data changes. \n2. Most of the literature focuses on VAE/AE networks where the latent space representation is changed to remove certain concepts or isolate certain representations (such as gender information from the rest of the information).\n\n\nResult/Findings:\nThere would be some information in the latent space; all the information about the correlated attributes cannot be entirely removed from the latent space, even when an adversary is used. These correlated attributes make more changes when converted back to the input space, resulting in a higher distance ( thus, lower VCR ) compared to even the CVAE ( which learns from the distribution ).\nI will be discussing new papers that focus on separating sensitive and non-sensitive information in the latent space today.\n\nIssues/Questions:\nI do not have issues at the moment.",
           "placeholder": false
@@ -95,6 +100,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2026-03-11",
+          "content": "No update was provided for the week ending 2026-03-11.",
+          "placeholder": true
+        },
+        {
           "date": "2026-03-03",
           "content": "**Saif Uddin Mahmud:**\n\nHello everyone,\n\nMilestone: ICSME submission — abstract (submitted), full paper due Mar 6.\n\nProgress:\n\n\n- Incorporating feedback from the draft, with a tighter “verification adequacy” positioning.\n- Refining the introduction and contributions to clearly frame the benchmark as enabling infrastructure rather than a standalone dataset paper.\n- Adding brief dataset characterization (e.g., LOC and problem-tag breakdown) to better describe the analyzed programs.\n\n\nResults: no new results\n\nQuestions/Issues:\n\nTo address recent feedback on coherence and to help meet the 10-page limit, I am restructuring the narrative to focus more clearly on verification adequacy. I would appreciate your thoughts on whether this unified framing connects the components effectively:\n\n\t•\tResearch Gap: Current evaluations of AI-generated C++ rely mainly on single-tier static analysis, leaving runtime and edge-case violations underexplored.\n\n\t•\tVerification Approach: A multi-tier (static, dynamic, formal) framework used to reveal blind spots in single-tier evaluation.\n\n\t•\tBenchmark as Infrastructure: VULBENCH-CPP is positioned as enabling infrastructure rather than the primary contribution.\n\n\t•\tEmpirical finding: The AI-vs-human and correctness-vs-security results provide evidence that single-tier verification can be misleading (e.g., static parity vs. 3.6× runtime gap).",
           "placeholder": false
@@ -177,6 +187,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2026-03-11",
+          "content": "No update was provided for the week ending 2026-03-11.",
+          "placeholder": true
+        },
         {
           "date": "2026-03-03",
           "content": "**Fadul Sikder:**\n\nWeekly Research Update\n\nProgress\n\n1. Stage 1 (RQ1) Experiments and Fine-Tuning\n\nThis week, I focused on experiments for the first research question (RQ1).\n\n\n- I tested six models under two configurations:\n\nConfiguration A: adding a dedicated classification head for binary classification\nConfiguration B: supervised fine-tuning\n\n\n- Supervised fine-tuning introduced several practical caveats. I will discuss these caveats and the decisions I’m making in today’s meeting.\n- By Thursday, I expect to complete the full set of RQ1 experiments and report Accuracy, Precision, Recall, and F1 for both configurations.\n\n\n2. Paper Writing for arXiv Submission\n\n\n- I worked on writing and adding related-work discussion for the XPath paper.\n- I plan to share an updated version with the group by tomorrow evening.\n- If I receive feedback by the weekend, my target is to revise based on that feedback and then submit/post the paper by next Tuesday.\n- In parallel, I’m also looking into how to obtain sponsorship for the arXiv submission.\n\n\n3. Early Scope Exploration for the Next Project \n\n\n- I started a preliminary literature review for the next project and plan to present a candidate direction during Thursday’s new-idea discussion.\n- Topics I’m reviewing include code circuits, replacement models/transcoders, and Shapley-style explanation for LLMs.\n- So far, I’ve read around 4–5 papers, and my immediate goal is to aim and decide one direction. \n\n\nIssues / Notes\n\nNo major blockers right now, but supervised fine-tuning has some practical caveats that affect how results should be interpreted. I will summarize these in today’s meeting.",
@@ -261,6 +276,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-03-05",
+          "content": "**Krishna Khadka:**\n\nMilestone:\n\n\n1. Look for a new conference submission for DDCAM (I haven't received email response from ECCV chairs)\n\n\nAction Items:\n\n\n1. I completed evaluation of all non-CAM baselines (RISE, Integrated Gradients, SHAP, LIME, and Fong et al. Extremal Perturbation (EP)) under the same metric suite (ADCC, Average Drop, Coherency, Complexity, Inc, ADD, ROAD) across all 8 model architectures (ResNet-50, EfficientNet-B0, Inception-v3, VGG-11/16/19, ViT-B/16, ViT-L/16).\n2. I am continuing reframing and rewriting the DDCAM paper. \n3. I will now start focusing on the explanation guided debugging project while improving the DDCAM paper for next submission. \n\n\nResults:\n\n\n1. The summary from the current obtained results:\n\n\n1. CNN Linear Heads (ResNet-50, EfficientNet-B0, Inception-v3): DD-CAM achieves the best ADCC (0.809) and lowest Average Drop (0.139) among all methods. LIME is the strongest non-CAM baseline but is 8× slower. IG, SHAP, and EP are not very competitive. RISE produces poor localization due to insufficient mask sampling and will be re-evaluated with higher number of masks but its time complexity will increase by a lot.\n2. CNN Non-Linear Heads (VGG-11, VGG-16, VGG-19): DD-CAM performs  better on ADCC (0.787) and Average Drop (0.161). LIME comes close on ADCC (0.781) but is 20× slower. IG and SHAP perform poorly with high Average Drop and low ADCC. EP is slow (~97s/image) with mediocre ADCC (0.664) and high Average Drop (0.472).\n3. Vision Transformers (ViT-B/16, ViT-L/16): DD-CAM performs better with lowest Average Drop (0.083), highest coherency (0.995), and highest increase in confidence (0.600). Gradient-based CAMs perform poorly on ViTs. ScoreCAM and LIME are competitive on ADCC and ROAD but are significantly slower (4s and 101s vs. 1.9s). IG and SHAP again fail with Average Drop ~0.97–0.98. EP is very slow (~255s/image) with Average Drop of 0.446 due to full forward pass requirements and scales poorly with model size.\n\nIssues: None at the moment.\n\nI would also like to request to leave the meeting early at 1 due to TA duties.\n\n**Replies:**\n\n**Dr. Lei:**\nGood results. This is a lesson learned: don't wait until the last minute to catch a deadline.\nAlso, \"Look for a new conference submission...\" is not a meaningful milestone.\n\n---\n\n**Krishna Khadka:**\nThank you Dr. Lei. I'm looking for next possible conference and I will add a date and have small milestones as well\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-02-26",
           "content": "**Krishna Khadka:**\n\n**Milestone:**\n\n\n1. Reposition DD-CAM for ECCV and address CVPR reviewer concerns (March 5)\n\n\n**Action Items:**\n\n\n1. Added non-CAM baselines like RISE, Integrated Gradients, SHAP, LIME requested by reviewers into both comparison and localization pipelines in addition, I have also added the Fong et al (extremal perturbation) in the comparison.\n2. Performing evaluation under the same metric suite. The experiments are currently running. I plan to have all experiments completed by tomorrow.\n3. I also started reframing/rewriting the paper. \n\n\nResults:\n\n\n1. The experiments are in progress. \n\n\nIssues: None at the moment.",
           "placeholder": false
@@ -338,6 +358,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-03-10",
+          "content": "**Pujan Budhathoki:**\n\n**Milestone: **\n\n\n1. Look into how we can create the adversarial dataset required for the training? How technically challenging is this going to be? Are there other papers from which we can borrow ideas on how to create the dataset, OR are there existing dataset we can use? Also look into the token position selection problem to see if there exists other solutions to it. **March 17**\n2. Try using Teacher forcing on the vulnerable and safe code and look at where the first divergence occurs\n\n**Action Items:**\n\n\n1. I have been looking into different datasets that can be used/built upon for creating the Adversarial dataset. These include SVEN (He & Vechev, 2023), VISION (Pearce et al.), PrimeVul (Ding et al.), CWEval (Peng et al.), SecCodePLT (Yang et al.). We still need some transformation to turn them into adversarial datasets. I’m searching for the best/most efficient way to do it.\n2. There seems to be a phenomenon called **Early token commitment** (where an autoregressive LLM implicitly \"locks in\" a downstream code path (or behavioral trajectory) at tokens that appear long before the security-sensitive or decision-critical output is actually generated.) I’m looking more into this. \n\n**Findings:**\n\n\n1. I don’t have any notable findings at this point.\n\n**Questions/Issues:**\n\n\n1. I don’t have any issues at this point.",
+          "placeholder": false
+        },
         {
           "date": "2026-03-03",
           "content": "**Pujan Budhathoki:**\n\nLast week I was a bit busy with my TA work so I couldn’t commit as much time to research as I wanted to.\n**Milestone: **\n\n\n1. Complete Action Items from last meeting: Go through the approach in more detail, thinking about what made me choose the approach, what are its advantages over the SAE approach? What are going to be the technical challenges of the approach I’m proposing? Also, think about what are the fundamental differences between the domain of the paper and the security domain?(With concrete examples) **March 3**\n2. Carry out the discussed experiment to isolate the results using teacher forcing\n\n**Action Items:**\n\n\n1. I have been carrying out literature reviews with the goal of answering above questions:\n2. Geiger, Atticus, et al. \"Finding alignments between interpretable causal variables and distributed neural representations.\" Causal Learning and Reasoning. PMLR, 2024.\n3. Sun, Jiuding, et al. \"HyperDAS: Towards automating mechanistic interpretability with hypernetworks.\" arXiv preprint arXiv:2503.10894 (2025).\n4. Wu, Zhengxuan, et al. \"Interpretability at scale: Identifying causal mechanisms in alpaca.\" Advances in neural information processing systems 36 (2023): 78205-78226.\n\n**Findings:**\n\n\n1. I will present on the answers I came up with for the above questions in today’s meeting\n\n**Questions/Issues:**\n\n\n1. I don’t have any issues at this point.",
@@ -417,6 +442,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-03-11",
+          "content": "No update was provided for the week ending 2026-03-11.",
+          "placeholder": true
+        },
+        {
           "date": "2026-03-04",
           "content": "No update was provided for the week ending 2026-03-04.",
           "placeholder": true
@@ -495,6 +525,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-03-05",
+          "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Make a potential architecture of KD with a student model as MoE, with learning objectives that address the current problems.(March 10)\n\n**Action Items:**\n\n\n1. Make a sketch of the KD setup with a MoE student, which will include:\n\n\n1. Conceptual idea of using MoE in KD aligning with our previous approach\n2. learning objectives of each component\n3. dataflow of the pipeline\n4. Justification of each step.(How it solves our existing drawbacks, why the idea is technically sound)\n\n**Results/Findings:**\n\n\n1. The existing works in MoE in KD show that a) a dense teacher model can be distilled into a sparse network of expert students, and b) knowledge of an expert network of teachers can be aggregated into a dense student via distillation. The former, where the student is an MoE, could be most beneficial in our case.\n2. So far, I found a single work that directly uses this technique, but in a very straightforward fashion. \n\n**Issues:**\nNone at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\nTry to consider a few more fundamental questions:\n\n\n1. What does the student really need to learn? What would be the ideal case for data-free KD, in terms of what the student needs to learn and what data points need to be generated?\n2. What fundamentally makes a decision region/pattern/rule? What data points are needed to learn a specific decision region/pattern/rule?\n3. What are the fundamental technical challenges to achieve the ideal case?\n4. How would the approach you are exploring address each of the fundamental challenges?\n\nTry to write down your answer to each of these questions.\n\n---\n\n**Shovon Niverd:**\nthank you Dr. Lei, for the questions. I will set them as deliverables.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-02-26",
           "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Explore literature regarding MoE and distillation.(mainly find out avenues how MoE can be helpful towards distillation and look for existing work).[March 3]\n\n**Action Items:**\n\n\n1. It is important to understand the mechanism and structure of MoE. I have been reading about different ways they can be implemented. I will share details about it.\n2. In the context of distillation, how MoE can be implemented, I will provide an initial idea about it, it will be refined over time.\n\n**Results/Findings:**\n\n\n1. I am currently reading a survey paper showing different architectures of MoE, in terms of gating function, expert architectures, and data type. Once a get the big picture, I will share my findings.\n\n**Issues:**\nNone at the moment.",
           "placeholder": false
@@ -567,5 +602,5 @@
       ]
     }
   ],
-  "last_updated": "2026-03-04T23:35:38.782549"
+  "last_updated": "2026-03-11T23:32:15.958201"
 }
