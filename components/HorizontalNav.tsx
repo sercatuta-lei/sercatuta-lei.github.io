@@ -14,6 +14,7 @@ export default function HorizontalNav() {
     { href: "/publications", label: "Publications" },
     { href: "/projects", label: "Projects" },
     { href: "/future", label: "Future Students" },
+    { href: "/resources", label: "Resources" },
     { href: "/updates", label: "Archive" },
   ];
 

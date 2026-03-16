@@ -7,21 +7,33 @@ import { Button } from "@/components/ui/button";
 
 interface PasswordProtectedProps {
   children: ReactNode;
+  passwordHash?: string;
+  sessionKey?: string;
+  title?: string;
+  description?: string;
 }
 
-export default function PasswordProtected({ children }: PasswordProtectedProps) {
+export default function PasswordProtected({
+  children,
+  passwordHash,
+  sessionKey,
+  title,
+  description,
+}: PasswordProtectedProps) {
   const [password, setPassword] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [error, setError] = useState("");
   const [isChecking, setIsChecking] = useState(true);
 
-  // Password hash (SHA-256 of "425SEL@bRC")
-  const PASSWORD_HASH = "fe09819b017626806fc8b09ab5339098ea80dbd3cd36a5a8b0aeab94381c98bf";
+  // Default password hash (SHA-256 of "425SEL@bRC") for PhD updates
+  const PASSWORD_HASH =
+    passwordHash ?? "fe09819b017626806fc8b09ab5339098ea80dbd3cd36a5a8b0aeab94381c98bf";
+  const SESSION_KEY = sessionKey ?? "sessionTimestamp";
   const SESSION_DURATION = 5 * 60 * 1000; // 5 minutes
 
   useEffect(() => {
     // Check if session is still valid
-    const sessionTimestamp = localStorage.getItem("sessionTimestamp");
+    const sessionTimestamp = localStorage.getItem(SESSION_KEY);
     if (sessionTimestamp) {
       const now = Date.now();
       const elapsed = now - parseInt(sessionTimestamp);
@@ -29,11 +41,11 @@ export default function PasswordProtected({ children }: PasswordProtectedProps) 
       if (elapsed < SESSION_DURATION) {
         setIsAuthenticated(true);
       } else {
-        localStorage.removeItem("sessionTimestamp");
+        localStorage.removeItem(SESSION_KEY);
       }
     }
     setIsChecking(false);
-  }, []);
+  }, [SESSION_KEY]);
 
   const hashPassword = async (password: string): Promise<string> => {
     const encoder = new TextEncoder();
@@ -56,7 +68,7 @@ export default function PasswordProtected({ children }: PasswordProtectedProps) 
     const hash = await hashPassword(password);
     
     if (hash === PASSWORD_HASH) {
-      localStorage.setItem("sessionTimestamp", Date.now().toString());
+      localStorage.setItem(SESSION_KEY, Date.now().toString());
       setIsAuthenticated(true);
       setPassword("");
     } else {
@@ -90,10 +102,10 @@ export default function PasswordProtected({ children }: PasswordProtectedProps) 
             <CardContent className="p-8">
               <div className="text-center mb-6">
                 <h2 className="text-2xl font-bold text-slate-800 dark:text-white mb-2">
-                  Protected Content
+                  {title ?? "Protected Content"}
                 </h2>
                 <p className="text-slate-600 dark:text-gray-300">
-                  Enter password to access PhD student updates
+                  {description ?? "Enter password to access PhD student updates"}
                 </p>
               </div>
 

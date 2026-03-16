@@ -19,6 +19,7 @@ export default function Sidebar() {
         <SidebarLink href="/publications">Publications</SidebarLink>
         <SidebarLink href="/projects">Projects</SidebarLink>
         <SidebarLink href="/future">Future Students</SidebarLink>
+        <SidebarLink href="/resources">Resources</SidebarLink>
         <SidebarLink href="/updates">Archive</SidebarLink>
       </nav>
     </aside>
