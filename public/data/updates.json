@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-03-18",
+          "content": "No update was provided for the week ending 2026-03-18.",
+          "placeholder": true
+        },
+        {
           "date": "2026-03-05",
           "content": "**Arjun Dahal:**\n\nHi,\n\nMilestone:\nImplement the current idea for bias mitigation in NN\n\nAction Items:\n\n\n1. I trained a pre-trained NN on two loss functions. The two loss functions are classification loss and loss to reduce information ( HSIC between the output and the gender) between the output and the gender. \n\n\nResult/Findings:\nThe results showed that the accuracy improved upon retraining, and the metrics like AOD and EOD decreased, but the decrease wasn't as much as expected. The decrease in these parameters for RUNNER ( another method approaching the problem ) is almost 4X our results. I am looking into how we can improve the results.  I will be sharing more results in the Slack channel as the experiments progress.\n\nIssues/Questions:\nI do not have issues at the moment.\n\nI would also like to request to leave the meeting early at 1:45 due to TA duties.\n\n**Replies:**\n\n**Dr. Lei:**\nA milestone without a target date is not meaningful.\nAlso, you need to clearly write down the main idea and the major steps of your approach and the why part behind your approach.\n\n---\n\n**Arjun Dahal:**\nThank you, Dr. Lei. I am adding a date to the milestone.\nI will share the main approach in my research channel.\n\n---",
           "placeholder": false
@@ -100,6 +105,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2026-03-17",
+          "content": "**Saif Uddin Mahmud:**\n\nHello group,\n\nMilestone: ICSME submission\n\t•\tFull paper: submitted (Mar 7)\n\nPhD Milestone: Comprehensive Exam (Mar 30)\n\t•\tAwaiting papers from the committee\n\nUpdate\n\t•\tLight week due to spring break; Focused primarily on TA responsibilities during this period.\n\nQuestion/Issues: N/A\n\nResults: N/A",
+          "placeholder": false
+        },
+        {
           "date": "2026-03-11",
           "content": "No update was provided for the week ending 2026-03-11.",
           "placeholder": true
@@ -187,6 +197,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2026-03-17",
+          "content": "**Fadul Sikder:**\n\nWeekly Research Update\n\nProgress\n\n- Continued working on experiment implementation, running experiments, and paper writing.\n- Currently ~40% complete on experiments for RQ1 and RQ2.\n- Main focus has been setting up stable LLM training and execution pipelines.\n\nPaper Status\n\n- Worked on introduction, methodology, and updated the related work section.\n- Revised framing from the previous paper to align with the new research questions.\n- Overall paper progress is around 60–70% complete.\n- Original plan was to finish this week, but I will need until the weekend to deliver a full draft for review.\n\nAdditional Exploration\n\n- exploring ideas for the next project, though not yet fully formalized. I have done preliminary experiments on generating importance scores for program statements using LLMs.\n- Will share some early observations in the meeting.\n\nIssues / Challenges\n\n- Encountering OOM (out-of-memory) issues when running larger LLMs.\n- Identifying the correct set of libraries and configurations for stable, error-free LLM training has been time-consuming.",
+          "placeholder": false
+        },
         {
           "date": "2026-03-11",
           "content": "No update was provided for the week ending 2026-03-11.",
@@ -276,6 +291,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-03-18",
+          "content": "No update was provided for the week ending 2026-03-18.",
+          "placeholder": true
+        },
+        {
           "date": "2026-03-05",
           "content": "**Krishna Khadka:**\n\nMilestone:\n\n\n1. Look for a new conference submission for DDCAM (I haven't received email response from ECCV chairs)\n\n\nAction Items:\n\n\n1. I completed evaluation of all non-CAM baselines (RISE, Integrated Gradients, SHAP, LIME, and Fong et al. Extremal Perturbation (EP)) under the same metric suite (ADCC, Average Drop, Coherency, Complexity, Inc, ADD, ROAD) across all 8 model architectures (ResNet-50, EfficientNet-B0, Inception-v3, VGG-11/16/19, ViT-B/16, ViT-L/16).\n2. I am continuing reframing and rewriting the DDCAM paper. \n3. I will now start focusing on the explanation guided debugging project while improving the DDCAM paper for next submission. \n\n\nResults:\n\n\n1. The summary from the current obtained results:\n\n\n1. CNN Linear Heads (ResNet-50, EfficientNet-B0, Inception-v3): DD-CAM achieves the best ADCC (0.809) and lowest Average Drop (0.139) among all methods. LIME is the strongest non-CAM baseline but is 8× slower. IG, SHAP, and EP are not very competitive. RISE produces poor localization due to insufficient mask sampling and will be re-evaluated with higher number of masks but its time complexity will increase by a lot.\n2. CNN Non-Linear Heads (VGG-11, VGG-16, VGG-19): DD-CAM performs  better on ADCC (0.787) and Average Drop (0.161). LIME comes close on ADCC (0.781) but is 20× slower. IG and SHAP perform poorly with high Average Drop and low ADCC. EP is slow (~97s/image) with mediocre ADCC (0.664) and high Average Drop (0.472).\n3. Vision Transformers (ViT-B/16, ViT-L/16): DD-CAM performs better with lowest Average Drop (0.083), highest coherency (0.995), and highest increase in confidence (0.600). Gradient-based CAMs perform poorly on ViTs. ScoreCAM and LIME are competitive on ADCC and ROAD but are significantly slower (4s and 101s vs. 1.9s). IG and SHAP again fail with Average Drop ~0.97–0.98. EP is very slow (~255s/image) with Average Drop of 0.446 due to full forward pass requirements and scales poorly with model size.\n\nIssues: None at the moment.\n\nI would also like to request to leave the meeting early at 1 due to TA duties.\n\n**Replies:**\n\n**Dr. Lei:**\nGood results. This is a lesson learned: don't wait until the last minute to catch a deadline.\nAlso, \"Look for a new conference submission...\" is not a meaningful milestone.\n\n---\n\n**Krishna Khadka:**\nThank you Dr. Lei. I'm looking for next possible conference and I will add a date and have small milestones as well\n\n---",
           "placeholder": false
@@ -358,6 +378,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-03-17",
+          "content": "**Pujan Budhathoki:**\n\n**Milestone: **\n\n\n1. Look into how we can create the adversarial dataset required for the training? How technically challenging is this going to be? Are there other papers from which we can borrow ideas on how to create the dataset, OR are there existing dataset we can use? Also look into the token position selection problem to see if there exists other solutions to it. **March 17**\n2. Try using Teacher forcing on the vulnerable and safe code and look at where the first divergence occurs\n\n**Action Items:**\n\n\n1. I have been exploring different methods that will help us create the adversarial datasets required for training. No existing work directly deals with this in our problem space. However, we can possibly use the following methods to create it:\n\n\n1. Make use of existing adversarial attacks on LLMs: Adversarial attacks on LLMs are designed with the goal of bringing the targeted change in the output with minimal change in input prompt. This could work well for creating minimally different prompts(that produce safe and unsafe code) at scale. \n2. Make use of prompt tuning techniques: Prompt tuning techniques add a few tokens into the input that are treated as tunable parameters. They provide stronger results than prompt engineering. We could add some tunable tokens into the input prompt to make it take the safe or unsafe code generation path and use it to generate minimally different prompts(that produce safe and unsafe code) at scale. SVEN does something similar to this, it prepends tuned tokens into the prompt to steer the generation towards safe generation or unsafe generation. \n\n\n1. He, Jingxuan, and Martin Vechev. \"Large language models for code: Security hardening and adversarial testing.\" Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security. 2023. (SVEN)\n\n\n1. Regarding the token position selection problem (which token position holds the information regarding the vulnerability decision), HyperDAS uses a hypernetwork to solve this problem. The hypernetwork it trains is a transformer model that takes in the natural language description of the concept(for e.g. The country a city is in) and takes in the model activations(from the target LLM model) for the base prompt and the counterfactual prompt and as output gives the token positions that is encoding this idea. \n\n\n1. Another method related to this, Meng et al.(NeurIPS 2022) in their method run three forward passes: clean, corrupted (Gaussian noise on subject tokens), and corrupted-with-selective-restoration. By measuring how much restoring an activation at a specific (layer, token position) recovers the correct output probability, it produces a heatmap of causal importance. (Meng, Kevin, et al. \"Locating and editing factual associations in gpt.\" *Advances in neural information processing systems* 35 (2022): 17359-17372.)\n\n\n1. I have been setting up the experiment for the teacher forcing experiment to see exactly at which token position the model starts diverting towards producing vulnerable code\n\n**Findings: **\n\n\n1. I will talk more about my findings in my presentation today.\n\n**Problems/Issues:**\n\n\n1. I have no problems or issues at this point.",
+          "placeholder": false
+        },
         {
           "date": "2026-03-10",
           "content": "**Pujan Budhathoki:**\n\n**Milestone: **\n\n\n1. Look into how we can create the adversarial dataset required for the training? How technically challenging is this going to be? Are there other papers from which we can borrow ideas on how to create the dataset, OR are there existing dataset we can use? Also look into the token position selection problem to see if there exists other solutions to it. **March 17**\n2. Try using Teacher forcing on the vulnerable and safe code and look at where the first divergence occurs\n\n**Action Items:**\n\n\n1. I have been looking into different datasets that can be used/built upon for creating the Adversarial dataset. These include SVEN (He & Vechev, 2023), VISION (Pearce et al.), PrimeVul (Ding et al.), CWEval (Peng et al.), SecCodePLT (Yang et al.). We still need some transformation to turn them into adversarial datasets. I’m searching for the best/most efficient way to do it.\n2. There seems to be a phenomenon called **Early token commitment** (where an autoregressive LLM implicitly \"locks in\" a downstream code path (or behavioral trajectory) at tokens that appear long before the security-sensitive or decision-critical output is actually generated.) I’m looking more into this. \n\n**Findings:**\n\n\n1. I don’t have any notable findings at this point.\n\n**Questions/Issues:**\n\n\n1. I don’t have any issues at this point.",
@@ -442,6 +467,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-03-18",
+          "content": "No update was provided for the week ending 2026-03-18.",
+          "placeholder": true
+        },
+        {
           "date": "2026-03-11",
           "content": "No update was provided for the week ending 2026-03-11.",
           "placeholder": true
@@ -525,6 +555,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-03-18",
+          "content": "No update was provided for the week ending 2026-03-18.",
+          "placeholder": true
+        },
+        {
           "date": "2026-03-05",
           "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Make a potential architecture of KD with a student model as MoE, with learning objectives that address the current problems.(March 10)\n\n**Action Items:**\n\n\n1. Make a sketch of the KD setup with a MoE student, which will include:\n\n\n1. Conceptual idea of using MoE in KD aligning with our previous approach\n2. learning objectives of each component\n3. dataflow of the pipeline\n4. Justification of each step.(How it solves our existing drawbacks, why the idea is technically sound)\n\n**Results/Findings:**\n\n\n1. The existing works in MoE in KD show that a) a dense teacher model can be distilled into a sparse network of expert students, and b) knowledge of an expert network of teachers can be aggregated into a dense student via distillation. The former, where the student is an MoE, could be most beneficial in our case.\n2. So far, I found a single work that directly uses this technique, but in a very straightforward fashion. \n\n**Issues:**\nNone at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\nTry to consider a few more fundamental questions:\n\n\n1. What does the student really need to learn? What would be the ideal case for data-free KD, in terms of what the student needs to learn and what data points need to be generated?\n2. What fundamentally makes a decision region/pattern/rule? What data points are needed to learn a specific decision region/pattern/rule?\n3. What are the fundamental technical challenges to achieve the ideal case?\n4. How would the approach you are exploring address each of the fundamental challenges?\n\nTry to write down your answer to each of these questions.\n\n---\n\n**Shovon Niverd:**\nthank you Dr. Lei, for the questions. I will set them as deliverables.\n\n---",
           "placeholder": false
@@ -602,5 +637,5 @@
       ]
     }
   ],
-  "last_updated": "2026-03-11T23:32:15.958201"
+  "last_updated": "2026-03-18T23:34:55.876734"
 }
