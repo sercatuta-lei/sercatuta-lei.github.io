@@ -20,7 +20,6 @@ const resources = [
     href: "https://share.google/Fd4Bly5zkWyJiRwhd",
     category: "LLM foundations / architecture",
     why: [
-      "Even though none of our current projects are directly focused on LLM architecture, this article is a useful foundation for understanding the state of the art in open-weight model design and how leading models are built in practice.",
       "It surveys design patterns across LLM components that shape recent models, including Mixture-of-Experts (MoE), gated networks, Multi-Head Latent Attention (MLA), Grouped-Query Attention (GQA), sliding-window attention, and Delta Attention Networks—helping build a quick mental model of how architectures are evolving and where future designs may head.",
     ],
   },
