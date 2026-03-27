@@ -20,7 +20,7 @@ const resources = [
     href: "https://share.google/Fd4Bly5zkWyJiRwhd",
     category: "LLM foundations / architecture",
     why: [
-      "It surveys design patterns across LLM components that shape recent models, including Mixture-of-Experts (MoE), gated networks, Multi-Head Latent Attention (MLA), Grouped-Query Attention (GQA), sliding-window attention, and Delta Attention Networks—helping build a quick mental model of how architectures are evolving and where future designs may head.",
+      "This survey covers key LLM design patterns such as MoE, gated networks, MLA, GQA, sliding-window attention, and Delta Attention, offering a quick understanding of how architectures are evolving and where they’re headed.",
     ],
   },
   {
