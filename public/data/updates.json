@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-03-26",
+          "content": "**Arjun Dahal:**\n\nHi,\n\nMilestone:\nFinalize the approach ( Mar 26 )\n\nAction Items:\n\n\n1. I carried out more experiments to understand gender information across MLP layers for different datasets. \n2. Learned more about the loss functions and proposed different loss functions for different fairness metrics.\n\n 3. Read the existing literature on what they do and if they do something similar to what we are proposing.\n\nResult/Findings:\nI will be discussing my approach today in the group meeting.\n\nIssues/Questions:\nNone at the moment",
+          "placeholder": false
+        },
+        {
           "date": "2026-03-19",
           "content": "**Arjun Dahal:**\n\nHi,\n\nMilestone:\nFinalize the approach ( Mar 26 )\n\nAction Items:\n\n\n1. I carried out more experiments to understand the effect of a larger network on the datasets for bias and accuracy. \n2. Added linear ( a linear layer ) and non-linear layer ( a linear layer + relu ) in between the second last layer and output layer, and checked the changes in the accuracy of the network.\n\n\nResult/Findings:\nIncreasing the network size doesn't significantly change the baseline accuracy or bias across datasets. However, if the network becomes too large, it overparametrizes and becomes sensitive to the noise in the dataset for a small dataset. When comparing with the baselines, the change in accuracy or fairness metrics should be reported. Adding a linear layer is more like a re-parametrization of the network. It helps in a slight improvement in accuracy and a slight decrease in bias of the network (for one of the metrics,  but mightn't be for the other metric of group-level bias metric). Using a linear layer + relu unit results in an architectural change and introduces non-linearity, which changes the loss landscape and helps in non-linear bias removal.\n\nIssues/Questions:\nShould we use a linear layer or (linear layer + relu) in our case, during retraining with loss for accuracy and loss for information removal between gender and output prediction?\n\nTo Do:\nHow can we re-design our loss function for different fairness metrics?\n\nAfter finding the answer to the To Do and the Question above, I believe we can carry out a couple of experiments to compare the results against the baseline and work on finalizing the approach.",
           "placeholder": false
@@ -110,6 +115,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2026-04-01",
+          "content": "No update was provided for the week ending 2026-04-01.",
+          "placeholder": true
+        },
+        {
           "date": "2026-03-24",
           "content": "**Saif Uddin Mahmud:**\n\n**PhD Milestone: Comprehensive Exam (Mar 30)**\n\n**Update**\n • After the discussion on the new research direction, I have been exploring Mixture-of-Experts (MoE) for code generation and the security of agentic AI.\n• I have shared the two documents that provide a high-level literature review on these topics .\n• My comprehensive exam is scheduled for this coming Monday, so I am currently dedicating most of my time to preparation.\n\n**Questions/Issues:** N/A\n\n**Results:**\n• At this moment, I do not have any presentable results.",
           "placeholder": false
@@ -207,6 +217,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2026-04-01",
+          "content": "No update was provided for the week ending 2026-04-01.",
+          "placeholder": true
+        },
         {
           "date": "2026-03-25",
           "content": "No update was provided for the week ending 2026-03-25.",
@@ -306,6 +321,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-03-26",
+          "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. Submit DD-CAM paper to NIPS 2026 May 7\n2. Proposal by April end\n\n\nAction Items:\nMy goal this week was to understand how existing methods identify spurious regions, and then figure out whether CLIP + SpLiCE could serve the same role in our pipeline, and if so, how.\n\nWhat existing methods do:\nLooking at related work, the approaches to spurious region identification fall into three camps. DISC (ICML'23) uses a manually curated bank of 224 concepts and generates synthetic images per concept to measure which ones have high prediction sensitivity, but this requires knowing which concepts to look for in advance. LBC (IJCAI'24) captions all training images with a VLM and scores each word for spuriousness based on accuracy gaps, this is global (whole image) and depends on what the VLM describes. RaVL (NeurIPS'24) proposes generic image regions (quadrants/RPN), embeds them in VLM space, and clusters by performance gap. The common thread: all these methods use external tools that are model-agnostic and do not look at why the specific model being debugged actually fails.\n\nApproach with CLIP + SpLiCE:\nThe question I was investigating is whether we can identify spurious regions from the model's own failure signal. The diff-map D = ReLU(S_wrong - S_true) localises the region driving the misprediction, but not if they are spurious to inpaint. The question is: is that region spurious, or is it genuinely relevant?\nTo answer this, I applied CLIP + SpLiCE contrastively:\n\n\n1. Embed the diff-map region with CLIP (avg-fill: preserve diff-map pixels, fill non mask area with neutral colour so CLIP focuses on the diff map pixels)\n2. Decompose with SpLiCE into sparse concept weights (e.g., \"ocean: 0.017, water: 0.014, forests: 0.026\")\n3. Do the same for correctly predicted images of the same class\n4. Compute excess weight = avg(mispredicted diff-maps) - avg(correct images, same class)\n\nConcepts with high excess weight appear disproportionately in the diff-map regions of mispredicted images but not in correct ones. For Waterbirds: landbirds mispredicted as waterbirds show excess ocean (0.017), water (0.014), backgrounds (0.009), which are near-zero in correctly predicted landbirds. Waterbirds mispredicted as landbirds show excess forests (0.026), woods (0.010), trees (0.008). The mechanism works with SpLiCE using the same CLIP backbone it was designed for, and the contrastive comparison gives it statistical grounding across instances rather than relying on any single image.\n\nResults:\n\n\n1. ERM baseline: 72.59% worst-group\n2. Diff Map + inpainting, no filter: 82.87%\n3. Diff Map + CLIP/SpLiCE contrastive filter + inpainting: 86.14% worst-group on Waterbirds test set (no group labels at any stage)\n\n\nIssues:\nNone at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\nsounds interesting. one quick comment: for step 3, it is possible that an image can be classified to be of some class for different reasons.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-03-19",
           "content": "**Krishna Khadka:**\n\nHi Group\nMilestone:\n\n\n1. Submit DD-CAM paper to NIPS 2026 May 7\n2. Proposal by April end\n\nAction Items:\n\n\n1. I have been exploring concepts and techniques that could be used to reliably identify whether a region flagged by the margin mask is truly spurious before inpainting it. Specifically, apply a verify before repair steps that first identifies candidate spurious regions via margin saliency difference, then verifier confirms regions are genuinely spurious before acting on them, and repairer applies diffusion inpainting only on verified regions. \n2. Additionally, I explored using SpLiCE-based concept verification to check whether masked difference regions correspond to known shortcut concepts (e.g., \"background,\" \"water\") rather than class-relevant features. This paper helps with identifying spurious features in the image. I was thinking of applying/tweaking the approach to help identify if the masked region is spurious. \n\nResults:\n\n\n1. I'm yet to implement/run some experiments for the verification steps.\n\nIssues:\n\n\n1. None at the moment.\n\n\nSince I have to take a midterm exam, I would like to request to leave at 1:30.",
           "placeholder": false
@@ -398,6 +418,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-04-01",
+          "content": "No update was provided for the week ending 2026-04-01.",
+          "placeholder": true
+        },
         {
           "date": "2026-03-24",
           "content": "**Pujan Budhathoki:**\n\n**I have my Comprehensive exam scheduled for next week so last week I spent almost all my time carrying out literature reviews in preparation for it. I’m trying to finish preparations for it as quickly as possible so I can have more time refining it by taking feedback from others. **\n**Milestone:**\n\n\n1. Send a document to the group containing the things we discussed (Approach, Technical Challenges, Main idea for each challenge, workflow in terms of major steps)\n2. Carry out the teacher forcing experiment on safe and vulnerable code to see where the first divergence occurs\n\n**Action Items:**\n\n\n1. Apart from my preparation for the comprehensive exam, I am working on creating a detailed document (summarizing my approach, technical challenges ..). I don’t have the completed document ready yet, I will send it to the group after I have completed it. \n\n**Findings:**\n\n\n1. I don’t have any notable findings at this point.\n\n**Problem/Issues:**\n\n\n1. I don’t have any issues at this point.",
@@ -492,6 +517,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-04-01",
+          "content": "No update was provided for the week ending 2026-04-01.",
+          "placeholder": true
+        },
+        {
           "date": "2026-03-25",
           "content": "No update was provided for the week ending 2026-03-25.",
           "placeholder": true
@@ -585,6 +615,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-03-26",
+          "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Based on few design ideas shared, construct small-scale proof of concepts incrementally for the ideas.(March 31)\n\n**Action Items:**\n\n\n1. After our last discussion, the MoE KD design can follow two potential paths\n\n\n1. A bin learner creates one-dimensional boundaries but takes into context from other features to place them, and the gating method helps learning the bin numbers\n2. The gating method works as a mult-feature decision region learner; in this case, we do not need a bin learner.\n\n\n1. I am reading some literature to understand how the gating network and expert networks might look.\n2. Identifying the loss functions is important, starting with traditional KD losses for students and balancing loss for the gating network; I need to pinpoint what other losses are required\n\n**Results/Findings:**\n\n\n1. I will share my findings based on the action items in a few days\n\n**Issues:**\nNone at the moment.",
+          "placeholder": false
+        },
+        {
           "date": "2026-03-19",
           "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Finalize the MoE design of knowledge distillation, and justify the decision (March 25)\n\n**Action Items:**\n\n\n1. After our last discussion, MoE KD design can follow two potential paths\n\n\n1. A bin learner creates one-dimensional boundaries but takes in context from other features to place them, and the gating method helps learning the bin numbers\n2. The gating method works as a mult-feature decision region learner; in this case, we do not need a bin learner.\n\n\n1. Both ideas have their merit and flaws; I tried to list them in the document shared in my channel.\n2. The ideas are still very high-level; a more technical basis is required, with learning objectives, inputs, and outputs.\n\n**Results/Findings:**\n\n\n1. Most of the findings are shared in my channel in the document. I was supposed to answer a few questions; I will attach them in the reply. \n\n**Issues:**\nNone at the moment.\n\n**Replies:**\n\n**Shovon Niverd:**\n\n\n---",
           "placeholder": false
@@ -672,5 +707,5 @@
       ]
     }
   ],
-  "last_updated": "2026-03-25T23:40:36.691604"
+  "last_updated": "2026-04-01T23:41:16.870979"
 }
