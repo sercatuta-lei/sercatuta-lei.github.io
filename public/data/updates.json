@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-04-02",
+          "content": "**Arjun Dahal:**\n\nHi,\n\nMilestone:\nFinalize the approach (Apr 9 )\n\nAction Items:\n\n\n1. Wrote the approach that initiated further discussion \n2. Reviewed past works submitted to NeurIPS regarding Fairness Testing \n\n\nResults/Findings:\nFound the following work that debiases the classification head to reduce the bias:\nDu, Mengnan, et al. \"Fairness via representation neutralization.\" *Advances in Neural Information Processing Systems* 34 (2021): 12091-12103.\n\nIssues/Questions:\nI will be updating the answers to the question in my research channel shortly.\n\nI will be leaving early today, around 1:30, for the TA class.\n\n**Replies:**\n\n**Dr. Lei:**\nNo research topic is easy. To make meaningful progress, you must not only work hard, but also ask deep questions, learn from other papers especially those on the same topic, and observe/learn from how other people around you do research.\n\n---\n\n**Arjun Dahal:**\nThank you, Dr. Lei. I will followup on the questions and provide quicker update for better progress.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-03-26",
           "content": "**Arjun Dahal:**\n\nHi,\n\nMilestone:\nFinalize the approach ( Mar 26 )\n\nAction Items:\n\n\n1. I carried out more experiments to understand gender information across MLP layers for different datasets. \n2. Learned more about the loss functions and proposed different loss functions for different fairness metrics.\n\n 3. Read the existing literature on what they do and if they do something similar to what we are proposing.\n\nResult/Findings:\nI will be discussing my approach today in the group meeting.\n\nIssues/Questions:\nNone at the moment",
           "placeholder": false
@@ -115,6 +120,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2026-04-07",
+          "content": "**Saif Uddin Mahmud:**\n\nHello group,\n\nMilestones: No milestones at this moment\n\n**Action Items:**\n\n\n- I explored Mixture-of-Experts (MoE) models as one possible direction for secure code generation. I was motivated in part by recent work (Sparse Models, Sparse Safety: Unsafe Routes in Mixture-of-Experts LLMs- ) that shows routing decisions can impact model safety.\n- I have started setting up a small experiment using Qwen1.5-MoE-A2.7B to examine whether routing decisions correlate with differences in secure vs. vulnerable code generation.\n\n\n**Questions:**\n\n\n- No questions yet.\n\n\n\n**Results:**\n\n\n- Currently in the setup phase. My  goal is to establish a simple pipeline to observe how routing-related variations affect the generated code.",
+          "placeholder": false
+        },
+        {
           "date": "2026-04-01",
           "content": "No update was provided for the week ending 2026-04-01.",
           "placeholder": true
@@ -217,6 +227,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2026-04-07",
+          "content": "**Fadul Sikder:**\n\nWeekly Research Update\n\nProgress\n\n• This week I worked on multiple fronts, mainly running variations of experiments to gain deeper insights for the ongoing journal submission.\n• A significant portion of time was spent revising parts of the paper and improving implementation to remove bugs.\n• Conducted deeper analysis of experimental results and identified several emerging research observations.\n\nResults / Findings\n\n• Dataset choice plays a critical role in LLM-based vulnerability detection performance.\n• Most models show strong resilience to layer freezing: even after freezing up to 75% of lower layers, performance drops only by a few percentage points across most configurations.\n• However, a couple of models show higher sensitivity when freezing between 50%–75% of layers.\n• Mechanistic interpretability patterns appear broadly consistent across different model variants, suggesting some shared structural behavior\n\n Additional Exploration towards proposal \n\n• Investigating how to translate the current findings on LLM Finetunimg into well-defined research problems and potential approach to dolve it. \n• Revisiting the GNN explanation project to rethink evaluatipn design and propose a revised roadmap. \n• Exploring whether LLM-based agents can simulate or extend these path generation paradigm; currently reviewing related literature to understand how to come up with a systematic approach.",
+          "placeholder": false
+        },
         {
           "date": "2026-04-01",
           "content": "No update was provided for the week ending 2026-04-01.",
@@ -321,6 +336,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-04-02",
+          "content": "**Krishna Khadka:**\n\nMilestone:\n\n\n1. Submit DD-CAM paper to NIPS 2026 May 7\n2. Proposal by April end\n\nAction Items:\n\n\n1. This week I was focused on drafting the approach section of the paper. I think it needs some reconsiderations in some steps on how to handle the concept of essential vs spurious feature distinction. Specifically, essential and spurious features are about the real world, not about model behavior, so the approach cannot claim to identify them from model predictions alone. I'm reworking the framing around identifying systematic failure patterns and distributional repair rather than spurious feature identification.\n2. I'm also working towards the implementation of the proposed approach. \n3. I'm studying the related work section in more detail to provide a report by tomorrow. \n\nResults/Findings:\n\n\n1. I will provide more results and findings in my slack channel\n\nIssues:\n\n\n1. Fix the approach section with more clarity.\n\n**Replies:**\n\n**Dr. Lei:**\nTo have a good chance at NIPS, you should address all the major comments from previous reviews. Also ask yourself critically if there is anything that can be done to make the paper better. Try to submit the abstract/paper early so that you don't miss the deadline.\n\n---\n\n**Krishna Khadka:**\nYes, Dr. Lei. I needed to discuss a few points (for e.g. regarding convincing about multiple one minimal solution). I will prepare a document and share by Sunday, and get some feedback and plan internal deadline according to the feedbacks.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-03-26",
           "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. Submit DD-CAM paper to NIPS 2026 May 7\n2. Proposal by April end\n\n\nAction Items:\nMy goal this week was to understand how existing methods identify spurious regions, and then figure out whether CLIP + SpLiCE could serve the same role in our pipeline, and if so, how.\n\nWhat existing methods do:\nLooking at related work, the approaches to spurious region identification fall into three camps. DISC (ICML'23) uses a manually curated bank of 224 concepts and generates synthetic images per concept to measure which ones have high prediction sensitivity, but this requires knowing which concepts to look for in advance. LBC (IJCAI'24) captions all training images with a VLM and scores each word for spuriousness based on accuracy gaps, this is global (whole image) and depends on what the VLM describes. RaVL (NeurIPS'24) proposes generic image regions (quadrants/RPN), embeds them in VLM space, and clusters by performance gap. The common thread: all these methods use external tools that are model-agnostic and do not look at why the specific model being debugged actually fails.\n\nApproach with CLIP + SpLiCE:\nThe question I was investigating is whether we can identify spurious regions from the model's own failure signal. The diff-map D = ReLU(S_wrong - S_true) localises the region driving the misprediction, but not if they are spurious to inpaint. The question is: is that region spurious, or is it genuinely relevant?\nTo answer this, I applied CLIP + SpLiCE contrastively:\n\n\n1. Embed the diff-map region with CLIP (avg-fill: preserve diff-map pixels, fill non mask area with neutral colour so CLIP focuses on the diff map pixels)\n2. Decompose with SpLiCE into sparse concept weights (e.g., \"ocean: 0.017, water: 0.014, forests: 0.026\")\n3. Do the same for correctly predicted images of the same class\n4. Compute excess weight = avg(mispredicted diff-maps) - avg(correct images, same class)\n\nConcepts with high excess weight appear disproportionately in the diff-map regions of mispredicted images but not in correct ones. For Waterbirds: landbirds mispredicted as waterbirds show excess ocean (0.017), water (0.014), backgrounds (0.009), which are near-zero in correctly predicted landbirds. Waterbirds mispredicted as landbirds show excess forests (0.026), woods (0.010), trees (0.008). The mechanism works with SpLiCE using the same CLIP backbone it was designed for, and the contrastive comparison gives it statistical grounding across instances rather than relying on any single image.\n\nResults:\n\n\n1. ERM baseline: 72.59% worst-group\n2. Diff Map + inpainting, no filter: 82.87%\n3. Diff Map + CLIP/SpLiCE contrastive filter + inpainting: 86.14% worst-group on Waterbirds test set (no group labels at any stage)\n\n\nIssues:\nNone at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\nsounds interesting. one quick comment: for step 3, it is possible that an image can be classified to be of some class for different reasons.\n\n---",
           "placeholder": false
@@ -418,6 +438,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-04-07",
+          "content": "**Pujan Budhathoki:**\n\n**Milestone: **\n\n\n1. Send a document to the group containing the things we discussed (Approach, Technical Challenges, Main idea for each challenge, workflow in terms of major steps) - **April 7**\n\n**Action Items:**\n\n\n1. I have been working to develop alternative approaches to pinpoint the token position where vulnerability lives that is required for DAS based approaches.(Described in more detail below)  \n\n**Findings:**\n\n\n1. The Vanilla DAS(Distributed Alignment Search) approach is useful to find a subspace where the desired concept lives(and it is causally stronger than SAE) but it suffers from major limitations. It works with only simple Q/A tasks and we have to manually specify which Layer and token position we want to intervene on. \n2. HyperDAS(a new variant of DAS) solves this problem by training a hypernetwork(Basically another transformer network of around 3-4B parameters that is able to look inside the target model and pin point where the desired concept lives). But the main technical challenge with HyperDAS is its training complexity. It requires a lot of training data to train. (We need 20,000-30,000 pairs of vulnerable and safe programs(per CWE) that differ only in their vulnerability property). Initially, I was working to solve this technical challenge(How can we create a large enough dataset like that automatically?) but later realized that this would be impractical. \n3. Hence now, I’m still developing my approach around the DAS approach but have abandoned the idea of using HyperDAS. I am working on developing alternative approaches to solving the token position problem.\n\n**Problems/Issues:**\n\n\n1. I don’t have any issues at this point.",
+          "placeholder": false
+        },
         {
           "date": "2026-04-01",
           "content": "No update was provided for the week ending 2026-04-01.",
@@ -517,6 +542,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-04-08",
+          "content": "No update was provided for the week ending 2026-04-08.",
+          "placeholder": true
+        },
+        {
           "date": "2026-04-01",
           "content": "No update was provided for the week ending 2026-04-01.",
           "placeholder": true
@@ -615,6 +645,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-04-02",
+          "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Get my current project ready to submit in NIPS on May 6th\n\n**Action Items:**\n\n\n1. Complete adaptive gating and context-aware binning experiments incrementally to understand if they fit our need\n2. Deliver on the key insight of the approaches I am taking in written format before next Wednesday\n3. Share the results of proof-of-concept experiments of each idea.\n\n**Results/Findings:**\n\n\n1. There are exisiting methods doing context aware routing to experts, similar concept can be adapted for binning too.\n2. Adding MoE student to current setup did not make much difference on agreement, I will do a few more experiments to understand what is going on.\n\n**Issues:**\nNone at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\nI have not seen real progress on the new project.\n\n---\n\n**Shovon Niverd:**\nYes Dr Lei I agree, it has been slow, please let me have another 3-4 days; if the progress is still not good I will ask for help on how to approach it.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-03-26",
           "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Based on few design ideas shared, construct small-scale proof of concepts incrementally for the ideas.(March 31)\n\n**Action Items:**\n\n\n1. After our last discussion, the MoE KD design can follow two potential paths\n\n\n1. A bin learner creates one-dimensional boundaries but takes into context from other features to place them, and the gating method helps learning the bin numbers\n2. The gating method works as a mult-feature decision region learner; in this case, we do not need a bin learner.\n\n\n1. I am reading some literature to understand how the gating network and expert networks might look.\n2. Identifying the loss functions is important, starting with traditional KD losses for students and balancing loss for the gating network; I need to pinpoint what other losses are required\n\n**Results/Findings:**\n\n\n1. I will share my findings based on the action items in a few days\n\n**Issues:**\nNone at the moment.",
           "placeholder": false
@@ -707,5 +742,5 @@
       ]
     }
   ],
-  "last_updated": "2026-04-01T23:41:16.870979"
+  "last_updated": "2026-04-08T23:43:17.969023"
 }
