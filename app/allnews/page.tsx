@@ -5,6 +5,10 @@ import Link from "next/link";
 
 const news = [
   {
+  date: "April 2026",
+  headline:"Congratulations to Krishna for winning the Hesed Endowed Scholarship Fund Award and the Cynet Networks Outstanding Graduate Teaching Assistant Award!",
+  },
+  {
   date: "January 2026",
   headline:"Welcome Mekdelawit Gebrewold to our lab as a Undergraduate Research Assistant.",
   },
