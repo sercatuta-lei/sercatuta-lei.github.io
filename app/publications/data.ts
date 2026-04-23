@@ -40,6 +40,15 @@ const publicationsData: Publication[] = [
     year: 2025,
     type: "conference"
   },
+  {
+    id: 69,
+    title: "ABLE: Using Adversarial Pairs to Construct Local Models for Explaining Model Predictions",
+    authors: "Krishna Khadka, Sunny Shree, Pujan Budhathoki, Yu Lei, Raghu Kacker, D. Richard Kuhn",
+    venue: "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2026), Research Track (accepted). arXiv preprint arXiv:2511.21952",
+    url: "https://arxiv.org/abs/2511.21952",
+    year: 2025,
+    type: "conference"
+  },
 
 
   // 2024 Papers
