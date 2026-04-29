@@ -79,16 +79,18 @@ const alumni = [
   },
   {
     name: "Sunny Shree",
-    photo: "sunny.jpg"
+    photo: "sunny.jpg",
+    link: "https://sunnyshreexai.github.io/"
   },
   {
     name: "Mengfei (Angela) Ren",
     photo: "mengfei.jpg",
-    link: "https://www.linkedin.com/in/angelarenmf/"
+    link: "https://mengfei-ren.github.io/"
   },
   {
     name: "Xiaolei (Harry) Ren",
-    photo: "Xiaolei.jpg"
+    photo: "Xiaolei.jpg",
+    link: "https://websites.uta.edu/xiaoleiren/"
   },
   {
     name: "Ruben Martinez",
@@ -101,7 +103,8 @@ const alumni = [
   },
   {
     name: "Duan Feng",
-    photo: "Feng_Duan.jpeg"
+    photo: "Feng_Duan.jpeg",
+    link: "https://www.linkedin.com/in/feng-duan-820949a2/"
   },
   {
     name: "Huadong (Jack) Ren",
@@ -110,7 +113,7 @@ const alumni = [
   {
     name: "Jaganmohan Chandrasekaran",
     photo: "Jagan.jpg",
-    link: "https://www.linkedin.com/in/cjaganmohan/"
+    link: "https://cjaganmohan.github.io/"
   },
   {
     name: "Sarker Tanveer Ahmed",
@@ -129,7 +132,8 @@ const alumni = [
   },
   {
     name: "Mehra Nouroz Borazjany",
-    photo: "Mehra_Nouroz_Borazjany.jpeg"
+    photo: "Mehra_Nouroz_Borazjany.jpeg",
+    link: "https://www.linkedin.com/in/mehrautd/"
   },
   {
     name: "Linbin Yu",
@@ -157,7 +161,8 @@ const alumni = [
   },
   {
     name: "Arun Ramani",
-    photo: "Arun_Ramani.jpeg"
+    photo: "Arun_Ramani.jpeg",
+    link: "https://www.linkedin.com/in/arunramani/?originalSubdomain=in"
   },
   {
     name: "Andres Yanes",
