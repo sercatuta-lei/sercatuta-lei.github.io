@@ -46,7 +46,7 @@ const publicationsData: Publication[] = [
     authors: "Krishna Khadka, Sunny Shree, Pujan Budhathoki, Yu Lei, Raghu Kacker, D. Richard Kuhn",
     venue: "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2026), Research Track (accepted). arXiv preprint arXiv:2511.21952",
     url: "https://arxiv.org/abs/2511.21952",
-    year: 2025,
+    year: 2026,
     type: "conference"
   },
 
@@ -201,7 +201,7 @@ const publicationsData: Publication[] = [
     authors: "Krishna Khadka, Jaganmohan Chandrasekaran, Yu Lei, Raghu N Kacker, D Richard Kuhn",
     venue: "Springer Nature Computer Science",
     url: "https://link.springer.com/content/pdf/10.1007/s42979-025-04540-x.pdf",
-    year: 2025,
+    year: 2026,
     type: "journal"
   },
   {
