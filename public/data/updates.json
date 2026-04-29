@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-04-23",
+          "content": "**Arjun Dahal:**\n\nMilestone:\nSubmit the paper to CIKM ( May 23 )\nFinalize the approach for fairness repair\n\nAction Items:\n\n\n1. I have been working on developing a new approach to white box fairness repair. I will share it on my channel once I have something reasonable. \n2. I am running new baselines as per the reviewer's comments. I am targeting CIKM (May 23) for the TabChange paper.\n\n\nResults/Findings:\nI will share more details in my Slack channel.\n\nIssues/Questions:\nI don't have any issues.",
+          "placeholder": false
+        },
+        {
           "date": "2026-04-16",
           "content": "**Arjun Dahal:**\n\nMilestone:\nFinalize the approach ~~(Apr 9 ) ~~\n\nAction Items:\n\n\n1. Submitted the rebuttal after working on the experiments asked by the reviewers \n2. Reading the literature regarding Fair Representation, and other papers published in similar venues \n3. Working on finalizing the approach for the white box fairness repair \n\n\nResults/Findings:\nThe literature seems crowded regarding fairness repair in white box settings ( with papers at ML conferences )\nI will share more details on finalizing the approach in my Slack channel.\n\nIssues/Questions:\nI don't have any issues.",
           "placeholder": false
@@ -130,6 +135,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2026-04-28",
+          "content": "**Saif Uddin Mahmud:**\n\nMilestone: Prepare a complete research draft by mid-June targetting a security venue\n\nAction Items:\n\n\n- I designed and deployed a local testing environment to evaluate the security of agentic AI within enterprise frameworks motivate by ToolTweak paper.\n- Developed a vulnerable Spring Boot application integrated with Spring AI and Google Gemini to act as the routing agent.\n- I wrote Python fuzzing script (powered locally by Llama 3:8b) to execute prompt injection and jailbreaking attacks against the Spring Boot controller.\n- ⁠I set up a two-step attack where the script first tricks the agent into dumping a list of all its available tools, and then it automatically generates a new prompt to trigger the most dangerous one.\n\nFindings:\n\n\n- ⁠Standardized tool setups are actually a big vulnerability. An attacker does not even need to know what backend tools exist to break in.\n\n\nResults:\n\n\n- Still running.\n\nIssues/Questions:\n\n\n- N/A",
+          "placeholder": false
+        },
+        {
           "date": "2026-04-21",
           "content": "**Saif Uddin Mahmud:**\n\nHi group,\n\n**Milestone:**\nTargeting a good publication by the end of summer. Currently identifying suitable venues with deadlines in June/July.\n\n**Action Items:**\nReviewed literature on prompt injection attacks and security of agentic AI:\n• *Prompt Injection Attack to Tool Selection in LLM Agents - NDSS 2026*\n Introduces **ToolHijacker**, a “no-box” prompt injection attack targeting the tool-selection layer in LLM agents. Demonstrates high effectiveness (96.7% ASR against GPT-4o using a shadow model), challenging assumptions about both prevention-based and detection-based defenses.\n• *LLM Defenses Are Not Robust to Multi-Turn Human Jailbreaks Yet - arXiv (ScaleAI)*\n Examines weaknesses of single-turn defenses against multi-turn jailbreaks. Shows >70% ASR on benchmarks like HarmBench, emphasizing vulnerabilities in conversational memory and context accumulation (e.g., Crescendo-style attacks).\n\n**Findings:**\n\n\n- Prompt injection attacks remain highly effective even without model-specific knowledge (“no-box” setting).\n- Tool-selection mechanisms in agentic systems are a critical and under-protected attack surface.\n- Multi-turn interactions significantly amplify jailbreak success rates:\n\n\n- Stateless defenses fail to account for cumulative context manipulation\n\n\n- Conversational memory introduces exploitable attack vectors\n- Human-in-the-loop jailbreak strategies remain strong due to adaptive reasoning and psychological framing.\n\n\n**Results:**\n N/A\n\n**Issues/Questions:**\n N/A",
           "placeholder": false
@@ -247,6 +257,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2026-04-28",
+          "content": "**Fadul Sikder:**\n\nWeekly Status Updates\n\nThis week, I completed the proposal. My next milestone is to submit to ICSE 2026.\n\nI have started working on the project by reviewing the literature and clarifying how this idea should take shape. I’ve been researching some key concerns that got raised on my projects and I am working towords in terms of clarifying how to address those concern and clarify its technical ideas. \n\nIn the meeting, I plan to briefly summarize the key understanding, and discuss a few open questions I’m still considering.",
+          "placeholder": false
+        },
         {
           "date": "2026-04-22",
           "content": "No update was provided for the week ending 2026-04-22.",
@@ -366,6 +381,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-04-23",
+          "content": "**Krishna Khadka:**\n\nMilestone:\n\n\n1. Submit DD-CAM paper to NIPS 2026 May 7\n2. Proposal April 30\n\nAction Items:\n\n\n1. Completed 3 out of 5 action items for DD-CAM's resubmission. I will get the remaining two action items completed by today or tomorrow. \n2. I have been preparing the pdf document and presentation slides for the proposal. I will share them both by tomorrow to get some more feedbacks.\n\nResults:\n\n\n1. None at the moment, but I will share my findings in the slack channel.\n\nIssues:\n\n\n1. None",
+          "placeholder": false
+        },
+        {
           "date": "2026-04-16",
           "content": "**Krishna Khadka:**\n\nMilestone:\n\n\n1. Submit DD-CAM paper to NIPS 2026 May 7\n2. Proposal by April 30\n\nAction Items:\n\n\n1. DDCAM: I've completed tasks 4 and 5. Currently running baselines in task 1. \n2. I have completed the 2 walk through examples, where the approach would repair the mis prediction and where the approach would not proceed with repairing. I am sharing the examples in the slack channel shortly.\n3. I have also been working on drafting the proposal document and the slides. \n\nResults:\n\n\n1. I will share more details on the DDCAM paper in my slack channel.\n\nIssues:\n\n\n1. None at the moment.",
           "placeholder": false
@@ -478,6 +498,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-04-28",
+          "content": "**Pujan Budhathoki:**\n\n**Milestone:**\n\n\n1. Double-check the literature, compile a list of the most relevant papers, and provide a brief summary of how my approach differs: May 1st\n2. Identify technical challenges at each major step of the workflow and outline a plan to tackle each of the challenge: May 5th\n\n**Action Items:**\n\n\n1. I have been carrying out literature reviews to further refine my approach.\n2. I have been carrying out literature searches to see if there are any other papers that are using the DAS approach.\n\n**Findings:**\n\n\n1. I don’t have any notable findings at this point.\n\n**Problem/Issues:**\n\n\n1. I have no issues this week.",
+          "placeholder": false
+        },
         {
           "date": "2026-04-21",
           "content": "**Pujan Budhathoki:**\n\n**Milestone:**\n\n\n1. Send a document to the group containing the things we discussed (Approach, Technical Challenges, Main idea for each challenge, workflow in terms of major steps) - **April 7**\n\n**Action Items:**\n\n\n1. I have been working on the approach document and have been carrying out several literature reviews related to that.\n\n**Findings:**\n\n\n1. I have attached the approach document. \n\n**Problem/Issues:**\n\n\n1. I have no issues this week.",
@@ -592,6 +617,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-04-29",
+          "content": "No update was provided for the week ending 2026-04-29.",
+          "placeholder": true
+        },
+        {
           "date": "2026-04-22",
           "content": "No update was provided for the week ending 2026-04-22.",
           "placeholder": true
@@ -705,6 +735,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-04-23",
+          "content": "**Shovon Niverd:**\n\n**Milestones:**\n\n\n1. Finalize MoE + adaptive gating design for NeurIPS submission (May 4).\n2. Design and validate interaction-aware expert routing mechanism.\n\n**Action Items:**\n\n\n1. Implemented sequential boundary → gate training. Gate polarization improved (spread widened from 0.49-0.65 to 0.47-0.82) but still not fully bimodal. Tuning LAMBDA_SPARSITY continues.\n2. Designed interaction-aware expert routing: router takes bin membership vectors (not raw features) as input, grounding routing decisions in the teacher's decision structure. Wrote full design document covering intuition, rationale, technical overview, and challenges.\n3. Implement interaction-aware routing in MoE pipeline.\n4. Run baseline TabKD vs TabKD + MoE with bin-membership routing on Adult/Credit.\n5. Reviewed related literature: IDA-MoE (GMM-based routing, ACM MM 2025), MoEKD (partitioned expert teachers, 2026), Berisha et al. (post-training expert extraction, CVPR 2025). Our approach differs by routing based on teacher decision regions rather than generic input clusters.\n\n**Results/Findings:**\n\n\n1. Identified that membership based routing can achieve decision region expertise in experts. More details in my channel.\n\n**Issues:**\n\n\n1. Adaptive gating still not fully polarizing — may need stronger sparsity or longer gate training phase.\n2. Gating locality concern is unresolved — current design doesn't guarantee redistribution stays local to neighboring bins.",
+          "placeholder": false
+        },
+        {
           "date": "2026-04-16",
           "content": "**Shovon Niverd:**\n\n**Milestones:**\n\n\n1. Continue MoE + adaptive gating implementation for the NeurIPS May 6th submission.\n\n**Action Items:**\n\n\n1. Continued implementation adaptive gating. Rationale and design of the adaptive gating is presented in this document. [https://docs.google.com/document/d/11fDgrHJyVivkqG7Lxqf_Fk26DbDE7C4r/edit?usp=sharing&ouid=103310239940133680340&rtpof=true&sd=true](https://docs.google.com/document/d/11fDgrHJyVivkqG7Lxqf_Fk26DbDE7C4r/edit?usp=sharing&ouid=103310239940133680340&rtpof=true&sd=true)\n2. I will make a design of context-aware boundary by 17 April and discuss the rationale, and share a similar deliverable\n3. Timeline for current project\n\n\n1. **Apr 16-20:** Fix the reasoning and intuition behind adaptive gating and produce more results. Reason what the results mean\n2. **Apr 20-26:** Fix the design and rationale behind context-aware boundary, perform experiment and share results.\n3. **Apr 27 – May 1:** Full experiments across datasets, compile results, and start writing draft\n4. **May 2-3:** complete a draft\n5. For each points above I will share more detailed breakdown in my channel\n\n\n1. IJCAI rebuttal submitted.\n\n**Results/Findings:**\n\n\n1. With current settings, adaptive gating closes 33 out of 112 bins (~30% sparsity), which is the desired behavior. Working on validating whether closure pattern is meaningful.\n2. MoE expert specialization continues to show bin interaction preferences across experts.\n\n**Replies:**\n\n**Dr. Lei:**\nFor NIPS submission, you will need to include adaptive gating and also MoE to make sufficient research contributions.\n\n---",
           "placeholder": false
@@ -812,5 +847,5 @@
       ]
     }
   ],
-  "last_updated": "2026-04-22T23:51:05.658442"
+  "last_updated": "2026-04-29T23:59:24.061687"
 }
