@@ -35,6 +35,23 @@ const resources = [
   },
 ];
 
+const examplePresentationReports = [
+  {
+    title: "Proposal Document",
+    author: "Krishna Khadka",
+    venue: "Lab Example Report",
+    href: "/resources/Proposal_Document_Krishna_Khadka.pdf",
+    note: "Example proposal/report structure for new lab members.",
+  },
+  {
+    title: "Proposal Slides",
+    author: "Krishna Khadka",
+    venue: "Lab Example Presentation",
+    href: "/resources/Proposal_Krishna_Khadka.pptx",
+    note: "Example proposal presentation deck for new lab members.",
+  },
+];
+
 export default function ResourcesPage() {
   const RESOURCES_PASSWORD_HASH =
     "c88d15cc19d169a10b7643d64c8ac8835c1295c1d4aa44ff493520856c2d310d"; // SHA-256 of "sercutalei@123"
@@ -101,6 +118,39 @@ export default function ResourcesPage() {
             </Card>
           ))}
         </div>
+
+        <section className="mt-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-white mb-6">
+            Example Presentations and Reports
+          </h2>
+          <div className="space-y-6">
+            {examplePresentationReports.map((item) => (
+              <Card
+                key={item.href}
+                className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-slate-200/60 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <CardContent className="p-6 md:p-8">
+                  <h3 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-white mb-2">
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-600 dark:hover:text-blue-400 underline-offset-4 hover:underline transition-colors"
+                    >
+                      {item.title}
+                    </a>
+                  </h3>
+                  <p className="text-sm text-slate-500 dark:text-gray-400 mb-4">
+                    {[item.author, item.venue].filter(Boolean).join(" · ")}
+                  </p>
+                  <p className="text-slate-600 dark:text-gray-300 leading-relaxed">
+                    {item.note}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
       </div>
     </PasswordProtected>
   );
