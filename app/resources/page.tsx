@@ -41,14 +41,14 @@ const examplePresentationReports = [
     author: "Krishna Khadka",
     venue: "Lab Example Report",
     href: "/resources/Proposal_Document_Krishna_Khadka.pdf",
-    note: "Example proposal/report structure for new lab members.",
+    note: "Example proposal/report structure for lab members.",
   },
   {
     title: "Proposal Slides",
     author: "Krishna Khadka",
     venue: "Lab Example Presentation",
     href: "/resources/Proposal_Krishna_Khadka.pptx",
-    note: "Example proposal presentation deck for new lab members.",
+    note: "Example proposal presentation deck for lab members.",
   },
 ];
 
