@@ -53,7 +53,7 @@ const publicationsData: Publication[] = [
     id: 70,
     title: "TabKD: Tabular Knowledge Distillation through Interaction Diversity of Learned Feature Bins",
     authors: "Shovon Niverd Pereira, Krishna Khadka, Yu Lei",
-    venue: "Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2026), Research Track (accepted). arXiv preprint arXiv:2603.15481",
+    venue: "In Proceedings of the International Joint Conference on Artificial Intelligence (IJCAI 2026) (accepted). arXiv:2603.15481",
     url: "https://arxiv.org/abs/2603.15481",
     year: 2026,
     type: "conference"
