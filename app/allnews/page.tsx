@@ -5,6 +5,10 @@ import Link from "next/link";
 
 const news = [
   {
+  date: "May 2026",
+  headline:"Congratulations to Shovon and Krishna for their paper titled 'TabKD: Tabular Knowledge Distillation through Interaction Diversity of Learned Feature Bins', which has been accepted by IJCAI 2026!",
+  },
+  {
   date: "April 2026",
   headline:"Congratulations to Samreen who has successfully defended her thesis titled 'Mechanistic Auditing of Privacy Retention in LLM Summarization'.",
   },
