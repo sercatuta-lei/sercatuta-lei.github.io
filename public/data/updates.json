@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-04-30",
+          "content": "**Arjun Dahal:**\n\nMilestone:\nSubmit the paper to CIKM ( May 23 )\nFinalize the approach for fairness repair\n\nAction Items:\n\n\n1. I have been working on developing a new approach to white box fairness repair. There are works that link the bias ( group level metrics: DP, EO ) to neurons of the network and then fix them. It might be hard to beat these papers as they directly target how to reduce the bias between different groups for different fairness definitions.\n2. I have run a baseline GenRe from the reviewer's comment. Working further on polishing the last paper.\n\n\nResults/Findings:\nI will share more details in my Slack channel.\n\nIssues/Questions:\nI don't have any issues.",
+          "placeholder": false
+        },
+        {
           "date": "2026-04-23",
           "content": "**Arjun Dahal:**\n\nMilestone:\nSubmit the paper to CIKM ( May 23 )\nFinalize the approach for fairness repair\n\nAction Items:\n\n\n1. I have been working on developing a new approach to white box fairness repair. I will share it on my channel once I have something reasonable. \n2. I am running new baselines as per the reviewer's comments. I am targeting CIKM (May 23) for the TabChange paper.\n\n\nResults/Findings:\nI will share more details in my Slack channel.\n\nIssues/Questions:\nI don't have any issues.",
           "placeholder": false
@@ -135,6 +140,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2026-05-05",
+          "content": "**Saif Uddin Mahmud:**\n\nMilestone: Submit ICSME rebuttal - May 8\nMilestone: Prepare a complete research draft by mid-June targeting a security venue\n\n Action Items:\n\n\n1. For agentic AI security / jailbreaking project, I have been carrying out literature review. I went through the three MCP security papers shared by Dr. Lei\n2. Since the review came out for ICSME paper, I started working on the ICSME rebuttal which I would like to discuss in the meeting.\n\nQuestions:\n\n\n- Need discussion mostly on the Reviewer 3's concerns and how to over-turn the weak-reject to an accept\n\nResults:\n\n\n- N/A",
+          "placeholder": false
+        },
+        {
           "date": "2026-04-28",
           "content": "**Saif Uddin Mahmud:**\n\nMilestone: Prepare a complete research draft by mid-June targetting a security venue\n\nAction Items:\n\n\n- I designed and deployed a local testing environment to evaluate the security of agentic AI within enterprise frameworks motivate by ToolTweak paper.\n- Developed a vulnerable Spring Boot application integrated with Spring AI and Google Gemini to act as the routing agent.\n- I wrote Python fuzzing script (powered locally by Llama 3:8b) to execute prompt injection and jailbreaking attacks against the Spring Boot controller.\n- ⁠I set up a two-step attack where the script first tricks the agent into dumping a list of all its available tools, and then it automatically generates a new prompt to trigger the most dangerous one.\n\nFindings:\n\n\n- ⁠Standardized tool setups are actually a big vulnerability. An attacker does not even need to know what backend tools exist to break in.\n\n\nResults:\n\n\n- Still running.\n\nIssues/Questions:\n\n\n- N/A",
           "placeholder": false
@@ -257,6 +267,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2026-05-06",
+          "content": "No update was provided for the week ending 2026-05-06.",
+          "placeholder": true
+        },
         {
           "date": "2026-04-28",
           "content": "**Fadul Sikder:**\n\nWeekly Status Updates\n\nThis week, I completed the proposal. My next milestone is to submit to ICSE 2026.\n\nI have started working on the project by reviewing the literature and clarifying how this idea should take shape. I’ve been researching some key concerns that got raised on my projects and I am working towords in terms of clarifying how to address those concern and clarify its technical ideas. \n\nIn the meeting, I plan to briefly summarize the key understanding, and discuss a few open questions I’m still considering.",
@@ -381,6 +396,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-04-30",
+          "content": "**Krishna Khadka:**\n\nMilestone:\n\n\n1. Submit DD-CAM paper to NIPS 2026 May 7\n2. Proposal April 30\n\nAction Items:\n\n\n1. This week, I have been mostly preparing for my proposal.\n2. After my proposal I will start finishing up my DD-CAM paper.\n\nResults:\n\n\n1. None at the moment.\n\nIssues:\n\n\n1. None",
+          "placeholder": false
+        },
+        {
           "date": "2026-04-23",
           "content": "**Krishna Khadka:**\n\nMilestone:\n\n\n1. Submit DD-CAM paper to NIPS 2026 May 7\n2. Proposal April 30\n\nAction Items:\n\n\n1. Completed 3 out of 5 action items for DD-CAM's resubmission. I will get the remaining two action items completed by today or tomorrow. \n2. I have been preparing the pdf document and presentation slides for the proposal. I will share them both by tomorrow to get some more feedbacks.\n\nResults:\n\n\n1. None at the moment, but I will share my findings in the slack channel.\n\nIssues:\n\n\n1. None",
           "placeholder": false
@@ -498,6 +518,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-05-05",
+          "content": "**Pujan Budhathoki:**\n\n**I have been very busy with TA Project grading the last couple of days and I will be busy with it until Thursday. I don’t have anything to discuss in the meeting today. **\n**Milestone:**\n\n\n1. Double-check the literature, compile a list of the most relevant papers, and provide a brief summary of how my approach differs: May 1st: Completed\n2. Identify solutions for each technical challenge and an overall pipeline: May 5th: Because I was very busy the last few days in grading I will complete this by Sunday. \n\n**Action Items:**\n\n\n1. I have carried out a very thorough literature search to see if there are any other papers that have applied the idea of DAS for Secure code generation tasks. I went through all the papers that cite DAS approaches and used search engine with different search terms and also carried out multiple deep researches in different AI tools(Chatgpt and Claude) for my literature search.\n\n**Findings:**\n\n\n1. I don’t have any notable findings at this point.\n\n**Problem/Issues:**\n\n\n1. I have no issues this week.",
+          "placeholder": false
+        },
         {
           "date": "2026-04-28",
           "content": "**Pujan Budhathoki:**\n\n**Milestone:**\n\n\n1. Double-check the literature, compile a list of the most relevant papers, and provide a brief summary of how my approach differs: May 1st\n2. Identify technical challenges at each major step of the workflow and outline a plan to tackle each of the challenge: May 5th\n\n**Action Items:**\n\n\n1. I have been carrying out literature reviews to further refine my approach.\n2. I have been carrying out literature searches to see if there are any other papers that are using the DAS approach.\n\n**Findings:**\n\n\n1. I don’t have any notable findings at this point.\n\n**Problem/Issues:**\n\n\n1. I have no issues this week.",
@@ -617,6 +642,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-05-06",
+          "content": "No update was provided for the week ending 2026-05-06.",
+          "placeholder": true
+        },
+        {
           "date": "2026-04-29",
           "content": "No update was provided for the week ending 2026-04-29.",
           "placeholder": true
@@ -735,6 +765,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-04-30",
+          "content": "**Shovon Niverd:**\n\n**Milestones:**\n\n\n1. Implement and validate the decision-region binner as a replacement for per-feature binning(pipeline is already running).\n2. Resolve generator occasional collapse issue to enable meaningful region discovery(May 2).\n3. Implement gating mechanism to keep only meaningful regions alive(May 3).\n\n**Action Items:**\n\n\n1. Implemented the decision-region binner — a neural network that assigns samples to global decision regions based on teacher prediction similarity, replacing per-feature interval binning. Designed the variance loss (V_intra/V_inter) to operate on teacher logits as decision signatures.\n2. To avoid collapse issues, I used ransom samples from replay buffer. But I will need to find a better solution as it still happens in adult dataset.\n3. Implement the gating method\n4. Additional loss item to binner, such as feature interaction pattern in each region maybe unique.\n\n**Results/Findings:**\n\n\n1. Test-set centroids show meaningful separation on both Mushroom and Cancer datasets. Mushroom: centroids range from [0.984, 0.016] (confident class 0) to [0.008, 0.992] (confident class 1) with balanced boundary regions. Cancer: clear separation between class 0 regions (39%) and class 1 region (36%).\n\n**Issues:**\n\n\n1. Generator-based centroids may still be collapsed even though test-set centroids are separated — need to verify generator is covering all discovered regions in Phase 2.\n\n**Replies:**\n\n**Dr. Lei:**\nin addition to interaction patterns, try to consider adding gradients into the signature. the idea is that for data points in the same decision region, they should have similar logits, gradients, and interactions. also, for now, you can assume the teacher model is differentiable.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-04-23",
           "content": "**Shovon Niverd:**\n\n**Milestones:**\n\n\n1. Finalize MoE + adaptive gating design for NeurIPS submission (May 4).\n2. Design and validate interaction-aware expert routing mechanism.\n\n**Action Items:**\n\n\n1. Implemented sequential boundary → gate training. Gate polarization improved (spread widened from 0.49-0.65 to 0.47-0.82) but still not fully bimodal. Tuning LAMBDA_SPARSITY continues.\n2. Designed interaction-aware expert routing: router takes bin membership vectors (not raw features) as input, grounding routing decisions in the teacher's decision structure. Wrote full design document covering intuition, rationale, technical overview, and challenges.\n3. Implement interaction-aware routing in MoE pipeline.\n4. Run baseline TabKD vs TabKD + MoE with bin-membership routing on Adult/Credit.\n5. Reviewed related literature: IDA-MoE (GMM-based routing, ACM MM 2025), MoEKD (partitioned expert teachers, 2026), Berisha et al. (post-training expert extraction, CVPR 2025). Our approach differs by routing based on teacher decision regions rather than generic input clusters.\n\n**Results/Findings:**\n\n\n1. Identified that membership based routing can achieve decision region expertise in experts. More details in my channel.\n\n**Issues:**\n\n\n1. Adaptive gating still not fully polarizing — may need stronger sparsity or longer gate training phase.\n2. Gating locality concern is unresolved — current design doesn't guarantee redistribution stays local to neighboring bins.",
           "placeholder": false
@@ -847,5 +882,5 @@
       ]
     }
   ],
-  "last_updated": "2026-04-29T23:59:24.061687"
+  "last_updated": "2026-05-06T23:55:03.976840"
 }
