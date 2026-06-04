@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-06-04",
+          "content": "No update was provided for the week ending 2026-06-04.",
+          "placeholder": true
+        },
+        {
           "date": "2026-05-21",
           "content": "**Arjun Dahal:**\n\nICSE 2026 (Submission Target: June 30)\n\nProgress:\nI didn't find any literature similar to what we are trying to do - counterfactual fairness by searching in the attribute invariant latent space. There is work LIMI ( which samples in latent space ), and there are works that work using VAE for fair representation, followed by its use in fair prediction, but not something similar to what we are trying to do. More to follow in my research channel.\nI will also follow up in my channel with current results ( % of discriminatory samples found when sampling or searching ).\n\nI have been working on the draft for submitting my previous work to the journal. Since the deadline is near for ICSE, I would more likely focus on the current project.\nDr. Lei, please let me know if this project is reasonable. I believe I will have a draft by the end of the process, by the end of the month.\n\nProblems/Issues:\nI don't have any issues at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\nJust made some comments in your channel. If you can justify your research contributions, it would be fine to go with this project.\n\n---\n\n**Dr. Lei:**\nTry to submit finish the paper you planned for CIKM and submit it to a journal.\n\n---\n\n**Arjun Dahal:**\nSure, Dr. Lei. I will work on the Journal Submission.\n\n---",
           "placeholder": false
@@ -155,6 +160,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2026-06-04",
+          "content": "No update was provided for the week ending 2026-06-04.",
+          "placeholder": true
+        },
+        {
           "date": "2026-05-28",
           "content": "No update was provided for the week ending 2026-05-28.",
           "placeholder": true
@@ -297,6 +307,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2026-06-04",
+          "content": "No update was provided for the week ending 2026-06-04.",
+          "placeholder": true
+        },
         {
           "date": "2026-05-28",
           "content": "No update was provided for the week ending 2026-05-28.",
@@ -441,6 +456,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-06-04",
+          "content": "No update was provided for the week ending 2026-06-04.",
+          "placeholder": true
+        },
+        {
           "date": "2026-05-28",
           "content": "No update was provided for the week ending 2026-05-28.",
           "placeholder": true
@@ -578,6 +598,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-06-02",
+          "content": "**Pujan Budhathoki:**\n\n**Milestone: 5th June: Get Results on the extended experiment**\n**Action Items:**\n\n\n1. This week I ran the experiments for a larger model (Llama 3.1 8B instruct, a model used very frequently by papers in code generation domain) and I also tried new different evaluation methods for both smaller and the larger model. I have also been running experiments with different parameters to better explain the results.\n2. I have been working on expanding the current dataset that we have. \n\n**Findings:**\n\n\n1. I will share the experimental results I have found in the meeting.\n\n**Problem/Issues:**\n\n\n1. I don’t have any issues at this point.",
+          "placeholder": false
+        },
         {
           "date": "2026-05-26",
           "content": "**Pujan Budhathoki:**\n\n**Milestone: **29th May: Get a finalized Setup based on discussions about the initial experimental Results and resolve technical issues that may arise (And start writing the approach section)\n**Action Items:**\n\n\n1. I have been carrying out a thorough evaluation of the initial experimental setup code and the pipeline to address the inconsistencies in the results.\n\n**Findings:**\n\n\n1. I think I found a reason why my evaluation scores were near perfect initially. When training the DAS, I was using the forced prompt setup where the two prompts I gave were: “Base prompt + A” and “Base prompt + B”. I was also doing evaluation on the same setup where I gave the trained DAS, “Base Prompt + A” and then I swapped the subspace of the last token and observed if it flipped the final token to B (and vice versa). This way of evaluation might have been flawed. I’m trying other ways of evaluating. \n\nThis could be a flaw of the prompting method as well, the DAS could be taking a short cut of only learning how to flip the letter instead of flipping the concept.(And there could be other variables affecting it as well, like the very small size of the model) I’m currently implementing other ways of prompting to see how the results look in those cases.\n**Problems/Issues:**\n\n\n1. I don’t have any notable issues at this point.",
@@ -717,6 +742,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-06-04",
+          "content": "No update was provided for the week ending 2026-06-04.",
+          "placeholder": true
+        },
+        {
           "date": "2026-05-28",
           "content": "No update was provided for the week ending 2026-05-28.",
           "placeholder": true
@@ -855,6 +885,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-06-04",
+          "content": "No update was provided for the week ending 2026-06-04.",
+          "placeholder": true
+        },
+        {
           "date": "2026-05-21",
           "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Implement combined decision signatures for the binner(implementation completed, setting up more experiment).\n2. Solve gating issue(May 25).\n3. Incorporate review for camera ready of IJCAI paper.\n\n**Action Items:**\n\n\n1. Implemented combined decision signatures: first-order sensitivities + second-order interactions + logit diff, all normalized to direction vectors\n2. Study more on sparsity loss, in terms of closing the gate.\n3. Complete binner experiment using latest datasets from baselines\n4. Introduction and abstract are partially written keep updating it.\n\n**Results/Findings:**\n\n\n1. Combined signatures improve region quality on Credit dataset. The binner now respects both feature importance and interaction patterns when forming regions.\n\n**Replies:**\n\n**Dr. Lei:**\nTry to stick with your original plan to finish the paper by the CIKM deadline\n\n---\n\n**Shovon Niverd:**\nDr. @Dr. Lei I drafted the paper except for experimental results and ablation. All the other sections are there. So now anytime something changes we can make change on that structure of paper.\n\n---\n\n**Dr. Lei:**\nVery good. This draft can be used as a blueprint and help you cross check what you do.\n\n---",
           "placeholder": false
@@ -987,5 +1022,5 @@
       ]
     }
   ],
-  "last_updated": "2026-05-28T00:03:37.620390"
+  "last_updated": "2026-06-04T01:44:03.794027"
 }
