@@ -7,6 +7,11 @@ on:
   
   # Allow manual trigger
   workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force re-fetch, ignoring the 5-day skip (back-fill missed updates)'
+        type: boolean
+        default: false
 
 jobs:
   fetch-updates:
@@ -35,6 +40,7 @@ jobs:
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+          FORCE_FETCH: ${{ github.event.inputs.force }}
         run: |
           python scripts/fetch_slack_updates.py
       

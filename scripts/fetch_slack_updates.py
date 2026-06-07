@@ -226,12 +226,16 @@ def fetch_user_updates(
     
     # Calculate time range
     now = datetime.now()
-    
+
+    # FORCE_FETCH lets a manual run back-fill missed updates by ignoring the
+    # 5-day skip guard (e.g. a post that landed after the weekly run executed).
+    force_fetch = os.environ.get('FORCE_FETCH', '').strip().lower() in ('1', 'true', 'yes')
+
     if last_sync_ts:
         oldest = float(last_sync_ts)
         days_since = (now - datetime.fromtimestamp(oldest)).days
-        
-        if days_since < 5:
+
+        if days_since < 5 and not force_fetch:
             print(f"  [SKIP] Last update was {days_since} days ago")
             return None
     else:
@@ -371,6 +375,14 @@ def main():
                 student['updates'].sort(key=lambda x: x['date'], reverse=True)
                 updates_made = True
                 print(f"  [+] Added new update")
+            elif existing.get('placeholder') and not update_entry['placeholder']:
+                # A real update arrived for a date we previously filled with a
+                # placeholder (post landed after that week's run). Upgrade the
+                # entry in place so the real content replaces the placeholder.
+                existing['content'] = update_entry['content']
+                existing['placeholder'] = False
+                updates_made = True
+                print(f"  [+] Replaced placeholder with real update")
             else:
                 print(f"  [INFO] Update already exists")
             
