@@ -1,0 +1,311 @@
+{
+  "slug": "krishna-khadka",
+  "name": "Krishna Khadka",
+  "channel": "krishna-research",
+  "last_updated": "2026-06-08T00:58:18.911928",
+  "days": [
+    {
+      "id": "2026-06-01",
+      "date": "2026-06-01",
+      "owner": [
+        "Thank you for the in-depth questions, Dr. Lei. I will conduct additional experiments and analyses to better address them. Based on my preliminary results, the decision-region-aware repair approach appears to perform well on datasets that show distribution shifts during inference. However, I would like to perform a more thorough evaluation and deeper analysis before any definitive conclusions. I will follow up with more detailed findings once the experiments are complete."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "I see. A few comments/questions:\n\n\n1. Regarding no meaningful improvement, what did actually happen? Was it because the mispredictions were not corrected, or because the mispredictions were corrected, but the corrections caused some correct predictions to become incorrect?\n2. What is the fundamental reason for no meaningful improvement? Is it because the model is already optimal and thus no room for improvement? Or is it because the mispredictions are diffused in different regions, instead of concentrated in one region? They are actually different reasons. \n3. Also, when you say no broken decision rule to repair, what does it exactly mean? That is, if all the decision rules were correct, why would there be mispredictions? Are you saying that all the decision rules can be correct, but there can still be mispredictions due to other reasons? If so, what would be other reasons?\n4. If I understand your points correctly, you are suggesting that decision region-aware repair only works for distribution shift? Why so? Why would it be limited to this particular case as the notion of decision logic seems general?\n5. If you believe this approach makes more sense to image data where datasets with distribution shifts are more easily available, you can experiment it with them. Maybe the decision signatures would need to be in terms of the internal representations, such as feature maps, instead of the raw pixels."
+        }
+      ]
+    },
+    {
+      "id": "2026-05-28",
+      "date": "2026-05-28",
+      "owner": [
+        "Dr. Lei, for the part b, should the editing be same for entire dataset, or should it be gated and be specific to each failure regions?",
+        "I tried the decision region-aware repair approach on iid tabular datasets like Adult Income and Mushroom but saw no meaningful improvement. The reason is that the train, validation, and test splits come from the same distribution, so any shortcut the model relies on stays equally predictive at evaluation time, and there is no broken decision rule to repair. Beyond that, the residual errors on these datasets are largely irreducible: the same feature vector can map to either label because the features genuinely do not determine the outcome, so the model is already near Bayes-optimal and a stronger model (e.g., gradient boosting) gains only a couple of points before flatlining. The validation mistakes are therefore scattered across these ambiguous cases rather than forming a concentrated decision-rule region, so the repair has no systematic target to find, edit, and contain.\nDatasets like waterbirds is different because the dataset is built around a clear spurious correlation between the bird label and the background, and that correlation breaks under distribution shift: it holds about 95% of the time in training but only 50% at test, so the minority combinations (waterbird on land, landbird on water) jump from roughly 1-4% of training to about 11-39% of test. The model learns the background shortcut and then fails systematically on exactly those shifted minority groups, and those failures form identifiable decision-rule regions that the method can target, improving worst-group (waterbird-on-land) test accuracy from 0.73 to 0.89. I applied the approach by freezing the ResNet50 backbone and treating the post-GAP feature vector as the input to the classification head, editing only that head, which is analogous to an MLP on tabular data but with many more features.\n\nThe general principle is that decision-rule regions are repairable precisely when the distribution shifts between training and test, since that is when a decision rule learned during training stops holding at test time. I'm looking to explore more tabular datasets where the trianing set and testing set show distributional shift.",
+        "Thank you, Dr. Lei. Im also applying to each failure region in my implementation."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "I would say it is better to make it specific to each failure region, this will provide opportunities for optimizing and also for containing the impact to other regions"
+        }
+      ]
+    },
+    {
+      "id": "2026-05-26",
+      "date": "2026-05-26",
+      "owner": [
+        "I agree, how we make the edits in step b based on the identified failure-rule regions from step a. I did some implementations and the improvements were marginal. I'm reverifying the implementations and also checking in new datasets to see if different datasets can show more improvements."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "Sounds good. One challenge is how to connect step a with step b, i.e., how to make step b take advantage of step a, in terms of targeting the identified failure region."
+        }
+      ]
+    },
+    {
+      "id": "2026-05-24",
+      "date": "2026-05-24",
+      "owner": [
+        "I'm trying to implement the workflow and see how it performs on 4 tabular datasets trained on a MLP classifier."
+      ],
+      "replies": []
+    },
+    {
+      "id": "2026-05-21",
+      "date": "2026-05-21",
+      "owner": [
+        "Thank you for the suggestions, Dr. Lei. I will explore this and also ask any clarifying questions shortly."
+      ],
+      "replies": []
+    },
+    {
+      "id": "2026-05-20",
+      "date": "2026-05-20",
+      "owner": [
+        "Sure Dr. Lei. I will discuss more in the next group meeting",
+        "I was explaining the idea to Pujan yesterday and he mentioned the paper THEA (Repairing LLM Executions for Secure Automatic Programming). I looked it up and it's very similar at a high level. THEA does model repair via sparse features in the LLM secure-code setting where they train an SAE on residual-stream activations, find features whose distributions diverge between safe and unsafe code, and at inference shift each buggy feature toward the safe distribution before decoding back into the forward pass. That's the same skeleton I was thinking of training an SAE to get a sparse disentangled space from the feature extractor's last layer after pooling, identify failure-associated sparse features, and steer at inference.",
+        "I was thinking if the sparse features could be used to identify failure decision logics."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "Good literature review. I will need to digest what you have here before I can give you meaningful comments."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Good thinking. One general comment about using SAE as decision-logic region signatures is that SAE is used to disentangle distributed neural representations into more interpretable latent features/concepts. The sparse features are \"features\", not \"decision logic\". Thus, it is questionable to use them to identify decision logic. In the case of tabular data, all the data points have the same set of features. What makes decision logic is more about how these features are used in the decision process. With this said, in some cases, the presence of a spare feature may indicate a certain type of decision logic.\n\nAbout the general topic of decision-rule region-aware model debugging, I suggest the following:\n\n\n\n1. Do tabular data first. The notion of decision-rule region makes more sense for tabular data.\n2. The general workflow is the following: \n\n\n1. Identify failure decision-rule regions. A baseline approach is to group mispredicted (validation and perhaps training) instances based on their decision signatures. You can use the same decision signatures as Shovon, e.g., first-/second-order derivatives, the logit diff, for now. You can also include the hidden representation as part of the signature. \n2. Try to repair each failure region. Two general approaches. One is to generate synthetic data, but the challenge is naturalism and also labeling. The other is to do model editing, e.g., try to find minimal model edits (which can be a direction or subspace that is highly correlated with mispredictions, and SAE might be used here) that can correct the mispredictions while preserving the correct predictions. \n3. Try to contain the impact of the repair. This can be formulated as minimizing the differences in the prediction loss for some correctly predicted instances before and after the model repair. The challenge here is to make sure those instances are selected such that if they are minimally impacted, then the rest of the model is also minimally impacted. One approach is to select those instances from different decision regions.\n\n\nThe workflow is subject to discussion/exploration. Please let me know if you have any questions/comments."
+        }
+      ]
+    },
+    {
+      "id": "2026-05-19",
+      "date": "2026-05-19",
+      "owner": [
+        "A brief literature review on model debugging for group robustness (minority groups are the most affected groups). :\n\n\n\n1. On Feature Learning in the Presence of Spurious Correlations (NeurIPS 2022)\n\n\n1. Key Intuition: Standard Empirical Risk Minimization (ERM) models successfully learn core, meaningful features even when they appear to rely entirely on spurious correlations (like classifying a bird based on its water or land background). The failure lies not in the feature extractor, but in the final classification layer, which assigns incorrect weights to these features.\n2. How they solve it: The authors propose Deep Feature Reweighting (DFR). They freeze the feature extractor of an ERM-trained model and retrain only the last layer on a small, group-balanced held-out dataset. This simple procedure achieves state-of-the-art group robustness but strictly requires explicit group annotations to perfectly balance the reweighting data.\n\n\n1. Simple and Fast Group Robustness by Automatic Feature Reweighting (ICML 2023) \n\n\n1. Key Intuition: Minority group examples can be automatically inferred because the base ERM model inherently performs poorly (has high loss) on them. Therefore, explicit group labels are not needed to construct a balanced reweighting dataset.\n2. How they solve it: They introduce Automatic Feature Reweighting (AFR). AFR improves upon DFR by retraining the last layer using a weighted loss function that automatically upweights the specific examples where the base ERM model predicts poorly. This eliminates the need for expensive group annotations during training.\n\n\n1. Towards Last-layer Retraining for Group Robustness with Fewer Annotations (NeurIPS 2023)\n\n\n1. Key Intuition: While previous methods use high loss to find minority examples, model disagreement or uncertainty is a highly effective alternative signal for identifying worst-group data. Early-stopped models tend to fit simple, majority-group patterns first, so regions where they disagree with a fully trained ERM model indicate vulnerable minority data.\n2. How they solve it: They propose Selective Last-layer Fine-tuning (SELF). SELF constructs a tiny reweighting dataset by identifying data points where an ERM model and an early-stopped (or regularized) model disagree. It then finetunes the last layer using less than 3% of the class annotations required by previous methods, pushing label efficiency to the extreme.\n\n\n1. Group-Robust Sample Reweighting for Subpopulation Shifts via Influence Functions (ICLR 2025)\n\n\n1. Key Intuition: Instead of just fine-tuning the last layer on a subset of data, a tiny amount of high-quality group-labeled data can be used to perfectly optimize the sample weights of a much larger pool of unannotated data.\n2. How they solve it: The authors introduce Group-robust Sample Reweighting (GSR). They use influence functions (via implicit differentiation) to accurately compute how changing the weight of an unannotated training sample impacts the worst-group loss on a target set. This allows them to iteratively reweight standard training data to mitigate spurious correlations efficiently.\n\n\n1. Robustness Beyond Known Groups with Low-rank Adaptation (Preprint from MIT and Harvard, 2026)\n\n\n1. Key Intuition: In the real world, vulnerable subgroups are often completely unknown, rendering methods that require any group labels useless. However, systematic model errors on these unknown subpopulations concentrate in specific, low-dimensional geometric regions of the representation space.\n2. How they solve it: They propose Low-rank Error Informed Adaptation (LEIA). LEIA computes an error-weighted covariance matrix to identify the top eigenvectors (the error subspace) where high-loss examples cluster. It then applies a low-rank additive adjustment directly to the classifier logits exclusively along this error subspace, correcting latent failure modes without needing to know what the groups are.\n\n\n1. Diagnosing and Repairing Unsafe Channels in Vision-Language Models via Causal Discovery and Dual-Modal Safety Subspace Projection (CVPR 2026)\n\n\n1. Key Intuition: Unsafe behaviors in VLMs are mediated by specific internal components (specifically Feed-Forward Networks in the middle layers), and safety vulnerabilities arise from the complex interaction of both visual and textual modalities.\n2. How they solve it: They introduce CARE, which uses causal mediation to pinpoint safety-critical layers. They then use generalized eigen-decomposition to identify a harmful subspace across both text and vision tokens, and project the model’s activations onto a safe, orthogonal subspace at inference time, suppressing unsafe outputs without any retraining.\n\n\n1. SALVE: Sparse Autoencoder-Latent Vector Editing for Mechanistic Control of Neural Networks (ICLR 2026 Trustworthy AI)\n\n\n1. Key Intuition: Neural networks encode each class as a small number of distinct internal “concepts,” and these concepts can be identified, visualized, and permanently turned up or down by editing the model’s weights, without any retraining or inference-time tricks.\n2. How they solve it: They introduce SALVE, which trains a sparse autoencoder on a late layer of the model to discover a clean set of class-defining features, then validates these features with a Grad-CAM-style visualization (Grad-FAM) that shows where in the image each feature activates. Once a class-dominant feature is identified, they apply a permanent edit to the classifier weights that suppresses or enhances that feature’s influence by a controllable amount, flipping or strengthening predictions in a targeted way. They also introduce α_crit, a per-sample metric measuring how much suppression a class can tolerate before collapsing, which doubles as a diagnostic for fragile or over-reliant representations.",
+        "Recent work on model repair has moved through progressively deeper intervention surfaces. Last-layer methods (DFR, AFR, SELF, GSR) accept the ERM feature extractor and reweight or retrain only the classifier head. Representation-space methods intervene one level deeper: LEIA identifies a low-rank error subspace and adjusts logits along it, and CARE localizes safety-critical layers and projects activations onto an orthogonal safe subspace at inference.",
+        "I’m trying to better understand the landscape of how existing works perform model repair. LEIA align more closely to the direction we discussed in last meeting, as they focus on geometric regions and sub populations causing errors.",
+        "If I reiterate, we also want to work at decision region level, i.e. we believe that it is some decision region (caused by decision signatures) responsible for model failures of a group of sub populations.",
+        "The hypothesis I’m thinking is that recurring failures for certain subpopulations are not isolated mistakes, but are associated with recurring sparse activation signatures in the post-GAP representation space. I am thinking of treating compact groups of co-activated sparse features as approximate decision signatures, where their joint activation reflects localized decision logic used by the classifier. The reason for applying an SAE at the GAP layer is that it may provide a more disentangled and localized intervention space, where recurring failure-associated patterns can be identified more cleanly than in the dense GAP representation.\nBased on this, the goal would be to identify recurring sparse feature patterns associated with failures, learn localized steering directions constrained to those patterns, and apply the intervention only when the same failure signature reappears at inference time.\nThis would make the repair more targeted based on the sparse activation signatures than global last-layer reweighting/retraining.",
+        "My main question is whether applying a sparse autoencoder (SAE) on the GAP representations and treating recurring sparse activation patterns as approximate decision signatures is a good  direction for model debugging and repair. The intuition is that the SAE would produce a more disentangled sparse latent space, where recurring failure mechanisms may appear as recurring sparse feature patterns across mispredictions. Then, the steering intervention could be learned from the contrastive difference between sparse activations of correctly predicted samples and mispredicted samples (I need more idea on how this can be realized), with the goal of selectively steering the representation away from failure-associated signatures during inference.",
+        "I’m also coming from the idea of sparse decision-region repair for recurring subgroup failures rather than just applying SAE. One concern is when applying steering, we don’t want the important features to be steered. Would the correct-prediction sparse activations act as a stabilizing anchor that prevents the steering from aggressively removing generally useful information.",
+        "I’m also curious if this direction also holds the heuristic nature and local-to-global repair limitations."
+      ],
+      "replies": []
+    },
+    {
+      "id": "2026-04-22",
+      "date": "2026-04-22",
+      "owner": [
+        "Thank you for the thoughtful questions, Dr. Lei.\n\n\n1. I don’t have a precise technical definition of “background.” From a human perspective, background typically refers to semantic regions that are not necessary for making a prediction. However, for a model, these regions may still carry predictive signal due to learned correlations. The key difference is that humans have seen objects (e.g., cats) across diverse contexts, whereas a model may predominantly observe them in a limited set of backgrounds (e.g., cats on beds), and thus treat those as informative.\n2. I would define a “wrong object” as a semantic region that actively drives the model’s prediction toward an incorrect class. for example, in a misclassification scenario. In some cases, especially in binary settings, this can also arise in ambiguous or overlapping scenarios where both classes are present but only one label is assigned, making the decision inherently difficult.\n3. Regarding the masking approach, I agree that it does not fully address the OOD concern, and we should avoid making that claim. However, it does offer an advantage over directly zeroing out input pixels. In general, any form of masking will introduce some degree of distribution shift, since the modified input is no longer perfectly natural. The more relevant question is not whether masking is OOD, but how far it deviates from the original data distribution. Our goal is to minimize this deviation, but masking itself will inevitably introduce some level of shift.",
+        "DD-CAM by itself can not define 'background' or 'wrong object' as it only identifies computationally necessary units. But this is actually what makes it useful when annotations are available: because the minimal sufficient set is exactly the units the model can rely on, mismatch with human annotation is a cleaner diagnostic signal than it would be with a diffuse saliency map produced by other CAMs.",
+        "I agree, Dr. Lei. The concepts I proposed are not well defined and require more careful framing."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "Thanks, Krishna, for your response. Two more questions:\n\n\n1. Is there a technical definition about what makes \"background\" (or \"part of background\"), what is \"wrong object\"?\n2. I agree that zero attention weight has the advantage of zeroing out the actual contribution of a patch, compared to zeroing out the input pixels which may still have some contribution. But does it really address the OOD concern? I know the objects that are not masked are real, but its surrounding (of no contribution) is not really natural (or in the real-world distribution)?"
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "I see. What is behind both of my comments, and for that matter, in general, is about conceptual clarity. When we say a concept is well-defined, it is largely about its clarity, especially in terms of what makes them similar or different from other concepts. Well-defined concepts are the foundation of any solid research. This is also why textbooks are typically concept heavy, and learning of a subject matter typically begins with learning of the fundamental concepts in the subject domain."
+        }
+      ]
+    },
+    {
+      "id": "2026-04-21",
+      "date": "2026-04-21",
+      "owner": [
+        "Thank you for the comments, Dr. Lei. I have responded to them. I might not have fully justified the last response. I'm doing some more literature search on that."
+      ],
+      "replies": []
+    },
+    {
+      "id": "2026-04-20",
+      "date": "2026-04-20",
+      "owner": [
+        "I wanted to share a brief update on the DD-CAM improvements. I’ve attached a document summarizing the current progress.\nTasks 1 (expanded baselines), 2 (stability analysis), and 5 (algorithmic clarification) are complete. Tasks 3 (diagnostic case studies) and 4 (ViT masking ablation) are currently in progress and should be completed shortly. More details on each tasks are in the document below.\n[DD-CAM task.docx](https://1drv.ms/w/c/28ea4157e12a53a6/IQDvBJYcEiUJT4TMDlOwQG5ZARJnor1dIK2KAQ7xiMEDfUQ?e=ZNfqdg)",
+        "Thank you, Dr. Lei. I will respond to the comments shortly."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "I made some comments; please see attached. I really like the plan, which goes deep and will add significantly to the current version. In particular, the stability results are interesting, and I like the theory of multiple independent decision pathways, which seems reasonable and likely explains the results. Please keep me updated on the progress."
+        }
+      ]
+    },
+    {
+      "id": "2026-04-16",
+      "date": "2026-04-16",
+      "owner": [
+        "1. Example #16 (Sooty Albatross, waterbird on land, repaired):\n\nThe approach first builds class concept profiles by averaging SpLiCE decompositions over correctly predicted images of each class, then scores each concept by asymmetry to find concepts that are characteristic of one class but absent from the other, surfacing candidates like `forest`, `bamboo`, `cardinal`, `swan`. For this image, a waterbird mispredicted as landbird, the diff-map isolates the dense bamboo/forest background as the region tipping the classifier toward the wrong class. SpLiCE on that region activates `bamboo` (0.090) and `forest` (0.031), both landbird-dominant asymmetric concepts, confirming instance-level alignment. The recurrence check then asks: across all 43 waterbird-on-land mispredictions, what fraction have diff-map regions that activate the same landbird-dominant concepts? The answer is 58.1%, above the alpha = 0.5 threshold, meaning this is a systematic, population-level failure pattern, not an isolated anomaly. The approach proceeds to inpaint the forest region with Stable Diffusion, producing a counterfactual training image with the same bird on a class-appropriate background.\n\n2. Example #51 (Brewer Blackbird with duckling, landbird on water, abstained):\nFor this image, a landbird mispredicted as waterbird, the diff-map highlights a region that turns out to contain a duckling standing in water alongside the blackbird, a multi-object confound where a secondary bird from the opposing class is physically present in the frame. SpLiCE on the diff-map region activates water-habitat concepts (`pond` 0.087, `swim` 0.052, `pigeon` 0.032), and instance-level alignment passes with a higher weight (0.0412) than Example 16 (0.0309), meaning the per-image evidence looks even more convincing. However, the recurrence check reveals that only 39.1% of the 110 landbird-on-water mispredictions share this same concept activation pattern, below the alpha = 0.5 threshold. Unlike waterbird-on-land failures which are structurally uniform (every one has a land background), landbird-on-water failures are heterogeneous: some are driven by water backgrounds, some by secondary birds in frame, some by reflective surfaces CLIP confuses with water. The approach abstains because repairing based on a pattern that only covers 39% of the population risks acting on noise rather than a systematic distributional gap.",
+        "The second image has no inpainting so it is left blank."
+      ],
+      "replies": []
+    },
+    {
+      "id": "2026-04-15",
+      "date": "2026-04-15",
+      "owner": [
+        "Thank you, Dr. Lei"
+      ],
+      "replies": []
+    },
+    {
+      "id": "2026-04-11",
+      "date": "2026-04-11",
+      "owner": [
+        "Thank you Dr. Lei. Is this more appropriate title?: Toward Trustworthy Machine Learning: Understanding, Explaining, and Repairing Model Predictions",
+        "I agree, Dr. Lei.\nWould this be more accurate?\nToward Reliable Machine Learning: Understanding, Explaining, and Repairing Model Predictions"
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "Very good. I like the general theme and progression. The wording of the title needs more consideration. Technically, interpretability is not the overarching goal, and it does not really include model repair. The goal is more like building high-quality or trustworthy models."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Yes, this is better. One comment: While trustworthiness should, in principle, include prediction performance, it focuses on more on other aspects such as fairness, safety, security, and privacy. If your work is mainly about prediction performance, reliable machine learning would be more accurate."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Yes this is more accurate"
+        }
+      ]
+    },
+    {
+      "id": "2026-04-10",
+      "date": "2026-04-10",
+      "owner": [
+        "Hi Dr. @Dr. Lei ,\n I have been thinking about structuring my proposal and wanted to share my current framing before I finalize the document and powerpoint.\n\nI am planning to use an article-based format with four core chapters:\n(Past Work)\n1. Feature Interaction Study (IWCT 2024) — establishes that most predictions depend on only a few feature interactions\n2. ABLE (KDD 2026) — faithful local explanations for tabular models via adversarial pair generation\n(Future Work)\n3. DD-CAM (targeting NeurIPS 2026) — minimal sufficient explanations for vision models using delta debugging\n4. EGDA (targeting AAAI 2027) — explanation-guided repair of model mispredictions\n\nThe general theme is: \"Toward Faithful and Actionable Interpretability: From Understanding Predictions to Repairing Model Failures.\" The progression is: understand how many feature interactions determine predictions → build faithful explanations for tabular and vision models → use explanations to repair systematic failures.\n\nMy other publications using combinatorial testing for generating synthetic samples and hyperparameter tunings doesn't directly align with interpretability but are directed more towards model improvements. So, I'm not sure if and how I could include/exclude them from proposal and final dissertation based on the above theme.\n\nI appreciate your feedback on the proposal framing. Thank you."
+      ],
+      "replies": []
+    },
+    {
+      "id": "2026-04-08",
+      "date": "2026-04-08",
+      "owner": [
+        "Thank you Dr. Lei. I will work on this as suggested as per the timeline. Please do let me know if you any additional suggestions.",
+        "I agree, it is the essential features that stand strong across unseen or out-of distribution data.",
+        "thank you for the feedback, Dr. Lei. I will follow up with how my approach compares to these approaches in terms of the points suggested.",
+        "I agree, Dr. Lei. First, we need to identify a heuristic that would allow us to inpaint likely spurious regions without potential damage to the other instances. The reasoning would be that spurious likely features don't help with model generalization, thus can be inpainted.",
+        "I agree, Dr. Lei. The key takeaway for me is that the focus should be on justifying why each step minimizes collateral damage to other instances, not just on pipeline ordering. Moving forward, I'll work on building a clear argument for each stage: what it achieves and why the resulting model updates are unlikely to harm performance on other instances. I'll back this with experimental evidence alongside the reasoning."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "The DD-CAM plan looks good. I like Task 3. It would be good to show some more tangible benefits of minimal sufficient sets. For Task 5, Option A is more technically sound. That is, if the one-pass variant is correct and is faster, then it should be presented separately from the general DD algorithm. Option B is more like you just want to simplify the presentation while sacrificing technical soundness."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "a few comments:\n\n\n1. the direction, global to local or local to global, does not really matter. \n2. what really matters is the why part. What does each step try to achieve, and why what you do allows you to achieve that?\n3. the fundamental challenge for model correction is, whatever updates made to the model can potentially impact other instances in a negative manner. Thus, it is important to justify why the updates you make will not negatively impact other instances.\n4. your approach does not have to be perfect. for example, it is probably impossible to identify essential/spurious features perfectly. but it needs to work for most cases, with a reasonable argument and experimental data support."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Yes. I agree with your assessment. In fact, it is impossible to identify spurious features perfectly from model behavior alone.\nTo some extent, the model exists in a \"virtual\" world, which is different than the real world. Without some kind of grounding, it would be impossible to discover what is going in the real world.\nThis raises the following question: Do we really have to identify the real-world relationship? After all, we are dealing with models. As long as the model works, in terms of producing good predictions, do we really care whether it is using \"real-world\" essential features to make the prediction?\nI guess we do to some extent, because predictions based on \"real-world\" essential features can generalize much better, especially for unseen, out-of-distribution data."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Good. We seem on the same page. It seems impossible to perfectly identify real-world essential/spurious features, at least without some kind of grounding. Thus, a more reasonable goal is to develop heuristics such that the features to be inpainted are likely spurious, minimizing the potential damage to other instances."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Thanks for the summary. These are very good papers.\nOne important question to ask: how would you compare your approach to these approaches, in terms of novelty, strengths and limitations, as you envision at this point?"
+        }
+      ]
+    },
+    {
+      "id": "2026-04-07",
+      "date": "2026-04-07",
+      "owner": [
+        "I’ve responded to the comments from the first draft. But, I feel this approach lacks clarity and needs fixing.",
+        "DD-CAM Resubmission: Task List\nTask 1: Expand Baselines Beyond CAM Family (April 16)\n\n\n- Add IG, RISE, SHAP, LIME comparisons using same metrics (ADCC, AD, IoU, etc.)\n- Add Extremal Perturbations (Fong et al., ICCV 2019) — Done\n\n\nTask 2: Stability Analysis of 1-Minimal Sets (April 14)\n\n\n- Run DD-CAM with 10–20 random unit orderings on a subset of images\n- Report Jaccard similarity between resulting minimal sets across runs\n- Report variance in faithfulness metrics across seeds\n- Show side-by-side saliency maps from different runs\n- Is experimental proof better or can we have some theoretical analysis\n\n\nTask 3: Model Diagnostic Case Studies (April 19)\nSince, most reviewers had concerns on novelty, can we offset that with some additional contributions? For example: run on Waterbirds/CelebA to check if minimal sets expose model failure reasons\n\n\n- Introduce minimal failure-inducing set (flip objective: find smallest set causing a wrong prediction)\n- Correlate minimal set size with prediction confidence and correctness\n\n\nTask 4: ViT Masking Ablation (April 12)\n\n\n- Compare zero-token vs. mean-token vs. random-noise masking on ViT-B/16 and ViT-L/16\n- Report faithfulness metrics in an ablation table\n\n\nTask 5: Algorithmic Decision (April 9)\n\n\n- Option A: Keep the one-pass variant but add a formal lemma proving negative-margin units cannot belong to any sufficient set in GAP+FC models, plus an empirical sanity check comparing results with and without filtering. This preserves the runtime optimization but requires additional writing and proof effort to satisfy reviewers.\n- Option B: Drop the one-pass optimization for GAP+FC models and use the standard delta debugging algorithm uniformly across all classifier heads. This eliminates the need to formally justify negative-unit filtering and the one-pass correctness argument — both of which R-qWsW flagged and remained unconvinced by after the rebuttal. The runtime cost is minimal (O(K) → O(K log K)). The paper becomes simpler: one algorithm, one guarantee, no special cases."
+      ],
+      "replies": []
+    },
+    {
+      "id": "2026-04-06",
+      "date": "2026-04-06",
+      "owner": [
+        "Thank you for these comments, Dr. Lei.\n\n1. You're right. If the model predicts entirely from background and never learned bird features, then comparing concepts across correct and incorrect predictions would only reveal differences in background content. My earlier suggestion (stable concepts = essential) breaks down because nothing bird-related would appear in either profile. This is a genuine limitation. The detection stages (diff-map, cross-class profiling) would still correctly identify that mispredictions are driven by wrong-class-typical background content. But the repair via inpainting would be insufficient because after removing the background signal, the model would have nothing to fall back on.\n\n2. I agree completely, and this changes the framing of the approach. We should not claim to identify spurious features. Essential and spurious are properties of the real world, and model behavior can only tell us how the model responds, not whether a feature is genuinely essential or spurious. The approach should instead identify systematic patterns in model failures and use repair (e.g. counterfactual augmentation) to address the associated distributional imbalance.\n\n3. This is an important point. Since we cannot identify essential/spurious features with certainty, every repair carries risk of collateral damage. The approach could address this in two ways: (a) establishing that the failure pattern is systematic across many instances and repairing a recurring pattern is less likely to cause collateral damage than repairing an isolated anomaly, and (b) including original training data alongside counterfactual images during fine-tuning. However, this would be an empirical argument, not a theoretical guarantee.\n\n4. You're right that the diff-map is local but repair is global. I think the bridge from local to global is the population-level analysis: when many mispredictions show consistent cross-class contamination (e.g., 40/50 mispredicted waterbirds have land/forest in their failure regions), this suggests a systematic failure mode consistent with a distributional imbalance. The repair would generate training data that addresses this imbalance. I would not because we've proven features are spurious, but because the training data lacks sufficient variation. The diff-map could serve as spatial guidance for where to inpaint on each image, while the primary justification for what to repair comes from the population-level distributional analysis.\n\n5. Here is a more precise definition. The class concept profile P_c is the average SpLiCE weight vector across all correctly predicted images of class c. It captures the typical concept distribution exhibited by images the model classifies correctly as class c, as measured by CLIP/SpLiCE (external to the classifier). It includes both genuinely class-related features and features that co-occur due to training distribution bias. Example: The waterbird profile has high weights on bird (0.043), water (0.021), ocean (0.018), beak (0.015), swimming (0.012). The landbird profile has bird (0.041), perched (0.019), branch (0.016), forest (0.014), songbird (0.011).",
+        "I have also attached short summary of 4 related papers.",
+        "Note:\nLBC and DISC claim to identify spurious features, but each uses a different operational proxy rather than establishing real-world spuriousness:\n\n\n\n1. LBC uses accuracy gaps: if the model performs differently on images with vs. without an attribute, that attribute is called spurious\n\n2. DISC uses concept sensitivity: if a concept's importance varies across data environments, it is called spurious",
+        "As you pointed out, all of these are statements about model behavior, not about the real world.",
+        "These methods work empirically because the benchmarks (Waterbirds, CelebA) have known ground-truth spurious correlations built into the dataset design. The proxies happen to identify the right features on these benchmarks, but the identification is validated by the benchmark's construction, not by the proxy itself.",
+        "One question on the approach direction:\n\nBased on your feedback about the diff-map being local while repair needs to be global, I've been thinking about restructuring the reasoning to flow from global to local rather than the other way around.\n\nThe idea would be:\n\n1. Start by building class concept profiles from correctly predicted images (using CLIP + SpLiCE). This gives a population-level picture of what concept content is typically present when the model predicts each class correctly, without looking at any individual failure.\n\n2. Compare profiles across classes to identify asymmetric concept dimensions, i.e. concepts strongly associated with one class but not others (e.g., \"ocean\" high in waterbird profile, near-zero in landbird profile). These asymmetries reflect the training distribution's imbalance.\n\n3. Check whether the model's mispredictions concentrate along these asymmetric dimensions. If mispredicted waterbirds systematically have land/forest concepts in their failure regions, the distributional imbalance is driving real failures.\n\n4. Only then use per-instance diff-maps as spatial guidance for where to inpaint on each image and not as the starting point for diagnosing what's wrong.\n\nThe repair would be framed as filling the distributional gap identified at the population level, with the diff-map serving as a spatial tool rather than the primary justification.\n\nDoes this align with what you had in mind? Or would you suggest a different way to ground the approach globally before moving to per-instance repair?"
+      ],
+      "replies": []
+    },
+    {
+      "id": "2026-04-02",
+      "date": "2026-04-02",
+      "owner": [
+        "Thank you for the feedbacks Dr. Lei. Please allow me some time to think through the questions.",
+        "attached is the paper I was mentioning about."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "A few comments:\n\n\n1. The point I was trying to make is that a model may not use (or even learn) essential features at all to make predictions, including correct predictions. In this case, does the general approach really work that tries to compare the features/concepts used in different predictions (of the same instance or between different instances)? Use this as an extreme case to challenge the validity/limit of your approach.\n2. Essential/spurious features are fundamentally about the real world, not about what a model has learned or what a model does for predictions. Probably it is impossible to distinguish them by observing/analyzing how model predictions are made (in terms of what features/concepts are used). This is probably true even with causal intervention on the model prediction (e.g., by masking regions and then checking if the model prediction changes). This is because intervention is fundamentally about how the model behaves, not about the real world, i.e., the true causal relationship.\n3. The reason why it is important to identify essential/spurious features is because this is the idea case where we do not have to worry about the potential damage to other instances when we try to fix one or more mispredictions. Otherwise, whatever we do, we have to be conscious about how it will impact other mispredictions.\n4. Can you clarify what you mean by \"safe and beneficial\"? What arguments, at a more fundamental level, can you make that the inpainting of the region as identified by your approach would be \"safe and beneficial\"? Note that the diff-map is a local concept, as it is identified with respect to a single instance. However, \"safe and beneficial\" is a global concept, i.e., whatever you do should not or have minimal impact on other instances.\n5. Yes, it is important to be more precise about the notion of class concept profile. Try to come up with a more precise definition and also give an example if possible."
+        }
+      ]
+    },
+    {
+      "id": "2026-04-01",
+      "date": "2026-04-01",
+      "owner": [
+        "Thank you for the question, Dr. Lei.\n\nThe approach detects cross-class contamination, i.e., when the diff-map region contains concepts matching the wrong class's profile, and then uses the causal intervention to determine whether the region is safe to inpaint.\n\nThe diff-map identifies what the model relies on for inference that favors the wrong class. The cross-class contamination step compares those concepts against class profiles built from correctly predicted images, confirming which class the contaminating features belong to. But this stage cannot tell whether the contamination is from a spurious feature of the wrong class (e.g., land background behind a waterbird) or an essential feature of the wrong class (e.g., a waterbird with landbird-like coloring).\n\nThe causal intervention adds a necessary check. Neutralise the diff-map region: if the true-class logit drops, the region contains evidence needed for the correct prediction then skip it, because inpainting would destroy essential true-class features. If the true-class logit is preserved, the region was not contributing to the correct prediction and it was only serving the wrong one, and can be safely inpainted.\n\nTo be precise, this test confirms the region is not essential for the true class. It does not guarantee the region is purely spurious as it could contain essential features of the wrong class that happen not to overlap with true-class evidence. However, the diff-map's construction (ReLU of wrong-class minus true-class saliency) biases the selected region toward areas where the wrong class dominates and the true class is inactive.\n\nFor the two scenarios you raised: if the model learned essential features but underweights them, inpainting works because the model falls back on those features after the wrong-class signal is removed. If the model never learned essential features, our detection still identifies the problem correctly, but repair via inpainting alone would be insufficient as the model would have nothing to fall back on. This would be a limitation of the repair stage.",
+        "I think rather than asking \"is this feature spurious or essential?\", our pipeline asks would as a more operational question: \"is it safe and beneficial to inpaint this region?\"\n\nThe three stages establish this jointly. Stage 1 (diff-map) identifies the region drives the prediction margin toward the wrong class. Stage 2 (cross-class contamination) confirms the region contains content characteristic of the wrong class's concept profile. Stage 3 (causal intervention) confirms the region can be removed without degrading the true-class prediction.\n\nRegions passing all three conditions could be safe targets for inpainting: the model's correct prediction survives their modification, while the signal driving the incorrect prediction is neutralised. This framing could also avoid the need to classify features as spurious or essential in the abstract. The pipeline does not claim to solve that distinction. Instead, it provides an operational guarantee: inpainting a region that passes all three stages will remove a source of error without removing a source of correct prediction.",
+        "I  think the class concept profiles can give us a natural way to distinguish spurious from essential features if we extend them slightly.\nFor each class, compare the concept profile from correctly predicted instances vs. mispredicted instances of the same class. Concepts stable across both are essential (the model sees them regardless of outcome). Concepts present only in the correct profile are spurious (they correlate with prediction success, not class identity). In other words, essential features are stable across both profiles (the model sees them regardless of prediction outcome). Spurious features appear predominantly in the correct profile (they correlate with prediction success, not class identity).",
+        "I think it needs some formalization, but could be a proxy to identify spurious features/concepts."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "One question: Consider a model that predicts based on spurious features. For example, it predicts waterbirds or landbirds based on the background.  In other words, the model just did not pick up the essential features during training. Or the model picked up the essential features, but it does not use them for inference. How would your approach handle this situation? Specifically, how does your approach distinguish essential features from spurious features based on what features are used for inference (e..g, by comparing features/concepts used for correct and incorrect predictions)?"
+        }
+      ]
+    },
+    {
+      "id": "2026-03-31",
+      "date": "2026-03-31",
+      "owner": [
+        "Sure Dr. Lei, Thank you so much. I will work on comments and also do some implementations."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "Very good. I added some comments. Several general comments:\n\n\n1. You can go ahead to do some implementation while addressing the comments.\n2. For each experiment, try to be clear about your hypothesis, and what kind of results would confirm or reject your hypothesis.\n3. Think about what datasets would be easier or more challenging to your approach. Try to first do experiments on the easier dataset to see how it works, and then do experiments on the more challenging datasets.\n4. Also try to compare the results with and without the intervention step."
+        }
+      ]
+    },
+    {
+      "id": "2026-03-29",
+      "date": "2026-03-29",
+      "owner": [
+        "Hi Dr. @Dr. Lei , I’ve prepared a draft outlining the approach, including the motivation, problem setup, and methodological steps. I appreciate your feedback on whether the direction is sound and if the approach is clear and well aligned.",
+        "I’d also appreciate your thoughts on whether the problem framing is appropriate, or if it would be stronger to frame it differently.",
+        "I will also prepare the related work section discussion and share with you."
+      ],
+      "replies": []
+    },
+    {
+      "id": "2026-03-11",
+      "date": "2026-03-11",
+      "owner": [
+        "List of conferences where I could target both of my research works:",
+        "Dr. @Dr. Lei, I’m considering submitting both papers to BMVC, but I’d appreciate your advice on whether there might be a better venues or if we should target different venues.",
+        "Also, since I will need to give my proposal this semester, as next semester will likely be my last, could you please guide me on how I should proceed? My current plan is to first work on the comments you provided on the current project so I can develop a deeper understanding and confidence in the work while preparing for the proposal. After the proposal, I plan to continue working more on this project.",
+        "Thank you, Dr. Lei. I will plan accordingly. Yes, Dr. Lei, I have finished most part. I will look at NeurIPS papers and see how I can frame better and add more experiments and get some feedback. neurIPS deadline is on May 7th, so I will work alongside while working towards the proposal."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "Sounds good, Krishna. I suggest you target NeurIPS. Yes, you can plan for the proposal this semester. It is important to develop more insights on the current project, so that you have reasonable confidence about the approach and obtain some initial results going into the proposal. I suggest between now and the proposal meeting, you focus on the development of the approach for the current project while you work on the submission for NeurIPS (which I hope you have already finished most of the work)."
+        }
+      ]
+    }
+  ]
+}
