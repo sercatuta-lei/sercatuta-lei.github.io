@@ -8,8 +8,8 @@
       "updates": [
         {
           "date": "2026-06-04",
-          "content": "No update was provided for the week ending 2026-06-04.",
-          "placeholder": true
+          "content": "**Arjun Dahal:**\n\nICSE 2026 (Submission Target: June 30)\n\nAction Items\nI have been working on the counterfactual fairness testing paper. I used MLP as a surrogate in the latent space; the yield was low for the discriminatory instances. Furthermore, I found that my old method of using GBT as a surrogate resulted in some duplicates in test cases. I worked on these two since last week and then made changes to reduce the duplicate test cases.\n\nProblems/Issues:\nI will be comparing our results ( yield and reduction in discrimination after retraining ) with these papers. I couldn't find apple-to-apple comparison papers. These papers are similar in spirit but work on the causal definition of individual fairness.\n\nXiao, Yisong, et al. \"Latent imitator: Generating natural individual discriminatory instances for black-box fairness testing.\" *Proceedings of the 32nd ACM SIGSOFT international symposium on software testing and analysis*. 2023.\nQuan, Lili, et al. \"Dissecting global search: A simple yet effective method to boost individual discrimination testing and repair.\" (2025): 1908.\n\nFindings:\nI don't have any new findings at the moment. I will be discussing more about my project in the meeting.\n\n**Replies:**\n\n**Dr. Lei:**\nTry to think from a user perspective when you try to compare to other approaches. What does the user really care about? The definitions of causal and counterfactual fairness are not that different.\n\n---\n\n**Arjun Dahal:**\nYeah, the user doesn't care about the definitions. Thank you, Dr. Lei.\n\n---",
+          "placeholder": false
         },
         {
           "date": "2026-05-21",
@@ -160,6 +160,11 @@
       "photo": "saif-pic.jpg",
       "updates": [
         {
+          "date": "2026-06-08",
+          "content": "No update was provided for the week ending 2026-06-08.",
+          "placeholder": true
+        },
+        {
           "date": "2026-06-04",
           "content": "No update was provided for the week ending 2026-06-04.",
           "placeholder": true
@@ -307,6 +312,11 @@
       "slug": "fadul-sikder",
       "photo": "fadul.jpg",
       "updates": [
+        {
+          "date": "2026-06-08",
+          "content": "No update was provided for the week ending 2026-06-08.",
+          "placeholder": true
+        },
         {
           "date": "2026-06-04",
           "content": "No update was provided for the week ending 2026-06-04.",
@@ -457,8 +467,8 @@
       "updates": [
         {
           "date": "2026-06-04",
-          "content": "No update was provided for the week ending 2026-06-04.",
-          "placeholder": true
+          "content": "**Krishna Khadka:**\n\nHi Group,\n\n\n1. Explore new approach to the current project of explanation guided model repair. -- June 11\n2. Target Conference — AAAIi 2027 — July 27\n\nAction Items:\n\n\n1. In the last few weeks, I have been implementing the approach and checking the results on both the tabular and image datasets. I’m exploring datasets with different distributional properties while training and testing to see what actually caused the failure, and which failures can be addressed with our approach. This would help narrow down the problem we would solve for model repair. \n2. I have set up 4 experiments to address Dr. Lei’s feedback. I’m currently running the experiments and understanding the problem better. I will share/discuss the findings in detail. \n\nResults:\n\n\n1. I will discuss the findings.\n\nIssues:\n\n\n1. No issues at the moment. \n\nSorry for the late status update.\n\n**Replies:**\n\n**Dr. Lei:**\nSounds good. Can you write down the approach you are taking step by step? Also, for each step, try to write down any doubts/questions you might have.\n\n---\n\n**Krishna Khadka:**\nYes, Dr. Lei. I’m mostly building up on the steps you’ve outlined. I will write it up and share to discuss.\n\n---",
+          "placeholder": false
         },
         {
           "date": "2026-05-28",
@@ -598,6 +608,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-06-08",
+          "content": "No update was provided for the week ending 2026-06-08.",
+          "placeholder": true
+        },
         {
           "date": "2026-06-02",
           "content": "**Pujan Budhathoki:**\n\n**Milestone: 5th June: Get Results on the extended experiment**\n**Action Items:**\n\n\n1. This week I ran the experiments for a larger model (Llama 3.1 8B instruct, a model used very frequently by papers in code generation domain) and I also tried new different evaluation methods for both smaller and the larger model. I have also been running experiments with different parameters to better explain the results.\n2. I have been working on expanding the current dataset that we have. \n\n**Findings:**\n\n\n1. I will share the experimental results I have found in the meeting.\n\n**Problem/Issues:**\n\n\n1. I don’t have any issues at this point.",
@@ -741,6 +756,11 @@
       "slug": "qiping-wei",
       "photo": "qiping.jpg",
       "updates": [
+        {
+          "date": "2026-06-08",
+          "content": "No update was provided for the week ending 2026-06-08.",
+          "placeholder": true
+        },
         {
           "date": "2026-06-04",
           "content": "No update was provided for the week ending 2026-06-04.",
@@ -886,8 +906,8 @@
       "updates": [
         {
           "date": "2026-06-04",
-          "content": "No update was provided for the week ending 2026-06-04.",
-          "placeholder": true
+          "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Implemented the combined decision signature method for the decision region(completed with first order, second order, and prediction signature)\n2. Adaptive gating is now implemented using the objective, which regions receive a meaningful mass of samples. But exploring other clustering methods to see if they make more sense. Complete by June 8.\n3. Targeting AAAI. Submission time June 21 - July 28\n\n**Action Items:**\n\n\n1. Implemented combined decision signatures: first-order sensitivities + second-order interactions + logit diff, all normalized to direction vectors.\n2. Experiments for NN students are done. The results are favorable. I will complete experiments on non-neural teachers and more datasets.\n3. After looking into some clustering methods, agglomerative clustering seems to be a good method to merge similar bins together. Run some experiment with it.\n4. As the draft is written, I plan to improve it section by section, starting with the introduction.\n5. I plan to propose some ablation studies to validate our approach.\n\n**Results/Findings:**\n\n\n1. Agglomerative clustering merges bins based on their centroid similarity. For our case, this can be implemented to merge decision regions based on their similarity.\n2. Sample mass-based gating shows that it effectively closes unused regions, and in phase 2, using only those regions gives us high agreement accuracy.\n\n**Replies:**\n\n**Dr. Lei:**\nAs emphasize before, milestones without target dates are not meaningful. Also, was it your plan to complete the paper by the CIKM deadline? How far are you from that milestone?\n\n---\n\n**Shovon Niverd:**\nExcept for the experiment and evaluation section, rest is written but of course that needs revision.\n\n---",
+          "placeholder": false
         },
         {
           "date": "2026-05-21",
@@ -1022,5 +1042,5 @@
       ]
     }
   ],
-  "last_updated": "2026-06-04T01:44:03.794027"
+  "last_updated": "2026-06-08T00:34:49.584308"
 }
