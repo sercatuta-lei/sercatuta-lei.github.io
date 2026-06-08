@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import PasswordProtected from "@/components/PasswordProtected";
+import { PEOPLE } from "@/lib/people";
 
 interface Student {
   slackId: string;
@@ -88,66 +89,64 @@ export default function UpdatesPage() {
         </motion.div>
       )}
 
-      {!loading && !error && data && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {data.students.map((student, index) => (
-            <motion.div
-              key={student.slackId}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-            >
-              <Link href={`/updates/${student.slug}`}>
-                <Card className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-slate-200/60 dark:border-gray-700 shadow-lg hover:shadow-xl rounded-2xl transition-all duration-300 cursor-pointer group">
-                  <CardContent className="p-6">
-                    <div className="text-center">
-                      <div className="relative mb-4 mx-auto w-32 h-32">
-                        <img
-                          src={`/images/teampic/${student.photo}`}
-                          alt={`${student.name} photo`}
-                          className="w-full h-full object-cover rounded-full shadow-md group-hover:shadow-lg transition-shadow"
-                        />
-                        {student.updates.length > 0 && (
-                          <div className="absolute -top-2 -right-2 bg-blue-600 dark:bg-blue-500 text-white text-xs font-bold rounded-full w-8 h-8 flex items-center justify-center shadow-lg">
-                            {student.updates.length}
+      {!loading && !error && (() => {
+        const bySlug = new Map((data?.students ?? []).map((s) => [s.slug, s]));
+        return (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {PEOPLE.map((person, index) => {
+              const student = bySlug.get(person.slug);
+              const count = student?.updates.length ?? 0;
+              const latest = student?.updates[0]?.date;
+              return (
+                <motion.div
+                  key={person.slug}
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: Math.min(index * 0.08, 0.6) }}
+                  whileHover={{ y: -5 }}
+                >
+                  <Link href={`/updates/${person.slug}`}>
+                    <Card className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-slate-200/60 dark:border-gray-700 shadow-lg hover:shadow-xl rounded-2xl transition-all duration-300 cursor-pointer group">
+                      <CardContent className="p-6">
+                        <div className="text-center">
+                          <div className="relative mb-4 mx-auto w-32 h-32">
+                            <img
+                              src={`/images/teampic/${person.photo}`}
+                              alt={`${person.name} photo`}
+                              className="w-full h-full object-cover rounded-full shadow-md group-hover:shadow-lg transition-shadow"
+                            />
+                            {count > 0 && (
+                              <div className="absolute -top-2 -right-2 bg-blue-600 dark:bg-blue-500 text-white text-xs font-bold rounded-full w-8 h-8 flex items-center justify-center shadow-lg">
+                                {count}
+                              </div>
+                            )}
                           </div>
-                        )}
-                      </div>
-                      
-                      <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                        {student.name}
-                      </h3>
-                      
-                      <p className="text-sm text-slate-600 dark:text-gray-300">
-                        {student.updates.length} {student.updates.length === 1 ? "update" : "updates"}
-                      </p>
-                      
-                      {student.updates.length > 0 && (
-                        <p className="text-xs text-slate-500 dark:text-gray-400 mt-2">
-                          Latest: {new Date(student.updates[0].date).toLocaleDateString()}
-                        </p>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
-      )}
 
-      {!loading && !error && data && data.students.length === 0 && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-center py-20"
-        >
-          <p className="text-lg text-slate-600 dark:text-gray-300">
-            No student updates available yet.
-          </p>
-        </motion.div>
-      )}
+                          <h3 className="text-lg font-semibold text-slate-800 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            {person.name}
+                          </h3>
+
+                          <p className="text-sm text-slate-600 dark:text-gray-300">
+                            {count > 0
+                              ? `${count} weekly ${count === 1 ? "update" : "updates"}`
+                              : "View research"}
+                          </p>
+
+                          {latest && (
+                            <p className="text-xs text-slate-500 dark:text-gray-400 mt-2">
+                              Latest: {new Date(latest).toLocaleDateString()}
+                            </p>
+                          )}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </motion.div>
+              );
+            })}
+          </div>
+        );
+      })()}
     </div>
   );
 

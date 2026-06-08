@@ -43,7 +43,13 @@ jobs:
           FORCE_FETCH: ${{ github.event.inputs.force }}
         run: |
           python scripts/fetch_slack_updates.py
-      
+
+      - name: Fetch research channel updates
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        run: |
+          python scripts/fetch_research_updates.py
+
       - name: Check for changes
         id: check_changes
         run: |
@@ -60,7 +66,8 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add public/data/updates.json
           git add public/data/last-sync.json
-          git commit -m "🤖 Update weekly updates from Slack [$(date +'%Y-%m-%d')]"
+          git add public/data/research/
+          git commit -m "🤖 Update weekly + research updates from Slack [$(date +'%Y-%m-%d')]"
           git push
       
       - name: Create summary

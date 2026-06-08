@@ -1,23 +1,15 @@
 import StudentUpdateClient from './StudentUpdateClient';
+import { PEOPLE } from '@/lib/people';
 
-// Generate static paths for all students at build time
+// Generate static paths for everyone who has an individual page.
 export async function generateStaticParams() {
-  // List of all possible student slugs
-  return [
-    { slug: 'arjun-dahal' },
-    { slug: 'fadul-sikder' },
-    { slug: 'krishna-khadka' },
-    { slug: 'pujan-budhathoki' },
-    { slug: 'qiping-wei' },
-    { slug: 'saif-uddin-mahmud' },
-    { slug: 'shovon-niverd' },
-  ];
+  return PEOPLE.map((p) => ({ slug: p.slug }));
 }
 
-export default async function StudentUpdatePage({ 
-  params 
-}: { 
-  params: Promise<{ slug: string }> 
+export default async function StudentUpdatePage({
+  params
+}: {
+  params: Promise<{ slug: string }>
 }) {
   // In Next.js 15, params is now a Promise and must be awaited
   const { slug } = await params;
