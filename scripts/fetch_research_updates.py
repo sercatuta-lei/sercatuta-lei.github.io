@@ -28,7 +28,7 @@ from dotenv import load_dotenv
 # Reuse the markdown formatting + client helpers from the weekly fetcher.
 from fetch_slack_updates import (
     get_slack_client,
-    format_message_with_replies,
+    parse_blocks,
     USER_MAPPING,
 )
 
@@ -115,58 +115,90 @@ def fetch_all_messages(client: WebClient, channel_id: str) -> List[Dict[str, Any
     return messages
 
 
+def message_markdown(m: Dict[str, Any]) -> str:
+    """A single message's text as markdown, WITHOUT an author prefix."""
+    if m.get("blocks"):
+        md = parse_blocks(m["blocks"])
+        if md.strip():
+            return md
+    return m.get("text", "")
+
+
 def fetch_channel(client: WebClient, channel_id: str, person: Dict[str, str]) -> Dict[str, Any]:
     raw = fetch_all_messages(client, channel_id)
 
     # Keep real user posts; drop system/subtype noise (joins, topic changes...).
-    posts = [
+    posts_raw = [
         m
         for m in raw
         if m.get("type") == "message" and not m.get("subtype") and m.get("user")
     ]
 
-    # Collect every author (and repliers) so attribution resolves to real names.
-    author_ids = {m.get("user") for m in posts}
+    # Identify the channel owner. Prefer an exact Slack id match (known users),
+    # fall back to the channel's first-name token for people not in the mapping.
+    owner_name = person["name"]
+    owner_id = next((uid for uid, info in USER_MAPPING.items() if info.get("name") == owner_name), None)
+    first_name = person["channel"].split("-research")[0].lower()
 
-    messages: List[Dict[str, Any]] = []
-    for m in posts:
-        replies: List[Dict[str, Any]] = []
+    # Flatten top-level posts + thread replies into individual posts.
+    flat: List[Dict[str, Any]] = []
+    author_ids = set()
+    for m in posts_raw:
+        flat.append(m)
+        author_ids.add(m.get("user"))
         if m.get("thread_ts") and m.get("reply_count"):
             try:
                 thread = client.conversations_replies(channel=channel_id, ts=m["thread_ts"])
-                replies = thread.get("messages", [])
-                author_ids.update(r.get("user") for r in replies)
+                for r in thread.get("messages", [])[1:]:  # [0] is the parent, already added
+                    if r.get("type") == "message" and r.get("user"):
+                        flat.append(r)
+                        author_ids.add(r.get("user"))
                 time.sleep(0.5)
             except SlackApiError as e:
                 print(f"  [INFO] thread fetch skipped ({e.response['error']})")
 
+    resolve_user_names(client, author_ids)
+
+    def is_owner(uid: Optional[str]) -> bool:
+        if owner_id and uid == owner_id:
+            return True
+        return first_name in USER_MAPPING.get(uid, {}).get("name", "").lower()
+
+    # Group posts by local calendar day.
+    by_day: Dict[str, List[Dict[str, Any]]] = {}
+    for m in flat:
         ts = float(m["ts"])
-        messages.append(
+        uid = m.get("user")
+        date = datetime.fromtimestamp(ts).strftime("%Y-%m-%d")
+        by_day.setdefault(date, []).append(
             {
-                "_pending_replies": replies,
-                "_message": m,
-                "id": m["ts"],
-                "date": datetime.fromtimestamp(ts).strftime("%Y-%m-%d"),
                 "ts": ts,
-                "reply_count": (len(replies) - 1) if len(replies) > 1 else 0,
+                "author": USER_MAPPING.get(uid, {}).get("name", uid),
+                "content": message_markdown(m).strip(),
+                "is_owner": is_owner(uid),
             }
         )
 
-    # Resolve names once, then format markdown (format uses USER_MAPPING).
-    resolve_user_names(client, author_ids)
-    for entry in messages:
-        entry["content"] = format_message_with_replies(entry.pop("_message"), entry.pop("_pending_replies"))
-
-    messages.sort(key=lambda x: x["ts"], reverse=True)
-    for entry in messages:
-        entry.pop("ts", None)
+    # One entry per day: owner's posts are the body, everyone else -> replies.
+    days: List[Dict[str, Any]] = []
+    for date in sorted(by_day.keys(), reverse=True):
+        day_posts = sorted(by_day[date], key=lambda x: x["ts"])
+        owner = [p["content"] for p in day_posts if p["is_owner"] and p["content"]]
+        replies = [
+            {"author": p["author"], "content": p["content"]}
+            for p in day_posts
+            if not p["is_owner"] and p["content"]
+        ]
+        if not owner and not replies:
+            continue
+        days.append({"id": date, "date": date, "owner": owner, "replies": replies})
 
     return {
         "slug": person["slug"],
         "name": person["name"],
         "channel": person["channel"],
         "last_updated": datetime.now().isoformat(),
-        "messages": messages,
+        "days": days,
     }
 
 
@@ -200,7 +232,7 @@ def main():
         out_path = f"{DATA_DIR}/{person['slug']}.json"
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
-        print(f"  [OK] {len(data['messages'])} messages -> {out_path}")
+        print(f"  [OK] {len(data['days'])} days -> {out_path}")
         written += 1
 
     print(f"\n[SUMMARY] wrote {written}/{len(RESEARCH_CHANNELS)} research files")

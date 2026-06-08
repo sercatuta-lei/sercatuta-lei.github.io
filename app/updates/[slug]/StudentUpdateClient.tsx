@@ -30,11 +30,16 @@ interface UpdatesData {
   last_updated: string | null;
 }
 
-interface ResearchMessage {
+interface ResearchReply {
+  author: string;
+  content: string;
+}
+
+interface ResearchDay {
   id: string;
   date: string;
-  content: string;
-  reply_count?: number;
+  owner: string[];
+  replies: ResearchReply[];
 }
 
 interface ResearchData {
@@ -42,7 +47,7 @@ interface ResearchData {
   name: string;
   channel: string;
   last_updated: string | null;
-  messages: ResearchMessage[];
+  days: ResearchDay[];
 }
 
 type Tab = "weekly" | "research";
@@ -61,7 +66,7 @@ export default function StudentUpdateClient({ slug }: StudentUpdateClientProps) 
   const [tab, setTab] = useState<Tab>("weekly");
 
   // Research is lazy-loaded the first time the Research tab is opened.
-  const [research, setResearch] = useState<ResearchMessage[] | null>(null);
+  const [research, setResearch] = useState<ResearchDay[] | null>(null);
   const [researchLoading, setResearchLoading] = useState(false);
   const [researchLoaded, setResearchLoaded] = useState(false);
   const [researchError, setResearchError] = useState<string | null>(null);
@@ -99,7 +104,7 @@ export default function StudentUpdateClient({ slug }: StudentUpdateClientProps) 
         return res.json();
       })
       .then((data: ResearchData | null) => {
-        setResearch(data ? data.messages : []);
+        setResearch(data?.days ?? []);
         setResearchLoaded(true);
         setResearchLoading(false);
       })
@@ -244,40 +249,59 @@ export default function StudentUpdateClient({ slug }: StudentUpdateClientProps) 
               )}
               {!researchLoading && !researchError && research && research.length > 0 && (
                 <div className="space-y-4">
-                  {research.map((msg, index) => (
+                  {research.map((day, index) => (
                     <motion.div
-                      key={msg.id}
+                      key={day.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: Math.min(index * 0.04, 0.3) }}
                     >
                       <Card className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm border border-slate-200/60 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
                         <button
-                          onClick={() => toggle(msg.id)}
+                          onClick={() => toggle(day.id)}
                           className="w-full px-6 py-4 text-left bg-slate-50/50 dark:bg-gray-900/30 hover:bg-slate-100/50 dark:hover:bg-gray-900/50 transition-colors rounded-t-2xl"
                         >
                           <div className="flex justify-between items-center">
                             <div>
                               <h2 className="text-lg font-semibold text-slate-800 dark:text-white">
-                                {formatDate(msg.date)}
+                                {formatDate(day.date)}
                               </h2>
-                              {!!msg.reply_count && msg.reply_count > 0 && (
+                              {day.replies.length > 0 && (
                                 <p className="text-sm text-slate-500 dark:text-gray-400 mt-1">
-                                  {msg.reply_count} {msg.reply_count === 1 ? "reply" : "replies"}
+                                  {day.replies.length} {day.replies.length === 1 ? "reply" : "replies"}
                                 </p>
                               )}
                             </div>
-                            <Chevron open={expanded === msg.id} />
+                            <Chevron open={expanded === day.id} />
                           </div>
                         </button>
-                        {expanded === msg.id && (
+                        {expanded === day.id && (
                           <motion.div
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
                             transition={{ duration: 0.3 }}
                           >
-                            <CardContent className="p-6">
-                              <Markdown>{msg.content}</Markdown>
+                            <CardContent className="p-6 space-y-4">
+                              {day.owner.map((md, i) => (
+                                <Markdown key={i}>{md}</Markdown>
+                              ))}
+                              {day.replies.length > 0 && (
+                                <div className="space-y-4 pt-4 border-t border-slate-200 dark:border-gray-700">
+                                  {day.owner.length > 0 && (
+                                    <h3 className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-gray-400">
+                                      Replies
+                                    </h3>
+                                  )}
+                                  {day.replies.map((r, i) => (
+                                    <div key={i} className="border-l-2 border-slate-200 dark:border-gray-700 pl-4">
+                                      <p className="text-sm font-semibold text-slate-700 dark:text-gray-200 mb-1">
+                                        {r.author}
+                                      </p>
+                                      <Markdown>{r.content}</Markdown>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
                             </CardContent>
                           </motion.div>
                         )}
