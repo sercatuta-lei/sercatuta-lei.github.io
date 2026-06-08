@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import PasswordProtected from "@/components/PasswordProtected";
 import { PEOPLE } from "@/lib/people";
+import { formatLocalDate } from "@/lib/utils";
 
 interface Student {
   slackId: string;
@@ -134,7 +135,7 @@ export default function UpdatesPage() {
 
                           {latest && (
                             <p className="text-xs text-slate-500 dark:text-gray-400 mt-2">
-                              Latest: {new Date(latest).toLocaleDateString()}
+                              Latest: {formatLocalDate(latest, { year: "numeric", month: "numeric", day: "numeric" })}
                             </p>
                           )}
                         </div>

@@ -9,6 +9,7 @@ import PasswordProtected from "@/components/PasswordProtected";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getPerson } from "@/lib/people";
+import { formatLocalDate } from "@/lib/utils";
 
 interface Update {
   date: string;
@@ -117,13 +118,7 @@ export default function StudentUpdateClient({ slug }: StudentUpdateClientProps) 
 
   const toggle = (key: string) => setExpanded((cur) => (cur === key ? null : key));
 
-  const formatDate = (date: string) =>
-    new Date(date).toLocaleDateString("en-US", {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
+  const formatDate = (date: string) => formatLocalDate(date);
 
   const notFound = !person;
 
