@@ -2,8 +2,22 @@
   "slug": "arjun-dahal",
   "name": "Arjun Dahal",
   "channel": "arjun-research",
-  "last_updated": "2026-06-08T00:58:13.787306",
+  "last_updated": "2026-06-11T00:21:00.857411",
   "days": [
+    {
+      "id": "2026-06-08",
+      "date": "2026-06-08",
+      "owner": [
+        "Thank You, Dr. Lei. I will get back to you.",
+        "Thank you, Dr. Lei.\nI agree the approach makes sense in general and might yield well, but there are still a lot of things that need further investigation. It still isn't very intuitive.\nI am investigating primarily the following: Why does this work? Will the method work reasonably well for other datasets/cases?"
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "I hope you are not discouraged by my comments. If you are confident about your approach, you can continue with your plan. But try to characterize what you do at a higher level of abstraction. Try to ask yourself what are the fundamental ideas that allow what you do to do better than state of the art. Try to be critical at your own work by asking questions like, what are the possible failure modes, i.e., where your approach can break. An important part of research is to know the limitations of your own work, i.e., try to understand not only what your approach can do, but also what your approach cannot do."
+        }
+      ]
+    },
     {
       "id": "2026-06-07",
       "date": "2026-06-07",

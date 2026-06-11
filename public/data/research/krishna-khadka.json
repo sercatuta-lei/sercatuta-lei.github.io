@@ -2,7 +2,7 @@
   "slug": "krishna-khadka",
   "name": "Krishna Khadka",
   "channel": "krishna-research",
-  "last_updated": "2026-06-08T00:58:18.911928",
+  "last_updated": "2026-06-11T00:21:07.426957",
   "days": [
     {
       "id": "2026-06-01",
@@ -290,22 +290,6 @@
         "I will also prepare the related work section discussion and share with you."
       ],
       "replies": []
-    },
-    {
-      "id": "2026-03-11",
-      "date": "2026-03-11",
-      "owner": [
-        "List of conferences where I could target both of my research works:",
-        "Dr. @Dr. Lei, I’m considering submitting both papers to BMVC, but I’d appreciate your advice on whether there might be a better venues or if we should target different venues.",
-        "Also, since I will need to give my proposal this semester, as next semester will likely be my last, could you please guide me on how I should proceed? My current plan is to first work on the comments you provided on the current project so I can develop a deeper understanding and confidence in the work while preparing for the proposal. After the proposal, I plan to continue working more on this project.",
-        "Thank you, Dr. Lei. I will plan accordingly. Yes, Dr. Lei, I have finished most part. I will look at NeurIPS papers and see how I can frame better and add more experiments and get some feedback. neurIPS deadline is on May 7th, so I will work alongside while working towards the proposal."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "Sounds good, Krishna. I suggest you target NeurIPS. Yes, you can plan for the proposal this semester. It is important to develop more insights on the current project, so that you have reasonable confidence about the approach and obtain some initial results going into the proposal. I suggest between now and the proposal meeting, you focus on the development of the approach for the current project while you work on the submission for NeurIPS (which I hope you have already finished most of the work)."
-        }
-      ]
     }
   ]
 }
