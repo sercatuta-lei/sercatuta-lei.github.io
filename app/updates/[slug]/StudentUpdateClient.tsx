@@ -58,12 +58,14 @@ interface StudentUpdateClientProps {
 
 export default function StudentUpdateClient({ slug }: StudentUpdateClientProps) {
   const person = getPerson(slug);
+  const isChannel = !!person?.isChannel;
 
   const [weekly, setWeekly] = useState<Update[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [expanded, setExpanded] = useState<string | null>(null);
 
-  const [tab, setTab] = useState<Tab>("weekly");
+  // Channel archives (e.g. #general) have no weekly tab — default to the feed.
+  const [tab, setTab] = useState<Tab>(isChannel ? "research" : "weekly");
 
   // Research is lazy-loaded the first time the Research tab is opened.
   const [research, setResearch] = useState<ResearchDay[] | null>(null);
@@ -121,6 +123,11 @@ export default function StudentUpdateClient({ slug }: StudentUpdateClientProps) 
     if (next === "research") loadResearch();
   };
 
+  // Channel archives load their feed immediately (no toggle to trigger it).
+  useEffect(() => {
+    if (isChannel) loadResearch();
+  }, [isChannel, loadResearch]);
+
   const toggle = (key: string) => setExpanded((cur) => (cur === key ? null : key));
 
   const formatDate = (date: string) => formatLocalDate(date);
@@ -144,7 +151,7 @@ export default function StudentUpdateClient({ slug }: StudentUpdateClientProps) 
               ← Back to All Students
             </Button>
           </Link>
-          {!notFound && <TabToggle tab={tab} onSelect={selectTab} />}
+          {!notFound && !isChannel && <TabToggle tab={tab} onSelect={selectTab} />}
         </div>
       </motion.div>
 
@@ -166,14 +173,20 @@ export default function StudentUpdateClient({ slug }: StudentUpdateClientProps) 
             className="mb-8"
           >
             <div className="flex items-center gap-4">
-              <img
-                src={`/images/teampic/${person!.photo}`}
-                alt={`${person!.name} photo`}
-                className="w-20 h-20 rounded-full object-cover shadow-lg"
-              />
+              {isChannel ? (
+                <div className="w-20 h-20 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center shadow-lg">
+                  <span className="text-4xl font-bold text-blue-600 dark:text-blue-400">#</span>
+                </div>
+              ) : (
+                <img
+                  src={`/images/teampic/${person!.photo}`}
+                  alt={`${person!.name} photo`}
+                  className="w-20 h-20 rounded-full object-cover shadow-lg"
+                />
+              )}
               <div>
                 <h1 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white">
-                  {person!.name}
+                  {isChannel ? `#${person!.name}` : person!.name}
                 </h1>
               </div>
             </div>
@@ -268,7 +281,10 @@ export default function StudentUpdateClient({ slug }: StudentUpdateClientProps) 
                               </h2>
                               {day.replies.length > 0 && (
                                 <p className="text-sm text-slate-500 dark:text-gray-400 mt-1">
-                                  {day.replies.length} {day.replies.length === 1 ? "reply" : "replies"}
+                                  {day.replies.length}{" "}
+                                  {isChannel
+                                    ? day.replies.length === 1 ? "message" : "messages"
+                                    : day.replies.length === 1 ? "reply" : "replies"}
                                 </p>
                               )}
                             </div>

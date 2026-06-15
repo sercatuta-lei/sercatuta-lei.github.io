@@ -49,6 +49,9 @@ RESEARCH_CHANNELS = [
     {"channel": "mekdelawit-research", "slug": "mekdelawit-gebrewold", "name": "Mekdelawit Gebrewold"},
     {"channel": "samreen-research", "slug": "samreen", "name": "Samreen"},
     {"channel": "sunny-research", "slug": "sunny-shree", "name": "Sunny Shree"},
+    # Shared channel archive (not a person): no owner, every message shown with
+    # its author. Channel id is given explicitly so we don't rely on name lookup.
+    {"channel": "general", "slug": "general", "name": "general", "channel_id": "C079XJ28396"},
 ]
 
 
@@ -217,7 +220,7 @@ def main():
     for person in RESEARCH_CHANNELS:
         name = person["channel"]
         print(f"\n[PROCESSING] {name}...")
-        channel_id = channel_index.get(name)
+        channel_id = person.get("channel_id") or channel_index.get(name)
         if not channel_id:
             print("  [SKIP] channel not found / not visible to bot")
             continue

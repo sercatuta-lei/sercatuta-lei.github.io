@@ -111,11 +111,17 @@ export default function UpdatesPage() {
                       <CardContent className="p-6">
                         <div className="text-center">
                           <div className="relative mb-4 mx-auto w-32 h-32">
-                            <img
-                              src={`/images/teampic/${person.photo}`}
-                              alt={`${person.name} photo`}
-                              className="w-full h-full object-cover rounded-full shadow-md group-hover:shadow-lg transition-shadow"
-                            />
+                            {person.isChannel ? (
+                              <div className="w-full h-full rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+                                <span className="text-5xl font-bold text-blue-600 dark:text-blue-400">#</span>
+                              </div>
+                            ) : (
+                              <img
+                                src={`/images/teampic/${person.photo}`}
+                                alt={`${person.name} photo`}
+                                className="w-full h-full object-cover rounded-full shadow-md group-hover:shadow-lg transition-shadow"
+                              />
+                            )}
                             {count > 0 && (
                               <div className="absolute -top-2 -right-2 bg-blue-600 dark:bg-blue-500 text-white text-xs font-bold rounded-full w-8 h-8 flex items-center justify-center shadow-lg">
                                 {count}
@@ -128,7 +134,9 @@ export default function UpdatesPage() {
                           </h3>
 
                           <p className="text-sm text-slate-600 dark:text-gray-300">
-                            {count > 0
+                            {person.isChannel
+                              ? "View archive"
+                              : count > 0
                               ? `${count} weekly ${count === 1 ? "update" : "updates"}`
                               : "View research"}
                           </p>

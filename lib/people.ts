@@ -6,9 +6,13 @@
 export interface Person {
   slug: string;
   name: string;
+  /** teampic filename; empty for channel-type entries (rendered with a # icon). */
   photo: string;
   /** Slack channel the research feed is pulled from (used by the fetch script). */
   researchChannel: string;
+  /** A shared Slack channel (e.g. #general) rather than a person — archive-only,
+   *  no Weekly tab, every message shown with its author. */
+  isChannel?: boolean;
 }
 
 export const PEOPLE: Person[] = [
@@ -22,6 +26,7 @@ export const PEOPLE: Person[] = [
   { slug: "mekdelawit-gebrewold", name: "Mekdelawit Gebrewold", photo: "Mekdelawit.jpg", researchChannel: "mekdelawit-research" },
   { slug: "samreen", name: "Samreen", photo: "samreen.jpeg", researchChannel: "samreen-research" },
   { slug: "sunny-shree", name: "Sunny Shree", photo: "sunny.jpg", researchChannel: "sunny-research" },
+  { slug: "general", name: "general", photo: "", researchChannel: "general", isChannel: true },
 ];
 
 export function getPerson(slug: string): Person | undefined {
