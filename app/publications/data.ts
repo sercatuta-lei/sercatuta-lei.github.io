@@ -377,3 +377,32 @@ export const getPublications = (): Publication[] => publicationsData;
 
 // Export for backward compatibility
 export const publications = publicationsData;
+
+// --- Tags -------------------------------------------------------------------
+// Tags are DERIVED from each paper's title + venue (no manual tagging needed).
+// Order here is the display order; a tag only appears if it matches >=1 paper.
+export const TAG_DEFINITIONS: { tag: string; keywords: string[] }[] = [
+  { tag: "Combinatorial Testing", keywords: ["combinatorial", "covering array", "t-way", "factorial", "pending schema", "forbidden tuple", "metamorphic", "covering measures"] },
+  { tag: "Software Testing", keywords: ["software testing", "verification and validation", "test generation", "test suite", "model-based testing", "model refinement", "input space coverage", "dataset reduction", "t-way testing"] },
+  { tag: "Smart Contracts", keywords: ["smart contract", "solidity", "distributed ledger", "symbolic execution", "blockchain"] },
+  { tag: "Fuzzing", keywords: ["fuzz"] },
+  { tag: "IoT Security", keywords: ["zigbee", "iot", "embedded", "wireless and mobile"] },
+  { tag: "ML Security & Privacy", keywords: ["security", "privacy", "adversarial", "vulnerabilit", "hardening", "attack"] },
+  { tag: "Explainability", keywords: ["explain", "counterfactual", "interpret", "feature interaction", "model prediction", "influence analysis", "surrogate", "proxy model"] },
+  { tag: "Fairness", keywords: ["fairness"] },
+  { tag: "Synthetic Data", keywords: ["synthetic data"] },
+  { tag: "LLMs", keywords: ["language model", "llm"] },
+  { tag: "Knowledge Distillation", keywords: ["distillation"] },
+  { tag: "Binary Analysis", keywords: ["binary code", "binary diff", "compiler optimization", "peephole"] },
+];
+
+export function getTags(pub: Publication): string[] {
+  const hay = `${pub.title} ${pub.venue}`.toLowerCase();
+  return TAG_DEFINITIONS.filter((d) => d.keywords.some((k) => hay.includes(k))).map((d) => d.tag);
+}
+
+export function getAllTags(): string[] {
+  const present = new Set<string>();
+  for (const pub of publicationsData) getTags(pub).forEach((t) => present.add(t));
+  return TAG_DEFINITIONS.map((d) => d.tag).filter((t) => present.has(t));
+}
