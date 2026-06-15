@@ -2,8 +2,43 @@
   "slug": "arjun-dahal",
   "name": "Arjun Dahal",
   "channel": "arjun-research",
-  "last_updated": "2026-06-11T00:21:00.857411",
+  "last_updated": "2026-06-15T02:09:44.051021",
   "days": [
+    {
+      "id": "2026-06-14",
+      "date": "2026-06-14",
+      "owner": [
+        "Sure, Dr. Lei. I will go ahead with the approach and update Slack over time."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "The general idea seems to make sense. Again, try to articulate the key insight/perspective as intuitive as possible and why it allows you to tackle the technical problems in a way that is better than the state of the art."
+        }
+      ]
+    },
+    {
+      "id": "2026-06-13",
+      "date": "2026-06-13",
+      "owner": [
+        "In the context of fairness testing, the concept of the decision region seems to draw parallels to the local search ( among global and local search for the discriminatory samples ). In local search, the instances near the global discriminatory instances are searched by perturbing the non-sensitive attribute. The concept of a decision region has more geometric rigor associated with it, rather than just assuming that simple perturbations lead to the same decision behavior.\nFor the global search, I was thinking of using gradient for the non-discriminatory latents and then using gradient to find a new decision region in the latent space ( where the surrogate is MLP ). However, if we were to do so, it might be conceptually similar to the existing works.\nFor an alternative, keeping a record of the center point of known decision regions and then searching latents at a certain radius ( querying them for getting their prediction probability ) and for promising discriminatory latents, maybe querying them in the black box could be a preliminary approach. If a new region is discovered, then caching its signature to guide future searches in latent space.\nSo, the question of how to explore for the decision region can be done either 1. starting with known non-discriminatory latents and using gradients to search for new regions, or 2. use active learning in some capacity for finding those regions from known regions, or 3. Something else.\nDr. Lei, please let me know the direction I should pursue or if there is some gap in my understanding."
+      ],
+      "replies": []
+    },
+    {
+      "id": "2026-06-11",
+      "date": "2026-06-11",
+      "owner": [
+        "The current approach is good at exploiting already available regions that have discriminatory instance clusters/pockets, but not good at exploring other regions of discrimination. Uncertainty and density-based searches seem to be useful, but aren't sufficient conditions to uncover such regions that are discriminatory ( but have low density of instances (GMM on latents) near them ). Our approach of dividing the whole latent space could turn out to be pretty huge for datasets having a larger number of columns ( 14D ).\n\nLatent Imitator circumvents the issue by drawing a decision boundary in the latent space, where the projection acts as a guide to take instances near the boundary. The advantage being we now know the region to sample. However, I believe it's still not enough, because it doesn't concern itself with latent density, and could still miss the regions that are far away from the decision boundary. For example, there could be instances with very high probability, whose counterfactual gender instance could have very low probability ( with the threshold being 0.5 ), resulting in a discriminatory pair.\n\nSo, there are a couple of fundamental questions:\nFirst: Finding all the discriminatory regions ( or at least trying to ),  second: and a way to guide the non-discriminatory instances to these discriminatory regions. Moreover, we might have to find if such discriminatory latents make a cluster in the latent space or are scattered or something else.  Latent imitator finds a way to guide the instance to the decision boundary ( but not with gradients), but still doesn't touch the first one, where we could contribute. The first one seems to uncover a harder problem, i.e., coverage of our approach.",
+        "Sure, Dr. Lei. I will make a submission as soon as possible."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "As you are still exploring ideas for this project, I suggest you get your other paper submitted to the journal as soon as possible. It can take quite some time for a journal paper to get accepted."
+        }
+      ]
+    },
     {
       "id": "2026-06-08",
       "date": "2026-06-08",

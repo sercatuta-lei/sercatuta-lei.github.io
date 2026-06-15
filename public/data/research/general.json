@@ -1,0 +1,339 @@
+{
+  "slug": "general",
+  "name": "general",
+  "channel": "general",
+  "last_updated": "2026-06-15T02:09:56.887660",
+  "days": [
+    {
+      "id": "2026-06-06",
+      "date": "2026-06-06",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "An interesting read: [https://www.anthropic.com/institute/recursive-self-improvement](https://www.anthropic.com/institute/recursive-self-improvement)"
+        },
+        {
+          "author": "Shovon Niverd",
+          "content": "It is interesting that they are saying AI lacks the capability of judging what should be the goal of a research or engineering problem. It looks like how Anthropic is progressing, very soon the human role in research will be to set the research questions."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Indeed. The ability to ask questions and evaluate the responses from AI will become more important. Also, AI will have a profound impact on how research is done, just like how it impacts knowledge work in general."
+        }
+      ]
+    },
+    {
+      "id": "2026-05-20",
+      "date": "2026-05-20",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "@channel I won't be able to meet today, as I am preparing for my trip. If you have any technical issues, please send them to Slack and I will try to respond as I can."
+        }
+      ]
+    },
+    {
+      "id": "2026-05-13",
+      "date": "2026-05-13",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "@channel For the summer, we will meet at 2pm on Teams every Thursday. Please let me know if this does not work for you. Also, starting from tomorrow, we will use the new format, i.e., everyone will have a required technical discussion on your project. The session should focus on problem solving. Every discussion should have an agenda that identifies the technical issues to discuss, and what outcome you expect from the discussion."
+        }
+      ]
+    },
+    {
+      "id": "2026-05-07",
+      "date": "2026-05-07",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Krishna Khadka",
+          "content": "It works for me"
+        }
+      ]
+    },
+    {
+      "id": "2026-05-06",
+      "date": "2026-05-06",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "@channel For tomorrow's group meeting, can we meet at 1.30pm, instead of 12.30pm? This will be our last in-person meeting for the semester."
+        },
+        {
+          "author": "Shovon Niverd",
+          "content": "I can attend at 1.30pm"
+        },
+        {
+          "author": "Saif Uddin Mahmud",
+          "content": "works for me Dr. Lei. Thank you.."
+        },
+        {
+          "author": "Pujan Budhathoki",
+          "content": "Works for me."
+        }
+      ]
+    },
+    {
+      "id": "2026-05-01",
+      "date": "2026-05-01",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Shovon Niverd",
+          "content": "Thank you Dr @Dr. Lei  and @Krishna Khadka for your support and guidance"
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "Thank you Dr. Lei and Shovon. It was great working together."
+        },
+        {
+          "author": "Sampada Pawate",
+          "content": "I’ve made the announcement and added the paper to the website Professor."
+        },
+        {
+          "author": "Sampada Pawate",
+          "content": "Congratulations @Shovon Niverd and @Krishna Khadka"
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Thanks, Sampada. For the paper, please add the conference information just like what you did for the ABLE paper, i.e., not just the arXiv info."
+        }
+      ]
+    },
+    {
+      "id": "2026-04-30",
+      "date": "2026-04-30",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Krishna Khadka",
+          "content": "Good Morning All,\nI'm sharing the link to my proposal meeting if anyone wants to join: [Scheduling Proposal Defense for Krishna Khadka (April 27– May 1) | Meeting-Join | Microsoft Teams](https://teams.microsoft.com/meet/242544817311234?p=RtrDYhjXvLtHFfnAKv)"
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "@channel Just want to say Krishna did an excellent job on his proposal. His slides and delivery are what the committee is looking for in a proposal, or for that matter, in a presentation."
+        },
+        {
+          "author": "Arjun Dahal",
+          "content": "Congratulations @Krishna Khadka. Can you please share your slides and report internally if possible?"
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "Thank you, Dr. Lei, for your support and guidance.\nI also appreciate lab mates for attending the meeting and special thanks to Shovon for helping with the dry run."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "@Sampada Pawate Maybe we can keep Krishna's slides/report on our group website as part of our Resources page."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Under a section titled \"Example Presentations and Reports\""
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "Sure @Arjun Dahal, I will share the slides and the report"
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "I will share the slides/report with Sampada"
+        },
+        {
+          "author": "Sampada Pawate",
+          "content": "Congratulations @Krishna Khadka.Please share it whenever it's ready.I’ll add it to the Resources page on the website."
+        },
+        {
+          "author": "Sampada Pawate",
+          "content": "Sure Professor, I’ll add it once I receive it."
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "I have attached the slides and the report."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "@channel Please join me to congratulate Shovon and Krishna, for their joint paper being accepted by IJCAI! IJCAI is a top-tier conference in AI, and their paper is titled \"TabKD: Tabular Knowledge Distillation through Interaction Diversity of Learned Feature Bins\". Shovon has done an excellent job on picking up the topic of Knowledge Distillation quickly from a pure Software Engineering background. I am also very happy to see a close, fruitful collaboration between Shovon and Krishna on this project. Well done!"
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "@Sampada Pawate Can you please make an announcement and also add the paper on our website? Thanks."
+        },
+        {
+          "author": "Samreen",
+          "content": "Congratulations @Shovon Niverd and @Krishna Khadka"
+        },
+        {
+          "author": "Pujan Budhathoki",
+          "content": "Congratulations @Shovon Niverd and @Krishna Khadka"
+        }
+      ]
+    },
+    {
+      "id": "2026-04-27",
+      "date": "2026-04-27",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "@channel Recently I have noticed that a couple of you are using LLMs to write internal reports. For example, in a few cases, I see the phrase \"The advisor's comment ...\", which seems to refer to what I said/asked during our meetings. This is troubling as you likely did not even read the text from LLMs before you sent it to me. Worse, this defeats the purpose of writing the reports, which is to demonstrate your understand about the subject matter you are supposed to explore.\n\nFrom now on, you are NOT allowed to use LLMs for writing internal reports, not even for polishing the text. Instead, you must write down your understanding in your own words. It is OK to use LLMs to help you understand concepts/papers, and to think with LLMs. But when it comes to write internal reports, you must write in your own words."
+        },
+        {
+          "author": "Fadul Sikder",
+          "content": "Professor Lei, I would like to respectfully push back on this idea a little. I believe that using AI to understand concepts and papers can be very important. I also think that using AI to help shape research ideas and communicate with the research group can have real value.\n\nThe first value is structure. Sometimes, when we try to write about our research, we face structural limitations, especially when we are trying to identify information gaps across different papers. For example, if I want to write a detailed report that looks at context across several papers and synthesizes them into one note in my own words, it can be difficult to maintain concentration and complete the task within a reasonable time frame. In this sense, AI can help provide structure for research communication and help organize the information we want to communicate about our research projects.\n\nThe second point is language. Many students think through ideas in their native language first. When they try to develop research ideas, they may naturally explain those ideas in their native language and then translate them into English. However, there is often a difference between making a research argument in one’s native language and formulating that same argument clearly in English, especially when English is a second language. From this perspective, AI can help translate and clarify a person’s ideas and arguments so they can be communicated more effectively in research discussions.\n\nMy third point is that AI use could be allowed in a limited and transparent way. Everyone should include a disclaimer explaining how and to what extent AI was used. There could also be a specific section in each report where the writer clearly states their own response, understanding, or thoughts about the research arguments or communications being discussed. This section could be labeled “My Own Response,” “My Own Understanding,” or “My Own Thoughts,” so it is clear which parts reflect the student’s personal understanding and argument.\n\nThe fourth point I want to emphasize is that the real issue is whether people understand what they are reporting. Even if they do not have a complete understanding, they should at least demonstrate some level of understanding. Any response, whether produced with AI or without AI, should go through a synthesis process so that it becomes the writer’s own. The goal should be to move toward a state of understanding that allows us to produce good research outcomes. So I think the main question everyone should honestly answer is this: when they report something using an LLM, do they actually understand what they are trying to communicate, or is it simply an LLM-generated response produced for the sake of having a response?"
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Well, I don't really buy your arguments. Let me respond to your points one by one: The first point, structure, is about thinking. You can definitely think with LLMs on the structure. For the second point, language, I don't really care whether your use of English is polished in an internal report. I care much more about whether you truly understand what you write. The third point applies only if the use of AI is necessary. Also, I only care about your section labeled \"My Own Response/Understanding/Thoughts\", whereas you can think with LLMs to come up with this section. The forth point does not conflict with the new policy.\n\nWhat I do agree is that the fundamental issue is about whether people understand what they are reporting. But one common problem is that you do not know whether you truly understand. Writing in your own words is one way to help you check whether you truly understand, and further the process of writing can help you further your understanding. This is like in a class, you are allowed to discuss with other people or use whatever resources you can get hold of to develop your own understanding, but you must write down your understanding in your own words.\n\nI welcome other inputs to this new policy. But you would have to come up with a good argument first. Keep this in mind as you consider this policy. What do you really want to accomplish when you write an internal report, and for the matter, when you do research?"
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Another point related to this: I noticed some of you start to write very long internal reports. While I appreciate your effort, this is not really necessary, and it is certainly not the best way to use your time. I don't look for polished reports. Instead, I look for reports that are concise but make meaningful points. In several cases, the reports are written based on inaccurate/incorrect understandings. The time you spend on trying to get a very polished report can be spent on developing actual ideas. Also, this seems to add significant delays to your responses. Instead of long reports, I would rather have more timely exchanges on interesting ideas and real points."
+        }
+      ]
+    },
+    {
+      "id": "2026-04-24",
+      "date": "2026-04-24",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "A few important comments about presentations (based on feedback from Fadul's proposal):\n\n\n1. It is critical to make your presentation from the committee/audience perspective. It is not about what you want to say. Instead, it is about what the audience is looking for.\n2. Considering the time limit (typically no more than 1 hour), you must focus on the big picture and main ideas in a way that people who are not familiar with your specific projects can understand.\n3. Before a milestone meeting, you must send to the committee the slides and the necessary documents in good shape in advance. You should try your best to send them one week in advance, if at all possible. \n\nI want to emphasize these points as otherwise, you are at significant risk for failing the presentation/milestone."
+        }
+      ]
+    },
+    {
+      "id": "2026-04-23",
+      "date": "2026-04-23",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Krishna Khadka",
+          "content": "I would like to request if I and other interested group members could join Fadul's proposal meeting."
+        },
+        {
+          "author": "Shovon Niverd",
+          "content": "Yes I would be interested too"
+        },
+        {
+          "author": "Arjun Dahal",
+          "content": "Yes I would be interested too"
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Yes. Fadul can send you the link"
+        },
+        {
+          "author": "Fadul Sikder",
+          "content": "[Fadul Sikder PhD Decertation Proposal (Online Meeting) | Meeting-Join | Microsoft Teams](https://teams.microsoft.com/meet/25049485925043?p=kBGJqWSqo8otHbSxS5)"
+        }
+      ]
+    },
+    {
+      "id": "2026-04-21",
+      "date": "2026-04-21",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Samreen",
+          "content": "Thank you @Krishna Khadka"
+        },
+        {
+          "author": "Pujan Budhathoki",
+          "content": "Congratulations @Samreen"
+        }
+      ]
+    },
+    {
+      "id": "2026-04-20",
+      "date": "2026-04-20",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "@channel Please join me to congratulate Samreen for passing her defense today! Samreen has done a wonderful job on her thesis.\n@Sampada Pawate Can you please post the news on our group website? Thanks."
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "Congratulations @Samreen"
+        }
+      ]
+    },
+    {
+      "id": "2026-04-17",
+      "date": "2026-04-17",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "@channel Please join me to congratulate Krishna for winning the Hesed Endowed Scholarship Fund Award and the Cyneta Networks Outstanding Graduate Teaching Assistant Award. These are well-deserved honors. Well done!\n@Sampada Pawate Can you please post the news on our group website? Thanks."
+        },
+        {
+          "author": "Shovon Niverd",
+          "content": "Congratulations @Krishna Khadka"
+        },
+        {
+          "author": "Pujan Budhathoki",
+          "content": "Congratulations @Krishna Khadka :tada::tada:"
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "Thank you Dr. Lei and everyone for the support, means a lot!"
+        },
+        {
+          "author": "Samreen",
+          "content": "Congratulations @Krishna Khadka"
+        }
+      ]
+    },
+    {
+      "id": "2026-04-09",
+      "date": "2026-04-09",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Pujan Budhathoki",
+          "content": "I am still feeling very ill with a bad headache so I won't be able to join the meeting today."
+        }
+      ]
+    },
+    {
+      "id": "2026-04-02",
+      "date": "2026-04-02",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Samreen",
+          "content": "Sharing the slides from today’s presentation."
+        }
+      ]
+    },
+    {
+      "id": "2026-03-24",
+      "date": "2026-03-24",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "This is an interesting article to read about using AI to write research papers:\n[https://www.anthropic.com/research/vibe-physics](https://www.anthropic.com/research/vibe-physics)"
+        }
+      ]
+    },
+    {
+      "id": "2026-03-19",
+      "date": "2026-03-19",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Fadul Sikder",
+          "content": "I am currently in the middle of a critical experiment on my machine. So, I will not be able to come to the lab physically today. Instead, I will join the meeting online. Kindly someone help me join the meeting."
+        }
+      ]
+    }
+  ]
+}
