@@ -48,7 +48,7 @@ const currentMembers = [
     name: "Shovon Niverd",
     photo: "shovon_pereira.jpg",
     info: "Ph.D. Student",
-    link: "https://shovon-pereira.vercel.app/"
+    link: "https://pereiramavs.github.io/"
   },
   {
     name: "Samreen",
