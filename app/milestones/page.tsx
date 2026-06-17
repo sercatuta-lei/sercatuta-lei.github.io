@@ -18,7 +18,7 @@ export default function MilestonesPage() {
   const today = useMemo(() => todayISO(), []);
 
   useEffect(() => {
-    fetch("/data/milestones.json")
+    fetch("/data/milestones.json", { cache: "no-store" })
       .then((res) => {
         if (res.status === 404) return { last_updated: null, milestones: [] } as MilestonesData;
         if (!res.ok) throw new Error("Failed to fetch milestones");
