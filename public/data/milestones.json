@@ -1,6 +1,42 @@
 {
-  "last_updated": "2026-06-17T21:52:59.211392",
+  "last_updated": "2026-06-17T22:17:58.917198",
   "milestones": [
+    {
+      "id": "1781734642.739989",
+      "ownerName": "Sampada Pawate",
+      "ownerSlug": "sampada-pawate",
+      "title": "Submit related-work section",
+      "deadline": "2026-06-10",
+      "deadlineRaw": "2026-06-10",
+      "status": "in progress",
+      "completed": null,
+      "comments": [],
+      "updated": "2026-06-17"
+    },
+    {
+      "id": "1781734622.058889",
+      "ownerName": "Sampada Pawate",
+      "ownerSlug": "sampada-pawate",
+      "title": "Finalize responses",
+      "deadline": "2026-06-12",
+      "deadlineRaw": "2026-06-12",
+      "status": "done",
+      "completed": "2026-06-16",
+      "comments": [],
+      "updated": "2026-06-17"
+    },
+    {
+      "id": "1781734598.381129",
+      "ownerName": "Sampada Pawate",
+      "ownerSlug": "sampada-pawate",
+      "title": "Run baseline experiments",
+      "deadline": "2026-06-16",
+      "deadlineRaw": "2026-06-16",
+      "status": "done",
+      "completed": "2026-06-15",
+      "comments": [],
+      "updated": "2026-06-17"
+    },
     {
       "id": "1781733109.306999",
       "ownerName": "Sampada Pawate",
