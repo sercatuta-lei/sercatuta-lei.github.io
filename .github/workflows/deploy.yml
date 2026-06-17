@@ -9,7 +9,7 @@ on:
   # with GITHUB_TOKEN, which by design does NOT trigger `push` events, so without
   # this the site never rebuilt for automated updates.
   workflow_run:
-    workflows: ["Fetch Slack Weekly Updates"]
+    workflows: ["Fetch Slack Weekly Updates", "Milestone Deadlines"]
     types: [completed]
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages

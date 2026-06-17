@@ -1,0 +1,67 @@
+name: Milestone Deadlines
+
+on:
+  schedule:
+    # Daily at 13:00 UTC (~8 AM Central)
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+
+jobs:
+  milestones:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install slack_sdk pyyaml python-dotenv
+
+      - name: Fetch milestones from Slack
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        run: python scripts/fetch_milestones.py
+
+      - name: Check deadlines and notify Slack
+        id: check
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+        run: python scripts/check_milestone_deadlines.py
+
+      # Optional email — enable by setting repo variable ENABLE_EMAIL=true and the
+      # MAIL_* secrets. Skipped otherwise (Slack notification still runs above).
+      - name: Email overdue summary
+        if: steps.check.outputs.has_alerts == 'true' && vars.ENABLE_EMAIL == 'true'
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: ${{ secrets.MAIL_SERVER }}
+          server_port: ${{ secrets.MAIL_PORT }}
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "⚠️ Overdue lab milestones"
+          to: ${{ secrets.MAIL_TO }}
+          from: SERC Lab Bot <${{ secrets.MAIL_USERNAME }}>
+          body: file://milestone_alert.txt
+
+      - name: Commit changes
+        run: |
+          if [ -n "$(git status --porcelain public/data/milestones.json public/data/milestone-alerts.json)" ]; then
+            git config --local user.email "github-actions[bot]@users.noreply.github.com"
+            git config --local user.name "github-actions[bot]"
+            git add public/data/milestones.json public/data/milestone-alerts.json
+            git commit -m "🤖 Update milestones [$(date +'%Y-%m-%d')]"
+            git push
+          else
+            echo "No milestone changes to commit"
+          fi

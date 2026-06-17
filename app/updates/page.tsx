@@ -68,6 +68,37 @@ export default function UpdatesPage() {
         )}
       </motion.div>
 
+      {/* Milestones dashboard link */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.05 }}
+        className="mb-10"
+      >
+        <Link href="/milestones">
+          <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-200/60 dark:border-blue-800 shadow-lg hover:shadow-xl rounded-2xl transition-all duration-300 cursor-pointer group">
+            <CardContent className="p-6 flex items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-xl bg-blue-600 dark:bg-blue-500 flex items-center justify-center shadow-md shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-slate-800 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    Milestones Dashboard
+                  </h3>
+                  <p className="text-sm text-slate-600 dark:text-gray-300">
+                    Student milestones, deadlines, and missed-deadline tracking
+                  </p>
+                </div>
+              </div>
+              <span className="text-blue-600 dark:text-blue-400 text-2xl group-hover:translate-x-1 transition-transform">→</span>
+            </CardContent>
+          </Card>
+        </Link>
+      </motion.div>
+
       {loading && (
         <div className="text-center py-20">
           <div className="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600 dark:border-blue-400"></div>
