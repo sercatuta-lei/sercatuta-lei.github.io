@@ -2,8 +2,45 @@
   "slug": "krishna-khadka",
   "name": "Krishna Khadka",
   "channel": "krishna-research",
-  "last_updated": "2026-06-15T02:09:49.610650",
+  "last_updated": "2026-06-18T00:18:45.164773",
   "days": [
+    {
+      "id": "2026-06-17",
+      "date": "2026-06-17",
+      "owner": [
+        "Hi Dr. Lei,\nI would like your suggestion on a design choice. Instead of using a per-sample gate to decide which fix to apply to each input, can I identify an individual fix for each failure region and then merge all of them into a single corrected head that every input passes through?",
+        "I was thinking of like getting an updated head thats merged based on all the individual fixes. I think it's because there are very few mispredictions that can be used to learn the routing. The training set has no mispredictions (for worst group waterbirds). Thus, the routing is not learnt properly. While different routing approach does improve the performance in general, the merging fixes to get one fixed head results are better than the state of the art approaches.",
+        "Each individual fixes learnt are learnt with the constraint that guards the already good predictions.",
+        "So this might help with the collateral damage when each individual fixes are merged with the head to get one fixed head.",
+        "Existing approaches also try to modify the head weights to give a fix, ours fix would be based on the decision regions fix thats aggregated.",
+        "I was thinking of not requiring to route and add all the per-region weight edits (delta -- small model edits) together into the original head once, `W' = W0 + α·Σ_r ΔW_r` (and the same for the bias), producing a single fixed head that every input passes through, so there is no per-sample decision at test time.",
+        "Sure, Dr. Lei, I do need to think if the datasets I used are actually best for the proposed approach.",
+        "Primarily i think it can be because of less samples, and also the inherent limitation of the classification model that we use for the routing purpose.",
+        "The fix is a delta: a small additive change to the head's weights and bias.\n\n\n- Each region learns its own delta:`(ΔW_r, Δb_r)`, same shape as the head.\n- Applying one fix means`W0 + ΔW_r`,`b0 + Δb_r`.\n- The merged head is the base plus the sum of all deltas, scaled:`W' = W0 + α·Σ ΔW_r`,`b' = b0 + α·Σ Δb_r`.\n\nSo the model itself is never retrained. We keep the original head `W0, b0` and just add the deltas on top",
+        "Each delta is a small change to the head's weights that we learn to fix the mistakes in that one region. We train it to correct those specific mistakes while keeping the edit small and leaving the already-correct predictions alone by applying constraints when learning the edits (focusing on repair, minimality, and locality).",
+        "Yes, it would still be routing, but more like implicit routing. After we merge the fixes, the corrected model adds the original weights plus a small weight change (delta) from every region's fix, all added together into one new set of weights. Each weight change was trained to stay quiet outside its own decision region, so for any given input mostly one fix has an effect and the rest do almost nothing. But one concern I have is if the fixes can interfere other fixes as we add. However, experimentally, it looks good.",
+        "I will also think more on the fundamental issue here.",
+        "A very related paper on model editing ( related work): [2110.11309](https://arxiv.org/pdf/2110.11309) Fast Model Editing at Scale. The problem it targets: to correct a single mistake in a large pretrained model (for example fix one wrong answer) quickly, without retraining and without breaking everything else."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "If I understand what you are saying correctly, both options would be equivalent from the user perspective. Thus, in principle, either option is fine. However, conceptually speaking, the first option seems to make more sense for two reasons. First, you would need an individual fix for each failure region. Thus, even if you merge them into a single head, you would still need to route each sample to the corresponding fix (based on which region the sample falls into). Second, conceptually it makes more sense to route each sample to its corresponding region, than routing all samples that need to be corrected into a single head, because it can be more difficult to determine if a sample needs to be corrected or not in general as they may belong to different failure regions and may not share a common set of coherent features."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "I may not fully understand what you are saying. In principle, it is OK for you to use the merged option if it produces better results. However, it is also important to explain the why part behind the better results. Also, it is important to ask, if the water/land birds dataset is best for the proposed approach. At least, this is not the dataset that the approach was targetting? In other words, you may want to find another dataset for evaluation."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "But you still have to know which region, and thus which delta, you will apply, for a given sample? This is still implicit routing?\nAlso, try to think what is the fundamental issue here. Is it insufficient training data (for the routing), the idea of routing, or something else? Different root causes may require different solutions. For example, if it is insufficient mispredictions, you can probably try other options like clustering in the representation space."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "This is indeed a very related paper. The idea of learning an editor network, instead of individual edits, is interesting. Do you think if you can apply this idea to your work?"
+        }
+      ]
+    },
     {
       "id": "2026-06-11",
       "date": "2026-06-11",

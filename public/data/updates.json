@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-06-18",
+          "content": "No update was provided for the week ending 2026-06-18.",
+          "placeholder": true
+        },
+        {
           "date": "2026-06-11",
           "content": "**Arjun Dahal:**\n\nJournal Submission: TabChange ( Jun 18 - Internal Deadline )\n~~ICSE 2026 (Submission Target: June 30)~~\n\nAction Items\nI have been working on the counterfactual fairness testing paper. This requires more literature review and more analysis on how to solve the problem.\nI will be working in parallel on the Journal Submission for the previous paper.\n\nProblems/Issues:\nNone at the moment.\n\nFindings:\nI don't have any new findings at the moment.\n\nMy workstation doesn't seem to be working at the moment. I haven't been able to work on it since late afternoon yesterday.",
           "placeholder": false
@@ -486,6 +491,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-06-18",
+          "content": "No update was provided for the week ending 2026-06-18.",
+          "placeholder": true
+        },
+        {
           "date": "2026-06-11",
           "content": "**Krishna Khadka:**\n\nHi Group,\n\n\n1. Fix the approach -- June 11\n2. Target Conference — AAAI 2027 — July 27\n\nAction Items:\n\n\n1. I have been working on the approach part. Mostly thinking through each steps and trying to figure out if the approach makes sense and has the appropriate information flow for each steps.\n\nResults:\n\n\n1. No results at the moment.\n\nIssues:\n\n\n1. No issues at the moment.",
           "placeholder": false
@@ -638,6 +648,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-06-16",
+          "content": "**Pujan Budhathoki:**\n\nI have almost recovered from my flu. However, I am having a very intense migraine attack this morning.(I have been having more frequent migraines throughout this flu). I will take medicine and have a rest and join the meeting if I feel better. I will keep posting updates and discussions on my Team’s Channel.\n**Milestone:** 21st June: Get a readable version of the paper: (Was 15th June but I had to delay it due to my illness.)\n**Action Items:**\n\n\n1. I have expanded the dataset to now include 500 pairs of programs under Query Construction Strategy and 1000 pairs under SQL injection and have also verified them.(From original 200)\n2. I have carried out the experiments in lots of new different scenarios to observe the results.\n3. I have implemented and evaluated DAS on open ended program generation.\n4. I am currently working on a readable version of the paper.\n\n**Findings:**\n\n\n1. I have posted the summary of my findings in my Team’s channel.\n\n**Problems/Issues:**\n\n\n1. I don’t have any issues at this point.",
+          "placeholder": false
+        },
         {
           "date": "2026-06-09",
           "content": "**Pujan Budhathoki:**\n\nI have been suffering from the flu since Friday. My productivity has slowed down but I’ve been trying my best to stay productive. I won’t be able to join the meeting today. I will send updates to teams by this week as I get the things done.\n**Milestone:** 5th June: Get Results on the extended experiment\n**Action Items:**\n\n\n1. I have been carrying out different experiments to investigate the highly accurate experimental results.\n2. I have made use of CVEfixes(which has a very large dataset of vulnerable programs and fixes) and expanded the dataset from 200 to now 500 pairs for Query Construction Strategy under SQL injection.(I can expand it even further if I just categorize under just SQL injection). I am working on deriving datasets for other CWEs as well. I did this by filtering the big dataset(making use of Chatgpt Codex and manual inspection on some random samples) \n\n**Findings:**\n\n\n1. (I am still working on this but the current results:) Regarding the highly accurate experimental results, I carried out extensive experiments and found out that, only when we swap subspace of the already appended answer choice Token(The Yes/No or A/B Token position), the model produced fully accurate results. Also, the previous accuracy test only checked whether after the swap, P(A)>P(B) [Whether the subspace swap successfully increased the token prediction probability of the opposing choice compared to the original choice]. If we carry out the swap in an earlier token position (or Just give the base prompt, allow the model to generate its answer choice by itself and then try to swap subspace instead of changing the subspace of the appended answer], the resulting accuracy drops to almost 0. I’ve tried lots of variations of this, and except the case I mentioned above, the results have been near 0 for almost all other cases. I have been currently testing with higher sizes of dataset and varying hyperparameters to improve the results. (I am still working on testing performance on actual code generation task)\n\n**Problems/Issues:**\n\n\n1. I don’t have any issues at this point.",
@@ -945,6 +960,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-06-18",
+          "content": "No update was provided for the week ending 2026-06-18.",
+          "placeholder": true
+        },
+        {
           "date": "2026-06-11",
           "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Targeting AAAI. Abstract submission July 21\n2. Finish first complete draft of the paper - June 30\n3. Finish all experiments, including ablations - June 27\n\n**Action Items:**\n\n\n1. Implemented combined decision signatures: first-order sensitivities + second-order interactions + logit diff, all normalized to direction vectors.\n2. Experiments for NN students are done. The results are favorable. I completed experiments on non-neural teachers too. Results are mostly favorable. Next step is to complete multiclass dataset experiments.\n3. I tried agglomerative clustering method to merge regions based on centroid similarity. The problem is, in later stages of the training, the binner stops classifying samples in some bins which makes it difficult to calculate similarity.\n4. As the draft is written, I plan to improve it section by section.\n5. I plan to propose some ablation studies to validate our approach.\n\n\n1. Try distillation with random samples\n2. without binner optimization\n3. query efficiency\n\n**Results/Findings:**\n\n\n1. Agglomerative clustering merges bins based on their centroid similarity. For our case, this can be implemented to merge decision regions based on their similarity. But as the binner training progresses, it learns the logic patterns well and starts classifying samples in those well-defined regions; in doing so it implicitly shows us which regions are meaningful without any gating or clustering.\n\n**Replies:**\n\n**Dr. Lei:**\nSounds like good progress. I am not very clear about the agglomerative clustering issue, but since this is a classic clustering problem,I am confident the issue can be solved.\n\n---",
           "placeholder": false
@@ -1092,5 +1112,5 @@
       ]
     }
   ],
-  "last_updated": "2026-06-15T02:09:43.465305"
+  "last_updated": "2026-06-18T00:18:38.460086"
 }

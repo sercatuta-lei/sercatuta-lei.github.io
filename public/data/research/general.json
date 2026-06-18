@@ -2,7 +2,7 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-06-15T02:09:56.887660",
+  "last_updated": "2026-06-18T00:18:52.837207",
   "days": [
     {
       "id": "2026-06-06",
@@ -321,17 +321,6 @@
         {
           "author": "Dr. Lei",
           "content": "This is an interesting article to read about using AI to write research papers:\n[https://www.anthropic.com/research/vibe-physics](https://www.anthropic.com/research/vibe-physics)"
-        }
-      ]
-    },
-    {
-      "id": "2026-03-19",
-      "date": "2026-03-19",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Fadul Sikder",
-          "content": "I am currently in the middle of a critical experiment on my machine. So, I will not be able to come to the lab physically today. Instead, I will join the meeting online. Kindly someone help me join the meeting."
         }
       ]
     }

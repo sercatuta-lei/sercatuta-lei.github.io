@@ -2,8 +2,21 @@
   "slug": "arjun-dahal",
   "name": "Arjun Dahal",
   "channel": "arjun-research",
-  "last_updated": "2026-06-15T02:09:44.051021",
+  "last_updated": "2026-06-18T00:18:39.019103",
   "days": [
+    {
+      "id": "2026-06-16",
+      "date": "2026-06-16",
+      "owner": [
+        "Thank you, Dr. Lei. I'll look into this and get back to you."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "Let me give you a baseline approach that exploits the notion of decision-rule region for fairness testing:\n\n\n1. Use the training data to train a generative model, which can be GAN or VAE or their condition version.\n2. Also, use the training data to learn decision-rule regions. This is similar to what Shovon is doing.\n3. Now you want to freeze the generative model. You try to generate test cases that achieve two objectives: (1) cover every decision-rule region; (2) for each decision-rule region, try to find instances that are close to the decision boundaries. You need to design a loss function that is differentiable so that you can quickly generate the instances.\n4. Use instances that are found in step 3 as test cases for fairness testing. This means, you will flip the sensitive attribute of each instance in a way that preserves naturalism, and then check if the decision is fair.\n\nTry to critique this approach:\n\n\n1. Based on your understanding, would this approach would work? Why or why not? \n2. What do you consider to be the key insight behind this approach? How does it compare to the state of the art, especially work like LatentImitator, in terms of pros/cons? \n3. What technical issues do you see in terms of implementing this approach?"
+        }
+      ]
+    },
     {
       "id": "2026-06-14",
       "date": "2026-06-14",
