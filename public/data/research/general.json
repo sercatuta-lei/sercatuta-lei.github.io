@@ -2,7 +2,7 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-06-18T00:18:52.837207",
+  "last_updated": "2026-06-25T00:17:38.973652",
   "days": [
     {
       "id": "2026-06-06",
@@ -164,7 +164,7 @@
           "content": "@Sampada Pawate Can you please make an announcement and also add the paper on our website? Thanks."
         },
         {
-          "author": "Samreen",
+          "author": "Deactivated User",
           "content": "Congratulations @Shovon Niverd and @Krishna Khadka"
         },
         {
@@ -240,12 +240,12 @@
       "owner": [],
       "replies": [
         {
-          "author": "Samreen",
+          "author": "Deactivated User",
           "content": "Thank you @Krishna Khadka"
         },
         {
           "author": "Pujan Budhathoki",
-          "content": "Congratulations @Samreen"
+          "content": "Congratulations @Deactivated User"
         }
       ]
     },
@@ -260,7 +260,7 @@
         },
         {
           "author": "Krishna Khadka",
-          "content": "Congratulations @Samreen"
+          "content": "Congratulations @Deactivated User"
         }
       ]
     },
@@ -286,7 +286,7 @@
           "content": "Thank you Dr. Lei and everyone for the support, means a lot!"
         },
         {
-          "author": "Samreen",
+          "author": "Deactivated User",
           "content": "Congratulations @Krishna Khadka"
         }
       ]
@@ -308,19 +308,8 @@
       "owner": [],
       "replies": [
         {
-          "author": "Samreen",
+          "author": "Deactivated User",
           "content": "Sharing the slides from today’s presentation."
-        }
-      ]
-    },
-    {
-      "id": "2026-03-24",
-      "date": "2026-03-24",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "This is an interesting article to read about using AI to write research papers:\n[https://www.anthropic.com/research/vibe-physics](https://www.anthropic.com/research/vibe-physics)"
         }
       ]
     }
