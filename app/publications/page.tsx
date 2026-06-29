@@ -28,6 +28,7 @@ export default function PublicationsPage() {
   const [search, setSearch] = useState("");
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [citeOpen, setCiteOpen] = useState<number | null>(null);
+  const [citeFormat, setCiteFormat] = useState<"bibtex" | "apa">("bibtex");
   const [copied, setCopied] = useState<string | null>(null);
 
   const filteredPublications = useMemo(() => {
@@ -227,7 +228,10 @@ export default function PublicationsPage() {
 
                       <div className="relative">
                         <button
-                          onClick={() => setCiteOpen((c) => (c === pub.id ? null : pub.id))}
+                          onClick={() => {
+                            setCiteOpen((c) => (c === pub.id ? null : pub.id));
+                            setCiteFormat("bibtex");
+                          }}
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium border border-slate-200 dark:border-gray-700 text-slate-700 dark:text-gray-200 bg-white/70 dark:bg-gray-800 hover:border-blue-400 dark:hover:border-blue-500 transition-colors"
                         >
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -236,22 +240,40 @@ export default function PublicationsPage() {
                           Cite this
                         </button>
 
-                        {citeOpen === pub.id && (
-                          <div className="absolute right-0 mt-2 w-44 z-10 rounded-lg border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-xl p-1.5">
-                            <button
-                              onClick={() => copy(toBibTeX(pub), `${pub.id}-bib`)}
-                              className="w-full text-left px-3 py-2 rounded-md text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-gray-700 transition-colors"
-                            >
-                              {copied === `${pub.id}-bib` ? "✓ Copied!" : "Copy BibTeX"}
-                            </button>
-                            <button
-                              onClick={() => copy(toAPA(pub), `${pub.id}-apa`)}
-                              className="w-full text-left px-3 py-2 rounded-md text-sm text-slate-700 dark:text-gray-200 hover:bg-slate-100 dark:hover:bg-gray-700 transition-colors"
-                            >
-                              {copied === `${pub.id}-apa` ? "✓ Copied!" : "Copy APA"}
-                            </button>
-                          </div>
-                        )}
+                        {citeOpen === pub.id && (() => {
+                          const text = citeFormat === "bibtex" ? toBibTeX(pub) : toAPA(pub);
+                          const key = `${pub.id}-${citeFormat}`;
+                          return (
+                            <div className="absolute right-0 mt-2 w-[min(88vw,34rem)] z-20 rounded-lg border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-xl p-3">
+                              <div className="flex items-center justify-between mb-2 gap-2">
+                                <div className="inline-flex rounded-md bg-slate-100 dark:bg-gray-900 p-0.5">
+                                  {(["bibtex", "apa"] as const).map((f) => (
+                                    <button
+                                      key={f}
+                                      onClick={() => setCiteFormat(f)}
+                                      className={`px-3 py-1 text-xs font-semibold rounded transition-colors ${
+                                        citeFormat === f
+                                          ? "bg-white dark:bg-gray-700 text-blue-600 dark:text-blue-400 shadow"
+                                          : "text-slate-500 dark:text-gray-400 hover:text-slate-700 dark:hover:text-gray-200"
+                                      }`}
+                                    >
+                                      {f === "bibtex" ? "BibTeX" : "APA"}
+                                    </button>
+                                  ))}
+                                </div>
+                                <button
+                                  onClick={() => copy(text, key)}
+                                  className="text-xs font-semibold px-3 py-1.5 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                                >
+                                  {copied === key ? "✓ Copied!" : "Copy"}
+                                </button>
+                              </div>
+                              <pre className="text-xs leading-relaxed text-slate-700 dark:text-gray-200 bg-slate-50 dark:bg-gray-900 rounded-md p-3 max-h-56 overflow-auto whitespace-pre-wrap break-words font-mono select-all">
+                                {text}
+                              </pre>
+                            </div>
+                          );
+                        })()}
                       </div>
                     </div>
                   </CardContent>
