@@ -1,5 +1,5 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { getPublications, getTags, getAllTags } from "./data";
@@ -47,11 +47,32 @@ export default function PublicationsPage() {
   const toggleTag = (tag: string) =>
     setSelectedTags((cur) => (cur.includes(tag) ? cur.filter((t) => t !== tag) : [...cur, tag]));
 
+  const citeRef = useRef<HTMLDivElement>(null);
+
+  // Close the cite popup on outside click or Escape.
+  useEffect(() => {
+    if (citeOpen === null) return;
+    const onDown = (e: MouseEvent) => {
+      if (citeRef.current && !citeRef.current.contains(e.target as Node)) setCiteOpen(null);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setCiteOpen(null);
+    };
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [citeOpen]);
+
   const copy = async (text: string, key: string) => {
     try {
       await navigator.clipboard.writeText(text);
       setCopied(key);
       setTimeout(() => setCopied((c) => (c === key ? null : c)), 1500);
+      // Auto-close shortly after copying so the popup doesn't linger.
+      setTimeout(() => setCiteOpen(null), 800);
     } catch {
       // clipboard unavailable — ignore
     }
@@ -226,7 +247,7 @@ export default function PublicationsPage() {
                         ))}
                       </div>
 
-                      <div className="relative">
+                      <div className="relative" ref={citeOpen === pub.id ? citeRef : undefined}>
                         <button
                           onClick={() => {
                             setCiteOpen((c) => (c === pub.id ? null : pub.id));
@@ -261,12 +282,21 @@ export default function PublicationsPage() {
                                     </button>
                                   ))}
                                 </div>
-                                <button
-                                  onClick={() => copy(text, key)}
-                                  className="text-xs font-semibold px-3 py-1.5 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition-colors"
-                                >
-                                  {copied === key ? "✓ Copied!" : "Copy"}
-                                </button>
+                                <div className="flex items-center gap-1.5">
+                                  <button
+                                    onClick={() => copy(text, key)}
+                                    className="text-xs font-semibold px-3 py-1.5 rounded-md bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                                  >
+                                    {copied === key ? "✓ Copied!" : "Copy"}
+                                  </button>
+                                  <button
+                                    onClick={() => setCiteOpen(null)}
+                                    aria-label="Close"
+                                    className="w-7 h-7 flex items-center justify-center rounded-md text-slate-500 dark:text-gray-400 hover:bg-slate-100 dark:hover:bg-gray-700 transition-colors"
+                                  >
+                                    ✕
+                                  </button>
+                                </div>
                               </div>
                               <pre className="text-xs leading-relaxed text-slate-700 dark:text-gray-200 bg-slate-50 dark:bg-gray-900 rounded-md p-3 max-h-56 overflow-auto whitespace-pre-wrap break-words font-mono select-all">
                                 {text}
