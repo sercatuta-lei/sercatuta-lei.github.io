@@ -2,7 +2,7 @@
   "slug": "mekdelawit-gebrewold",
   "name": "Mekdelawit Gebrewold",
   "channel": "mekdelawit-research",
-  "last_updated": "2026-06-25T00:17:33.507706",
+  "last_updated": "2026-07-02T00:13:54.776048",
   "days": [
     {
       "id": "2026-04-17",
@@ -55,14 +55,6 @@
       "date": "2026-04-09",
       "owner": [
         "Update: I have completed my research poster and attached it for review. I would like to have an opinion and feedback on this."
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-04-02",
-      "date": "2026-04-02",
-      "owner": [
-        "Report & Findings\n1. Mutation Score Comparison\nThe mutation coverage dropped significantly as the code got more complex:\n\nEasy Classes: The LLM did really well here, hitting 94% mutation coverage , which is almost as good as the human-written baseline of 97%.\n\n\nMedium Classes: for medium, the human tests hit 99% , but the LLM stayed at 79%. A lot of this was because the LLM got confused by overloaded methods that had similar names.\n\nHard Classes: This is where the biggest gap was. For one of the benchmarks, the human tests found 77% of the mutants , but the LLM only found 47%. It basically ignored the complex math and just tested the easy methods.\n\n2. Where the LLM Missed Coverage\nLooking at the reports, the LLM-generated tests have \"Shallow Coverage\":\n\n\"Lazy\" Testing: The AI tended to use the simplest ways to create objects. It ignored complex setup options and \"overloaded\" constructors that humans typically test to be thorough.\n\nInternal Logic: For the larger classes, the LLM hit the public getters but didn't trigger the internal validation or mathematical helper functions, leaving those lines red in the PIT report.\n\n3. Summary of Findings\nThe main takeaway is that as classes get larger, LLMs struggle to keep track of the internal logic. Using Iterative Prompt Engineering helped me improve the results, but the AI still makes \"Oracle\" mistakes, and  we still need a \"human-in-the-loop\" to check the logic.                                                         \n\nI will have a detailed report on my project page."
       ],
       "replies": []
     }

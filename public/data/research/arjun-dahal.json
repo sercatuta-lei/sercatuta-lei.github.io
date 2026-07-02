@@ -2,7 +2,7 @@
   "slug": "arjun-dahal",
   "name": "Arjun Dahal",
   "channel": "arjun-research",
-  "last_updated": "2026-06-25T00:17:26.842539",
+  "last_updated": "2026-07-02T00:13:45.162553",
   "days": [
     {
       "id": "2026-06-21",
@@ -327,36 +327,6 @@
           "content": "A few comments/questions:\n\n\n1. \"... but cannot or prefer not to retrain from scratch...\" Why so? Also, what data will you be using to mitigate the bias? If it is the entire training data, why not just retrain from scratch, i.e., what advantages does your approach have over retraining?\n2. If the goal of your diagnostic is to determine whether sensitive info is used for prediction, why not do it in the last layer, i.e., before the prediction is made? Wouldn't that be more direct than looking at the other layers?\n3. What are the fundamental differences between the two mitigation strategies you are proposing based on the diagnostic, and why?\n4. If you are probing the propagation of sensitive info, try to consider what would be the best point for mitigation. Does it have to be the last layer or is it better to do it in the middle, i.e., before it is too late to intervene/mitigate?\n5. As I asked during the meeting, what does it mean when you say, the amount of sensitive information increases/decreases, and specifically, how do you measure the amount? Try to do one example, explain intuitively what it means in the example when the amount increases or decreases.\n\nPlease respond to each question directly and explicitly."
         }
       ]
-    },
-    {
-      "id": "2026-04-02",
-      "date": "2026-04-02",
-      "owner": [
-        "Thank You Dr. Lei, I will get back with the answers.",
-        "Dr. Lei, please find the response to the questions above:\n\nThe user is a practitioner with a trained classifier on tabular data that has been found to violate group fairness. They have white-box access — the training data, model weights, and architecture — but cannot or prefer not to retrain from scratch. The problem is that the model's predictions are influenced by a sensitive attribute, and the goal is to repair this with minimal changes to the existing model architecture.\n\nThe diagnostic measures how strongly sensitive attribute information is present at each layer. If it decreases toward the output, the network is not actively using it for prediction — the bias is spurious, and only the output decision boundary needs adjustment. If it increases, the network is actively using it for prediction — the bias is embedded in the representation and needs to be fixed there. The diagnostic output directly determines the location and degree of intervention in Step 2. Without it, any repair is applied blindly, as existing methods do.\n\nThe novelty is a principled diagnostic that classifies the bias mechanism — whether sensitive information is actively used for prediction or only superficially correlated — and uses this to determine the repair strategy.  Prior works apply the same intervention to every dataset regardless of where bias lives, which either under-repairs or over-intervenes.\nThe loss functions are tailored to specific group fairness criteria rather than applying a single generic penalty, and the repair components are selected based on the diagnostic outcome rather than fixed by design."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "A few comments:\n\n\n1. Clearly specify the use case. What data can be accessed by the user? What is the problem the user tries to address?\n2. I don't see a strong connection between Step 1 and Step 2. In other words, I don't see a what you do in step 1 provides meaningful signal to step 2.\n3. The key distinction as you identified does not seem to provide enough novelty or research contribution for a quality paper."
-        }
-      ]
-    },
-    {
-      "id": "2026-03-31",
-      "date": "2026-03-31",
-      "owner": [
-        "Good afternoon, Dr. @Dr. Lei,\n\nI have attached the details of the approach. Please advise with the necessary feedback."
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-03-28",
-      "date": "2026-03-28",
-      "owner": [
-        "Metric used in my work:\nGretton, Arthur, et al. \"A kernel statistical test of independence.\" *Advances in neural information processing systems* 20 (2007).\n\nQuestion my research is trying to address:\nWhat is the minimal change we have to make in a pre-trained network to improve the fairness of the network? Can we make different types of adjustments in the network based on different strengths of relationship between the sensitive attribute and the output variable for different datasets?"
-      ],
-      "replies": []
     }
   ]
 }

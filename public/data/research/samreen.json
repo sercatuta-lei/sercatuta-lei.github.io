@@ -2,7 +2,7 @@
   "slug": "samreen",
   "name": "Samreen",
   "channel": "samreen-research",
-  "last_updated": "2026-06-25T00:17:33.771896",
+  "last_updated": "2026-07-02T00:13:55.538667",
   "days": [
     {
       "id": "2026-04-16",
@@ -85,17 +85,6 @@
         {
           "author": "Dr. Lei",
           "content": "I see. This makes a lot of sense. Very clear explanation."
-        }
-      ]
-    },
-    {
-      "id": "2026-04-02",
-      "date": "2026-04-02",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Deactivated User",
-          "content": "Follow-up on questions from today’s presentation:\nWhen we compare entity heads and control heads directly, we’re not just comparing what those heads do, we’re also comparing where they are in the model.\nSome layers are naturally more important than others. For example, removing heads from later layers may hurt performance more than removing heads from earlier layers, regardless of what those heads are actually doing. So if entity heads tend to come from more important layers and control heads from less important ones, a direct comparison like\n NLL_entity − NLL_control\n can be misleading, it may reflect layer importance rather than identity-specific behavior.\nTo address this, we compare each head set against a layer-matched random baseline, so that we control for where the heads are in the network.\nWe compute:\n\n\n- Entity Effect = NLL_entity − NLL_random_entity\n- Control Effect = NLL_control − NLL_random_control\n\nThis removes the expected impact of ablating heads from those specific layers. What remains is the additional effect of those heads beyond what is typical for that layer.\nWe then compute the Difference-of-Differences (DoD):\n\n\n- DoD = Entity Effect − Control Effect\n\nBecause the random baselines are matched separately for entity and control (due to different layer distributions), they do not cancel out. Instead, they ensure that each effect is normalized relative to its own layer context.\nThis makes the final comparison more meaningful: DoD now reflects the true difference in causal impact, rather than differences caused by layer importance."
         }
       ]
     }

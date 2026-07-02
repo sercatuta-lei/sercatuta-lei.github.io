@@ -2,7 +2,7 @@
   "slug": "krishna-khadka",
   "name": "Krishna Khadka",
   "channel": "krishna-research",
-  "last_updated": "2026-06-25T00:17:32.716297",
+  "last_updated": "2026-07-02T00:13:52.301428",
   "days": [
     {
       "id": "2026-06-18",
@@ -249,7 +249,6 @@
         "Thank you Dr. Lei. I will work on this as suggested as per the timeline. Please do let me know if you any additional suggestions.",
         "I agree, it is the essential features that stand strong across unseen or out-of distribution data.",
         "thank you for the feedback, Dr. Lei. I will follow up with how my approach compares to these approaches in terms of the points suggested.",
-        "I agree, Dr. Lei. First, we need to identify a heuristic that would allow us to inpaint likely spurious regions without potential damage to the other instances. The reasoning would be that spurious likely features don't help with model generalization, thus can be inpainted.",
         "I agree, Dr. Lei. The key takeaway for me is that the focus should be on justifying why each step minimizes collateral damage to other instances, not just on pipeline ordering. Moving forward, I'll work on building a clear argument for each stage: what it achieves and why the resulting model updates are unlikely to harm performance on other instances. I'll back this with experimental evidence alongside the reasoning."
       ],
       "replies": [
@@ -264,10 +263,6 @@
         {
           "author": "Dr. Lei",
           "content": "Yes. I agree with your assessment. In fact, it is impossible to identify spurious features perfectly from model behavior alone.\nTo some extent, the model exists in a \"virtual\" world, which is different than the real world. Without some kind of grounding, it would be impossible to discover what is going in the real world.\nThis raises the following question: Do we really have to identify the real-world relationship? After all, we are dealing with models. As long as the model works, in terms of producing good predictions, do we really care whether it is using \"real-world\" essential features to make the prediction?\nI guess we do to some extent, because predictions based on \"real-world\" essential features can generalize much better, especially for unseen, out-of-distribution data."
-        },
-        {
-          "author": "Dr. Lei",
-          "content": "Good. We seem on the same page. It seems impossible to perfectly identify real-world essential/spurious features, at least without some kind of grounding. Thus, a more reasonable goal is to develop heuristics such that the features to be inpainted are likely spurious, minimizing the potential damage to other instances."
         },
         {
           "author": "Dr. Lei",
@@ -288,65 +283,11 @@
       "id": "2026-04-06",
       "date": "2026-04-06",
       "owner": [
-        "Thank you for these comments, Dr. Lei.\n\n1. You're right. If the model predicts entirely from background and never learned bird features, then comparing concepts across correct and incorrect predictions would only reveal differences in background content. My earlier suggestion (stable concepts = essential) breaks down because nothing bird-related would appear in either profile. This is a genuine limitation. The detection stages (diff-map, cross-class profiling) would still correctly identify that mispredictions are driven by wrong-class-typical background content. But the repair via inpainting would be insufficient because after removing the background signal, the model would have nothing to fall back on.\n\n2. I agree completely, and this changes the framing of the approach. We should not claim to identify spurious features. Essential and spurious are properties of the real world, and model behavior can only tell us how the model responds, not whether a feature is genuinely essential or spurious. The approach should instead identify systematic patterns in model failures and use repair (e.g. counterfactual augmentation) to address the associated distributional imbalance.\n\n3. This is an important point. Since we cannot identify essential/spurious features with certainty, every repair carries risk of collateral damage. The approach could address this in two ways: (a) establishing that the failure pattern is systematic across many instances and repairing a recurring pattern is less likely to cause collateral damage than repairing an isolated anomaly, and (b) including original training data alongside counterfactual images during fine-tuning. However, this would be an empirical argument, not a theoretical guarantee.\n\n4. You're right that the diff-map is local but repair is global. I think the bridge from local to global is the population-level analysis: when many mispredictions show consistent cross-class contamination (e.g., 40/50 mispredicted waterbirds have land/forest in their failure regions), this suggests a systematic failure mode consistent with a distributional imbalance. The repair would generate training data that addresses this imbalance. I would not because we've proven features are spurious, but because the training data lacks sufficient variation. The diff-map could serve as spatial guidance for where to inpaint on each image, while the primary justification for what to repair comes from the population-level distributional analysis.\n\n5. Here is a more precise definition. The class concept profile P_c is the average SpLiCE weight vector across all correctly predicted images of class c. It captures the typical concept distribution exhibited by images the model classifies correctly as class c, as measured by CLIP/SpLiCE (external to the classifier). It includes both genuinely class-related features and features that co-occur due to training distribution bias. Example: The waterbird profile has high weights on bird (0.043), water (0.021), ocean (0.018), beak (0.015), swimming (0.012). The landbird profile has bird (0.041), perched (0.019), branch (0.016), forest (0.014), songbird (0.011).",
         "I have also attached short summary of 4 related papers.",
         "Note:\nLBC and DISC claim to identify spurious features, but each uses a different operational proxy rather than establishing real-world spuriousness:\n\n\n\n1. LBC uses accuracy gaps: if the model performs differently on images with vs. without an attribute, that attribute is called spurious\n\n2. DISC uses concept sensitivity: if a concept's importance varies across data environments, it is called spurious",
         "As you pointed out, all of these are statements about model behavior, not about the real world.",
         "These methods work empirically because the benchmarks (Waterbirds, CelebA) have known ground-truth spurious correlations built into the dataset design. The proxies happen to identify the right features on these benchmarks, but the identification is validated by the benchmark's construction, not by the proxy itself.",
         "One question on the approach direction:\n\nBased on your feedback about the diff-map being local while repair needs to be global, I've been thinking about restructuring the reasoning to flow from global to local rather than the other way around.\n\nThe idea would be:\n\n1. Start by building class concept profiles from correctly predicted images (using CLIP + SpLiCE). This gives a population-level picture of what concept content is typically present when the model predicts each class correctly, without looking at any individual failure.\n\n2. Compare profiles across classes to identify asymmetric concept dimensions, i.e. concepts strongly associated with one class but not others (e.g., \"ocean\" high in waterbird profile, near-zero in landbird profile). These asymmetries reflect the training distribution's imbalance.\n\n3. Check whether the model's mispredictions concentrate along these asymmetric dimensions. If mispredicted waterbirds systematically have land/forest concepts in their failure regions, the distributional imbalance is driving real failures.\n\n4. Only then use per-instance diff-maps as spatial guidance for where to inpaint on each image and not as the starting point for diagnosing what's wrong.\n\nThe repair would be framed as filling the distributional gap identified at the population level, with the diff-map serving as a spatial tool rather than the primary justification.\n\nDoes this align with what you had in mind? Or would you suggest a different way to ground the approach globally before moving to per-instance repair?"
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-04-02",
-      "date": "2026-04-02",
-      "owner": [
-        "Thank you for the feedbacks Dr. Lei. Please allow me some time to think through the questions.",
-        "attached is the paper I was mentioning about."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "A few comments:\n\n\n1. The point I was trying to make is that a model may not use (or even learn) essential features at all to make predictions, including correct predictions. In this case, does the general approach really work that tries to compare the features/concepts used in different predictions (of the same instance or between different instances)? Use this as an extreme case to challenge the validity/limit of your approach.\n2. Essential/spurious features are fundamentally about the real world, not about what a model has learned or what a model does for predictions. Probably it is impossible to distinguish them by observing/analyzing how model predictions are made (in terms of what features/concepts are used). This is probably true even with causal intervention on the model prediction (e.g., by masking regions and then checking if the model prediction changes). This is because intervention is fundamentally about how the model behaves, not about the real world, i.e., the true causal relationship.\n3. The reason why it is important to identify essential/spurious features is because this is the idea case where we do not have to worry about the potential damage to other instances when we try to fix one or more mispredictions. Otherwise, whatever we do, we have to be conscious about how it will impact other mispredictions.\n4. Can you clarify what you mean by \"safe and beneficial\"? What arguments, at a more fundamental level, can you make that the inpainting of the region as identified by your approach would be \"safe and beneficial\"? Note that the diff-map is a local concept, as it is identified with respect to a single instance. However, \"safe and beneficial\" is a global concept, i.e., whatever you do should not or have minimal impact on other instances.\n5. Yes, it is important to be more precise about the notion of class concept profile. Try to come up with a more precise definition and also give an example if possible."
-        }
-      ]
-    },
-    {
-      "id": "2026-04-01",
-      "date": "2026-04-01",
-      "owner": [
-        "Thank you for the question, Dr. Lei.\n\nThe approach detects cross-class contamination, i.e., when the diff-map region contains concepts matching the wrong class's profile, and then uses the causal intervention to determine whether the region is safe to inpaint.\n\nThe diff-map identifies what the model relies on for inference that favors the wrong class. The cross-class contamination step compares those concepts against class profiles built from correctly predicted images, confirming which class the contaminating features belong to. But this stage cannot tell whether the contamination is from a spurious feature of the wrong class (e.g., land background behind a waterbird) or an essential feature of the wrong class (e.g., a waterbird with landbird-like coloring).\n\nThe causal intervention adds a necessary check. Neutralise the diff-map region: if the true-class logit drops, the region contains evidence needed for the correct prediction then skip it, because inpainting would destroy essential true-class features. If the true-class logit is preserved, the region was not contributing to the correct prediction and it was only serving the wrong one, and can be safely inpainted.\n\nTo be precise, this test confirms the region is not essential for the true class. It does not guarantee the region is purely spurious as it could contain essential features of the wrong class that happen not to overlap with true-class evidence. However, the diff-map's construction (ReLU of wrong-class minus true-class saliency) biases the selected region toward areas where the wrong class dominates and the true class is inactive.\n\nFor the two scenarios you raised: if the model learned essential features but underweights them, inpainting works because the model falls back on those features after the wrong-class signal is removed. If the model never learned essential features, our detection still identifies the problem correctly, but repair via inpainting alone would be insufficient as the model would have nothing to fall back on. This would be a limitation of the repair stage.",
-        "I think rather than asking \"is this feature spurious or essential?\", our pipeline asks would as a more operational question: \"is it safe and beneficial to inpaint this region?\"\n\nThe three stages establish this jointly. Stage 1 (diff-map) identifies the region drives the prediction margin toward the wrong class. Stage 2 (cross-class contamination) confirms the region contains content characteristic of the wrong class's concept profile. Stage 3 (causal intervention) confirms the region can be removed without degrading the true-class prediction.\n\nRegions passing all three conditions could be safe targets for inpainting: the model's correct prediction survives their modification, while the signal driving the incorrect prediction is neutralised. This framing could also avoid the need to classify features as spurious or essential in the abstract. The pipeline does not claim to solve that distinction. Instead, it provides an operational guarantee: inpainting a region that passes all three stages will remove a source of error without removing a source of correct prediction.",
-        "I  think the class concept profiles can give us a natural way to distinguish spurious from essential features if we extend them slightly.\nFor each class, compare the concept profile from correctly predicted instances vs. mispredicted instances of the same class. Concepts stable across both are essential (the model sees them regardless of outcome). Concepts present only in the correct profile are spurious (they correlate with prediction success, not class identity). In other words, essential features are stable across both profiles (the model sees them regardless of prediction outcome). Spurious features appear predominantly in the correct profile (they correlate with prediction success, not class identity).",
-        "I think it needs some formalization, but could be a proxy to identify spurious features/concepts."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "One question: Consider a model that predicts based on spurious features. For example, it predicts waterbirds or landbirds based on the background.  In other words, the model just did not pick up the essential features during training. Or the model picked up the essential features, but it does not use them for inference. How would your approach handle this situation? Specifically, how does your approach distinguish essential features from spurious features based on what features are used for inference (e..g, by comparing features/concepts used for correct and incorrect predictions)?"
-        }
-      ]
-    },
-    {
-      "id": "2026-03-31",
-      "date": "2026-03-31",
-      "owner": [
-        "Sure Dr. Lei, Thank you so much. I will work on comments and also do some implementations."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "Very good. I added some comments. Several general comments:\n\n\n1. You can go ahead to do some implementation while addressing the comments.\n2. For each experiment, try to be clear about your hypothesis, and what kind of results would confirm or reject your hypothesis.\n3. Think about what datasets would be easier or more challenging to your approach. Try to first do experiments on the easier dataset to see how it works, and then do experiments on the more challenging datasets.\n4. Also try to compare the results with and without the intervention step."
-        }
-      ]
-    },
-    {
-      "id": "2026-03-29",
-      "date": "2026-03-29",
-      "owner": [
-        "Hi Dr. @Dr. Lei , I’ve prepared a draft outlining the approach, including the motivation, problem setup, and methodological steps. I appreciate your feedback on whether the direction is sound and if the approach is clear and well aligned.",
-        "I’d also appreciate your thoughts on whether the problem framing is appropriate, or if it would be stronger to frame it differently.",
-        "I will also prepare the related work section discussion and share with you."
       ],
       "replies": []
     }
