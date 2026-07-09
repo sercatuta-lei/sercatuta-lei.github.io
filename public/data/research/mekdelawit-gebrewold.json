@@ -2,7 +2,7 @@
   "slug": "mekdelawit-gebrewold",
   "name": "Mekdelawit Gebrewold",
   "channel": "mekdelawit-research",
-  "last_updated": "2026-07-02T00:13:54.776048",
+  "last_updated": "2026-07-09T00:16:01.837573",
   "days": [
     {
       "id": "2026-04-17",
@@ -49,14 +49,6 @@
           "content": "Looks good. A few comments:\n\n\n1. The poster is a bit cluttered. Focus on the most important points. Try to be more concise, e.g., by reducing redundancy. Also try to use bullet points, instead of full sentences, which are difficult to read.\n2. It is important to show how many programs are used and their characteristics like # of code, language, domain, and what kind of faults and how many, are in those programs. This tells people how comprehensive your work is and how valid your conclusions are. This also shows the actual amount of work involved in your project.\n3. Consider putting a QR code on the poster that links to your project website for more information."
         }
       ]
-    },
-    {
-      "id": "2026-04-09",
-      "date": "2026-04-09",
-      "owner": [
-        "Update: I have completed my research poster and attached it for review. I would like to have an opinion and feedback on this."
-      ],
-      "replies": []
     }
   ]
 }

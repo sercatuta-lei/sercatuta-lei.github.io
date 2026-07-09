@@ -2,7 +2,7 @@
   "slug": "krishna-khadka",
   "name": "Krishna Khadka",
   "channel": "krishna-research",
-  "last_updated": "2026-07-02T00:13:52.301428",
+  "last_updated": "2026-07-09T00:16:01.100226",
   "days": [
     {
       "id": "2026-06-18",
@@ -239,55 +239,6 @@
       "date": "2026-04-10",
       "owner": [
         "Hi Dr. @Dr. Lei ,\n I have been thinking about structuring my proposal and wanted to share my current framing before I finalize the document and powerpoint.\n\nI am planning to use an article-based format with four core chapters:\n(Past Work)\n1. Feature Interaction Study (IWCT 2024) — establishes that most predictions depend on only a few feature interactions\n2. ABLE (KDD 2026) — faithful local explanations for tabular models via adversarial pair generation\n(Future Work)\n3. DD-CAM (targeting NeurIPS 2026) — minimal sufficient explanations for vision models using delta debugging\n4. EGDA (targeting AAAI 2027) — explanation-guided repair of model mispredictions\n\nThe general theme is: \"Toward Faithful and Actionable Interpretability: From Understanding Predictions to Repairing Model Failures.\" The progression is: understand how many feature interactions determine predictions → build faithful explanations for tabular and vision models → use explanations to repair systematic failures.\n\nMy other publications using combinatorial testing for generating synthetic samples and hyperparameter tunings doesn't directly align with interpretability but are directed more towards model improvements. So, I'm not sure if and how I could include/exclude them from proposal and final dissertation based on the above theme.\n\nI appreciate your feedback on the proposal framing. Thank you."
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-04-08",
-      "date": "2026-04-08",
-      "owner": [
-        "Thank you Dr. Lei. I will work on this as suggested as per the timeline. Please do let me know if you any additional suggestions.",
-        "I agree, it is the essential features that stand strong across unseen or out-of distribution data.",
-        "thank you for the feedback, Dr. Lei. I will follow up with how my approach compares to these approaches in terms of the points suggested.",
-        "I agree, Dr. Lei. The key takeaway for me is that the focus should be on justifying why each step minimizes collateral damage to other instances, not just on pipeline ordering. Moving forward, I'll work on building a clear argument for each stage: what it achieves and why the resulting model updates are unlikely to harm performance on other instances. I'll back this with experimental evidence alongside the reasoning."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "The DD-CAM plan looks good. I like Task 3. It would be good to show some more tangible benefits of minimal sufficient sets. For Task 5, Option A is more technically sound. That is, if the one-pass variant is correct and is faster, then it should be presented separately from the general DD algorithm. Option B is more like you just want to simplify the presentation while sacrificing technical soundness."
-        },
-        {
-          "author": "Dr. Lei",
-          "content": "a few comments:\n\n\n1. the direction, global to local or local to global, does not really matter. \n2. what really matters is the why part. What does each step try to achieve, and why what you do allows you to achieve that?\n3. the fundamental challenge for model correction is, whatever updates made to the model can potentially impact other instances in a negative manner. Thus, it is important to justify why the updates you make will not negatively impact other instances.\n4. your approach does not have to be perfect. for example, it is probably impossible to identify essential/spurious features perfectly. but it needs to work for most cases, with a reasonable argument and experimental data support."
-        },
-        {
-          "author": "Dr. Lei",
-          "content": "Yes. I agree with your assessment. In fact, it is impossible to identify spurious features perfectly from model behavior alone.\nTo some extent, the model exists in a \"virtual\" world, which is different than the real world. Without some kind of grounding, it would be impossible to discover what is going in the real world.\nThis raises the following question: Do we really have to identify the real-world relationship? After all, we are dealing with models. As long as the model works, in terms of producing good predictions, do we really care whether it is using \"real-world\" essential features to make the prediction?\nI guess we do to some extent, because predictions based on \"real-world\" essential features can generalize much better, especially for unseen, out-of-distribution data."
-        },
-        {
-          "author": "Dr. Lei",
-          "content": "Thanks for the summary. These are very good papers.\nOne important question to ask: how would you compare your approach to these approaches, in terms of novelty, strengths and limitations, as you envision at this point?"
-        }
-      ]
-    },
-    {
-      "id": "2026-04-07",
-      "date": "2026-04-07",
-      "owner": [
-        "I’ve responded to the comments from the first draft. But, I feel this approach lacks clarity and needs fixing.",
-        "DD-CAM Resubmission: Task List\nTask 1: Expand Baselines Beyond CAM Family (April 16)\n\n\n- Add IG, RISE, SHAP, LIME comparisons using same metrics (ADCC, AD, IoU, etc.)\n- Add Extremal Perturbations (Fong et al., ICCV 2019) — Done\n\n\nTask 2: Stability Analysis of 1-Minimal Sets (April 14)\n\n\n- Run DD-CAM with 10–20 random unit orderings on a subset of images\n- Report Jaccard similarity between resulting minimal sets across runs\n- Report variance in faithfulness metrics across seeds\n- Show side-by-side saliency maps from different runs\n- Is experimental proof better or can we have some theoretical analysis\n\n\nTask 3: Model Diagnostic Case Studies (April 19)\nSince, most reviewers had concerns on novelty, can we offset that with some additional contributions? For example: run on Waterbirds/CelebA to check if minimal sets expose model failure reasons\n\n\n- Introduce minimal failure-inducing set (flip objective: find smallest set causing a wrong prediction)\n- Correlate minimal set size with prediction confidence and correctness\n\n\nTask 4: ViT Masking Ablation (April 12)\n\n\n- Compare zero-token vs. mean-token vs. random-noise masking on ViT-B/16 and ViT-L/16\n- Report faithfulness metrics in an ablation table\n\n\nTask 5: Algorithmic Decision (April 9)\n\n\n- Option A: Keep the one-pass variant but add a formal lemma proving negative-margin units cannot belong to any sufficient set in GAP+FC models, plus an empirical sanity check comparing results with and without filtering. This preserves the runtime optimization but requires additional writing and proof effort to satisfy reviewers.\n- Option B: Drop the one-pass optimization for GAP+FC models and use the standard delta debugging algorithm uniformly across all classifier heads. This eliminates the need to formally justify negative-unit filtering and the one-pass correctness argument — both of which R-qWsW flagged and remained unconvinced by after the rebuttal. The runtime cost is minimal (O(K) → O(K log K)). The paper becomes simpler: one algorithm, one guarantee, no special cases."
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-04-06",
-      "date": "2026-04-06",
-      "owner": [
-        "I have also attached short summary of 4 related papers.",
-        "Note:\nLBC and DISC claim to identify spurious features, but each uses a different operational proxy rather than establishing real-world spuriousness:\n\n\n\n1. LBC uses accuracy gaps: if the model performs differently on images with vs. without an attribute, that attribute is called spurious\n\n2. DISC uses concept sensitivity: if a concept's importance varies across data environments, it is called spurious",
-        "As you pointed out, all of these are statements about model behavior, not about the real world.",
-        "These methods work empirically because the benchmarks (Waterbirds, CelebA) have known ground-truth spurious correlations built into the dataset design. The proxies happen to identify the right features on these benchmarks, but the identification is validated by the benchmark's construction, not by the proxy itself.",
-        "One question on the approach direction:\n\nBased on your feedback about the diff-map being local while repair needs to be global, I've been thinking about restructuring the reasoning to flow from global to local rather than the other way around.\n\nThe idea would be:\n\n1. Start by building class concept profiles from correctly predicted images (using CLIP + SpLiCE). This gives a population-level picture of what concept content is typically present when the model predicts each class correctly, without looking at any individual failure.\n\n2. Compare profiles across classes to identify asymmetric concept dimensions, i.e. concepts strongly associated with one class but not others (e.g., \"ocean\" high in waterbird profile, near-zero in landbird profile). These asymmetries reflect the training distribution's imbalance.\n\n3. Check whether the model's mispredictions concentrate along these asymmetric dimensions. If mispredicted waterbirds systematically have land/forest concepts in their failure regions, the distributional imbalance is driving real failures.\n\n4. Only then use per-instance diff-maps as spatial guidance for where to inpaint on each image and not as the starting point for diagnosing what's wrong.\n\nThe repair would be framed as filling the distributional gap identified at the population level, with the diff-map serving as a spatial tool rather than the primary justification.\n\nDoes this align with what you had in mind? Or would you suggest a different way to ground the approach globally before moving to per-instance repair?"
       ],
       "replies": []
     }

@@ -2,7 +2,7 @@
   "slug": "arjun-dahal",
   "name": "Arjun Dahal",
   "channel": "arjun-research",
-  "last_updated": "2026-07-02T00:13:45.162553",
+  "last_updated": "2026-07-09T00:15:58.358170",
   "days": [
     {
       "id": "2026-06-21",
@@ -293,40 +293,6 @@
         "Dr. @Dr. Lei Please find the answers to the questions above:\n\n\n\n1. Retraining changes all the parameters at once. We are limiting the changes here using an adapter, which doesn’t have an advantage over retraining the whole model, at least from the user perspective. We might just retrain the model from the layer ( till the output layer ) without using the adapter - it’s similar to retraining but mightn’t involve all the layers ( at least not for all the datasets ). Our contribution would be diagnostic - whether bias is from the representation or spurious, i.e., not all the datasets require retraining the whole network, preserving the representation learned in some cases.\n\n\n2. Most of the works on fair representation use an encoder (and some form of penalty) to get the fair representation. In our case, we are just working with a NN - that is, pre-trained. The novelty is that we have a diagnostic metric to find from which layer we need to start removing the information related to the gender, which is a unique perspective on the problem.\n\n4. It’s the alignment of gender information in the representation. Yes, sensitive attributes ( along with the related attributes ) are part of the model input. Yes, it would be there, but not concentrated in the representation from the beginning. The CKA metric is similar to MI in the sense that if the metrics had the value of 0, it would indicate independence. CKA has been used in the literature.\n\nI agree that fair representation mightn’t be possible entirely because of the entanglement. What we will try to do is find a balance between accuracy and fairness via the loss functions.\n\nUpdated method:  Use the TCAV metric instead of CKA for the diagnostic, and then I will be retraining the network on the layer where we have the information about gender. Please let me know if it’s reasonable."
       ],
       "replies": []
-    },
-    {
-      "id": "2026-04-05",
-      "date": "2026-04-05",
-      "owner": [
-        "Thank you, Dr. Lei. I will come back with the responses."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "Good. See my responses below:\n\n\n1. Try to have a user perspective, in addition to the technical perspective, whenever you try to come up with a new approach. Minimizing the number of changes is a technical perspective. The user does not care about how many parameters you change. What they care is how effective the approach is in their end. The real question is, compared to training an adapter, which is more like a patch work, what are the fundamental advantages over a retraining approach from the user perspective, since you assume access to full training data?\n2. If you are probing where to intervene, it makes more sense to do the diagnostics. I did not see this from the original approach you sent. Again, the user perspective is important. Whether the representation encodes gender does not matter to the user. What they care is whether the model is fair. Also, be aware that there is a lot of work on fair representation learning. What is your novelty over those work if you aim to learn a fair representation?\n3. See my response to 2.\n4. What I was trying to ask is what it means, by increasing/decreasing the amount of info, intuitively? That is, not what you do it operationally. When you train the model, are the sensitive attributes used as part of the model input? If so, would the sensitive information be there and easily accessible from the beginning? If not, the sensitive information may be implicitly encoded in other attributes. But it is still there, and it is just not easily accessible. Also is what you are trying to measure basically the amount of mutual information? How reliable is the metric you are using?\n\nAlso, one general comment: Even though it is ideal to learn a fair representation, it may not be possible. Some sensitive information may be inherently entangled with non-sensitive attributes; in this case, it would be impossible or make sense to remove such information without damaging the useful signal."
-        }
-      ]
-    },
-    {
-      "id": "2026-04-04",
-      "date": "2026-04-04",
-      "owner": [
-        "Dr. Lei, please find the answers to the questions above:\n\n1 ) It’s post-hoc repair - It’s not that the practitioner cannot retrain from scratch. It’s just that we want to make minimal changes to the pre-existing model to fix the bias.\nCurrently, we assume we will be using the training dataset to mitigate the bias. Retraining from scratch might change the representation of the whole network, while with an adapter ( or frozen base layers ), we make minimal changes in the adapter or the last layer from the place where we know the model has good accuracy, and then try to fix the bias. The frozen backbone preserves the representation that had good accuracy, and the adapter starts from an identity initialization — identical to the original model — and only perturbs in output weights or adapter + output weights to fix the bias.\n\n4 and 2 ) The diagnosis across layers is necessary because we need to know where gender is encoded before we decide where to fix it. Looking only at the last layer tells us whether the output uses gender or not. If the bias is deeply embedded and indicated by the diagnostic metric, then it's better to intervene somewhere in the middle compared to the later layers. The place to intervene would be the place where we would see a significant increase in the value of the diagnostic metric. Looking into the last layer gives us the information whether the sensitive information was used in the prediction or not; however, if gender is encoded in the intermediate representation (Adult), fixing only the output is insufficient — the representation still encodes gender strongly.\n\n3 ) The difference between the two mitigation strategies is reducing the gender concentration present in the representation to reduce the use of sensitive information in making a prediction ( as in the case of Adult) or just fixing the gender in the output to reduce spurious bias ( as in the case of Credit ). For the adult income dataset, if we only fix W_out alone, the representation still contains gender information; this suppression would be inadequate.\n\n5 ) Covariance indicates a relationship between two variables. In our case, we are measuring covariance between gender and activations in the NN across layers ( divided by the covariance within activations across the layers and covariance within gender ). So, for layer 1, we measure the covariance between gender and activation and then divide it by this normalization factor; we do the same to layer 2 to obtain a normalized measure of the gender-activation relationship at each layer.\nSuppose for the adult income dataset, we have 4 people — Male1, Male2, Female1, Female2 — pass through the network. If at layer h1 males have activations [2.1, 2.9] and females have [1.9, 2.1], the values overlap — low covariance with gender. At layer h2, if males have [3.5, 3.8] and females have [0.4, 0.6], the groups have separated — high covariance with gender. The normalized measure increased from h1 to h2, meaning the network amplified the gender distinction while processing."
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-04-03",
-      "date": "2026-04-03",
-      "owner": [
-        "Thank you Dr. Lei, I will get back with the answers."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "A few comments/questions:\n\n\n1. \"... but cannot or prefer not to retrain from scratch...\" Why so? Also, what data will you be using to mitigate the bias? If it is the entire training data, why not just retrain from scratch, i.e., what advantages does your approach have over retraining?\n2. If the goal of your diagnostic is to determine whether sensitive info is used for prediction, why not do it in the last layer, i.e., before the prediction is made? Wouldn't that be more direct than looking at the other layers?\n3. What are the fundamental differences between the two mitigation strategies you are proposing based on the diagnostic, and why?\n4. If you are probing the propagation of sensitive info, try to consider what would be the best point for mitigation. Does it have to be the last layer or is it better to do it in the middle, i.e., before it is too late to intervene/mitigate?\n5. As I asked during the meeting, what does it mean when you say, the amount of sensitive information increases/decreases, and specifically, how do you measure the amount? Try to do one example, explain intuitively what it means in the example when the amount increases or decreases.\n\nPlease respond to each question directly and explicitly."
-        }
-      ]
     }
   ]
 }

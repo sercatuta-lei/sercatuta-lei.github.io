@@ -2,7 +2,7 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-07-02T00:14:02.797202",
+  "last_updated": "2026-07-09T00:16:07.169791",
   "days": [
     {
       "id": "2026-06-06",
@@ -288,17 +288,6 @@
         {
           "author": "Deactivated User",
           "content": "Congratulations @Krishna Khadka"
-        }
-      ]
-    },
-    {
-      "id": "2026-04-09",
-      "date": "2026-04-09",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Pujan Budhathoki",
-          "content": "I am still feeling very ill with a bad headache so I won't be able to join the meeting today."
         }
       ]
     }
