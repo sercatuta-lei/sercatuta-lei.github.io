@@ -2,7 +2,7 @@
   "slug": "arjun-dahal",
   "name": "Arjun Dahal",
   "channel": "arjun-research",
-  "last_updated": "2026-07-09T00:15:58.358170",
+  "last_updated": "2026-07-16T00:02:24.252778",
   "days": [
     {
       "id": "2026-06-21",
@@ -285,14 +285,6 @@
           "content": "Two comments:\n\n\n1. if your entire approach does not do better than simply retraining, it does not matter whether any component of your approach is novel or not. ultimately, it is the user perspective that determines the value of any research work. if it does not do better than an existing approach for the user, why bother?\n2. i don't really understand what you mean by \"concentrated\". if the sensitive attribute is present in the beginning as a separate attribute, wouldn't this be the most concentrated form?"
         }
       ]
-    },
-    {
-      "id": "2026-04-15",
-      "date": "2026-04-15",
-      "owner": [
-        "Dr. @Dr. Lei Please find the answers to the questions above:\n\n\n\n1. Retraining changes all the parameters at once. We are limiting the changes here using an adapter, which doesn’t have an advantage over retraining the whole model, at least from the user perspective. We might just retrain the model from the layer ( till the output layer ) without using the adapter - it’s similar to retraining but mightn’t involve all the layers ( at least not for all the datasets ). Our contribution would be diagnostic - whether bias is from the representation or spurious, i.e., not all the datasets require retraining the whole network, preserving the representation learned in some cases.\n\n\n2. Most of the works on fair representation use an encoder (and some form of penalty) to get the fair representation. In our case, we are just working with a NN - that is, pre-trained. The novelty is that we have a diagnostic metric to find from which layer we need to start removing the information related to the gender, which is a unique perspective on the problem.\n\n4. It’s the alignment of gender information in the representation. Yes, sensitive attributes ( along with the related attributes ) are part of the model input. Yes, it would be there, but not concentrated in the representation from the beginning. The CKA metric is similar to MI in the sense that if the metrics had the value of 0, it would indicate independence. CKA has been used in the literature.\n\nI agree that fair representation mightn’t be possible entirely because of the entanglement. What we will try to do is find a balance between accuracy and fairness via the loss functions.\n\nUpdated method:  Use the TCAV metric instead of CKA for the diagnostic, and then I will be retraining the network on the layer where we have the information about gender. Please let me know if it’s reasonable."
-      ],
-      "replies": []
     }
   ]
 }

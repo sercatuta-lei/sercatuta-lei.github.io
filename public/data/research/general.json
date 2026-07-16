@@ -2,8 +2,38 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-07-09T00:16:07.169791",
+  "last_updated": "2026-07-16T00:02:33.067840",
   "days": [
+    {
+      "id": "2026-07-15",
+      "date": "2026-07-15",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "@channel As some of you know, I am in California this week. We will not meet tomorrow (Thursday)"
+        }
+      ]
+    },
+    {
+      "id": "2026-07-09",
+      "date": "2026-07-09",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "@channel I know some of you are soccer fans. Since our meeting time conflicts with the first quarter final match, and since everyone is making progress without issue, let us skip today's meeting."
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": ":fr:"
+        },
+        {
+          "author": "Shovon Niverd",
+          "content": ":flag-cp: sounds good"
+        }
+      ]
+    },
     {
       "id": "2026-06-06",
       "date": "2026-06-06",

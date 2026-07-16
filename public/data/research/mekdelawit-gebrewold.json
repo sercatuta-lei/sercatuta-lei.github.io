@@ -2,7 +2,7 @@
   "slug": "mekdelawit-gebrewold",
   "name": "Mekdelawit Gebrewold",
   "channel": "mekdelawit-research",
-  "last_updated": "2026-07-09T00:16:01.837573",
+  "last_updated": "2026-07-16T00:02:27.124041",
   "days": [
     {
       "id": "2026-04-17",
@@ -15,38 +15,6 @@
         {
           "author": "Dr. Lei",
           "content": "Looks good. One suggestion: If I understand correctly, human-written tests you have used are provided by the benchmark, i.e., not by yourself. If so, make it explicit."
-        }
-      ]
-    },
-    {
-      "id": "2026-04-16",
-      "date": "2026-04-16",
-      "owner": [
-        "@Dr. Lei I had a quick question about the level of detail for the benchmark description on my poster. Since my research focuses on coverage and mutation testing rather than directly analyzing faults in the benchmarks, would it be enough to summarize the dataset at a higher level (e.g., total number of bugs for each library and general fault types), rather than reporting exact fault counts per class?"
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "Yes, summarizing at a high level is fine"
-        }
-      ]
-    },
-    {
-      "id": "2026-04-13",
-      "date": "2026-04-13",
-      "owner": [
-        "I will. Thank you, professor."
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-04-11",
-      "date": "2026-04-11",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "Looks good. A few comments:\n\n\n1. The poster is a bit cluttered. Focus on the most important points. Try to be more concise, e.g., by reducing redundancy. Also try to use bullet points, instead of full sentences, which are difficult to read.\n2. It is important to show how many programs are used and their characteristics like # of code, language, domain, and what kind of faults and how many, are in those programs. This tells people how comprehensive your work is and how valid your conclusions are. This also shows the actual amount of work involved in your project.\n3. Consider putting a QR code on the poster that links to your project website for more information."
         }
       ]
     }

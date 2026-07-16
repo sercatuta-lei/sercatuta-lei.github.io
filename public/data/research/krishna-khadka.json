@@ -2,7 +2,7 @@
   "slug": "krishna-khadka",
   "name": "Krishna Khadka",
   "channel": "krishna-research",
-  "last_updated": "2026-07-09T00:16:01.100226",
+  "last_updated": "2026-07-16T00:02:26.399751",
   "days": [
     {
       "id": "2026-06-18",
@@ -194,53 +194,6 @@
           "content": "I made some comments; please see attached. I really like the plan, which goes deep and will add significantly to the current version. In particular, the stability results are interesting, and I like the theory of multiple independent decision pathways, which seems reasonable and likely explains the results. Please keep me updated on the progress."
         }
       ]
-    },
-    {
-      "id": "2026-04-16",
-      "date": "2026-04-16",
-      "owner": [
-        "1. Example #16 (Sooty Albatross, waterbird on land, repaired):\n\nThe approach first builds class concept profiles by averaging SpLiCE decompositions over correctly predicted images of each class, then scores each concept by asymmetry to find concepts that are characteristic of one class but absent from the other, surfacing candidates like `forest`, `bamboo`, `cardinal`, `swan`. For this image, a waterbird mispredicted as landbird, the diff-map isolates the dense bamboo/forest background as the region tipping the classifier toward the wrong class. SpLiCE on that region activates `bamboo` (0.090) and `forest` (0.031), both landbird-dominant asymmetric concepts, confirming instance-level alignment. The recurrence check then asks: across all 43 waterbird-on-land mispredictions, what fraction have diff-map regions that activate the same landbird-dominant concepts? The answer is 58.1%, above the alpha = 0.5 threshold, meaning this is a systematic, population-level failure pattern, not an isolated anomaly. The approach proceeds to inpaint the forest region with Stable Diffusion, producing a counterfactual training image with the same bird on a class-appropriate background.\n\n2. Example #51 (Brewer Blackbird with duckling, landbird on water, abstained):\nFor this image, a landbird mispredicted as waterbird, the diff-map highlights a region that turns out to contain a duckling standing in water alongside the blackbird, a multi-object confound where a secondary bird from the opposing class is physically present in the frame. SpLiCE on the diff-map region activates water-habitat concepts (`pond` 0.087, `swim` 0.052, `pigeon` 0.032), and instance-level alignment passes with a higher weight (0.0412) than Example 16 (0.0309), meaning the per-image evidence looks even more convincing. However, the recurrence check reveals that only 39.1% of the 110 landbird-on-water mispredictions share this same concept activation pattern, below the alpha = 0.5 threshold. Unlike waterbird-on-land failures which are structurally uniform (every one has a land background), landbird-on-water failures are heterogeneous: some are driven by water backgrounds, some by secondary birds in frame, some by reflective surfaces CLIP confuses with water. The approach abstains because repairing based on a pattern that only covers 39% of the population risks acting on noise rather than a systematic distributional gap.",
-        "The second image has no inpainting so it is left blank."
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-04-15",
-      "date": "2026-04-15",
-      "owner": [
-        "Thank you, Dr. Lei"
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-04-11",
-      "date": "2026-04-11",
-      "owner": [
-        "Thank you Dr. Lei. Is this more appropriate title?: Toward Trustworthy Machine Learning: Understanding, Explaining, and Repairing Model Predictions",
-        "I agree, Dr. Lei.\nWould this be more accurate?\nToward Reliable Machine Learning: Understanding, Explaining, and Repairing Model Predictions"
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "Very good. I like the general theme and progression. The wording of the title needs more consideration. Technically, interpretability is not the overarching goal, and it does not really include model repair. The goal is more like building high-quality or trustworthy models."
-        },
-        {
-          "author": "Dr. Lei",
-          "content": "Yes, this is better. One comment: While trustworthiness should, in principle, include prediction performance, it focuses on more on other aspects such as fairness, safety, security, and privacy. If your work is mainly about prediction performance, reliable machine learning would be more accurate."
-        },
-        {
-          "author": "Dr. Lei",
-          "content": "Yes this is more accurate"
-        }
-      ]
-    },
-    {
-      "id": "2026-04-10",
-      "date": "2026-04-10",
-      "owner": [
-        "Hi Dr. @Dr. Lei ,\n I have been thinking about structuring my proposal and wanted to share my current framing before I finalize the document and powerpoint.\n\nI am planning to use an article-based format with four core chapters:\n(Past Work)\n1. Feature Interaction Study (IWCT 2024) — establishes that most predictions depend on only a few feature interactions\n2. ABLE (KDD 2026) — faithful local explanations for tabular models via adversarial pair generation\n(Future Work)\n3. DD-CAM (targeting NeurIPS 2026) — minimal sufficient explanations for vision models using delta debugging\n4. EGDA (targeting AAAI 2027) — explanation-guided repair of model mispredictions\n\nThe general theme is: \"Toward Faithful and Actionable Interpretability: From Understanding Predictions to Repairing Model Failures.\" The progression is: understand how many feature interactions determine predictions → build faithful explanations for tabular and vision models → use explanations to repair systematic failures.\n\nMy other publications using combinatorial testing for generating synthetic samples and hyperparameter tunings doesn't directly align with interpretability but are directed more towards model improvements. So, I'm not sure if and how I could include/exclude them from proposal and final dissertation based on the above theme.\n\nI appreciate your feedback on the proposal framing. Thank you."
-      ],
-      "replies": []
     }
   ]
 }
