@@ -2,7 +2,7 @@
   "slug": "krishna-khadka",
   "name": "Krishna Khadka",
   "channel": "krishna-research",
-  "last_updated": "2026-07-16T00:02:26.399751",
+  "last_updated": "2026-07-23T00:04:05.111329",
   "days": [
     {
       "id": "2026-06-18",
@@ -153,47 +153,6 @@
         "I’m also curious if this direction also holds the heuristic nature and local-to-global repair limitations."
       ],
       "replies": []
-    },
-    {
-      "id": "2026-04-22",
-      "date": "2026-04-22",
-      "owner": [
-        "Thank you for the thoughtful questions, Dr. Lei.\n\n\n1. I don’t have a precise technical definition of “background.” From a human perspective, background typically refers to semantic regions that are not necessary for making a prediction. However, for a model, these regions may still carry predictive signal due to learned correlations. The key difference is that humans have seen objects (e.g., cats) across diverse contexts, whereas a model may predominantly observe them in a limited set of backgrounds (e.g., cats on beds), and thus treat those as informative.\n2. I would define a “wrong object” as a semantic region that actively drives the model’s prediction toward an incorrect class. for example, in a misclassification scenario. In some cases, especially in binary settings, this can also arise in ambiguous or overlapping scenarios where both classes are present but only one label is assigned, making the decision inherently difficult.\n3. Regarding the masking approach, I agree that it does not fully address the OOD concern, and we should avoid making that claim. However, it does offer an advantage over directly zeroing out input pixels. In general, any form of masking will introduce some degree of distribution shift, since the modified input is no longer perfectly natural. The more relevant question is not whether masking is OOD, but how far it deviates from the original data distribution. Our goal is to minimize this deviation, but masking itself will inevitably introduce some level of shift.",
-        "DD-CAM by itself can not define 'background' or 'wrong object' as it only identifies computationally necessary units. But this is actually what makes it useful when annotations are available: because the minimal sufficient set is exactly the units the model can rely on, mismatch with human annotation is a cleaner diagnostic signal than it would be with a diffuse saliency map produced by other CAMs.",
-        "I agree, Dr. Lei. The concepts I proposed are not well defined and require more careful framing."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "Thanks, Krishna, for your response. Two more questions:\n\n\n1. Is there a technical definition about what makes \"background\" (or \"part of background\"), what is \"wrong object\"?\n2. I agree that zero attention weight has the advantage of zeroing out the actual contribution of a patch, compared to zeroing out the input pixels which may still have some contribution. But does it really address the OOD concern? I know the objects that are not masked are real, but its surrounding (of no contribution) is not really natural (or in the real-world distribution)?"
-        },
-        {
-          "author": "Dr. Lei",
-          "content": "I see. What is behind both of my comments, and for that matter, in general, is about conceptual clarity. When we say a concept is well-defined, it is largely about its clarity, especially in terms of what makes them similar or different from other concepts. Well-defined concepts are the foundation of any solid research. This is also why textbooks are typically concept heavy, and learning of a subject matter typically begins with learning of the fundamental concepts in the subject domain."
-        }
-      ]
-    },
-    {
-      "id": "2026-04-21",
-      "date": "2026-04-21",
-      "owner": [
-        "Thank you for the comments, Dr. Lei. I have responded to them. I might not have fully justified the last response. I'm doing some more literature search on that."
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-04-20",
-      "date": "2026-04-20",
-      "owner": [
-        "I wanted to share a brief update on the DD-CAM improvements. I’ve attached a document summarizing the current progress.\nTasks 1 (expanded baselines), 2 (stability analysis), and 5 (algorithmic clarification) are complete. Tasks 3 (diagnostic case studies) and 4 (ViT masking ablation) are currently in progress and should be completed shortly. More details on each tasks are in the document below.\n[DD-CAM task.docx](https://1drv.ms/w/c/28ea4157e12a53a6/IQDvBJYcEiUJT4TMDlOwQG5ZARJnor1dIK2KAQ7xiMEDfUQ?e=ZNfqdg)",
-        "Thank you, Dr. Lei. I will respond to the comments shortly."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "I made some comments; please see attached. I really like the plan, which goes deep and will add significantly to the current version. In particular, the stability results are interesting, and I like the theory of multiple independent decision pathways, which seems reasonable and likely explains the results. Please keep me updated on the progress."
-        }
-      ]
     }
   ]
 }

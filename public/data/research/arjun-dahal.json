@@ -2,7 +2,7 @@
   "slug": "arjun-dahal",
   "name": "Arjun Dahal",
   "channel": "arjun-research",
-  "last_updated": "2026-07-16T00:02:24.252778",
+  "last_updated": "2026-07-23T00:04:02.592504",
   "days": [
     {
       "id": "2026-06-21",
@@ -247,44 +247,6 @@
         "Dr. Lei, I was thinking of working on this for my next project for ICSE. Please let me know if this is reasonable."
       ],
       "replies": []
-    },
-    {
-      "id": "2026-04-20",
-      "date": "2026-04-20",
-      "owner": [
-        "Thank you, Dr. Lei. I will investigate a new approach to the problem."
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-04-19",
-      "date": "2026-04-19",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "Again, the user perspective is ultimately what determines the utility/value of a research approach. No matter how technically good an approach, if it does not provide benefits to the user, it is of no value. Note that the user is defined to be whoever uses the proposed approach, i.e., it can be a developer. The point is that it has to be useful to whoever uses the approach. Whatever technical advantages your approach has must be translated into some kind of benefits for the user.\nAlso, the benefits must be stated in terms of how it compares to alternative approaches the user has. This is what people typically refer to as the state of the art. Research is about improving the state of the art, not just a similar approach.\nAnother tricky point to bear in mind is the amount of benefits a research paper has to make in order to be accepted into a top venue. This, of course, is a bit subjective, but typically the community or be specific, most reviewers have some kind of common sense about it.\nFor your project, I am not convinced about the research contribution of what you propose to do, both in terms of user benefits and also technical novelty. I know what you are trying to say about the notion of \"concentrated\", but at least at this point, it is a very rough concept, and is not well-defined, which makes it difficult to really assess its feasibility or research value."
-        }
-      ]
-    },
-    {
-      "id": "2026-04-18",
-      "date": "2026-04-18",
-      "owner": [
-        "Dr @Dr. Lei, Please find the response to the questions above:\n\n**1.** I agree that the end-user perspective is important, and they may only care about the final metrics. However, the representations in the pre-trained MLP were optimized specifically for accuracy, which is the primary reason the organization deploys the model in the first place. Retraining the entire model purely to satisfy a secondary metric like fairness risks throwing away that valuable representation, making full retraining for all of the cases/datasets a blunt instrument. Our approach of first diagnosing whether the bias is spurious or deeply embedded, and then applying a targeted fix, offers a more parameter-efficient repair mechanism than discarding and retraining the entire architecture.\n\n**2.** Regarding the term \"concentrated\": At the input layer, gender is present as an isolated column. However, as data progresses through the network's layers, that gender information becomes \"concentrated\" in the sense that it combines with proxy variables (like marital status, relationship, etc.) to form a more complex representation. The combined representation in the deeper layers serves as a much stronger predictor of the output (income) than the raw gender attribute alone, which is exactly why the targeted diagnostic is necessary.\n\nI agree that we have access to everything in the network - network internals and the training data. This is highly privileged access. Maybe I can slightly pivot towards lesser privileged access to the network. Please let me know if this is reasonable, or suggest any direction you would like me to follow."
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-04-17",
-      "date": "2026-04-17",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "Two comments:\n\n\n1. if your entire approach does not do better than simply retraining, it does not matter whether any component of your approach is novel or not. ultimately, it is the user perspective that determines the value of any research work. if it does not do better than an existing approach for the user, why bother?\n2. i don't really understand what you mean by \"concentrated\". if the sensitive attribute is present in the beginning as a separate attribute, wouldn't this be the most concentrated form?"
-        }
-      ]
     }
   ]
 }
