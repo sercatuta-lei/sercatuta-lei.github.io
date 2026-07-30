@@ -2,8 +2,16 @@
   "slug": "arjun-dahal",
   "name": "Arjun Dahal",
   "channel": "arjun-research",
-  "last_updated": "2026-07-23T00:04:02.592504",
+  "last_updated": "2026-07-30T00:03:28.584834",
   "days": [
+    {
+      "id": "2026-07-25",
+      "date": "2026-07-25",
+      "owner": [
+        "This paper also asks the question we have been asking for fairness testing (for test case generation ): Is there a different way to approach fairness testing rather than just trying to generate as many discriminatory test cases as possible?\n\nFunamoto, Kazuki, Takashi Kitamura, and Shingo Takada. \"Is Diversity a Meaningful Metric in Fairness Testing?\" *2025 ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM)*. IEEE, 2025."
+      ],
+      "replies": []
+    },
     {
       "id": "2026-06-21",
       "date": "2026-06-21",
