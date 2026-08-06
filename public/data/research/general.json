@@ -2,8 +2,19 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-07-30T00:03:32.905928",
+  "last_updated": "2026-08-06T00:02:37.191653",
   "days": [
+    {
+      "id": "2026-07-31",
+      "date": "2026-07-31",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "Interesting article: [insidehighered.com/opinion/…/stop-telling-students-computer-science-dying-opinion](https://www.insidehighered.com/opinion/views/2026/07/28/stop-telling-students-computer-science-dying-opinion)"
+        }
+      ]
+    },
     {
       "id": "2026-07-15",
       "date": "2026-07-15",
@@ -72,51 +83,6 @@
         {
           "author": "Dr. Lei",
           "content": "@channel For the summer, we will meet at 2pm on Teams every Thursday. Please let me know if this does not work for you. Also, starting from tomorrow, we will use the new format, i.e., everyone will have a required technical discussion on your project. The session should focus on problem solving. Every discussion should have an agenda that identifies the technical issues to discuss, and what outcome you expect from the discussion."
-        }
-      ]
-    },
-    {
-      "id": "2026-05-07",
-      "date": "2026-05-07",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Krishna Khadka",
-          "content": "It works for me"
-        }
-      ]
-    },
-    {
-      "id": "2026-05-06",
-      "date": "2026-05-06",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "@channel For tomorrow's group meeting, can we meet at 1.30pm, instead of 12.30pm? This will be our last in-person meeting for the semester."
-        },
-        {
-          "author": "Shovon Niverd",
-          "content": "I can attend at 1.30pm"
-        },
-        {
-          "author": "Saif Uddin Mahmud",
-          "content": "works for me Dr. Lei. Thank you.."
-        },
-        {
-          "author": "Pujan Budhathoki",
-          "content": "Works for me."
-        }
-      ]
-    },
-    {
-      "id": "2026-05-01",
-      "date": "2026-05-01",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "Thanks, Sampada. For the paper, please add the conference information just like what you did for the ABLE paper, i.e., not just the arXiv info."
         }
       ]
     }

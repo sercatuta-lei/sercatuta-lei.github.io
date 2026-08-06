@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-08-06",
+          "content": "No update was provided for the week ending 2026-08-06.",
+          "placeholder": true
+        },
+        {
           "date": "2026-07-23",
           "content": "**Arjun Dahal:**\n\nJournal Submission: TabChange\n\nAction Items:\nI have completed the writing for the journal.\nI will check a couple of things before sharing it for review by the end of the day.\n\nProblems/Issues:\nNone at the moment\n\nFindings:\nOur approach wins in most of the cases with the new loss (proximity) added.\n\nI will be focusing on the test case generation  ( near the decision boundary ) of a generative model ( grouped by the decision signature ). I will share some form of initial findings in my research channel within the next couple of days.",
           "placeholder": false
@@ -194,6 +199,11 @@
       "slug": "saif-uddin-mahmud",
       "photo": "saif-pic.jpg",
       "updates": [
+        {
+          "date": "2026-08-06",
+          "content": "No update was provided for the week ending 2026-08-06.",
+          "placeholder": true
+        },
         {
           "date": "2026-07-30",
           "content": "No update was provided for the week ending 2026-07-30.",
@@ -383,6 +393,11 @@
       "photo": "fadul.jpg",
       "updates": [
         {
+          "date": "2026-08-06",
+          "content": "No update was provided for the week ending 2026-08-06.",
+          "placeholder": true
+        },
+        {
           "date": "2026-07-24",
           "content": "**Fadul Sikder:**\n\nWeekly Research Update\n\nMilestone: AAAI — July 28\n\nI have been working on finalizing the experimental version of the paper and revising several sections based on the feedback I received. Yesterday, I was finally able to complete a full version of the paper.\n\nA few additional results still need to be added, and I am currently working on finalizing them. I also think the results section needs to be more impactful by including stronger analytical insights, so I am working on improving that section as well.\n\nIn terms of writing, reducing the paper by three more pages will be a challenging task. If the group has time, I would appreciate feedback on the current version.\n\nI am hoping to complete another updated version by Sunday so that I can share it with the group before Tuesday’s submission deadline.",
           "placeholder": false
@@ -571,6 +586,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-07-30",
+          "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\nSubmitted paper to AAAI 2027\nAction Items:\n\n\n1. I submitted the paper to the AAAI.\n2. I plan to improve the submitted version by 1. Identifying the technical gaps and other issues in the paper. 2. Expand the experimental evaluation.\n\nIssues:\n\n\n1. None at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\ngood job on making the submission. i made some comments on kdd slides and poster. i will need to upload the poster today. can you please send me a final version of the poster today?\n\n---\n\n**Krishna Khadka:**\nthank you for the feedbacks, Dr. Lei. I will work on them now\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-07-23",
           "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\nTargeting AAAI 2027 — July 27\nAction Items:\n\n\n1. I submitted the abstract for the AAAI.\n2. I'm almost done preparing the first draft for the paper which I will share shortly after one final proofreading. I was working on the draft, so as I wait for some feedback, I will finish up the slides and poster for the presentation.\n3. I'm also expecting reviews for the NeurIPS submission today.\n\nIssues:\n\n\n1. None at the moment.",
           "placeholder": false
@@ -748,6 +768,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-07-31",
+          "content": "**Pujan Budhathoki:**\n\n**Milestone:**\n\n\n1. Think about this regarding the Anthropic’s paper: How did they do this and whether we can do the same thing for our purpose? Create a written document regarding this and share to group: August 4th\n2. Clarify in Teams discussion regarding the actual question from last time: whether we can extract at one token position and apply to another token position: August 1st\n3. Explore/think about any other methods(and develop an approach if possible) that can be used for this. (Other than the one used by Anthropic): August 4th\n\n\n**Action Items:**\n\n\n1. I have been carrying out literature reviews on Anthropic’s method of circuit tracing to better understand their approach to see whether we can apply something similar to our approach.\n\n\n1. [transformer-circuits.pub/2025/attribution-graphs/methods.html](https://transformer-circuits.pub/2025/attribution-graphs/methods.html) (Circuit Tracing: Revealing Computational Graphs in Language Models)\n2. [transformer-circuits.pub/2025/attribution-graphs/biology.html](https://transformer-circuits.pub/2025/attribution-graphs/biology.html) (On the Biology of a Large Language Model) \n\n\n1. I have been carrying out literature reviews regarding the token position problem that we discussed. \n2. As Fadul suggested, I have been exploring different Attribution methods/tools for LLMs and have been attempting to play around with the available tools.\n\n\n**Findings:**\n\n\n1. Regarding the token position discussion, I found a few more papers that extract the residual activations from a later token position and apply it to previous token positions. (I’ll post a more detailed discussion of this later on, on Teams). The general reasons why this should work are summarized in the following points:\n\n\n- Compressed task or solution representation: A later activation may summarize the question, intermediate reasoning, and partial solution into a compact internal state. Moving it earlier lets the model bypass some of the computation normally needed to reach that state.\n- Procedural or control-mode representation: The activation may encode a general instruction such as “use this solution method,” “reason briefly,” or “write secure code,” rather than one exact future token. Because this kind of control signal is general, downstream layers may still use it when it is inserted at an earlier position.\n- Latent plan before textual realization: The model may form an internal plan before expressing it in words or code. A later activation could contain a stronger or more stable version of that plan, so inserting it earlier may reinforce the model’s intended direction.\n- Safety or behavioral direction: Completed safe and unsafe outputs may differ along broad representation-space directions corresponding to behaviors such as validation, caution, or secure coding. Applying such a direction earlier can bias future token choices without transferring the entire later output or a detailed step-by-step plan.\n\n\n**Problems/Issues:**\n\n\n1. I don’t have any problems or issues at this point.",
+          "placeholder": false
+        },
         {
           "date": "2026-07-24",
           "content": "**Pujan Budhathoki:**\n\n• **Weekly Status Update**\n**Milestone: **\nLook for papers where they model the mental process of humans and try to map it into LLMs for secure code generation(or other tasks): July 28th(Currently working on this)\nTake one particular vulnerability example and make a mental map for this so that it can be validated: July 28th\nGo into depth regarding the special token that they used if other papers use it and further details regarding it: Completed\nThe paper I described on Tuesday extracted activations from one token position and applied it to all other tokens, see if other papers do this, and if this is the norm and if there is a good reason behind this decision: Completed\n**Action Items:**\nI am carrying out a literature review on papers where they model the mental process of humans and try to map it into LLMs for secure code generation(or other tasks). The papers that I found most close to this research problem so far are: (I haven’t found anything that applies it to coding tasks yet)\n**Interpretability in the Wild: A Circuit for Indirect Object Identification in GPT-2 Small (ICLR 2023):** This paper reverse-engineers how GPT-2 performs the Indirect Object Identification task by identifying the specific attention heads and circuits responsible for the behavior.\n**Towards Automated Circuit Discovery for Mechanistic Interpretability (NeurIPS 2023):** This paper introduces Automatic Circuit Discovery, an algorithm that automates the process of identifying the internal circuits responsible for a model's behavior using activation patching.\n**Circuit Tracing: Revealing Computational Graphs in Language Models(Anthropic Circuits Thread, 2025): **They make use of Cross-layer Transcoders and trace how their features interact. By doing that, they construct attribution graphs that reveal the sequence of computation steps leading to a prediction and validate the inferred mechanisms through targeted interventions. This one might be closest to what we want to do, however, their approach is very computationally expensive(Cross-layer Transcoder that they use is trained across all layers). \nOverall, to find a specific circuit that carries out a certain mechanism inside an LLM, I believe we have to modify our approach such that it is able to work across multiple layers. \nI also carried out literature reviews regarding the special token position to see if using the special token was something common across papers. I have included my findings below.\n\n**Findings:**\nAlmost all modern chat-oriented instruction-tuned LLMs use special chat-template tokens. After the pre-training of the model, they are instruction-tuned to work in a chat style format. These special tokens are present in the dataset during this instruction tuning. They help in guiding the LLM. And since the models are trained on this format, they still retain those tokens but they are hidden from the user during inference.\nWhen we are prompting the LLM, we can either prompt it in “raw” prompting style or “chat” prompting style.\nIn “raw” prompting, the model performs next-token prediction on plain text without using the chat-template tokens introduced during instruction tuning.\nBut in “chat” prompting style, the LLM makes use of the special tokens and processes and outputs the responses in a conversational style similar to its instruction tuning. This mode is generally used during inference.\nInstruction tuning can be seen as a special type of fine tuning. There exists different type of fine tunings like: Domain Fine Tuning, Preference Tuning, Task-specific Fine tuning, Code Fine tuning, Instruction Fine tuning.\nInstruction Fine tuning is a special type of fine tuning that teaches the model how to follow instructions and behave like a chatbot. \nRegarding the norm of using special tokens for extracting activations, I found 8 papers that do this(including the paper I presented on Tuesday). Among those papers, 7 of them are targeted towards Safety alignment of LLMs/Steering Refusal behaviors(The paper I presented also aimed towards steering refusal behavior). So, this might be a common norm while we are trying to steer the Refusal behaviors of LLMs. And so far it seems, such a special token hasn’t been applied for steering code generation behavior yet.\nAlmost all papers that use a special/template token extract the activation from the token immediately before the model begins generating its response.(The position of the special token is almost always right before the model starts generating its response). They provide the following reasoning for using the special token for extracting activations:\nThe assistant/template token is the transition point between understanding the prompt and generating the response. Its activation is believed to encode the model's high-level intent before any output tokens are produced.\nBy the time the model reaches the final prompt/template token, it has processed the entire input. The hidden state at this position acts as a compact summary of the prompt, similar to the [CLS] token in BERT or the last prompt token in decoder LLMs.\nSpecial/template tokens act as control interfaces for generation. Since all subsequent response tokens attend to them, manipulating their activations can influence the entire generated sequence.\n\n**Problems/Issues:**\nI don’t have any issues at this point.",
@@ -937,6 +962,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-08-06",
+          "content": "No update was provided for the week ending 2026-08-06.",
+          "placeholder": true
+        },
+        {
           "date": "2026-07-30",
           "content": "No update was provided for the week ending 2026-07-30.",
           "placeholder": true
@@ -1120,6 +1150,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-07-30",
+          "content": "**Shovon Niverd:**\n\nMilestone:\n\n\n1. Submitted paper to AAAI 27\n\nAction Items:\n\n\n1. Work on the current version, few tasks I was supposed to finish before submission but unfortunately couldn't, I will focus on them.\n2. IJCAI presentation and posters. I started working on them, hope to have the first version by July 2 Saturday. \n\nIssues:\n\n\n1. None at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\ngood job on making the submission. for the slides and poster, please refer to krishna's slides and poster for kdd.\n\n---\n\n**Shovon Niverd:**\nThank you Dr Lei \nI already took the kdd slides from Krishna and will refer to them\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-07-23",
           "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Targeting AAAI. Abstract submission July 21(Done)\n2. Final submission July 28\n\n**Action Items:**\n\n\n1. I am continuously refining the paper. \n\n\n1. A horizontal image to save space.\n2. Work on appropriate language framing of the paper\n\n\n1. I was busy working on the writing and finish up some pending experiments, couldn't finish the stage by stage sampling approach, I will try my best to finish it by paper deadline\n2. Add a supplementary section\n\n\n1. I will shorten the related work part in actual paper and add a detailed on in supplement\n2. Query budget and coverage related experiments can be added here.\n\n**Issues:**\n** **Right now learning the number of bins is not working well, most of the times no bins get closed. Therefore I did not add this in the paper.\nMain focus is on improving the quality of the paper with what we have.",
           "placeholder": false
@@ -1292,5 +1327,5 @@
       ]
     }
   ],
-  "last_updated": "2026-07-30T00:03:28.198338"
+  "last_updated": "2026-08-06T00:02:33.654194"
 }
