@@ -2,7 +2,7 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-08-06T00:02:37.191653",
+  "last_updated": "2026-08-12T23:48:14.967169",
   "days": [
     {
       "id": "2026-07-31",
@@ -72,17 +72,6 @@
         {
           "author": "Dr. Lei",
           "content": "@channel I won't be able to meet today, as I am preparing for my trip. If you have any technical issues, please send them to Slack and I will try to respond as I can."
-        }
-      ]
-    },
-    {
-      "id": "2026-05-13",
-      "date": "2026-05-13",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "@channel For the summer, we will meet at 2pm on Teams every Thursday. Please let me know if this does not work for you. Also, starting from tomorrow, we will use the new format, i.e., everyone will have a required technical discussion on your project. The session should focus on problem solving. Every discussion should have an agenda that identifies the technical issues to discuss, and what outcome you expect from the discussion."
         }
       ]
     }

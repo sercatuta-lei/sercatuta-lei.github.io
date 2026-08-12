@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-08-12",
+          "content": "No update was provided for the week ending 2026-08-12.",
+          "placeholder": true
+        },
+        {
           "date": "2026-08-06",
           "content": "No update was provided for the week ending 2026-08-06.",
           "placeholder": true
@@ -199,6 +204,11 @@
       "slug": "saif-uddin-mahmud",
       "photo": "saif-pic.jpg",
       "updates": [
+        {
+          "date": "2026-08-12",
+          "content": "No update was provided for the week ending 2026-08-12.",
+          "placeholder": true
+        },
         {
           "date": "2026-08-06",
           "content": "No update was provided for the week ending 2026-08-06.",
@@ -393,6 +403,11 @@
       "photo": "fadul.jpg",
       "updates": [
         {
+          "date": "2026-08-12",
+          "content": "No update was provided for the week ending 2026-08-12.",
+          "placeholder": true
+        },
+        {
           "date": "2026-08-06",
           "content": "No update was provided for the week ending 2026-08-06.",
           "placeholder": true
@@ -586,6 +601,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-08-12",
+          "content": "No update was provided for the week ending 2026-08-12.",
+          "placeholder": true
+        },
+        {
           "date": "2026-07-30",
           "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\nSubmitted paper to AAAI 2027\nAction Items:\n\n\n1. I submitted the paper to the AAAI.\n2. I plan to improve the submitted version by 1. Identifying the technical gaps and other issues in the paper. 2. Expand the experimental evaluation.\n\nIssues:\n\n\n1. None at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\ngood job on making the submission. i made some comments on kdd slides and poster. i will need to upload the poster today. can you please send me a final version of the poster today?\n\n---\n\n**Krishna Khadka:**\nthank you for the feedbacks, Dr. Lei. I will work on them now\n\n---",
           "placeholder": false
@@ -768,6 +788,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-08-07",
+          "content": "**Pujan Budhathoki:**\n\n**Milestone:**\n\n\n1. Get Answers for the questions that arose during the discussion and follow up on Teams Discussion, for the meeting notes points no. (1), (3), (4), (5): August 11\n2. Try to play around with J-space, try to implement it myself and observe the results: August 18\n\n\n**Action Items:**\n\n\n1. I have been going further deep into the Anthropic’s Paper on J-space that I presented in the last meeting to get a better understanding of it.\n2. They have a github link for their implementation. I am currently going through the implementation trying to reproduce the results myself.\n3. There is also this tool to observe the J-space and effect on different prompts and effects of steering released by Anthropic. I am playing around with it to see the effects on different scenarios.\n\n\n1. [neuronpedia.org/…/jlens](https://www.neuronpedia.org/qwen3.6-27b/jlens)\n\n\n**Findings:**\n\n\n1. Some of the interesting findings while I was playing with J-space(from the link I sent above)\n\n\n- First I gave a prompt to Qwen 3.6 27B to, “Write a simple Python function that takes a username as input and converts it into a C-compatible string so it can be passed to a native library.” \n\n\n- This first generated a simple python function\n- But, after I found the J-space concept “Python” and swapped it with “Java”, the generated program now turned into a java function(while keeping the same functionality)\n- So, there exists programming related concepts that have downstream effects\n- For now, this is the J-space concept that was very common and worked across all programs\n- J-space seems to contain lot of multiple concepts(Like “Python”, “python”, “_python”, “_Python” are listed separately) and also lots of unrelated, completely random concepts(These might be the concepts that fall out of the “effective J-space range” but are still included by the online tool I used)\n\n\n1. Regarding the question, **“Why is J-space limited to a few dozen of concepts? Why can’t it be more than that? How do they get the boundary for this?”**  J-space is not mathematically restricted to exactly 25 concepts. The model has a J-lens vector for every vocabulary token, and these vectors can collectively span the residual stream. What Anthropic found is that, at a particular token position and layer, only roughly a few dozen J-lens directions are meaningfully active, with median occupancy around 25 in the workspace layers. The exact number varies with the prompt and context.\n\nIt can further be explained by the following points:\n\n\n- **The model uses sparse representations:** Although thousands of J-lens directions are available, the current activation is well described by a sparse combination of only a few of them. Anthropic measured the point where adding another J-lens vector no longer improved reconstruction more than adding a random direction and this improvement generally plateaued at around 25 vectors.\n- **Most internal information is deliberately outside J-space:** The active J-space component explains no more than about 10% of the activation variance. The remaining roughly 90% contains lower-level processing such as syntax, token identity, formatting, grammatical structure, local pattern matching, and other automatic computations. J-space is therefore a small privileged channel, and not a summary of everything the model is computing\n- **Only information needed for flexible use enters the workspace:** Information tends to enter J-space when the model must report it, reason with it, hold it in mind, or pass it to a context-dependent downstream operation. Routine computations can happen outside J-space. Because only currently relevant and flexibly usable information is selected, the active set remains small. \n- **Unrelated concepts compete and displace one another:** In the paper's list experiments, when the model read unrelated words, older items rapidly disappeared from the J-space. Only about six previously read unrelated items remained detectable somewhere across the complete workspace layer band, and only around one or two were simultaneously represented at an individual layer. When the topic changed from animals to colors, the animal representations were quickly displaced by color representations. This is direct evidence of a capacity bottleneck rather than merely a visualization cutoff. \n- **The few-dozen estimate is local, not global:** The limit applies approximately to one activation at a particular token position and layer. Different layers may hold different concepts, and the contents change as the model processes additional tokens. Across all workspace layers and an entire generated response, the total number of distinct concepts observed can therefore be hundreds or more.\n\n\n**Problems/Issues:**\n\n\n1. I don’t have any problems at this point.",
+          "placeholder": false
+        },
         {
           "date": "2026-07-31",
           "content": "**Pujan Budhathoki:**\n\n**Milestone:**\n\n\n1. Think about this regarding the Anthropic’s paper: How did they do this and whether we can do the same thing for our purpose? Create a written document regarding this and share to group: August 4th\n2. Clarify in Teams discussion regarding the actual question from last time: whether we can extract at one token position and apply to another token position: August 1st\n3. Explore/think about any other methods(and develop an approach if possible) that can be used for this. (Other than the one used by Anthropic): August 4th\n\n\n**Action Items:**\n\n\n1. I have been carrying out literature reviews on Anthropic’s method of circuit tracing to better understand their approach to see whether we can apply something similar to our approach.\n\n\n1. [transformer-circuits.pub/2025/attribution-graphs/methods.html](https://transformer-circuits.pub/2025/attribution-graphs/methods.html) (Circuit Tracing: Revealing Computational Graphs in Language Models)\n2. [transformer-circuits.pub/2025/attribution-graphs/biology.html](https://transformer-circuits.pub/2025/attribution-graphs/biology.html) (On the Biology of a Large Language Model) \n\n\n1. I have been carrying out literature reviews regarding the token position problem that we discussed. \n2. As Fadul suggested, I have been exploring different Attribution methods/tools for LLMs and have been attempting to play around with the available tools.\n\n\n**Findings:**\n\n\n1. Regarding the token position discussion, I found a few more papers that extract the residual activations from a later token position and apply it to previous token positions. (I’ll post a more detailed discussion of this later on, on Teams). The general reasons why this should work are summarized in the following points:\n\n\n- Compressed task or solution representation: A later activation may summarize the question, intermediate reasoning, and partial solution into a compact internal state. Moving it earlier lets the model bypass some of the computation normally needed to reach that state.\n- Procedural or control-mode representation: The activation may encode a general instruction such as “use this solution method,” “reason briefly,” or “write secure code,” rather than one exact future token. Because this kind of control signal is general, downstream layers may still use it when it is inserted at an earlier position.\n- Latent plan before textual realization: The model may form an internal plan before expressing it in words or code. A later activation could contain a stronger or more stable version of that plan, so inserting it earlier may reinforce the model’s intended direction.\n- Safety or behavioral direction: Completed safe and unsafe outputs may differ along broad representation-space directions corresponding to behaviors such as validation, caution, or secure coding. Applying such a direction earlier can bias future token choices without transferring the entire later output or a detailed step-by-step plan.\n\n\n**Problems/Issues:**\n\n\n1. I don’t have any problems or issues at this point.",
@@ -962,6 +987,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-08-12",
+          "content": "No update was provided for the week ending 2026-08-12.",
+          "placeholder": true
+        },
+        {
           "date": "2026-08-06",
           "content": "No update was provided for the week ending 2026-08-06.",
           "placeholder": true
@@ -1150,6 +1180,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-08-12",
+          "content": "No update was provided for the week ending 2026-08-12.",
+          "placeholder": true
+        },
+        {
           "date": "2026-07-30",
           "content": "**Shovon Niverd:**\n\nMilestone:\n\n\n1. Submitted paper to AAAI 27\n\nAction Items:\n\n\n1. Work on the current version, few tasks I was supposed to finish before submission but unfortunately couldn't, I will focus on them.\n2. IJCAI presentation and posters. I started working on them, hope to have the first version by July 2 Saturday. \n\nIssues:\n\n\n1. None at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\ngood job on making the submission. for the slides and poster, please refer to krishna's slides and poster for kdd.\n\n---\n\n**Shovon Niverd:**\nThank you Dr Lei \nI already took the kdd slides from Krishna and will refer to them\n\n---",
           "placeholder": false
@@ -1327,5 +1362,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-06T00:02:33.654194"
+  "last_updated": "2026-08-12T23:48:09.164157"
 }
