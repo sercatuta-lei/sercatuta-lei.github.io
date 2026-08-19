@@ -2,7 +2,7 @@
   "slug": "arjun-dahal",
   "name": "Arjun Dahal",
   "channel": "arjun-research",
-  "last_updated": "2026-08-12T23:48:09.876417",
+  "last_updated": "2026-08-19T23:26:39.170973",
   "days": [
     {
       "id": "2026-07-25",
@@ -246,15 +246,6 @@
           "content": "Maybe I am missing something. Is this the same as or similar to your current work? The key idea seems to train a sensitive attribute invariant latent space which is the same as what is behind the use of fader network? If so the main concern remains, i.e., it may not be always possible to separate the sensitive attribute from the latent space. In any case, what do you consider to be the innovations or research contributions of your proposed work?"
         }
       ]
-    },
-    {
-      "id": "2026-05-20",
-      "date": "2026-05-20",
-      "owner": [
-        "**Main Idea**\nOur method learns a sensitive-attribute-invariant latent representation using a Wasserstein-style autoencoder. The encoder maps a tabular instance into a latent code. The decoder takes that latent code plus a chosen sensitive attribute value and reconstructs an instance. Then we search/sample the latent space to find codes where decoding with different sensitive values produces valid counterfactual pairs that receive different predictions from the black-box model. After generating these discriminatory pairs, we can use them either for fairness testing or to retrain the original model and reduce individual bias.\n\n**Process:**\n\n**1. Train a Sensitive attribute -Invariant Latent Space**\n\nInput: training dataset, sensitive attribute, Wasserstein-style autoencoder\nOutput: trained encoder and decoder\n\nWe train a Wasserstein autoencoder. The encoder maps each tabular row into a latent code z. The decoder reconstructs the row using z and the sensitive attribute value as a condition. During training, we use reconstruction loss and latent regularization loss. Then we add a sensitive-invariance objective, such as MMD across male/female latent distributions, so that the latent code does not strongly encode gender.\n\n**2. Generate Candidate Counterfactual Pairs**\nInput: trained decoder, sampled or encoded latent codes, sensitive attribute values\nOutput: generated male/female counterfactual candidate pairs\n\nFor a latent code z, we decode it twice:\nx_male  = Dec(z, Male)\nx_female = Dec(z, Female)\nThis gives us a pair of generated instances that share the same latent content but differ in the sensitive attribute condition. These are candidate sensitive-attribute counterfactuals.\n\n**3. Query the Black-Box Classifier**\nInput: generated counterfactual pairs and black-box classifier\nOutput: labeled latent samples\n\nz -> prediction_gap = |f(y | x_male) - f(y | x_female)|\nWe pass both generated instances into the black-box classifier. If the classifier predicts different labels, then this pair is discriminatory, and we have found a discriminatory latent code.\n\n**4. Search the Latent Space Efficiently**\nInput: initial labeled latent samples, trained decoder, black-box classifier\nOutput: more latent codes likely to generate discriminatory counterfactual pairs\n\nWe use search methods such as Bayesian Optimization and SVM-based sampling to find regions of the latent space where male/female decoded pairs are more likely to produce different predictions. Bayesian Optimization uses previous query results to decide where to sample next. SVM-style sampling can learn a rough boundary between flipping and non-flipping latent regions and then sample near that boundary ( this is what LIMI does for finding discriminatory instances; in our case, we use it for finding the pair).\n\n**5. Use the Generated Pairs for Testing or Repair**\nInput: final generated discriminatory counterfactual pairs\nOutput: fairness test cases and a repaired classifier with lower individual bias on held-out data\n\nFor fairness testing, we report how many valid counterfactual pairs produce different predictions under sensitive-attribute change. For repair, we add these generated pairs to the training process, with corrected labels, and retrain the original biased classifier.",
-        "Dr. Lei, I was thinking of working on this for my next project for ICSE. Please let me know if this is reasonable."
-      ],
-      "replies": []
     }
   ]
 }

@@ -2,7 +2,7 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-08-12T23:48:14.967169",
+  "last_updated": "2026-08-19T23:26:44.746711",
   "days": [
     {
       "id": "2026-07-31",
@@ -61,17 +61,6 @@
         {
           "author": "Dr. Lei",
           "content": "Indeed. The ability to ask questions and evaluate the responses from AI will become more important. Also, AI will have a profound impact on how research is done, just like how it impacts knowledge work in general."
-        }
-      ]
-    },
-    {
-      "id": "2026-05-20",
-      "date": "2026-05-20",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "@channel I won't be able to meet today, as I am preparing for my trip. If you have any technical issues, please send them to Slack and I will try to respond as I can."
         }
       ]
     }

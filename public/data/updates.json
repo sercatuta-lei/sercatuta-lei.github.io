@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-08-19",
+          "content": "No update was provided for the week ending 2026-08-19.",
+          "placeholder": true
+        },
+        {
           "date": "2026-08-12",
           "content": "No update was provided for the week ending 2026-08-12.",
           "placeholder": true
@@ -204,6 +209,11 @@
       "slug": "saif-uddin-mahmud",
       "photo": "saif-pic.jpg",
       "updates": [
+        {
+          "date": "2026-08-19",
+          "content": "No update was provided for the week ending 2026-08-19.",
+          "placeholder": true
+        },
         {
           "date": "2026-08-12",
           "content": "No update was provided for the week ending 2026-08-12.",
@@ -403,6 +413,11 @@
       "photo": "fadul.jpg",
       "updates": [
         {
+          "date": "2026-08-19",
+          "content": "No update was provided for the week ending 2026-08-19.",
+          "placeholder": true
+        },
+        {
           "date": "2026-08-12",
           "content": "No update was provided for the week ending 2026-08-12.",
           "placeholder": true
@@ -601,6 +616,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-08-19",
+          "content": "No update was provided for the week ending 2026-08-19.",
+          "placeholder": true
+        },
+        {
           "date": "2026-08-12",
           "content": "No update was provided for the week ending 2026-08-12.",
           "placeholder": true
@@ -788,6 +808,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-08-14",
+          "content": "**Pujan Budhathoki:**\n\n**Milestone:**\n\n\n1. Get Answers for the questions that arose during the discussion and follow up on Teams Discussion, for the meeting notes points no. (1), (3), (4), (5): August 11: Done\n2. Try to play around with J-space, try to implement it myself and observe the results: August 18\n\n\n**Action Items:**\n\n\n1. I have been further going deep into the J-space paper to answer the questions that arose in the meeting.\n2. I have been working on implementing J-space and getting the results myself.\n3. I am working on getting the statistics for the various concepts present in the J-space across various prompts on program generation tasks.\n\n\n**Findings:**\n\n\n1. I have posted my findings regarding the questions that arose in the last meeting in a different post.\n\n\n**Problems/Issues:**\n\n\n1. I don’t have any problems or issues at this point.",
+          "placeholder": false
+        },
         {
           "date": "2026-08-07",
           "content": "**Pujan Budhathoki:**\n\n**Milestone:**\n\n\n1. Get Answers for the questions that arose during the discussion and follow up on Teams Discussion, for the meeting notes points no. (1), (3), (4), (5): August 11\n2. Try to play around with J-space, try to implement it myself and observe the results: August 18\n\n\n**Action Items:**\n\n\n1. I have been going further deep into the Anthropic’s Paper on J-space that I presented in the last meeting to get a better understanding of it.\n2. They have a github link for their implementation. I am currently going through the implementation trying to reproduce the results myself.\n3. There is also this tool to observe the J-space and effect on different prompts and effects of steering released by Anthropic. I am playing around with it to see the effects on different scenarios.\n\n\n1. [neuronpedia.org/…/jlens](https://www.neuronpedia.org/qwen3.6-27b/jlens)\n\n\n**Findings:**\n\n\n1. Some of the interesting findings while I was playing with J-space(from the link I sent above)\n\n\n- First I gave a prompt to Qwen 3.6 27B to, “Write a simple Python function that takes a username as input and converts it into a C-compatible string so it can be passed to a native library.” \n\n\n- This first generated a simple python function\n- But, after I found the J-space concept “Python” and swapped it with “Java”, the generated program now turned into a java function(while keeping the same functionality)\n- So, there exists programming related concepts that have downstream effects\n- For now, this is the J-space concept that was very common and worked across all programs\n- J-space seems to contain lot of multiple concepts(Like “Python”, “python”, “_python”, “_Python” are listed separately) and also lots of unrelated, completely random concepts(These might be the concepts that fall out of the “effective J-space range” but are still included by the online tool I used)\n\n\n1. Regarding the question, **“Why is J-space limited to a few dozen of concepts? Why can’t it be more than that? How do they get the boundary for this?”**  J-space is not mathematically restricted to exactly 25 concepts. The model has a J-lens vector for every vocabulary token, and these vectors can collectively span the residual stream. What Anthropic found is that, at a particular token position and layer, only roughly a few dozen J-lens directions are meaningfully active, with median occupancy around 25 in the workspace layers. The exact number varies with the prompt and context.\n\nIt can further be explained by the following points:\n\n\n- **The model uses sparse representations:** Although thousands of J-lens directions are available, the current activation is well described by a sparse combination of only a few of them. Anthropic measured the point where adding another J-lens vector no longer improved reconstruction more than adding a random direction and this improvement generally plateaued at around 25 vectors.\n- **Most internal information is deliberately outside J-space:** The active J-space component explains no more than about 10% of the activation variance. The remaining roughly 90% contains lower-level processing such as syntax, token identity, formatting, grammatical structure, local pattern matching, and other automatic computations. J-space is therefore a small privileged channel, and not a summary of everything the model is computing\n- **Only information needed for flexible use enters the workspace:** Information tends to enter J-space when the model must report it, reason with it, hold it in mind, or pass it to a context-dependent downstream operation. Routine computations can happen outside J-space. Because only currently relevant and flexibly usable information is selected, the active set remains small. \n- **Unrelated concepts compete and displace one another:** In the paper's list experiments, when the model read unrelated words, older items rapidly disappeared from the J-space. Only about six previously read unrelated items remained detectable somewhere across the complete workspace layer band, and only around one or two were simultaneously represented at an individual layer. When the topic changed from animals to colors, the animal representations were quickly displaced by color representations. This is direct evidence of a capacity bottleneck rather than merely a visualization cutoff. \n- **The few-dozen estimate is local, not global:** The limit applies approximately to one activation at a particular token position and layer. Different layers may hold different concepts, and the contents change as the model processes additional tokens. Across all workspace layers and an entire generated response, the total number of distinct concepts observed can therefore be hundreds or more.\n\n\n**Problems/Issues:**\n\n\n1. I don’t have any problems at this point.",
@@ -987,6 +1012,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-08-19",
+          "content": "No update was provided for the week ending 2026-08-19.",
+          "placeholder": true
+        },
+        {
           "date": "2026-08-12",
           "content": "No update was provided for the week ending 2026-08-12.",
           "placeholder": true
@@ -1180,6 +1210,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-08-19",
+          "content": "No update was provided for the week ending 2026-08-19.",
+          "placeholder": true
+        },
+        {
           "date": "2026-08-12",
           "content": "No update was provided for the week ending 2026-08-12.",
           "placeholder": true
@@ -1362,5 +1397,5 @@
       ]
     }
   ],
-  "last_updated": "2026-08-12T23:48:09.164157"
+  "last_updated": "2026-08-19T23:26:38.377206"
 }
