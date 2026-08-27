@@ -2,8 +2,50 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-08-19T23:26:44.746711",
+  "last_updated": "2026-08-27T04:26:14.900248",
   "days": [
+    {
+      "id": "2026-08-27",
+      "date": "2026-08-27",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "I am attaching the kickoff slides. The topic of discussion is: In an ideal world, what would research look like to you, and how research should be done? See you all at 2pm tomorrow."
+        }
+      ]
+    },
+    {
+      "id": "2026-08-24",
+      "date": "2026-08-24",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "@channel We will need to figure out a different meeting schedule for this semester, as I am teaching at 12.30pm on Tue/Thu. My plan is to have the kick-off meeting first, where we can discuss what would be the most efficient way to organize the meetings. Can we meet in the lab at 2pm this Thursday for the kick-off meeting? Please let me know if this works for you."
+        },
+        {
+          "author": "Shovon Niverd",
+          "content": "This Thursday 2pm works for me"
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "It works for me"
+        },
+        {
+          "author": "Arjun Dahal",
+          "content": "It works for me"
+        },
+        {
+          "author": "Fadul Sikder",
+          "content": "Works for me."
+        },
+        {
+          "author": "Pujan Budhathoki",
+          "content": "Works for me."
+        }
+      ]
+    },
     {
       "id": "2026-07-31",
       "date": "2026-07-31",

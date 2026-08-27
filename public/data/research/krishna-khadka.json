@@ -2,7 +2,7 @@
   "slug": "krishna-khadka",
   "name": "Krishna Khadka",
   "channel": "krishna-research",
-  "last_updated": "2026-08-19T23:26:40.694498",
+  "last_updated": "2026-08-27T04:26:12.573787",
   "days": [
     {
       "id": "2026-06-18",
@@ -75,35 +75,6 @@
           "content": "I see. A few comments/questions:\n\n\n1. Regarding no meaningful improvement, what did actually happen? Was it because the mispredictions were not corrected, or because the mispredictions were corrected, but the corrections caused some correct predictions to become incorrect?\n2. What is the fundamental reason for no meaningful improvement? Is it because the model is already optimal and thus no room for improvement? Or is it because the mispredictions are diffused in different regions, instead of concentrated in one region? They are actually different reasons. \n3. Also, when you say no broken decision rule to repair, what does it exactly mean? That is, if all the decision rules were correct, why would there be mispredictions? Are you saying that all the decision rules can be correct, but there can still be mispredictions due to other reasons? If so, what would be other reasons?\n4. If I understand your points correctly, you are suggesting that decision region-aware repair only works for distribution shift? Why so? Why would it be limited to this particular case as the notion of decision logic seems general?\n5. If you believe this approach makes more sense to image data where datasets with distribution shifts are more easily available, you can experiment it with them. Maybe the decision signatures would need to be in terms of the internal representations, such as feature maps, instead of the raw pixels."
         }
       ]
-    },
-    {
-      "id": "2026-05-28",
-      "date": "2026-05-28",
-      "owner": [
-        "I tried the decision region-aware repair approach on iid tabular datasets like Adult Income and Mushroom but saw no meaningful improvement. The reason is that the train, validation, and test splits come from the same distribution, so any shortcut the model relies on stays equally predictive at evaluation time, and there is no broken decision rule to repair. Beyond that, the residual errors on these datasets are largely irreducible: the same feature vector can map to either label because the features genuinely do not determine the outcome, so the model is already near Bayes-optimal and a stronger model (e.g., gradient boosting) gains only a couple of points before flatlining. The validation mistakes are therefore scattered across these ambiguous cases rather than forming a concentrated decision-rule region, so the repair has no systematic target to find, edit, and contain.\nDatasets like waterbirds is different because the dataset is built around a clear spurious correlation between the bird label and the background, and that correlation breaks under distribution shift: it holds about 95% of the time in training but only 50% at test, so the minority combinations (waterbird on land, landbird on water) jump from roughly 1-4% of training to about 11-39% of test. The model learns the background shortcut and then fails systematically on exactly those shifted minority groups, and those failures form identifiable decision-rule regions that the method can target, improving worst-group (waterbird-on-land) test accuracy from 0.73 to 0.89. I applied the approach by freezing the ResNet50 backbone and treating the post-GAP feature vector as the input to the classification head, editing only that head, which is analogous to an MLP on tabular data but with many more features.\n\nThe general principle is that decision-rule regions are repairable precisely when the distribution shifts between training and test, since that is when a decision rule learned during training stops holding at test time. I'm looking to explore more tabular datasets where the trianing set and testing set show distributional shift."
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-05-26",
-      "date": "2026-05-26",
-      "owner": [
-        "I agree, how we make the edits in step b based on the identified failure-rule regions from step a. I did some implementations and the improvements were marginal. I'm reverifying the implementations and also checking in new datasets to see if different datasets can show more improvements."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "Sounds good. One challenge is how to connect step a with step b, i.e., how to make step b take advantage of step a, in terms of targeting the identified failure region."
-        }
-      ]
-    },
-    {
-      "id": "2026-05-24",
-      "date": "2026-05-24",
-      "owner": [
-        "I'm trying to implement the workflow and see how it performs on 4 tabular datasets trained on a MLP classifier."
-      ],
-      "replies": []
     }
   ]
 }
