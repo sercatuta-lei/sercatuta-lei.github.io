@@ -2,7 +2,7 @@
   "slug": "arjun-dahal",
   "name": "Arjun Dahal",
   "channel": "arjun-research",
-  "last_updated": "2026-08-27T04:26:11.665989",
+  "last_updated": "2026-09-03T01:01:08.654631",
   "days": [
     {
       "id": "2026-07-25",
@@ -153,10 +153,6 @@
       "id": "2026-06-05",
       "date": "2026-06-05",
       "owner": [
-        "We have training latent vectors scattered throughout the latent space. Now, the idea is to find the latents that are discriminatory. If the latents are discriminatory, then we can just sample around them. If they aren't, then we will try to move them / change them such that they are made discriminatory or search the region where the latents are likely to be discriminatory.",
-        "So, there are 2 major tasks: find the discriminatory latents/region and the second sample around them. For starters, we can just find the discriminatory training latents and then sample around them, but given that there will only be 5% of discriminatory latents, we won't get much yield if we sample around them.",
-        "So, somehow, we need to move the non-discriminatory latents or make changes to them such that they will be discriminatory, or just find the regions where the latents are likely to be discriminatory. For now, from the t-SNE plot, we can see discriminatory latents in a specific region of the latent space. So, let's start with the hypothesis that we can isolate/separate discriminatory latents into regions where discriminatory latents are found and regions where discriminatory latents aren't found.",
-        "Our key insight is: discriminatory latents are not only found by walking smoothly along one latent direction ( like using gradients ) or only sampling near a decision boundary; they appear as many separated pockets in the higher-dimensional latent space ( as seen in the t-SNE plot), and a decision tree is good at separating those pockets into exploitable regions. The better the decision tree we have, with high precision that the region is discriminatory or not ( similar to counterfactual being discriminatory for the black box model ), the better we can isolate such regions, and then we will just sample in those regions. We will use active learning to make the surrogate better over time, along with feedback from the blackbox model ( the probability difference between X_prev - X_unprev ) and then use that label to train the surrogate by associating with the corresponding latent.\n\nLatent Imitator’s insight is: “go near the decision boundary and sample nearby.” Our insight is more global: learn a cheap latent map of where black-box discrimination tends to occur, then repeatedly sample high-probability decision tree leaves/regions instead of doing directional movement.",
         "When we make an initial decision tree at first, we divide the whole latent space into rough regions where we mightn't be able to identify such pockets. Now that we have a rough approximation, we will find a certain number of samples within each region by sampling x number of instances in each region and then querying them to the black box. Over iterations, we will leave the regions that don't have a good discriminatory score and only work on the regions where there is a good discriminatory probability ( we will be associating the region with the probability ). So, the problem boils down to not finding regions outside of our initial regions made by the first surrogate decision tree, but just to divide it into smaller regions and iterate over time to find the pockets. For speeding up the process, we will use uncertain samples, i.e., we will use uncertain samples ( 0.5 prob for being discriminatory )  within each region to divide each region faster. Finally, we can sample in the region/leaf where there is a high probability of samples being discriminatory.\n\nThis paper also does use decision tree in the input space as a surrogate, but is severely limited for efficient discovery because it needs to find the branches that differ in the sensitive attribute ( with the rest of the attributes being similar ). [https://dl.acm.org/doi/pdf/10.1145/3691620.3695481](https://dl.acm.org/doi/pdf/10.1145/3691620.3695481)\n\nPictures are for reference only:"
       ],
       "replies": [
@@ -167,19 +163,6 @@
         {
           "author": "Dr. Lei",
           "content": "The general idea makes sense. But the effectiveness of this search process has a lot to do with how you build the decision tree. Two questions:\n\n\n1. Are you using/adapting an existing algorithm or proposing a new one? In the latter case, what is the novelty of the new algorithm? \n2. Can you provide a good argument (or event better, some kind of guarantee) that the algorithm will be effective in most cases?"
-        }
-      ]
-    },
-    {
-      "id": "2026-05-29",
-      "date": "2026-05-29",
-      "owner": [
-        "Thank you for your comments. I will keep Slack updated on the project details as it progresses."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "It seems the main differences from LIMI are in the technical details. Try to make sure the differences are not just by choice. That is, you want to show that what you decide to do differently has some technical challenges to solve. If this is the case, and if your approach can produce significantly better results, then you can justify your research novelty and contributions."
         }
       ]
     }

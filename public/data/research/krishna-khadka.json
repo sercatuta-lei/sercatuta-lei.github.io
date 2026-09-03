@@ -2,7 +2,7 @@
   "slug": "krishna-khadka",
   "name": "Krishna Khadka",
   "channel": "krishna-research",
-  "last_updated": "2026-08-27T04:26:12.573787",
+  "last_updated": "2026-09-03T01:01:10.587092",
   "days": [
     {
       "id": "2026-06-18",
@@ -60,19 +60,6 @@
         {
           "author": "Dr. Lei",
           "content": "Yes, the general idea/steps make sense. A few comments:\n\n\n1. Regarding your concerns, it is something that needs to be tried and answered by experiments. I suggest you take an incremental approach, trying the simplest ones first and then add more to it and observe its impact. For decision signatures, try to include components that make most sense first. For the correction you will learn for each region, try linear correction first.\n2. For the decision signature, why do you want to build it from the top two classes? Also, the gap between the top two does not seem to make sense, as all the instances in the same decision region do not necessarily have the same top two classes, and the same gap. The same goes for the confidence scores. The key principle for the signature design is that it has to be something invariant for all the instances in the same region. Try to ask what each component represents, intuitively and geometrically.\n3. Now you assume the representation is good, but the classification is not. Another option is not to assume, but check, e.g., using linear probing. That is, if the representation is good, you can probably train a linear classifier to get good predictions. Also think about what to do if the representation is not good, which of course, can be a separate project."
-        }
-      ]
-    },
-    {
-      "id": "2026-06-01",
-      "date": "2026-06-01",
-      "owner": [
-        "Thank you for the in-depth questions, Dr. Lei. I will conduct additional experiments and analyses to better address them. Based on my preliminary results, the decision-region-aware repair approach appears to perform well on datasets that show distribution shifts during inference. However, I would like to perform a more thorough evaluation and deeper analysis before any definitive conclusions. I will follow up with more detailed findings once the experiments are complete."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "I see. A few comments/questions:\n\n\n1. Regarding no meaningful improvement, what did actually happen? Was it because the mispredictions were not corrected, or because the mispredictions were corrected, but the corrections caused some correct predictions to become incorrect?\n2. What is the fundamental reason for no meaningful improvement? Is it because the model is already optimal and thus no room for improvement? Or is it because the mispredictions are diffused in different regions, instead of concentrated in one region? They are actually different reasons. \n3. Also, when you say no broken decision rule to repair, what does it exactly mean? That is, if all the decision rules were correct, why would there be mispredictions? Are you saying that all the decision rules can be correct, but there can still be mispredictions due to other reasons? If so, what would be other reasons?\n4. If I understand your points correctly, you are suggesting that decision region-aware repair only works for distribution shift? Why so? Why would it be limited to this particular case as the notion of decision logic seems general?\n5. If you believe this approach makes more sense to image data where datasets with distribution shifts are more easily available, you can experiment it with them. Maybe the decision signatures would need to be in terms of the internal representations, such as feature maps, instead of the raw pixels."
         }
       ]
     }
