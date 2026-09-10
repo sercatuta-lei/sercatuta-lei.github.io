@@ -2,8 +2,28 @@
   "slug": "arjun-dahal",
   "name": "Arjun Dahal",
   "channel": "arjun-research",
-  "last_updated": "2026-09-03T01:01:08.654631",
+  "last_updated": "2026-09-10T00:55:52.005262",
   "days": [
+    {
+      "id": "2026-09-09",
+      "date": "2026-09-09",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "I don't quite remember the details of what you are trying to do, after such a long while. Some general comments:\n\n\n1. Key insight/novelty is the key. Try to explain the key insight/novelty in a way that a 3rd-person can understand, probably no more than five sentences. What you do would not matter, research-wise, if you cannot clearly explain the key insight/novelty in a way other people can appreciate.\n2. Focus your work on the key insight/novelty. What you are outlining seems to be a very involved process, and most steps do not seem directly related to the notion of decision logic region, which seems to be your key insight. Clearly spell out what is your contribution, and what is existing work you are just trying to use. You should minimize the amount of work/effort on parts that are not your major contributions.\n3. Try not to limit yourself to existing problems/setups/incremental improvements of existing solutions. It is not only difficult for you to develop a better solution (I am not saying this is not possible), but more importantly, what you do can be easily dismissed as lack of novelty/significant research contributions."
+        }
+      ]
+    },
+    {
+      "id": "2026-09-08",
+      "date": "2026-09-08",
+      "owner": [
+        "**Main idea**\n\nDiscover regions near a black-box classifier’s decision boundary that exhibit different feature sensitivities and interactions, then use these regions to guide the search for instances near the decision boundary. These instances would be further passed through the TabChange framework to find counterfactuals on sensitive attributes; the pair would then be used to check discrimination in the black-box model and repair the bias of the model.\n\n**Steps:**\n**1. Train models:**\nInput: training data\nOutput: classifier, GAN, and constraints\nTrain the classifier, preprocessing, CTGAN, and obtain the associated constraints.\n\n2. **Define decision signatures:**\nInput: training rows and classifier\nOutput: decision signature for each row (and normalization scheme)\nQuery instances and obtain their decision signatures; select sensitivity components ( primary focus on sensitive attribute sensitivity and its second-order interactions, and the rest of them based on average magnitude strength)\n\n**3. Explore the boundary:**\nInput: frozen CTGAN and 1.5 million sampled latents\nOutput: boundary candidates with their probabilities, and corresponding latents\nDecode possible boundary samples, query the black box model, and then guide the samples towards the decision boundary.\n\n\n\n1. **Discover boundary regions:** \n\nInput: boundary candidates\nOutput: supported regions with labels\nVerify probabilities to determine whether the instances are boundary samples or not, and cluster the samples using their decision signatures ( use normalization from step 2). From this stage onwards, we will just search/exploit the clusters we have found.\n\n**5. Exploit selected regions:**\nInput: boundary regions\nOutput: additional boundary samples\nTrain a region predictor and guide fresh latent searches toward selected regions; exploit to find more possible discriminatory latents ( near the decision boundary ).\n\n**6. Find the counterfactuals on the sensitive attribute**\nInput: Boundary samples from the decision regions\nOutput: Counterfactuals on sensitive attribute for those instances\nUse the TabChange framework to find the counterfactuals on the sensitive attribute.\n\n**7. Test fairness:**\nInput: sensitive-attribute counterfactuals\nOutput: verified fairness-test pairs\nQuery both pairs, check prediction disagreements on the pair, and report the number\n\n\n\n1. **Retrain the model for bias removal:**\n\nInput: verified fairness-test pairs\nOutput: train on these pairs to remove the bias from the model.\nSelect a few samples from each region that are discriminatory pairs, and then train the model on them to remove the bias.",
+        "Dr. Lei, I am looking for your feedback on the approach."
+      ],
+      "replies": []
+    },
     {
       "id": "2026-07-25",
       "date": "2026-07-25",
@@ -95,76 +115,6 @@
         "In the context of fairness testing, the concept of the decision region seems to draw parallels to the local search ( among global and local search for the discriminatory samples ). In local search, the instances near the global discriminatory instances are searched by perturbing the non-sensitive attribute. The concept of a decision region has more geometric rigor associated with it, rather than just assuming that simple perturbations lead to the same decision behavior.\nFor the global search, I was thinking of using gradient for the non-discriminatory latents and then using gradient to find a new decision region in the latent space ( where the surrogate is MLP ). However, if we were to do so, it might be conceptually similar to the existing works.\nFor an alternative, keeping a record of the center point of known decision regions and then searching latents at a certain radius ( querying them for getting their prediction probability ) and for promising discriminatory latents, maybe querying them in the black box could be a preliminary approach. If a new region is discovered, then caching its signature to guide future searches in latent space.\nSo, the question of how to explore for the decision region can be done either 1. starting with known non-discriminatory latents and using gradients to search for new regions, or 2. use active learning in some capacity for finding those regions from known regions, or 3. Something else.\nDr. Lei, please let me know the direction I should pursue or if there is some gap in my understanding."
       ],
       "replies": []
-    },
-    {
-      "id": "2026-06-11",
-      "date": "2026-06-11",
-      "owner": [
-        "The current approach is good at exploiting already available regions that have discriminatory instance clusters/pockets, but not good at exploring other regions of discrimination. Uncertainty and density-based searches seem to be useful, but aren't sufficient conditions to uncover such regions that are discriminatory ( but have low density of instances (GMM on latents) near them ). Our approach of dividing the whole latent space could turn out to be pretty huge for datasets having a larger number of columns ( 14D ).\n\nLatent Imitator circumvents the issue by drawing a decision boundary in the latent space, where the projection acts as a guide to take instances near the boundary. The advantage being we now know the region to sample. However, I believe it's still not enough, because it doesn't concern itself with latent density, and could still miss the regions that are far away from the decision boundary. For example, there could be instances with very high probability, whose counterfactual gender instance could have very low probability ( with the threshold being 0.5 ), resulting in a discriminatory pair.\n\nSo, there are a couple of fundamental questions:\nFirst: Finding all the discriminatory regions ( or at least trying to ),  second: and a way to guide the non-discriminatory instances to these discriminatory regions. Moreover, we might have to find if such discriminatory latents make a cluster in the latent space or are scattered or something else.  Latent imitator finds a way to guide the instance to the decision boundary ( but not with gradients), but still doesn't touch the first one, where we could contribute. The first one seems to uncover a harder problem, i.e., coverage of our approach.",
-        "Sure, Dr. Lei. I will make a submission as soon as possible."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "As you are still exploring ideas for this project, I suggest you get your other paper submitted to the journal as soon as possible. It can take quite some time for a journal paper to get accepted."
-        }
-      ]
-    },
-    {
-      "id": "2026-06-08",
-      "date": "2026-06-08",
-      "owner": [
-        "Thank You, Dr. Lei. I will get back to you.",
-        "Thank you, Dr. Lei.\nI agree the approach makes sense in general and might yield well, but there are still a lot of things that need further investigation. It still isn't very intuitive.\nI am investigating primarily the following: Why does this work? Will the method work reasonably well for other datasets/cases?"
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "I hope you are not discouraged by my comments. If you are confident about your approach, you can continue with your plan. But try to characterize what you do at a higher level of abstraction. Try to ask yourself what are the fundamental ideas that allow what you do to do better than state of the art. Try to be critical at your own work by asking questions like, what are the possible failure modes, i.e., where your approach can break. An important part of research is to know the limitations of your own work, i.e., try to understand not only what your approach can do, but also what your approach cannot do."
-        }
-      ]
-    },
-    {
-      "id": "2026-06-07",
-      "date": "2026-06-07",
-      "owner": [
-        "Thank you for your comments.\nThe region is defined by the surrogate we build and how it divides the latent space into regions. So, the process becomes how well we can build the surrogate to have regions that are discriminatory, non-discriminatory, and mixed ( having discriminatory and non-discriminatory latents ).\n\n\n1. We can know if two instances belong to the same region or not by passing them to the surrogate. Does one fall in the region defined by one of the discriminatory leaf, non-discriminatory leaf, or mixed leaf? The fundamental properties of the same region would be defined by the leaf, which in turn depends on how well we can find the samples ( and the quality of samples ) that we retrain the surrogate over time. In our cases, we are using uncertain samples in the mix ( that the surrogate doesn't know of to be discriminatory or non-discriminatory ), to improve the surrogate and, in turn, regions defined by leaves over time.\n2. Each leaf/region can have the following property: discriminatory, mixed, or non-discriminatory. Of course, it's not a discrete label but a continuous spectrum. We will be assigning the numbers between 0 and 1 to be the leaf/region, where the region that's discriminatory has the prob 0.8 - 1.0 (say), and one that's mixed has a range from 0.4 to 0.6 ( say ), and the non-discriminatory has the prob 0.2 - 0.0 ( say ). Later, when we sample for discriminatory instances, we will select the leaves that will have a higher chance of being discriminatory ( 0.8 to 1.0, i.e., out of all the instances we sample with the leaf/in the region, we will likely have 80% to 100% of those being discriminatory )."
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "I like the idea of region-aware search/sampling. However, the challenge is how to actually identify the regions efficiently, which is not clear from your writeup. As I suggested in the meeting, try to write down the workflow step by step in a way that a 3rd-person can follow and implement it.\nAlso, if you do region-aware search, you will need to make sure the notion of region is well-defined, in terms of questions like the following:\n\n\n1. Given two instances, how do you determine exactly if they belong to the same region? In other words, what fundamental properties would the instances in the same region share with each other (and thus make them belong to the same region)? This is similar to the definition of the decision signature in Krishna/Shovon's work.\n2. Are all the instances in the same region discriminatory or only some of them? The region would not be well-defined if some instances are discriminatory and others are not."
-        },
-        {
-          "author": "Dr. Lei",
-          "content": "Well, the way you responded to my questions is very operational. This is exactly where my concern is about. You seem to suggest that the notion of region-based search/sampling is what it distinguishes your work from others, but it seems difficult for you to clearly define the notion of a region. Your answer seems like whatever region you identify depends on how you build the surrogate. A well-defined notion should not depend on how you implement the notion. Just like when you work on a software project, you need to distinguish specification, what you are supposed to do, from implementation, how you actually do it. When you do research, you need to distinguish what you want to achieve from how you implement it.\nYou might say, why do we care about how we define the notion of a region, or for this matter, how we define basic concepts in research? Would it be sufficient as long as our approach has good results in our experiments? This has to do with what research is fundamentally about. Research is not only about whether your approach works or not, i.e. the end result. More importantly, it is about the why part, i.e., why your approach works, and why you get the results you are getting.\nWhen you explain the why part,  you cannot just explain how your approach works. Instead, you want to break down the problem you want to solve into smaller objectives that if achieved, would solve the end problem. Then you argue that your implementation actually achieves each of those smaller objectives. In computer science, smaller objectives are often in terms of what kind of intermediate results you want to produce, which is in turn often in terms of what kind of properties some data structures must satisfy."
-        }
-      ]
-    },
-    {
-      "id": "2026-06-06",
-      "date": "2026-06-06",
-      "owner": [
-        "Thank you for your questions.\n\n1.\nThe algorithm will be novel. Our unique latent space requires us to learn the surrogate differently.\nIt will have components of active learning. However, we will also be using density and uncertainty-based filtering for finding latents that are worth querying the black box model for updating the surrogate over time.\n\nWe are trying to learn a surrogate ( not directly for the black box model prediction ) for the black box's \"discriminatory behavior\" in the latent space. The surrogate will be trained on the latents ( and the probability difference of p_prev - p_unprev from the black box when the latent is decoded and queried for the pair to the black box model ). This is different from the surrogate LIMI learns. Now comes the choice of surrogate, which is a decision tree ( instead of MLP or SVM ), because we want to divide the latent space into regions of discrimination and non-discrimination  ( as seen in t-SNE plot ) and then sample from the discriminatory regions. However, before updating the surrogate, we can't just sample any point and decode and get the discriminatory signal from the black box method. When the initial surrogate is made, for each region/leaf, we will sample latents  a. that are uncertain for the surrogate itself, i.e., have prob of being near 0.5 for being discriminatory b. latents that the surrogate is highly confident to be discriminatory ( near prob 1 ) and non-discriminatory ( near prob 0 ), c. latents that are on the inner edges of the region ( for further exploration on the boundary )\nWe will filter these (a), (b), (c) by the GMM density on the latent space. So, in this way, we are using our surrogate and density-based filtering as cheap filters to reduce the number of queries to the black box model to better improve the surrogate map over time.\n\n2. The latent space has discriminatory instances in pockets/regions of discrimination, where training discriminatory instances makes a small group. Even the newly found discriminatory latents are found near the group of training discriminatory instances, rather than in isolation. This gives a strong signal that we need region-based separation in the latent and be able to isolate those regions, and then sample only on promising regions.\n\nPlease let me know your thoughts."
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-06-05",
-      "date": "2026-06-05",
-      "owner": [
-        "When we make an initial decision tree at first, we divide the whole latent space into rough regions where we mightn't be able to identify such pockets. Now that we have a rough approximation, we will find a certain number of samples within each region by sampling x number of instances in each region and then querying them to the black box. Over iterations, we will leave the regions that don't have a good discriminatory score and only work on the regions where there is a good discriminatory probability ( we will be associating the region with the probability ). So, the problem boils down to not finding regions outside of our initial regions made by the first surrogate decision tree, but just to divide it into smaller regions and iterate over time to find the pockets. For speeding up the process, we will use uncertain samples, i.e., we will use uncertain samples ( 0.5 prob for being discriminatory )  within each region to divide each region faster. Finally, we can sample in the region/leaf where there is a high probability of samples being discriminatory.\n\nThis paper also does use decision tree in the input space as a surrogate, but is severely limited for efficient discovery because it needs to find the branches that differ in the sensitive attribute ( with the rest of the attributes being similar ). [https://dl.acm.org/doi/pdf/10.1145/3691620.3695481](https://dl.acm.org/doi/pdf/10.1145/3691620.3695481)\n\nPictures are for reference only:"
-      ],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "I agree that discriminatory latents are in different separated pockets, and if you can find those pockets, you can just sample in those pockets. However, the key is to find those pockets quickly, for which I don't really see the key insight. Also, while this seems to be what existing work tries to do, I don't really buy into the idea of trying to find as many discriminatory instances as possible. As you said before, it is the quality of those instances that matter, in terms of diversity and completeness, that really matters, not purely the number."
-        },
-        {
-          "author": "Dr. Lei",
-          "content": "The general idea makes sense. But the effectiveness of this search process has a lot to do with how you build the decision tree. Two questions:\n\n\n1. Are you using/adapting an existing algorithm or proposing a new one? In the latter case, what is the novelty of the new algorithm? \n2. Can you provide a good argument (or event better, some kind of guarantee) that the algorithm will be effective in most cases?"
-        }
-      ]
     }
   ]
 }

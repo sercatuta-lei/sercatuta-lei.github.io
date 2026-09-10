@@ -2,8 +2,65 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-09-03T01:01:17.256134",
+  "last_updated": "2026-09-10T00:55:57.406990",
   "days": [
+    {
+      "id": "2026-09-09",
+      "date": "2026-09-09",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "@channel I have another student in CSE 4321 interested in doing research. If you can use any help for your projects, please let me know."
+        },
+        {
+          "author": "Shovon Niverd",
+          "content": "Dr Lei I would be interested in working with the student."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Great. I will put you in touch with him."
+        }
+      ]
+    },
+    {
+      "id": "2026-09-04",
+      "date": "2026-09-04",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Pujan Budhathoki",
+          "content": "Yes Dr. Lei, I’d like to help if that's alright."
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "I would like to review one paper."
+        },
+        {
+          "author": "Shovon Niverd",
+          "content": "I would be happy to review one paper"
+        },
+        {
+          "author": "Fadul Sikder",
+          "content": "I would also be able to help."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Great. Thanks. I will send you guys the papers by email."
+        }
+      ]
+    },
+    {
+      "id": "2026-09-03",
+      "date": "2026-09-03",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "@channel I have several papers on AI/Agent security to review for USENIX Security. Please let me know if you can help."
+        }
+      ]
+    },
     {
       "id": "2026-08-31",
       "date": "2026-08-31",
@@ -111,25 +168,6 @@
         {
           "author": "Shovon Niverd",
           "content": ":flag-cp: sounds good"
-        }
-      ]
-    },
-    {
-      "id": "2026-06-06",
-      "date": "2026-06-06",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "An interesting read: [https://www.anthropic.com/institute/recursive-self-improvement](https://www.anthropic.com/institute/recursive-self-improvement)"
-        },
-        {
-          "author": "Shovon Niverd",
-          "content": "It is interesting that they are saying AI lacks the capability of judging what should be the goal of a research or engineering problem. It looks like how Anthropic is progressing, very soon the human role in research will be to set the research questions."
-        },
-        {
-          "author": "Dr. Lei",
-          "content": "Indeed. The ability to ask questions and evaluate the responses from AI will become more important. Also, AI will have a profound impact on how research is done, just like how it impacts knowledge work in general."
         }
       ]
     }
