@@ -2,52 +2,58 @@
   "slug": "krishna-khadka",
   "name": "Krishna Khadka",
   "channel": "krishna-research",
-  "last_updated": "2026-09-10T00:55:52.981849",
+  "last_updated": "2026-09-17T01:13:13.935737",
   "days": [
     {
-      "id": "2026-06-18",
-      "date": "2026-06-18",
+      "id": "2026-09-17",
+      "date": "2026-09-17",
       "owner": [
-        "Sure, Dr. Lei. I will look more in detail if  I can apply this to my work"
+        "1. Can you provide an explicit justification for each component in the signature? Also, what is exactly the second component?\n\n\n1. The first component gives a score of how much the prediction favored the misprediction compared to the true prediction.\n2. The second component is the first order and second order derivative, which helps identify how much influence each feature has to the prediction, and how much the prediction difference changes with a unit change in feature or feature interaction.\n3. The third component is to measure the contribution due to the feature value, i.e. the magnitude of the impact caused by a feature.\n\n\n1. Do you have an example, constructed or from your experiments, that can demonstrate two failures with the same signature actually comes from the same failure region (i.e., they fail for the same reason)? -- I will try to plot an example for this one in a 2d space to visualize."
       ],
       "replies": []
     },
     {
-      "id": "2026-06-17",
-      "date": "2026-06-17",
+      "id": "2026-09-16",
+      "date": "2026-09-16",
       "owner": [
-        "Hi Dr. Lei,\nI would like your suggestion on a design choice. Instead of using a per-sample gate to decide which fix to apply to each input, can I identify an individual fix for each failure region and then merge all of them into a single corrected head that every input passes through?",
-        "I was thinking of like getting an updated head thats merged based on all the individual fixes. I think it's because there are very few mispredictions that can be used to learn the routing. The training set has no mispredictions (for worst group waterbirds). Thus, the routing is not learnt properly. While different routing approach does improve the performance in general, the merging fixes to get one fixed head results are better than the state of the art approaches.",
-        "Each individual fixes learnt are learnt with the constraint that guards the already good predictions.",
-        "So this might help with the collateral damage when each individual fixes are merged with the head to get one fixed head.",
-        "Existing approaches also try to modify the head weights to give a fix, ours fix would be based on the decision regions fix thats aggregated.",
-        "I was thinking of not requiring to route and add all the per-region weight edits (delta -- small model edits) together into the original head once, `W' = W0 + α·Σ_r ΔW_r` (and the same for the bias), producing a single fixed head that every input passes through, so there is no per-sample decision at test time.",
-        "Sure, Dr. Lei, I do need to think if the datasets I used are actually best for the proposed approach.",
-        "Primarily i think it can be because of less samples, and also the inherent limitation of the classification model that we use for the routing purpose.",
-        "The fix is a delta: a small additive change to the head's weights and bias.\n\n\n- Each region learns its own delta:`(ΔW_r, Δb_r)`, same shape as the head.\n- Applying one fix means`W0 + ΔW_r`,`b0 + Δb_r`.\n- The merged head is the base plus the sum of all deltas, scaled:`W' = W0 + α·Σ ΔW_r`,`b' = b0 + α·Σ Δb_r`.\n\nSo the model itself is never retrained. We keep the original head `W0, b0` and just add the deltas on top",
-        "Each delta is a small change to the head's weights that we learn to fix the mistakes in that one region. We train it to correct those specific mistakes while keeping the edit small and leaving the already-correct predictions alone by applying constraints when learning the edits (focusing on repair, minimality, and locality).",
-        "Yes, it would still be routing, but more like implicit routing. After we merge the fixes, the corrected model adds the original weights plus a small weight change (delta) from every region's fix, all added together into one new set of weights. Each weight change was trained to stay quiet outside its own decision region, so for any given input mostly one fix has an effect and the rest do almost nothing. But one concern I have is if the fixes can interfere other fixes as we add. However, experimentally, it looks good.",
-        "I will also think more on the fundamental issue here.",
-        "A very related paper on model editing ( related work): [2110.11309](https://arxiv.org/pdf/2110.11309) Fast Model Editing at Scale. The problem it targets: to correct a single mistake in a large pretrained model (for example fix one wrong answer) quickly, without retraining and without breaking everything else."
+        "I think in that case, a submission to ICLR is possible while waiting for first response from AAAI.",
+        "Other two conferences would be:\n\n\n1. FaaCT [facctconference.org/2027/cfp.html](https://facctconference.org/2027/cfp.html) Paper deadline: Nov 3\n2. Aistats [virtual.aistats.org/Conferences/2027/CallForPapers](https://virtual.aistats.org/Conferences/2027/CallForPapers) Paper deadline: Oct 6",
+        "I agree, Dr. Lei. Decision signature is the key component.\n\nIt should be able to generate more information than the features alone. Also, our assumption is that a similar decision signature means a similar fix, which I’m a little doubtful with the current decision signature that I have.\n\nI will provide more detailed response and examples to your questions after giving some thoughts.",
+        "Yes, Dr. Lei. for the evaluation, I’m following LEIA’s approach. They have three sets: train, val, test. They initially train a model using train set, they use the val set to perform the model fixing, and test the performance on the test set. So, there is no information leakage from the test set, as it is only used for final evaluation. Similarly for our approach, no information from the final set is used to improve the model.",
+        "I think, this ICLR 2025 paper is very related: [proceedings.iclr.cc/paper_files/…/fe96ca55e42f8087c4f2e3a06efc7ed1-Paper-Conference.pdf](https://proceedings.iclr.cc/paper_files/paper/2025/file/fe96ca55e42f8087c4f2e3a06efc7ed1-Paper-Conference.pdf) regarding error discovery and model repair. I will read this in more detail as I prepare for the submission.",
+        "Sure, Dr. Lei. I will submit to ICLR."
       ],
       "replies": [
         {
           "author": "Dr. Lei",
-          "content": "If I understand what you are saying correctly, both options would be equivalent from the user perspective. Thus, in principle, either option is fine. However, conceptually speaking, the first option seems to make more sense for two reasons. First, you would need an individual fix for each failure region. Thus, even if you merge them into a single head, you would still need to route each sample to the corresponding fix (based on which region the sample falls into). Second, conceptually it makes more sense to route each sample to its corresponding region, than routing all samples that need to be corrected into a single head, because it can be more difficult to determine if a sample needs to be corrected or not in general as they may belong to different failure regions and may not share a common set of coherent features."
+          "content": "What would be the other candidate conferences? I just checked the ICLR website, and it has the following FAQ question/reply:\n\nQ: I have a paper under review at NeurIPS, which notifies submitters about acceptances after the ICLR abstract deadline. May I submit an ICLR abstract and withdraw if my paper is accepted to NeurIPS?\nYes, this is allowed. (We will only do duplicate-submission checks for full submissions.)"
         },
         {
           "author": "Dr. Lei",
-          "content": "I may not fully understand what you are saying. In principle, it is OK for you to use the merged option if it produces better results. However, it is also important to explain the why part behind the better results. Also, it is important to ask, if the water/land birds dataset is best for the proposed approach. At least, this is not the dataset that the approach was targetting? In other words, you may want to find another dataset for evaluation."
+          "content": "The general approach seems reasonable. The key is the decision-signature extraction. Can you provide an explicit justification for each component in the signature? Also, what is exactly the second component? Do you have an example, constructed or from your experiments, that can demonstrate two failures with the same signature actually comes from the same failure region (i.e., they fail for the same reason)?\n\nAnother note is about evaluation. Since you use failures to learn corrections, the final model is fit to the failures. Thus,  you need to set aside an independent test set for the final evaluation. In any case, no information from the final test set to improve the model."
         },
         {
           "author": "Dr. Lei",
-          "content": "But you still have to know which region, and thus which delta, you will apply, for a given sample? This is still implicit routing?\nAlso, try to think what is the fundamental issue here. Is it insufficient training data (for the routing), the idea of routing, or something else? Different root causes may require different solutions. For example, if it is insufficient mispredictions, you can probably try other options like clustering in the representation space."
+          "content": "ICLR is probably a better choice as it is more general and better known."
         },
         {
           "author": "Dr. Lei",
-          "content": "This is indeed a very related paper. The idea of learning an editor network, instead of individual edits, is interesting. Do you think if you can apply this idea to your work?"
+          "content": "Indeed. This looks like closely related."
         }
       ]
+    },
+    {
+      "id": "2026-09-14",
+      "date": "2026-09-14",
+      "owner": [
+        "Hi Dr. Lei, I have summarized below the approach submitted in our AAAI submission after addressing the initial concerns. I would appreciate any additional concerns or suggestions you may have.\n\n\n\n1. Problem setup\n\n\nWe start with a trained classifier consisting of a frozen feature extractor and a linear classification head. The feature extractor maps each input to a learned feature representation, and the classification head converts that representation into class scores. (This is a same setup as the baseline approach, LEIA)\n\nWe use a small labeled repair set containing both correct predictions and failures. A failure occurs when the true class is a, but the classifier predicts class b; we denote this error direction as a → b.\n\nOur key hypothesis is that failures arising from similar decision logic are more likely to benefit from the same correction. Because one global correction may help some failures while harming others, we discover separate failure regions and learn a correction for each region.",
+        "2. Decision-signature extraction\n\nFor each failure, we construct a decision signature that describes how the classifier favored the predicted class over the true class. The signature captures:\n\n\n> the difference between the scores of the predicted and true classes;\n> the rate of change and curvature of their pairwise probability with respect to that score difference; and\n> the signed contribution of each learned feature to the incorrect class preference.\n\nHere, the pairwise probability measures the classifier’s preference for the predicted class when comparing only the predicted and true classes.\n\nTwo failures may have the same error direction but different decision signatures because the classifier may rely on different learned features to produce the same type of error.",
+        "3. Failure-region discovery\n\nWe first separate failures by error direction. For example, all “cat predicted as dog” failures are considered separately from “cat predicted as bird” failures.\n\nWithin each error direction, we cluster failures that have similar decision signatures. Each resulting cluster becomes a failure region.\n\nA failure region therefore contains examples with the same error direction and similar patterns of learned-feature contributions to the incorrect class preference. We use these patterns as an operational description of similar decision logic. Different failure regions within the same error direction may receive different corrections.",
+        "4. Anchored regional corrections\n\nFor each failure region, we learn one lightweight residual correction to the original class scores. The failures assigned to that region teach the correction which predictions should change.\n\nWe also train the correction using correctly predicted examples, which we call anchors. These anchors teach the correction which predictions should remain unchanged. Additional penalties keep the correction small and limit how much it changes the scores of correct examples.\n\nEach regional correction is therefore trained to repair its assigned failures while preserving the classifier’s existing correct behavior.",
+        "I also wanted to ask about a ICLR submission. The ICLR abstract deadline is September 18 and the full-paper deadline is September 25, but the AAAI decision is expected on September 24. I think registering the same work for ICLR could violate the simultaneous submission policy, so I might have to look for another conference.",
+        "AAAI Submitted version for your reference."
+      ],
+      "replies": []
     }
   ]
 }

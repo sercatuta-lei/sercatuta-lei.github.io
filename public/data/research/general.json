@@ -2,8 +2,19 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-09-10T00:55:57.406990",
+  "last_updated": "2026-09-17T01:13:17.806565",
   "days": [
+    {
+      "id": "2026-09-12",
+      "date": "2026-09-12",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "FYI: This does not only apply to math, but to any scientific discipline. This is what the PhD study is about. The research projects are proxy tasks to developing ways of thinking, problem formulation, and problem solving.\n\n\"... In many fields and activities, years of training have traditionally served not only to produce a final answer or product, but also to develop understanding and the ability to formulate new questions and ideas. ...\"\n\n[terrytao.wordpress.com/2026/09/11/a-severe-misalignment-of-ai-in-mathematics](https://terrytao.wordpress.com/2026/09/11/a-severe-misalignment-of-ai-in-mathematics/)"
+        }
+      ]
+    },
     {
       "id": "2026-09-09",
       "date": "2026-09-09",
