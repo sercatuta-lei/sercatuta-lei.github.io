@@ -2,13 +2,54 @@
   "slug": "krishna-khadka",
   "name": "Krishna Khadka",
   "channel": "krishna-research",
-  "last_updated": "2026-09-17T01:13:13.935737",
+  "last_updated": "2026-09-24T01:15:25.866379",
   "days": [
+    {
+      "id": "2026-09-23",
+      "date": "2026-09-23",
+      "owner": [
+        "Hi Dr. Lei, I've prepared first draft for your review. The draft is also available in the Overleaf Project Decision Logic Based Repair under ICLR folder.",
+        "I'm looking to run more ablations to show advantage of different components of our approach."
+      ],
+      "replies": []
+    },
+    {
+      "id": "2026-09-18",
+      "date": "2026-09-18",
+      "owner": [
+        "Thank you, for the detailed feedback, Dr. Lei. I agree margin alone would not give \"fail for the same reason\". I introduced the margin in the signature because, since decisions are relative to other classes, maybe it would capture that. But, I think keeping margin away is a better design choice as it might not be necessary to know for a particular prediction, which feature contribution were necessary.",
+        "I also agree that it is right to hypothesize that it is the underlying decision logic that makes them fail for the same reason. Yes, I agree regarding the first order and second order derivative of the (wrong) prediction, as they provide information on how much prediction changes if we change a unit of the feature value (for first order) or feature interaction (for second order). I think, in addition to the derivate, it is important to consider the value of the features as well. It helps to determine the magnitude of the contribution for the decision process.",
+        "For the example, \"the land background probably contributes significantly to the wrong prediction. This can apply to all the three regions, and in this respect, they all fail for the same reason and should belong to the same failure region\". I think if they fail for the same reason they should belong to the same failure region. In the above example, if we look at region 2 and 3, it's landbird mispredicted as waterbird. The background is a little different; for the region 2, it is mostly just water; for the region 3, it is water + beach. So I think, being able to separate them because of the texture of the background is a good signal that the decision signature is able to identify similar kind of failures.",
+        "Response to the questions:\n\n\n1. Initially, I included the margin to represent the relative preference between classes. I also expanded the decision signature with first- and second-order derivative terms because using derivatives alone did not outperform the existing state-of-the-art method. In retrospect, part of the limitation was the routing mechanism: it relied on a separately trained gate, and the margin required us to consider the unknown true class at inference. The revised routing procedure is more direct. On the validation set, we compute a label-free decision signature for every example, including both correct and misclassified examples, and group similar signatures into decision regions. Validation labels are used only to identify which regions contain failures and to learn a correction for those regions; correct regions are retained as no-repair regions. At test time, we compute the new sample’s decision signature using only the model’s representation and output. We compare it with the learned regions. If it matches a failure region and satisfies the similarity threshold, we apply that region’s correction. If it matches a correct region, or does not match any failure region confidently, we keep the original prediction unchanged. Thus, ground-truth labels are not required to compute signatures or route test examples. When learning the fix for the failure regions, we include anchors in order not to harm the already correct predictions.",
+        "2. Yes. In the  the attribution is computed from the derivative of the predicted class probability with respect to the representation.",
+        "3. Many of our models use a nonlinear feature extractor followed by a linear classification head. Thus, the decision function is linear in the final representation but generally nonlinear with respect to the original input. Since our current signature is computed at the final representation, second-order logit derivatives are zero, making first-order derivative and feature-scaled attribution the primary signature. Second-order terms may be useful if computed at an earlier nonlinear representation, but they are more expensive. However, since it is in the feature pooled space, rather than pixel space, computing Hessian is not too bad.",
+        "4. Yes, Dr. Lei, I've normalized them",
+        "Yes, Dr. Lei, thank you. The results are pretty good. I will share them after a complete benchmark run.",
+        "I will also identify the research questions, ablations, and evaluations that we can include in the paper. The experiments don't take much time."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "A major concern I have is about the use of margin in the signature, including both in the first and second component. Ideally, a failure region should consist of failures that fail for the same reason. What does it exactly mean by \"fail for the same reason\"? Two failures having the same margin do not seem to  indicate they fail for the same reason. What prevents two different failures from the same margin , especially considering that they may have different predicted and true classes?\n\nInstead, it is probably their underlying decision logic that makes them fail for the same reason. This is probably the starting point of this project, and probably why you call the signature a decision logic signature. If so, would it make more sense to just use the first-order and second-order derivates of the (wrong) prediction, instead of the margin? After all, the \"decision\" is the prediction, not the margin.\n\nThe attribution component seems reasonable, because if two failures caused by the same underlying decision logic can probably attribute to the same (wrong) feature. In your example, the land background probably contributes significantly to the wrong prediction. This can apply to all the three regions, and in this respect, they all fail for the same reason and should belong to the same failure region?\n\nA few specific questions and comments:\n\n\n\n1. How do you compare doing derivatives w.r.t. the margin (between the predicted and true class) and doing derivatives w.r.t. the actual prediction? Can you provide any reasoning why the use of margin might be better?\n2. How do you compute attributions? Does the computation involve any use of derivatives w.r.t. the prediction?\n3. The 2nd derivative can be expensive to compute when the number of features is large. In this case, you can just sample some pairs, instead of computing it for all pairs.\n4. When you compute derivatives, it is important to normalize them so that you can compare the relative, instead of absolute, impact of each feature change between different failures."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Sounds good, Krishna. We seem to be in agreement on the approach. Hopefully the experimental results will be good."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Great to hear. Thanks for your effort."
+        }
+      ]
+    },
     {
       "id": "2026-09-17",
       "date": "2026-09-17",
       "owner": [
-        "1. Can you provide an explicit justification for each component in the signature? Also, what is exactly the second component?\n\n\n1. The first component gives a score of how much the prediction favored the misprediction compared to the true prediction.\n2. The second component is the first order and second order derivative, which helps identify how much influence each feature has to the prediction, and how much the prediction difference changes with a unit change in feature or feature interaction.\n3. The third component is to measure the contribution due to the feature value, i.e. the magnitude of the impact caused by a feature.\n\n\n1. Do you have an example, constructed or from your experiments, that can demonstrate two failures with the same signature actually comes from the same failure region (i.e., they fail for the same reason)? -- I will try to plot an example for this one in a 2d space to visualize."
+        "1. Can you provide an explicit justification for each component in the signature? Also, what is exactly the second component?\n\n\n1. The first component gives a score of how much the prediction favored the misprediction compared to the true prediction.\n2. The second component is the first order and second order derivative, which helps identify how much influence each feature has to the prediction, and how much the prediction difference changes with a unit change in feature or feature interaction.\n3. The third component is to measure the contribution due to the feature value, i.e. the magnitude of the impact caused by a feature.\n\n\n1. Do you have an example, constructed or from your experiments, that can demonstrate two failures with the same signature actually comes from the same failure region (i.e., they fail for the same reason)? -- I will try to plot an example for this one in a 2d space to visualize.",
+        "Here are 3 error regions, with 2 similar looking images being grouped together for a failure",
+        "Region 0 groups waterbirds photographed on land backgrounds. Regions 2 and 3 group landbirds photographed on water backgrounds, but separate finer contribution patterns.",
+        "Within-region signature similarity is high, while cross-region similarity is lower. The corresponding regional corrections should have similar fix to repair the selected examples."
       ],
       "replies": []
     },
