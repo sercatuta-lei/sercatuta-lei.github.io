@@ -8,6 +8,10 @@ import Link from "next/link";
 // News data
 const newsData = [
   {
+  date: "September 2026",
+  headline:"Congratulations to Krishna for his paper titled 'DD-CAM: Minimal Sufficient Explanations for Vision Models Using Delta Debugging', which has been accepted by NeurIPS 2026 as an Oral! NeurIPS received 30,709 valid paper submissions, among which only 112 (0.36%) were accepted as Oral.",
+  },
+  {
   date: "May 2026",
   headline:"Congratulations to Shovon and Krishna for their paper titled 'TabKD: Tabular Knowledge Distillation through Interaction Diversity of Learned Feature Bins', which has been accepted by IJCAI 2026!",
   },
