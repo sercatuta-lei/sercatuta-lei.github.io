@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-09-24",
+          "content": "**Arjun Dahal:**\n\nMilestone: Fairness Testing using decision regions and natural test cases - comparison with baselines ( Sep 17 )\n\nAction Items:\nComplete the approach end-to-end and get the results.\n\nProblems/Issues:\nThe instances near the boundary generated for a region can often drift outside the bin.\nThe instances near the boundary can often be duplicates.\n\nFindings:\nFirst, instances near the decision boundary were searched, and then they were grouped into the regions. Afterwards, we would generate more instances in each group. However, this resulted in duplicates and out-of-region instances. I tried different solutions to this problem, but at the end settled with just getting the instances in each region, then decoding them and dropping the duplicates. This consumed most of my time during the steps of the pipeline.\n\nI am a bit behind the decided schedule. I will update Slack at the end of the day today with some results and a comparison.",
+          "placeholder": false
+        },
+        {
           "date": "2026-09-17",
           "content": "**Arjun Dahal:**\n\nMilestone: Fairness Testing using decision regions and natural test cases - comparison with baselines ( Sep 17 )\n\nAction Items:\nComplete the approach end-to-end and get the results.\n\nProblems/Issues:\nNone at the moment\n\nFindings:\nNone at the moment\n\nThe approach was changed significantly. It's now a white-box approach that uses a VAE as a generative model ( at least it's necessary to maintain the naturalness of the instances  - which I believe facilitates better repair ( needs to be tested) ), and the model under test is a white-box model. Till now, I have performed a search in the latent space of the VAE for instances near the decision boundary; the intermediate results are better than the black-box approach. However, the parts where we generate/search instances from the decision-logic region still need to be implemented.\n\nI will get the results on our approach by Sun 20th on Slack.\n\n**Replies:**\n\n**Dr. Lei:**\nif the novelty of your work comes from the notion of decision-logic region, you need to design your project that allows you to get your hands on this key component as soon as possible. Progress on other components are good, but it has very limited research significance.\n\n---\n\n**Arjun Dahal:**\nThank you, Dr. Lei, for your feedback. I agree that the novelty lies in the decision signature (  and I should focus on getting to this part quickly ).\n\nHowever, even for discovering unique regions (that are likely to yield discriminatory instances), we had to move beyond training instances ( and get natural instances near the decision boundary - still in the distribution ), for which a generative model was required. Please let me know if there are things I could do better for this.\n\n---\n\n**Dr. Lei:**\nOne experiment you can probably do is to verify the validity of the idea or get some feedback/confidence about the idea by using training data alone.\n\n---\n\n**Arjun Dahal:**\nThank You, Dr. Lei. I will check this  ( and share the findings regarding this ).\n\n---",
           "placeholder": false
@@ -229,6 +234,11 @@
       "slug": "saif-uddin-mahmud",
       "photo": "saif-pic.jpg",
       "updates": [
+        {
+          "date": "2026-10-01",
+          "content": "No update was provided for the week ending 2026-10-01.",
+          "placeholder": true
+        },
         {
           "date": "2026-09-24",
           "content": "No update was provided for the week ending 2026-09-24.",
@@ -458,6 +468,11 @@
       "photo": "fadul.jpg",
       "updates": [
         {
+          "date": "2026-10-01",
+          "content": "No update was provided for the week ending 2026-10-01.",
+          "placeholder": true
+        },
+        {
           "date": "2026-09-24",
           "content": "No update was provided for the week ending 2026-09-24.",
           "placeholder": true
@@ -686,6 +701,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-09-24",
+          "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. ICLR Submission -- Abstract Sept 18 (Done), Full Paper Sept 25\n2. Dissertation Defense\n\nAction Items:\n\n\n1. I have completed drafting first draft of the paper.\n2. I think some more ablations showing the importance of different components of the approach would help. I’m working on some additional ablations studies.\n\nResults:\n\n\n1. The results are much better with the current approach than the previous submission. It can be attributed to the improved decision signature construction and improved mechanism for applying a correction.\n\nIssues:\n\n\n1. None at the moment.",
+          "placeholder": false
+        },
+        {
           "date": "2026-09-17",
           "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. ICLR Submission -- Abstract Sept 18, Full Paper Sept 25\n2. Dissertation Defense\n\nAction Items:\n\n\n1. Start drafting for ICLR submission. \n2. For the paper, I'm trying different settings to better define the decision signatures. It is important because, later when we correct, examples defined within that decision signature group should be caused by a similar failure region and fixed by a similar solution. After trying multiple settings, some settings are technical valid (confirmation needed) and achieve better performance compared to the baseline methods. \n\nResults:\n\n\n1. I will share more details in the slack.\n\nIssues:\n\n\n1. None at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\nIf the settings allow you to get better results than the baseline methods, it is a very good sign. But as you said, it is important to ensure the approach makes logic sense, and can explain the good results.\n\n---",
           "placeholder": false
@@ -898,6 +918,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-09-26",
+          "content": "**Pujan Budhathoki:**\n\n**Milestone:**\n\n\n1. Wider Milestone: Paper Submission: IEEE S&P 2027: Paper Deadline on 17th November ( I believe this conference would be a suitable fit for our paper regarding J-space. Please let me know if you think otherwise. I will begin developing a detailed schedule if we finalize this one) \n2. Post on Teams Regarding new possible Research problem candidates: Sep 27th, Sunday\n\n\n**Action Items: **\n\n\n1. I have been going through the paper shared by Dr. Zhang at the last meeting and have been exploring more possible candidate topics. \n2. I have been carrying out reviews and thinking about how to design experiments for the J-space paper. \n\n\n**Findings:**\n\n\n1. There is one technical distinction that I had overlooked before:\n\n\n- In Anthropic’s paper, the **J-space is defined using sparse nonnegative combinations of J-lens directions**. To identify the J-space contents of a particular activation, they perform sparse decomposition over the J-lens dictionary. In their capacity analysis, they find that the median J-space occupancy across the workspace layers is roughly **25 active J-lens directions**, although this number varies across contexts and is not a fixed limit.\n- However, the public reproducibility GitHub repository released by Anthropic primarily implements the **J-lens readout**. Similarly, Neuronpedia(the API I’m currently using and this is linked in Anthropic’s paper for reproducibility as well) exposes J-lens readouts for open-source models. These readouts rank vocabulary tokens according to their J-lens scores and return the top-(k) tokens, rather than performing the sparse decomposition used to estimate the J-space component. Therefore, the top 8 J-lens words returned by Neuronpedia may overlap with the directions selected by sparse decomposition, but there is no guarantee that they correspond to the actual sparse J-space support for that activation. (In Neuronpedia site, they refer to the top J-lens readout as “J-space”, which is why I didn’t catch this sooner) \n- I looked at several follow-up papers to see how they handle this distinction:\n\n\n- **“Silent Alarm: A J-Space Protocol for Comparing Danger Recognition Across Models and Quantization Levels”** uses top-(k) J-lens readouts, specifically top-100 tokens for its metrics, even though the paper refers to these readouts as J-space tokens.\n- **“J-CoT: Chain-of-Thought in J-Space”** explicitly constructs sparse J-space coefficients using a nonnegative elastic-net decomposition. This is a genuine sparse decomposition over the J-lens dictionary, although it uses a different optimization method from Anthropic’s gradient-pursuit procedure.\n- **“Looped Transformers under the Jacobian Lens: Does the Global Workspace Survive Recurrence?”** implements a sparse nonnegative gradient-pursuit decomposition similar to the one described by Anthropic. It also directly compares the sparse J-space inventory against a top-8 J-lens readout.\n- Importantly, the Looped Transformers paper reports that the sparse-decomposition support and the top-8 J-lens readout have only about **0.07–0.24 mean Jaccard overlap per cell**, depending on the model. This provides direct evidence that the top-ranked J-lens tokens and the sparse J-space contents can differ substantially.\n\n\n- Based on this distinction, I am considering implementing the sparse J-space decomposition directly for my experiments instead of relying only on the Neuronpedia API. It is fairly straightforward to implement sparse decomposition on top of J-lens readout, or I could use the implementation of the above existing papers. It should be possible to run this on TACC and shouldn’t take a long time to run. **Should I move forward with this?**\n- Furthermore, because we were only looking at the J-lens readouts, I believe our previous readings were more noisy and it should be better if we observe the actual J-space readouts. I will do a comparison study on this. **And also, if we have the restriction that we can’t run Chinese models on the university systems, I can use Gemma family of open source models, should I do that? **\n\n**Problems/Issues:**\n\n\n1. I don’t have any issues right now.",
+          "placeholder": false
+        },
         {
           "date": "2026-09-18",
           "content": "**Pujan Budhathoki:**\n\nWeekly Status Update\n**Milestone:**\n\n\n1. Propose new candidate research problems for the primary project: Sep 21st\n2. Carry out literature review on other J-space papers(for the secondary project) and try to find the answer to the question, “Can we design an experiment so that we can confidently know that J-space identifies code security concepts?”: Sep 25th\n\n\n**Action Items:**\n\n\n1. This week I have been mainly carrying out literature reviews to find possible research problems for my new primary project that leverages the existing knowledge and experience I have gained and something that is concrete and publishable.\n2. I have been carrying out literature reviews on the other existing J-space papers to answer the question, “Can we design an experiment so that we can confidently know that J-space identifies code security concepts?”\n\n\n**Findings:**\n\n\n1. I don’t have any new findings at this point. I will discuss the candidate research problems in the meeting. \n\n\n**Problems/Issues:**\n\n\n1. I don’t have any issues at this point.",
@@ -1127,6 +1152,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-10-01",
+          "content": "No update was provided for the week ending 2026-10-01.",
+          "placeholder": true
+        },
+        {
           "date": "2026-09-24",
           "content": "No update was provided for the week ending 2026-09-24.",
           "placeholder": true
@@ -1350,6 +1380,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-09-24",
+          "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Draft initial proposal on ensemble model distillation with the decision signature method(29 Sep).\n\n**Action Items:**\n\n\n1. Working on improvements to previous work.\n\n\n1. Hierarchical sample distribution: Implementation started; the current issue with this problem seems to be the generator objective. Right now, the generator relies on generating samples uniformly over all the regions. But in a hierarchical setting, the objective constantly needs to change, which can confuse the generator. I am trying an approach where the generator moves from one level to another rather than each region.\n\n\n1. New project/proposal idea: Shared preliminary ideas on the channel — For now, distilling ensemble models using decision signature seems to be a good idea. In recent conferences, I found some work on ensemble distillation; one of them is [neurips.cc/virtual/…/118932](https://neurips.cc/virtual/2025/loc/san-diego/poster/118932) . I am using this as a starting point to understand what the challenges are in ensemble distillation.\n\n**Issues:**\n\n\n1. None at the moment.",
+          "placeholder": false
+        },
+        {
           "date": "2026-09-17",
           "content": "**Shovon Niverd:**\n\nMilestone:\n\n\n1. Improvement of the AAAI paper.\n2. Prepare for a new project/proposal idea(share some preliminary ideas(17 September).\n\nAction Items:\n\n\n1. Working on improvements to previous work.\n\n\n1. *Adaptive number of logic regions*: After implementing the idea described in my channel, so far the results show that if bins are closed/merged based on binner learning, the approach closes regions successfully. I am running the full set of experiments to see how many regions merge per teacher-dataset pair.\n2. *Hierarchical sample distribution*: I am starting the implementation tomorrow, and I will share results hopefully by Tuesday.\n\n\n1. Plan the natural continuation of current work as a new project. I have some preliminary ideas which include the application of our current signature-based KD techniques. I am leaning on 1) localizing model faults using signatures, 2) extracting the decision-region signature equation to distill a better model. I will share details on my channel by the end of day.\n\nIssues:\n\n\n1. None at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\nGood that the binning part seems to work. For hierarchical distillation, or for any part for that matter, it is important to have a sound approach before you start implementation.\n\n---",
           "placeholder": false
@@ -1557,5 +1592,5 @@
       ]
     }
   ],
-  "last_updated": "2026-09-24T01:15:23.205525"
+  "last_updated": "2026-10-01T01:55:01.657503"
 }

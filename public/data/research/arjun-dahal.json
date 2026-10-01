@@ -2,8 +2,22 @@
   "slug": "arjun-dahal",
   "name": "Arjun Dahal",
   "channel": "arjun-research",
-  "last_updated": "2026-09-24T01:15:23.841377",
+  "last_updated": "2026-10-01T01:55:01.991174",
   "days": [
+    {
+      "id": "2026-09-29",
+      "date": "2026-09-29",
+      "owner": [
+        "Good morning, Dr. Lei,\n\nThe decision logic regions we find - some of them might not have a decision boundary.\nWhen I searched for a decision boundary in one region, I didn't find it through the search process in that region.\nIf there are larger regions ( like 10 ), maybe all of them might contain it ( but it doesn't guarantee that they contain it ). Furthermore, if we use clustering, we don't know how many regions it will contain in advance - if the regions are fragmented a lot (it's unlikely to contain one), or whether all of them will contain the decision boundary. If we were to search for the boundary instances, then maybe first we have to know which regions have those boundaries and focus our effort.\n\nPlease let me know if this is reasonable.",
+        "Thank You, Dr. Lei."
+      ],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "I would suggest you sample the different decision-logic regions even if they do not have a decision boundary. In general, for every region, with or without a decision boundary, try to have samples close to boundary, representative interior samples, and samples that are highly sensitive to protective attributes. The latter two are important as sometimes the decision logic is so biased that every point may be away from the decision boundary."
+        }
+      ]
+    },
     {
       "id": "2026-09-10",
       "date": "2026-09-10",

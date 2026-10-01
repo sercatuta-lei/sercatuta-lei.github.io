@@ -2,8 +2,47 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-09-24T01:15:33.719039",
+  "last_updated": "2026-10-01T01:55:08.466426",
   "days": [
+    {
+      "id": "2026-09-24",
+      "date": "2026-09-24",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "@channel Please join me to congratulate Krishna for his paper, titled \"DD-CAM: Minimal Sufficient Explanations for Vision Models Using Delta Debugging\", being accepted by NeurIPS as Oral. This year, NeurIPS received 30709 valid paper submissions, among which only 112 (= 0.36%) papers accepted as Oral. This is an extraordinary accomplishment. Excellent job, Krishna!"
+        },
+        {
+          "author": "Shovon Niverd",
+          "content": "Congratulations @Krishna Khadka well deserved!!"
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "@U098Q8Y55MW Can you please post this news to our website? Thanks."
+        },
+        {
+          "author": "Pujan Budhathoki",
+          "content": "Congratulations @Krishna Khadka. Excellent job."
+        },
+        {
+          "author": "Arjun Dahal",
+          "content": "Congratulations @Krishna Khadka"
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "Thank you so much, Dr. Lei!\nI’m very grateful for your guidance and support throughout this journey. I'm also very happy to see our work recognized this way."
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "Thank you everyone for all the support."
+        },
+        {
+          "author": "Fadul Sikder",
+          "content": "Congratulations Krishna. Great Work."
+        }
+      ]
+    },
     {
       "id": "2026-09-12",
       "date": "2026-09-12",
