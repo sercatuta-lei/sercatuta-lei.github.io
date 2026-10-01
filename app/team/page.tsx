@@ -57,12 +57,6 @@ const currentMembers = [
     link: "https://www.linkedin.com/in/samerr98"
   },
   {
-    name: "Sampada",
-    photo: "Sampada.jpg",
-    info: "Volunteer Research Assistant",
-    link: "https://sampadapavate.com/"
-  },
-  {
     name: "Mekdelawit Gebrewold",
     photo: "Mekdelawit.jpg",
     info: "Undergraduate Research Assistant",
