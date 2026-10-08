@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-10-01",
+          "content": "**Arjun Dahal:**\n\nMilestone:\n\n\n1. TMLR Rebuttal: Oct 7 ( internal deadline ) \n2. Complete the Fairness Testing Project: Oct 21 ( Internal deadline ) \n\n\nAction Items:\n\n\n1. I received feedback from TMLR on how to improve my work.  Additional Baselines, reducing the strength of the claims, and a few more experiments. \n\nI am working on the experiments.\n\n2. Fairness Testing Project\nOur approach is unique compared to existing approaches. I will be able to submit it to ICST 2027, which is a month from now.\n\nResults:\nNone at the moment\n\nIssues:\nNone at the moment\n\n**Replies:**\n\n**Dr. Lei:**\nWere you targeting FSE?\n\n---\n\n**Arjun Dahal:**\nYes, Dr. Lei. I was thinking if I could make it to FSE ( 21 days ago ).\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-09-24",
           "content": "**Arjun Dahal:**\n\nMilestone: Fairness Testing using decision regions and natural test cases - comparison with baselines ( Sep 17 )\n\nAction Items:\nComplete the approach end-to-end and get the results.\n\nProblems/Issues:\nThe instances near the boundary generated for a region can often drift outside the bin.\nThe instances near the boundary can often be duplicates.\n\nFindings:\nFirst, instances near the decision boundary were searched, and then they were grouped into the regions. Afterwards, we would generate more instances in each group. However, this resulted in duplicates and out-of-region instances. I tried different solutions to this problem, but at the end settled with just getting the instances in each region, then decoding them and dropping the duplicates. This consumed most of my time during the steps of the pipeline.\n\nI am a bit behind the decided schedule. I will update Slack at the end of the day today with some results and a comparison.",
           "placeholder": false
@@ -234,6 +239,11 @@
       "slug": "saif-uddin-mahmud",
       "photo": "saif-pic.jpg",
       "updates": [
+        {
+          "date": "2026-10-08",
+          "content": "No update was provided for the week ending 2026-10-08.",
+          "placeholder": true
+        },
         {
           "date": "2026-10-01",
           "content": "No update was provided for the week ending 2026-10-01.",
@@ -468,6 +478,11 @@
       "photo": "fadul.jpg",
       "updates": [
         {
+          "date": "2026-10-08",
+          "content": "No update was provided for the week ending 2026-10-08.",
+          "placeholder": true
+        },
+        {
           "date": "2026-10-01",
           "content": "No update was provided for the week ending 2026-10-01.",
           "placeholder": true
@@ -701,6 +716,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-10-01",
+          "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. ICLR Submission -- Skipped\n2. Dissertation Defense\n\nAction Items:\n\n\n1. Last week I spent much time to prepare application material (writing research statements and teaching statements) for faculty jobs with Oct 1 as deadline. Given that I was not able to do much in the project. \n2. I plan to complete the outstanding comments made by Dr. Lei in the first draft for the following week. I was also thinking, as I prepare drafting the dissertation document, if I could use the latest version as the fourth chapter. \n\nResults:\n\n\n1. None at the moment. \n\nIssues:\n\n\n1. None at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\nYes, you can use the latest version as the fourth chapter.\n\n---\n\n**Krishna Khadka:**\nThank you, Dr. Lei.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-09-24",
           "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. ICLR Submission -- Abstract Sept 18 (Done), Full Paper Sept 25\n2. Dissertation Defense\n\nAction Items:\n\n\n1. I have completed drafting first draft of the paper.\n2. I think some more ablations showing the importance of different components of the approach would help. I’m working on some additional ablations studies.\n\nResults:\n\n\n1. The results are much better with the current approach than the previous submission. It can be attributed to the improved decision signature construction and improved mechanism for applying a correction.\n\nIssues:\n\n\n1. None at the moment.",
           "placeholder": false
@@ -918,6 +938,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-10-03",
+          "content": "**Pujan Budhathoki:**\n\n**Milestone:**\n\n\n1. Paper Submission: IEEE S&P 2027: Paper Deadline on 17th November\n2. Get the experimental Design for the project: Oct 5th\n3. Post detailed review of the three candidate research problems: Oct 16th\n\n\n**Action Items:**\n\n\n1. I have been setting up the experiment for J-space based on an existing implementation on TACC. I am currently carrying out a smoke test with some sample prompts to verify that this works properly. (Using the API and experimental results of other papers as ground truth to verify. I have been running into a few implementation errors, I am working on fixing them.)\n2. I have been further carrying out literature reviews for the full experimental design. \n3. I have been carrying out literature reviews on the three major problems that we identified(for my new project)\n\n\n**Findings:**\n\n\n1. I have posted the high level schedule for the paper submission in another post. \n\n\n**Problems/Issues:**\n\n\n1. I don’t have any problems or issues at this point.",
+          "placeholder": false
+        },
         {
           "date": "2026-09-26",
           "content": "**Pujan Budhathoki:**\n\n**Milestone:**\n\n\n1. Wider Milestone: Paper Submission: IEEE S&P 2027: Paper Deadline on 17th November ( I believe this conference would be a suitable fit for our paper regarding J-space. Please let me know if you think otherwise. I will begin developing a detailed schedule if we finalize this one) \n2. Post on Teams Regarding new possible Research problem candidates: Sep 27th, Sunday\n\n\n**Action Items: **\n\n\n1. I have been going through the paper shared by Dr. Zhang at the last meeting and have been exploring more possible candidate topics. \n2. I have been carrying out reviews and thinking about how to design experiments for the J-space paper. \n\n\n**Findings:**\n\n\n1. There is one technical distinction that I had overlooked before:\n\n\n- In Anthropic’s paper, the **J-space is defined using sparse nonnegative combinations of J-lens directions**. To identify the J-space contents of a particular activation, they perform sparse decomposition over the J-lens dictionary. In their capacity analysis, they find that the median J-space occupancy across the workspace layers is roughly **25 active J-lens directions**, although this number varies across contexts and is not a fixed limit.\n- However, the public reproducibility GitHub repository released by Anthropic primarily implements the **J-lens readout**. Similarly, Neuronpedia(the API I’m currently using and this is linked in Anthropic’s paper for reproducibility as well) exposes J-lens readouts for open-source models. These readouts rank vocabulary tokens according to their J-lens scores and return the top-(k) tokens, rather than performing the sparse decomposition used to estimate the J-space component. Therefore, the top 8 J-lens words returned by Neuronpedia may overlap with the directions selected by sparse decomposition, but there is no guarantee that they correspond to the actual sparse J-space support for that activation. (In Neuronpedia site, they refer to the top J-lens readout as “J-space”, which is why I didn’t catch this sooner) \n- I looked at several follow-up papers to see how they handle this distinction:\n\n\n- **“Silent Alarm: A J-Space Protocol for Comparing Danger Recognition Across Models and Quantization Levels”** uses top-(k) J-lens readouts, specifically top-100 tokens for its metrics, even though the paper refers to these readouts as J-space tokens.\n- **“J-CoT: Chain-of-Thought in J-Space”** explicitly constructs sparse J-space coefficients using a nonnegative elastic-net decomposition. This is a genuine sparse decomposition over the J-lens dictionary, although it uses a different optimization method from Anthropic’s gradient-pursuit procedure.\n- **“Looped Transformers under the Jacobian Lens: Does the Global Workspace Survive Recurrence?”** implements a sparse nonnegative gradient-pursuit decomposition similar to the one described by Anthropic. It also directly compares the sparse J-space inventory against a top-8 J-lens readout.\n- Importantly, the Looped Transformers paper reports that the sparse-decomposition support and the top-8 J-lens readout have only about **0.07–0.24 mean Jaccard overlap per cell**, depending on the model. This provides direct evidence that the top-ranked J-lens tokens and the sparse J-space contents can differ substantially.\n\n\n- Based on this distinction, I am considering implementing the sparse J-space decomposition directly for my experiments instead of relying only on the Neuronpedia API. It is fairly straightforward to implement sparse decomposition on top of J-lens readout, or I could use the implementation of the above existing papers. It should be possible to run this on TACC and shouldn’t take a long time to run. **Should I move forward with this?**\n- Furthermore, because we were only looking at the J-lens readouts, I believe our previous readings were more noisy and it should be better if we observe the actual J-space readouts. I will do a comparison study on this. **And also, if we have the restriction that we can’t run Chinese models on the university systems, I can use Gemma family of open source models, should I do that? **\n\n**Problems/Issues:**\n\n\n1. I don’t have any issues right now.",
@@ -1152,6 +1177,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-10-08",
+          "content": "No update was provided for the week ending 2026-10-08.",
+          "placeholder": true
+        },
+        {
           "date": "2026-10-01",
           "content": "No update was provided for the week ending 2026-10-01.",
           "placeholder": true
@@ -1380,6 +1410,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-10-01",
+          "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Revise the LogicDistiller paper for resubmission to AISTATS(October 5).\n\n**Action Items:**\n\n\n1. Analyzed the AAAI reviews and grouped the concerns into four themes:\n\n\n1. Fairness of the evaluation: query cost was not matched with the baselines.\n2. Experiment consistency: the main table and the signature-order ablation used different setups and seeds.\n3. The confidence-level coverage has no gradient path.\n4. Ablations and evidence: number of regions, loss weights, and empirical support for the motivation.\n\n\n1. Drafted a fix plan for each concern:\n\n\n1. Query accounting per method, plus budget-matched baseline comparisons.\n2. Rerunning the main table and the ablation under one consistent protocol, averaged over multiple seeds.\n3. Computing the confidence buckets from the student's output so the coverage objective has a gradient path.\n4. Adaptive number of regions and region-level evidence showing which features drive each region.\n\n\n1. Adaptive number of logic regions: [Full set of experiments running currently].\n2. Hierarchical sample distribution: Ongoing.\n3. Preparing the AISTATS draft while the experiments are running.",
+          "placeholder": false
+        },
+        {
           "date": "2026-09-24",
           "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Draft initial proposal on ensemble model distillation with the decision signature method(29 Sep).\n\n**Action Items:**\n\n\n1. Working on improvements to previous work.\n\n\n1. Hierarchical sample distribution: Implementation started; the current issue with this problem seems to be the generator objective. Right now, the generator relies on generating samples uniformly over all the regions. But in a hierarchical setting, the objective constantly needs to change, which can confuse the generator. I am trying an approach where the generator moves from one level to another rather than each region.\n\n\n1. New project/proposal idea: Shared preliminary ideas on the channel — For now, distilling ensemble models using decision signature seems to be a good idea. In recent conferences, I found some work on ensemble distillation; one of them is [neurips.cc/virtual/…/118932](https://neurips.cc/virtual/2025/loc/san-diego/poster/118932) . I am using this as a starting point to understand what the challenges are in ensemble distillation.\n\n**Issues:**\n\n\n1. None at the moment.",
           "placeholder": false
@@ -1592,5 +1627,5 @@
       ]
     }
   ],
-  "last_updated": "2026-10-01T01:55:01.657503"
+  "last_updated": "2026-10-08T02:37:03.080738"
 }
