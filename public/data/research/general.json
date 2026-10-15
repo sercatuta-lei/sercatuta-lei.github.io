@@ -2,8 +2,19 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-10-08T02:37:10.569907",
+  "last_updated": "2026-10-15T01:18:52.452041",
   "days": [
+    {
+      "id": "2026-10-08",
+      "date": "2026-10-08",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "Great. Thanks."
+        }
+      ]
+    },
     {
       "id": "2026-10-07",
       "date": "2026-10-07",
@@ -237,17 +248,6 @@
         {
           "author": "Dr. Lei",
           "content": "Interesting article: [insidehighered.com/opinion/…/stop-telling-students-computer-science-dying-opinion](https://www.insidehighered.com/opinion/views/2026/07/28/stop-telling-students-computer-science-dying-opinion)"
-        }
-      ]
-    },
-    {
-      "id": "2026-07-15",
-      "date": "2026-07-15",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "@channel As some of you know, I am in California this week. We will not meet tomorrow (Thursday)"
         }
       ]
     }
