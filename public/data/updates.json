@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-10-15",
+          "content": "**Arjun Dahal:**\n\nMilestone:\n\n\n1. TMLR Rebuttal\n2. Complete the Fairness Testing Project: Oct 21 ( Internal deadline ) \n\n\nAction Items:\n\n\n1. I received feedback from TMLR on how to improve my work.  Add additional baselines, reduce the strength of the claims, and run a few more experiments. \n\n\n2. Fairness Testing Project\nI will submit it to ICST 2027.\n\nResults:\nNone at the moment\n\nIssues:\n\n\n1. I am not quite sure how to suggest the value of Tau for routing purposes for real-world datasets. Furthermore, if we could suggest it. The evidence shows that simple flip is relevant for low MI and Tabchange-adv is relevant for high MI, where simple flip results in unnatural instances ( but not where the cutoff should be ).\n2. Should the framing of the paper be: our approach provides the best compromise for naturalness and proximity? ( and lead with constraints-based retention and distance throughout the abstract/introduction )\n3. Flip Resample has better results than our case (but it's not a critical change the reviewer requested); however, it primarily seems to me to be a lack of an evaluation method to prove correspondence with the actual data.\n\n**Replies:**\n\n**Dr. Lei:**\nTry to ask yourself how you would set the value of Tau if you are to use your approach in practice. Give a reasonable guideline and provide support for the guideline using experiments or reasoning or existing work.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-10-08",
           "content": "**Arjun Dahal:**\n\nMilestone:\n\n\n1. TMLR Rebuttal: Oct 7 ( internal deadline ) \n2. Complete the Fairness Testing Project: Oct 21 ( Internal deadline ) \n\n\nAction Items:\n\n\n1. I received feedback from TMLR on how to improve my work.  Add additional baselines, reduce the strength of the claims, and run a few more experiments. \n\n\n2. Fairness Testing Project\nI will submit it to ICST 2027.\n\nResults:\nNone at the moment\n\nIssues:\nThe experiments are still running. I will get the results by tomorrow.",
           "placeholder": false
@@ -244,6 +249,11 @@
       "slug": "saif-uddin-mahmud",
       "photo": "saif-pic.jpg",
       "updates": [
+        {
+          "date": "2026-10-22",
+          "content": "No update was provided for the week ending 2026-10-22.",
+          "placeholder": true
+        },
         {
           "date": "2026-10-15",
           "content": "No update was provided for the week ending 2026-10-15.",
@@ -488,6 +498,11 @@
       "photo": "fadul.jpg",
       "updates": [
         {
+          "date": "2026-10-22",
+          "content": "No update was provided for the week ending 2026-10-22.",
+          "placeholder": true
+        },
+        {
           "date": "2026-10-15",
           "content": "No update was provided for the week ending 2026-10-15.",
           "placeholder": true
@@ -731,6 +746,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-10-15",
+          "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. Dissertation Defense: Nov 16 - Nov 20 Week\n2. Submit Camera Ready Version NeurIPS -- Nov 6\n\nAction Items:\n\n\n1. Start preparing the dissertation document, with first draft by Nov 6.\n2. Prepare first draft of the camera ready version for NeurIPS by Nov 1, deadline is Nov 6.\n3. I’m also in the interview loop for some compines. \n\nResults:\n\n\n1. None at the moment. \n\nIssues:\n\n\n1. None at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\nIf you plan to defend in about a month, it is time for you to schedule it with your committee members.\n\n---\n\n**Krishna Khadka:**\nThank you Dr. Lei. How much time should I allocate for the defense?\n\n---\n\n**Dr. Lei:**\nYou can reserve for 1.5 hours. But try to plan to finish your presentation within 45 mins to 1 hour and then leave time for questions and other discussions.\n\n---\n\n**Krishna Khadka:**\nSure, Dr. Lei. Thank you.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-10-08",
           "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. Dissertation Defense — I need to fix in November before the thanksgiving break\n\nAction Items:\n\n\n1. I’m preparing an updated draft based on the feedbacks improving the clarity of the work/approach.\n2. I’m also preparing for job interviews. \n\nResults:\n\n\n1. None at the moment. \n\nIssues:\n\n\n1. None at the moment.",
           "placeholder": false
@@ -958,6 +978,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-10-22",
+          "content": "No update was provided for the week ending 2026-10-22.",
+          "placeholder": true
+        },
         {
           "date": "2026-10-10",
           "content": "**Pujan Budhathoki:**\n\n**Milestone:**\n\n\n1. Paper Submission: IEEE S&P 2027: Paper Deadline on 17th November\n2. Get Experimental Results for Initial small experiments: Oct 9th \n3. Post detailed review of the three candidate research problems: Oct 16th\n\n\n**Action Items:**\n\n\n1. I have been working on addressing the comments regarding the Experimental Design I posted.\n2. I have been working on the initial experiments\n\n\n1. I have gotten the results from my setup for Llama 3.1 8B model. I have the raw data, I am currently analyzing it.\n2. Gemma family of models are gated models in Hugging face which means I have to get approval to use them. I have requested the access and am currently waiting for approval. I should get it in a couple of days.\n\n**Findings:**\n\n\n1. I don’t have any findings at this point. I will post the results of my initial experiments after I have finished analyzing them.\n2. I will address the comments and talk regarding the experimental design on the Monday meeting. \n\n\n**Problems and Issues:**\n\n\n1. I don’t have any problems or issues at this point.",
@@ -1202,6 +1227,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-10-22",
+          "content": "No update was provided for the week ending 2026-10-22.",
+          "placeholder": true
+        },
+        {
           "date": "2026-10-15",
           "content": "No update was provided for the week ending 2026-10-15.",
           "placeholder": true
@@ -1440,6 +1470,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-10-15",
+          "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Revise the LogicDistiller approach as a white-box approach, assuming access to training data.(Have a working draft with experiments and baselines by end of October)\n\n**Action Items:**\n\n\n1. Shared a potential signature design in my channel.\n2. The pipeline and training protocol have a rough structure now; working on it will polish the idea. We are still using the concept of decision logic but building the signature with the help of model gradients this time.\n3. Find proper baselines for the new approach.\n4. Additionally, explore new datasets to evaluate the approach; the TabArena benchmark could be a good choice, as it has been used in recent works.\n\n**Findings:**\n\n\n1.  The current approach is compatible with differentiable teachers; a tree-based teacher may need different signature computation.",
+          "placeholder": false
+        },
+        {
           "date": "2026-10-08",
           "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Revise the LogicDistiller approach as a white-box approach, assuming access to training data.(Draft initial pipeline by October 12th)\n\n**Action Items:**\n\n\n1. Design pipeline of new white-box approach.\n2. Find proper baselines for new approach.\n3. Plan main experiments and required ablations. This can also be helpful by finding out what is used in baselines.\n4. Finer details of the project will be shared in my channel by next Monday. I plan to wrap up this project by end of October.\n5. Move on to next project as soon as possible.\n\n**Findings:**\n\n\n1.  Query inefficiency made the previous approach infeasible.",
           "placeholder": false
@@ -1662,5 +1697,5 @@
       ]
     }
   ],
-  "last_updated": "2026-10-15T01:18:41.565332"
+  "last_updated": "2026-10-22T01:22:15.743247"
 }

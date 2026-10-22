@@ -2,8 +2,31 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-10-15T01:18:52.452041",
+  "last_updated": "2026-10-22T01:22:26.751249",
   "days": [
+    {
+      "id": "2026-10-15",
+      "date": "2026-10-15",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Krishna Khadka",
+          "content": "[research.google/blog/analyzing-technical-documents-with-deep-review](https://research.google/blog/analyzing-technical-documents-with-deep-review/)"
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "Deep Review Portal: [Deep Review](https://research.google/deepreview/)"
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "Google was testing PAT review system and giving feedback when submitting papers to conferences like ICLR, NeurIPS, AAAI, and now the tool is publicly available. This can be a useful tool for reviewing when preparing manuscripts for submission."
+        },
+        {
+          "author": "Shovon Niverd",
+          "content": "awesome"
+        }
+      ]
+    },
     {
       "id": "2026-10-08",
       "date": "2026-10-08",
