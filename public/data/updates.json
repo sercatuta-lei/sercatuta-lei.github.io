@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-10-22",
+          "content": "**Arjun Dahal:**\n\nMilestone:\n\n\n1. Complete the Fairness Testing Project: Oct 21 ( Internal deadline ) \n\n\n- I am still working on the project experiments ( The schedule got a bit delayed because of the submission ). I will update Slack accordingly. \n\n\nAction Items:\n1. Fairness Testing Project\nI will submit it to ICST 2027.\n\nResults:\nNone at the moment\n\nIssues:\nNone at the moment\n\n**Replies:**\n\n**Dr. Lei:**\nI suggest you target ACM FAccT, which is better fit for your work.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-10-15",
           "content": "**Arjun Dahal:**\n\nMilestone:\n\n\n1. TMLR Rebuttal\n2. Complete the Fairness Testing Project: Oct 21 ( Internal deadline ) \n\n\nAction Items:\n\n\n1. I received feedback from TMLR on how to improve my work.  Add additional baselines, reduce the strength of the claims, and run a few more experiments. \n\n\n2. Fairness Testing Project\nI will submit it to ICST 2027.\n\nResults:\nNone at the moment\n\nIssues:\n\n\n1. I am not quite sure how to suggest the value of Tau for routing purposes for real-world datasets. Furthermore, if we could suggest it. The evidence shows that simple flip is relevant for low MI and Tabchange-adv is relevant for high MI, where simple flip results in unnatural instances ( but not where the cutoff should be ).\n2. Should the framing of the paper be: our approach provides the best compromise for naturalness and proximity? ( and lead with constraints-based retention and distance throughout the abstract/introduction )\n3. Flip Resample has better results than our case (but it's not a critical change the reviewer requested); however, it primarily seems to me to be a lack of an evaluation method to prove correspondence with the actual data.\n\n**Replies:**\n\n**Dr. Lei:**\nTry to ask yourself how you would set the value of Tau if you are to use your approach in practice. Give a reasonable guideline and provide support for the guideline using experiments or reasoning or existing work.\n\n---",
           "placeholder": false
@@ -249,6 +254,11 @@
       "slug": "saif-uddin-mahmud",
       "photo": "saif-pic.jpg",
       "updates": [
+        {
+          "date": "2026-10-29",
+          "content": "No update was provided for the week ending 2026-10-29.",
+          "placeholder": true
+        },
         {
           "date": "2026-10-22",
           "content": "No update was provided for the week ending 2026-10-22.",
@@ -498,6 +508,11 @@
       "photo": "fadul.jpg",
       "updates": [
         {
+          "date": "2026-10-29",
+          "content": "No update was provided for the week ending 2026-10-29.",
+          "placeholder": true
+        },
+        {
           "date": "2026-10-22",
           "content": "No update was provided for the week ending 2026-10-22.",
           "placeholder": true
@@ -746,6 +761,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-10-22",
+          "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. Dissertation Defense: Nov 18\n2. Submit Camera Ready Version NeurIPS -- Nov 6\n\nAction Items:\n\n\n1. I am working on preparing the dissertation defense document (Due: first draft by Nov 6).\n2. I am also preparing the camera ready version and  for NeurIPS (First draft by Nov 1); and poster + presentation preparation.\n3. I am looking forward to AAAI rebuttal this week from Saturday/Saturday. Before that, I will have another version for the updated DSR paper to put it to the dissertation document. \n\nResults:\n\n\n1. None at the moment. \n\nIssues:\n\n\n1. None at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\nSounds good. It is a good idea to budget  time for the AAAI rebuttal. Hopefully your recent updates on the project can help with the rebuttal.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-10-15",
           "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. Dissertation Defense: Nov 16 - Nov 20 Week\n2. Submit Camera Ready Version NeurIPS -- Nov 6\n\nAction Items:\n\n\n1. Start preparing the dissertation document, with first draft by Nov 6.\n2. Prepare first draft of the camera ready version for NeurIPS by Nov 1, deadline is Nov 6.\n3. I’m also in the interview loop for some compines. \n\nResults:\n\n\n1. None at the moment. \n\nIssues:\n\n\n1. None at the moment.\n\n**Replies:**\n\n**Dr. Lei:**\nIf you plan to defend in about a month, it is time for you to schedule it with your committee members.\n\n---\n\n**Krishna Khadka:**\nThank you Dr. Lei. How much time should I allocate for the defense?\n\n---\n\n**Dr. Lei:**\nYou can reserve for 1.5 hours. But try to plan to finish your presentation within 45 mins to 1 hour and then leave time for questions and other discussions.\n\n---\n\n**Krishna Khadka:**\nSure, Dr. Lei. Thank you.\n\n---",
           "placeholder": false
@@ -978,6 +998,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-10-29",
+          "content": "No update was provided for the week ending 2026-10-29.",
+          "placeholder": true
+        },
         {
           "date": "2026-10-22",
           "content": "No update was provided for the week ending 2026-10-22.",
@@ -1227,6 +1252,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-10-29",
+          "content": "No update was provided for the week ending 2026-10-29.",
+          "placeholder": true
+        },
+        {
           "date": "2026-10-22",
           "content": "No update was provided for the week ending 2026-10-22.",
           "placeholder": true
@@ -1470,6 +1500,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-10-22",
+          "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Revise the LogicDistiller approach as a white-box approach, assuming access to training data.(Have a working draft with experiments and baselines by end of October)\n\n**Action Items:**\n\n\n1. Surveyed baselines across white-box data-free, black-box data-free, and tabular distillation literature, compiled a candidate baseline table, narrowing it down, and will share it in my channel.\n2. Working on the code to change it to white-box version. I will start experimenting in a couple of days.\n3. Also additionally started working on parts of a new draft, i.e. Introduction. I should have a working draft by end of October.\n4. Planned ablations: a. without learned number of regions, b. different structure of binner, c.more degree of features\n5. Validation experiments such as with synthetic teacher with known number of regions are also being changed to whitebox.\n\n**Findings:**\n\n\n1.  The current approach is compatible with differentiable teachers; a tree-based teacher may need different signature computation. I have not looked into the issue yet.\n\n**Replies:**\n\n**Dr. Lei:**\nEven if you are not targeting a conference at this point, it is important to make your internal deadlines, and finish the paper as soon as possible, considering the timeline of your graduation.\n\n---",
+          "placeholder": false
+        },
+        {
           "date": "2026-10-15",
           "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Revise the LogicDistiller approach as a white-box approach, assuming access to training data.(Have a working draft with experiments and baselines by end of October)\n\n**Action Items:**\n\n\n1. Shared a potential signature design in my channel.\n2. The pipeline and training protocol have a rough structure now; working on it will polish the idea. We are still using the concept of decision logic but building the signature with the help of model gradients this time.\n3. Find proper baselines for the new approach.\n4. Additionally, explore new datasets to evaluate the approach; the TabArena benchmark could be a good choice, as it has been used in recent works.\n\n**Findings:**\n\n\n1.  The current approach is compatible with differentiable teachers; a tree-based teacher may need different signature computation.",
           "placeholder": false
@@ -1697,5 +1732,5 @@
       ]
     }
   ],
-  "last_updated": "2026-10-22T01:22:15.743247"
+  "last_updated": "2026-10-29T02:14:01.108866"
 }

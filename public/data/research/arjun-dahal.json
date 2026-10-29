@@ -2,7 +2,7 @@
   "slug": "arjun-dahal",
   "name": "Arjun Dahal",
   "channel": "arjun-research",
-  "last_updated": "2026-10-22T01:22:16.302248",
+  "last_updated": "2026-10-29T02:14:01.390905",
   "days": [
     {
       "id": "2026-09-29",
@@ -43,14 +43,6 @@
       "owner": [
         "**Main idea**\n\nDiscover regions near a black-box classifier’s decision boundary that exhibit different feature sensitivities and interactions, then use these regions to guide the search for instances near the decision boundary. These instances would be further passed through the TabChange framework to find counterfactuals on sensitive attributes; the pair would then be used to check discrimination in the black-box model and repair the bias of the model.\n\n**Steps:**\n**1. Train models:**\nInput: training data\nOutput: classifier, GAN, and constraints\nTrain the classifier, preprocessing, CTGAN, and obtain the associated constraints.\n\n2. **Define decision signatures:**\nInput: training rows and classifier\nOutput: decision signature for each row (and normalization scheme)\nQuery instances and obtain their decision signatures; select sensitivity components ( primary focus on sensitive attribute sensitivity and its second-order interactions, and the rest of them based on average magnitude strength)\n\n**3. Explore the boundary:**\nInput: frozen CTGAN and 1.5 million sampled latents\nOutput: boundary candidates with their probabilities, and corresponding latents\nDecode possible boundary samples, query the black box model, and then guide the samples towards the decision boundary.\n\n\n\n1. **Discover boundary regions:** \n\nInput: boundary candidates\nOutput: supported regions with labels\nVerify probabilities to determine whether the instances are boundary samples or not, and cluster the samples using their decision signatures ( use normalization from step 2). From this stage onwards, we will just search/exploit the clusters we have found.\n\n**5. Exploit selected regions:**\nInput: boundary regions\nOutput: additional boundary samples\nTrain a region predictor and guide fresh latent searches toward selected regions; exploit to find more possible discriminatory latents ( near the decision boundary ).\n\n**6. Find the counterfactuals on the sensitive attribute**\nInput: Boundary samples from the decision regions\nOutput: Counterfactuals on sensitive attribute for those instances\nUse the TabChange framework to find the counterfactuals on the sensitive attribute.\n\n**7. Test fairness:**\nInput: sensitive-attribute counterfactuals\nOutput: verified fairness-test pairs\nQuery both pairs, check prediction disagreements on the pair, and report the number\n\n\n\n1. **Retrain the model for bias removal:**\n\nInput: verified fairness-test pairs\nOutput: train on these pairs to remove the bias from the model.\nSelect a few samples from each region that are discriminatory pairs, and then train the model on them to remove the bias.",
         "Dr. Lei, I am looking for your feedback on the approach."
-      ],
-      "replies": []
-    },
-    {
-      "id": "2026-07-25",
-      "date": "2026-07-25",
-      "owner": [
-        "This paper also asks the question we have been asking for fairness testing (for test case generation ): Is there a different way to approach fairness testing rather than just trying to generate as many discriminatory test cases as possible?\n\nFunamoto, Kazuki, Takashi Kitamura, and Shingo Takada. \"Is Diversity a Meaningful Metric in Fairness Testing?\" *2025 ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM)*. IEEE, 2025."
       ],
       "replies": []
     }
