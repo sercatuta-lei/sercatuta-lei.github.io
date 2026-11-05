@@ -2,7 +2,7 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-10-29T02:14:08.976601",
+  "last_updated": "2026-11-05T03:19:58.093025",
   "days": [
     {
       "id": "2026-10-15",
@@ -260,17 +260,6 @@
         {
           "author": "Pujan Budhathoki",
           "content": "Works for me."
-        }
-      ]
-    },
-    {
-      "id": "2026-07-31",
-      "date": "2026-07-31",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "Interesting article: [insidehighered.com/opinion/…/stop-telling-students-computer-science-dying-opinion](https://www.insidehighered.com/opinion/views/2026/07/28/stop-telling-students-computer-science-dying-opinion)"
         }
       ]
     }
