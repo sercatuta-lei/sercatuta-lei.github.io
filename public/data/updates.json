@@ -7,6 +7,11 @@
       "photo": "arjun.jpeg",
       "updates": [
         {
+          "date": "2026-11-19",
+          "content": "**Arjun Dahal:**\n\nMilestone:\nGet initial results on whether using a decision-logic region helps with better bias mitigation compared to using the whole model.\nIntegrate some of the baselines and compare with our approach.\n~~Produce a draft for the paper~~ ~~( Nov 18 ) ~~\n\n\nAction Items:\nI have written the approach section and identified a couple of papers that could be compared with our approach.\nAs I get results from the preliminary experiments, I will revise the approach for an ML venue ( It needs to be more repair-focused, less IDI generation-focused).\n\nResults:\n1. I have results from some of the baselines. These were from the software engineering domain; I will be comparing new baselines from ML venues to our setup.\nGiven that our approach will now be compared against SOTA in ML conferences, I am integrating new baselines into our setup.\n2. I will integrate an existing method into our decision logic region idea and get the preliminary results by Tuesday. I will update Slack accordingly.\n\nIssues:\nNone at the moment.",
+          "placeholder": false
+        },
+        {
           "date": "2026-10-29",
           "content": "**Arjun Dahal:**\n\nMilestone:\n\n\n1. Complete the Fairness Testing Project: Oct 21 ( Internal deadline )\n\n\n- I am still working on the project experiments. I will update Slack accordingly. \n\n\nAction Items:\n1. Compare with the baselines.\n2. Write a draft.\n\nResults:\nNone at the moment\n\nIssues:\nThe baselines generally use their own preprocessing and test their own model. For us to test a model, we need to ensure all of them use the same dataset split, preprocessing, and the model. This adaptation brings new challenges, especially when the different approaches use different versions of libraries.\nI think it would be hard to submit to ICST, given that it's too close. We would have received good feedback from the conference if it had been submitted.",
           "placeholder": false
@@ -259,6 +264,11 @@
       "slug": "saif-uddin-mahmud",
       "photo": "saif-pic.jpg",
       "updates": [
+        {
+          "date": "2026-11-26",
+          "content": "No update was provided for the week ending 2026-11-26.",
+          "placeholder": true
+        },
         {
           "date": "2026-11-05",
           "content": "No update was provided for the week ending 2026-11-05.",
@@ -518,6 +528,11 @@
       "photo": "fadul.jpg",
       "updates": [
         {
+          "date": "2026-11-26",
+          "content": "No update was provided for the week ending 2026-11-26.",
+          "placeholder": true
+        },
+        {
           "date": "2026-11-05",
           "content": "No update was provided for the week ending 2026-11-05.",
           "placeholder": true
@@ -776,6 +791,11 @@
       "photo": "krishna.jpeg",
       "updates": [
         {
+          "date": "2026-11-19",
+          "content": "**Krishna Khadka:**\n\nMilestone:\n\n\n1. ICML submission in January \n\n\nAction Items:\n\n\n1. Conduct the suggested experiments with ReLU activations, different feature importance method for decision signatures by Dec 1st.\n\n\nResults:\n\n\n1. None at the moment \n\n\nIssues:\n\n\n1. None at the moment",
+          "placeholder": false
+        },
+        {
           "date": "2026-10-29",
           "content": "**Krishna Khadka:**\n\nHi Group,\nMilestone:\n\n\n1. Aaai Rebuttal Due: Oct 31\n\n2.    Dissertation Defense: Nov 18\n3.    Submit Camera Ready Version NeurIPS -- Nov 6\nAction Items:\n\n\n1. Based on the reviews, I am running some additional metrics, and some very important baselines. I should have one initial draft of response for all the reviews by later today. The reviewers will be able to see the responses after the deadline.\n\n2.    I am preparing the dissertation defense document and powerpoint (Due: first draft by Nov 6).\n3.    I am also preparing the camera ready version and  for NeurIPS (First draft by Nov 1); and poster + presentation preparation.\n\nResults:\n\n\n1. None at the moment. \n\nIssues:\n\n\n1. None at the moment.",
           "placeholder": false
@@ -1018,6 +1038,11 @@
       "slug": "pujan-budhathoki",
       "photo": "pujan.png",
       "updates": [
+        {
+          "date": "2026-11-26",
+          "content": "No update was provided for the week ending 2026-11-26.",
+          "placeholder": true
+        },
         {
           "date": "2026-10-31",
           "content": "**Pujan Budhathoki:**\n\n**Milestone:**\n\n\n1. Paper Submission: IEEE S&P 2027: Paper Deadline on 17th November\n2. Get experimental Results for the main experiments for the paper: Oct 31st\n3. Finish Introduction, Related Work and Methodology section of the paper: Nov 1st\n4. Get an initial full draft of the paper(with all sections): Nov 8th \n\n\n**Action Items:**\n\n\n1. I have been carrying out the main experiments on TACC. \n2. I have also been working on the introduction, Related Work and Methodology sections of the paper. \n3. I have also been carrying out the main experiments using Neuronpedia API for J-lens words(The one linked by the official paper). I am working on analyzing and interpreting the raw results to draw conclusions. (Running experiments with this is lot faster than when using TACC)\n\n\n**Findings:**\n\n\n1. From the partial results(along with the initial experimental results) I had from TACC that did run without crashing (For 42 prompts out of 128) for J-space(with sparse decomposition) and the full results from Neuronpedia API for J-lens (We can consider J-lens as a more limited view of the J-space though it can help us see broader trends of J-space), the conclusion so far is:\n\n\n1. Our results suggest that the models sometimes represent useful coding information, such as buffer size, required space, and destination choice, before writing the relevant code. Some readouts also change meaningfully when we change a requirement, giving promising clues about J-space. However, these patterns are not yet consistent enough to identify a reliable overflow-prevention signal, and readable information can still be followed by unsafe code. We have promising evidence of constraint awareness, but we have not yet shown reliable overflow prevention or fully answered RQ1.\n\n\n**Problems/Issues:**\n\n\n1. TACC has been very congested recently, drastically slowing down the experiments. I submitted several runs on TACC and they remained on queue for 72 hours before finally getting a chance to run and still they returned with a crash and I had to re-submit the jobs(runs) after fixing it. And I’m waiting for those jobs to run now. \n\n\n1. Should I request access for UTA HPC? It is a high performance cluster at UTA(TACC in turn is hosted by UT Austin and usable by the whole UT system)",
@@ -1277,6 +1302,11 @@
       "photo": "qiping.jpg",
       "updates": [
         {
+          "date": "2026-11-26",
+          "content": "No update was provided for the week ending 2026-11-26.",
+          "placeholder": true
+        },
+        {
           "date": "2026-11-05",
           "content": "No update was provided for the week ending 2026-11-05.",
           "placeholder": true
@@ -1530,6 +1560,11 @@
       "photo": "shovon_pereira.jpg",
       "updates": [
         {
+          "date": "2026-11-19",
+          "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Develop LogicDistiller for limited real data, targeting IJCAI 2027.\n2. Prepare for a new project/proposal idea.\n\n**Action Items:**\n\n\n1. Drafted most of the paper: introduction (framed around covering the teacher’s decision logic), approach, experimental setup, and preliminary results with one baseline.\n2. Settled three research questions: whether logic regions capture the teacher’s logic, whether covering each region is necessary, and how the method compares with augmentation baselines. I will run another set of full experiments with related ablation and a limited query budget.\n3. Results so far (three teachers, validation data):\n\n\n1. Logic regions capture the teacher’s logic better than grouping by class and confidence, by prediction, or by input position, in every setting tested.\n2. Removing a large region’s training samples costs 7–8 points of agreement inside it,\n3. LogicDistiller is best in four of six settings against FAST-DAD, MUNGE and SPUNGE, and significantly better than FAST-DAD in three. I am adding more datasets.\n\n\n1. Pending checks: the Jacobian ablation, a longer-trained FAST-DAD rerun, more datasets and seeds, and the final test-set evaluation.",
+          "placeholder": false
+        },
+        {
           "date": "2026-10-29",
           "content": "**Shovon Niverd:**\n\n**Milestone:**\n\n\n1. Revise the LogicDistiller approach as a white-box approach, assuming access to training data.(Have a working draft with experiments and baselines by end of October)\n\n**Action Items:**\n\n\n1. Surveyed baselines across white-box data-free, black-box data-free, and tabular distillation literature, compiled a candidate baseline table, following are the closest baselines for now.\n\n\n1. Fast, Accurate, and Simple Models for Tabular Data via Augmented Distillation\n2. **Enhancing Neural Network Performance on Tabular Data via Knowledge Distillation and RankGauss Transformation**\n3. Knowledge Extraction with No Observable Data\n\n\n1. I am running initial set of experiments to see if the new setting works. I should have the results by tomorrow.\n2. I already have drafts of introduction and approach section. Once I have the first set of experiments I will add them to draft.\n3. Right now I am working on replicating the baselines and implementing possible ablations.\n\n**Findings:**\n\n\n1.  The current approach is compatible with differentiable teachers; a tree-based teacher may need different signature computation. I have not looked into the issue yet.",
           "placeholder": false
@@ -1767,5 +1802,5 @@
       ]
     }
   ],
-  "last_updated": "2026-11-05T03:19:47.146076"
+  "last_updated": "2026-11-26T04:48:25.805316"
 }

@@ -2,8 +2,99 @@
   "slug": "general",
   "name": "general",
   "channel": "general",
-  "last_updated": "2026-11-05T03:19:58.093025",
+  "last_updated": "2026-11-26T04:48:35.232533",
   "days": [
+    {
+      "id": "2026-11-20",
+      "date": "2026-11-20",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "@Arjun Dahal The following image is from Safety Inspection. The boxes are stacked too close to the ceiling, which is a safety violation that needs to be addressed as soon as possible. Can you please remove the boxes (discard them if they are no longer needed, or move to a place that is not close to the ceiling), or ask someone in the lab to do, and then send me a picture? Thanks."
+        },
+        {
+          "author": "Arjun Dahal",
+          "content": "Sure, Dr. Lei. I have requested @Shovon Niverd to help me with it. If they belong to other professors, I will also request that the other groups ground them in the afternoon."
+        },
+        {
+          "author": "Shovon Niverd",
+          "content": "Removed the boxes, asked others in the lab to check if any of them belonged to them."
+        },
+        {
+          "author": "Dr. Lei",
+          "content": "Great. Thanks."
+        }
+      ]
+    },
+    {
+      "id": "2026-11-19",
+      "date": "2026-11-19",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "Thanks, Pujan. Congrats again to Krishna, and excellent job!"
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "Thank you Dr. Lei and thank you all for being there. :blush:"
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "Thank you for sharing, Pujan"
+        },
+        {
+          "author": "Hitha Alex",
+          "content": "Thank you for sharing the pictures. Congratulations again Krishna! Great accomplishment!"
+        },
+        {
+          "author": "Krishna Khadka",
+          "content": "Thank you so much, Hitha"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-18",
+      "date": "2026-11-18",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Pujan Budhathoki",
+          "content": "Pictures from Krishna’s defense today"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-16",
+      "date": "2026-11-16",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "@Arjun Dahal @Pujan Budhathoki Can you please help order some pizzas and drinks for Krishna’s defense this Wednesday? I assume everyone in the group will attend the defense. In addition, Hitha is planning to attend. Also, for the purpose of reimbursement, please follow the University’s policy on what products we can purchase. Thanks."
+        },
+        {
+          "author": "Arjun Dahal",
+          "content": "Sure, Dr. Lei"
+        },
+        {
+          "author": "Pujan Budhathoki",
+          "content": "Sure, Dr. Lei"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-08",
+      "date": "2026-11-08",
+      "owner": [],
+      "replies": [
+        {
+          "author": "Dr. Lei",
+          "content": "Mr. Rossel Banji is organizing a Hackathon workshop, and he is wondering if anyone would be interested in giving a 30-min or 1 hour workshop on any topic related to Trustworthy AI. I am including some information about the workshop below, but please let me know if you are available to do the workshop ASAP and by tomorrow (Monday), and I will put you in touch with him:\n\nDate/Time:\n\nSaturday: 11/14\n5-5:30 PM for 30 minute workshop OR\n5-6 PM (if they want hour long)\n\nOR\n\nSunday: 11/15\n10-10:30 AM for 30 minute workshop OR\n10-11 AM (if they want hour long)\n\nContent:\n\nRegarding the session’s content, you have complete freedom to choose the content and structure you would like to cover.\nYou also have full flexibility in how you choose to structure your time (30 min slot or a 1 hour slot). You are welcome to present in whatever format works best for you. Our only expectation is that the session is engaging and interactive for the participants.\n\nTo ensure everything runs smoothly, we will have 2 volunteers assigned to your room. They will be on hand to help manage the attendees, take photos, and assist you with anything else you might need so your PhD students can focus entirely on your session.\n\nWorkshop title could be: xAI, Trustworthy AI\n\nFor example, the session could be a 30 minute introduction to xAI.\nWith an example of Lime and Shap."
+        }
+      ]
+    },
     {
       "id": "2026-10-15",
       "date": "2026-10-15",
@@ -214,52 +305,6 @@
         {
           "author": "Arjun Dahal",
           "content": "Thank You"
-        }
-      ]
-    },
-    {
-      "id": "2026-08-27",
-      "date": "2026-08-27",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "I am attaching the kickoff slides. The topic of discussion is: In an ideal world, what would research look like to you, and how research should be done? See you all at 2pm tomorrow."
-        },
-        {
-          "author": "Fadul Sikder",
-          "content": "I faced little technical issue with my car in the raod. I would be half an hour late."
-        }
-      ]
-    },
-    {
-      "id": "2026-08-24",
-      "date": "2026-08-24",
-      "owner": [],
-      "replies": [
-        {
-          "author": "Dr. Lei",
-          "content": "@channel We will need to figure out a different meeting schedule for this semester, as I am teaching at 12.30pm on Tue/Thu. My plan is to have the kick-off meeting first, where we can discuss what would be the most efficient way to organize the meetings. Can we meet in the lab at 2pm this Thursday for the kick-off meeting? Please let me know if this works for you."
-        },
-        {
-          "author": "Shovon Niverd",
-          "content": "This Thursday 2pm works for me"
-        },
-        {
-          "author": "Krishna Khadka",
-          "content": "It works for me"
-        },
-        {
-          "author": "Arjun Dahal",
-          "content": "It works for me"
-        },
-        {
-          "author": "Fadul Sikder",
-          "content": "Works for me."
-        },
-        {
-          "author": "Pujan Budhathoki",
-          "content": "Works for me."
         }
       ]
     }

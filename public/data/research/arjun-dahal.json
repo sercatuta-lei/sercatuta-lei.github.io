@@ -2,8 +2,16 @@
   "slug": "arjun-dahal",
   "name": "Arjun Dahal",
   "channel": "arjun-research",
-  "last_updated": "2026-11-05T03:19:47.986241",
+  "last_updated": "2026-11-26T04:48:26.090361",
   "days": [
+    {
+      "id": "2026-11-16",
+      "date": "2026-11-16",
+      "owner": [
+        "Dr. Lei, this paper seems to be the one that we were targeting targeting for -\n\n[proceedings.mlr.press/v202/li23ag/li23ag.pdf](https://proceedings.mlr.press/v202/li23ag/li23ag.pdf)\n\nIt’s a well-defined problem that I believe we could improve upon with our decision logic region idea. Please let me know your thoughts."
+      ],
+      "replies": []
+    },
     {
       "id": "2026-09-29",
       "date": "2026-09-29",
